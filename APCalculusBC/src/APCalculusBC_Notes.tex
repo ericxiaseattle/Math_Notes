@@ -1568,7 +1568,7 @@
     \pagebreak
 %%%-------------------------------------------NEW SECTION--------------------------------------%%%
 
-    \section{Applications of Integration}
+    \section{Applications of Differentiation}
 
         \subsection{Critical Points}
             $x=c$ is a \textbf{critical point} of the function $f'(x)$ if $f(c)$ exists and \\
@@ -1787,23 +1787,847 @@
             \end{center}
 
 
-            \subsection{Optimization}
-            \subsection{Graphically Relating a Function and its Derivatives}
-            \subsection{Motion Along a Curve}
-            \subsection{Tangent-Line Approximations}
-            \subsection{The Newton-Raphson Method}
-            \subsection{Related Rates}
+        \subsection{Related Rates}
 
+        Related rates are an application of implicit differentiation that allow us to solve for
+        rates of change and other quantities in an applied real-world system, typically growing
+        with respect to time. \\
+
+        \noindent \color{blue} \colorit{Example 1: Air is being pumped into a spherical balloon at
+        a rate of 5 $\text{cm}^3$/min. Determine the rate at which the radius of the balloon is
+        increasing when the diameter of the balloon is 20 cm.} \color{black} \\
+
+        \noindent We are given $\frac{dV}{dt}=5$ and we want to find $\frac{dr}{dt}_{r=10}$. \\
+        \noindent Assuming the balloon is perfectly spherical, its volume is given by
+        $V=\frac{4}{3}\pi r^3$. Then
+
+        \begin{align*}
+            \frac{dV}{dt}        &= 4\pi r^2 \frac{dr}{dt} \\
+            5                    &= 4\pi (10)^2 \frac{dr}{dt} \\
+            \frac{dr}{dt}_{r=10} &= \frac{1}{80\pi} \text{cm/min}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: A 15 foot ladder is resting against the wall.
+        The bottom is initially 10 feet away from the wall and is being pushed towards the wall at
+        the rate of $\frac{1}{4}$ ft/sec. How fast is the top of the ladder moving 12 seconds
+        after we start pushing?} \color{black} \\
+
+        \noindent Let us first sketch the situation: \\
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit3DiffferentiationApps/Related_Rates_1}
+        \end{figure}
+
+        \noindent Let the vertical distance between the ground and the ladder be represented by $y$,
+        the horizontal distance between the wall and the end of the ladder be represented by $x$,
+        and let the length of the ladder be represented by $c=15$. Then from the Pythagorean Theorem,
+
+        \begin{align*}
+            x^2 + y^2       &= c^2 = 15 \\
+            2xx' + 2yy'     &= 0 \\
+            yy'             &= -xx' \\
+            \frac{dy}{dt}   &= \frac{-x\cdot\frac{dx}{dt}}{y} \\
+            \frac{dy}{dt}   &= \frac{-7(-\frac{1}{4})}{\sqrt{176}} \\
+            \frac{dy}{dt}   &= \frac{7}{4\sqrt{1176}} \approx 0.1319 \text{ft/sec}
+        \end{align*}
+
+        Notice that we were able to obtain exact values for $x$ and $y$ because
+        $x=10+tx'=10-\frac{1}{4}(12) = 7$ and
+
+        \begin{align*}
+            x^2+y^2     &=c^2 \\
+            49 + y^2    &= 225 \\
+            y           &= \sqrt{176}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 3: Suppose that we have two resistors connected in
+        parallel with resistances $R_1$ and $R_2$ measured in $\Omega$. The total resistance $R$
+        is then given by}
+
+        \begin{equation*}
+            \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
+        \end{equation*}
+
+        \noindent Suppose that $R_1$ is increasing at a rate of 0.4 $\Omega$/min and $R_2$ is
+        decreasing at a rate of 0.7 $\Omega$/min. At what rate is $R$ changing when $R_1=80\Omega$
+        and $R_2=105\Omega$? \color{black} \\
+
+        \noindent When $R_1=80\Omega$ and $R_2=105\Omega$,
+
+        \begin{align*}
+            \frac{1}{R}     &= \frac{1}{80} + \frac{1}{105} \\
+            \frac{1}{R}     &= \frac{37}{1680} \\
+            R               &= \frac{1680}{37}
+        \end{align*}
+
+        \noindent Then
+
+        \begin{align*}
+            \frac{1}{R}     &= \frac{1}{R_1} + \frac{1}{R_2} \\
+            -\frac{R'}{R^2} &= -\frac{R'_1}{(R_1)^2} - \frac{R'_2}{(R_2)^2} \\
+            \frac{dR}{dt}   &= R^2\left(\frac{R'_1}{(R_1)^2}+\frac{R'_2}{(R_2)^2}\right) \\
+            \frac{dR}{dt}   &= \left(\frac{1680}{37}\right)\left(\frac{0.4}{80^2}-\frac{0.7}{105^2}\right) \\
+            \frac{dR}{dt}   &\approx -0.002045 \Omega\text{/min}
+        \end{align*}
+
+
+    \subsection{Tangent-Line Approximations}
+        Given a function $f(x)$ that is differentiable at $x=a$, we know that the slope of the
+        tangent line to $f(x)$ at $(a,f(a))$ is $f'(a)$. Thus, the tangent line $L(x)$ through
+        $(a,f(a))$ with slope $f'(a)$ has an equation in point-slope form given by
+
+        \begin{equation*}
+            L(x) = f(a) + f'(a)(x-a)
+        \end{equation*}
+
+        \noindent Below is a graph of the function $y=f(x)$ and its linearization $y=L(x)$.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit3DiffferentiationApps/Linearization}
+        \end{figure}
+
+        \pagebreak
+
+        \noindent \color{blue} \textit{Example 1: Determine the linear approximation for
+        $f(x)=\sqrt[3]{x}$ at $x=8$. Use the linear approximation to approximate the value of
+        $\sqrt[3]{8.05}$} and $\sqrt[3]{25}$. \color{black}
+
+        \begin{align*}
+            L(x)        &= f(8) + f'(8)(x-8) \\
+                        &= 2 + \frac{1}{3}8^{-\frac{2}{3}}(x-8) \\
+                        &= \frac{1}{12}x + \frac{4}{3} \\
+            L(8.05)     &\approx 2.0041667 \\
+            L(25)       &\approx 3.4166667
+        \end{align*}
+
+
+    \subsection{The Newton-Raphson Method}
+        The \textbf{Newton-Raphson Method} is a way to quickly find an \textit{approximation}
+        iteratively for the root of a real-valued function $f(x)=0$. It is founded on the concept
+        that a continuous and differentiable function can be approximated by a tangent line to it. \\
+
+        \noindent Suppose you want to find the root of a continuous, differentiable function $f(x)$ and you
+        know that the target root is near the point $x_0$. Then with Newton's Method, an approximation
+        for the root $x_1$ is given by
+
+        \begin{equation*}
+            x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}
+        \end{equation*}
+
+        \noindent This method can be repeated as many times as necessary to get the desired accuracy.
+        Then the generalization of Newton's Method is given by \\
+
+        \begin{equation*}
+            x_{n+1}     = x_n - \frac{f(x_n)}{f'(x_n)}
+        \end{equation*}
+
+        \noindent Below is a visual demonstration of Newton's Method.
+
+        \begin{figure}
+            \centering
+            \includegraphics{Resources/Unit3DifferentiationApps/NewtonsMethod}
+        \end{figure}
+
+        \noindent \color{blue} \textit{Example: Find the root of the equation $x^2-4x-7=0$ near
+        $x=5$}. \color{black} \\
+
+        \noindent We are given $x_0=5$. Let $f(x)=x^2-4x-7$ and $f'(x)=2x-4$. Then,
+
+        \begin{align*}
+            x_1 &= 5 - \frac{5^2-4\cdot5-7}{2\cdot5-4} = 5-\left(\frac{-2}{6}\right)=\frac{16}{3}
+                   \approx 5.33333 \\
+            x_2 &= \frac{16}{3} - \frac{\left(\frac{16}{3}\right)^2-4\left(\frac{16}{3}\right)-7}
+                   {2\left(\frac{16}{3}\right)-4} = \frac{16}{3}-\frac{\frac{1}{9}}{\frac{20}{3}}
+                   = \frac{16}{3} - \frac{1}{60} = \frac{319}{60} \approx 5.31667 \\
+            x_3 &= \frac{319}{60} - \frac{\left(\frac{319}{60}\right)^2-4\left(\frac{319}{60}\right)-7}
+                   {2\left(\frac{319}{60}\right)-4} = \frac{319}{60} -
+                    \frac{\frac{1}{3600}}{\frac{398}{60}} \approx 5.31662
+        \end{align*}
+
+
+    \subsection{Optimization}
+        \textbf{Optimization} uses a function's derivatives to find the maximum or
+        minimum value of that function. \\
+
+        \noindent \color{blue} \textit{Example 1: We need to enclose a rectangular field with a
+        fence. We have 500 feet of fencing material and a building is on one side of the field
+        and so won't need any fencing. Determine the dimensions of the field that will enclose the
+        largest area.} \color{black} \\
+
+        \noindent Let us first visualize the situation:
+
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3DifferentiationApps_optimization}
+        \end{figure}
+
+        \noindent We want to maximize the area of the field and we only have 500 ft of fencing
+        material. So, we represent this system by the following equations:
+
+        \begin{align*}
+            \text{Maximize: } A     &= xy \\
+            \text{Constraint: } 500 &= x + 2y
+        \end{align*}
+
+        \noindent Solving the constraint equation for $x$, we get $x=500-2y$. We can substitute this
+        into the area function, giving us \\
+
+        \begin{align*}
+            A(y)  &= (500-2y)y \\
+                  &= 500y-2y^2 \\
+            A'(y) &= 500-4y \\
+            0     &= 500 - 4y \\
+            y     &= 125 \\
+            x     &= 500-2(125) = 250
+        \end{align*}
+
+        \noindent Thus, the dimensions of the field that wil give the largest area are 250 x 125. \\
+
+        \noindent \color{blue} \textit{Example 2: A manufacturer needs to make a cylinderical can
+        that will hold 1.5 litres of liquid. Determine the dimensions of the can that will
+        minimize the amount of material used in its constraint.} \color{black} \\
+
+        \noindent We will eventually need the radius and height of the can in terms of a linear
+        measurement unit, instead of litres. Thus, the volume, 1.5 litres, becomes 1500 $\text{cm}^3$.
+
+        \begin{align*}
+            \text{Minimize:} A      &= 2\pi rh+2\pi r^2 \\
+            \text{Constraint:} 1500 &= \pi r^2 h \\
+            h                       &= \frac{1500}{\pi r^2} \\
+            \implies A(r)           &= 2\pi r\left(\frac{1500}{\pi r^2}\right) + 2\pi r^2 \\
+            A(r)                    &= 2\pi r^2 + \frac{3000}{r} \\
+            A'(r)                   &= 4\pi r - \frac{3000}{r^2} \\
+            A'(r)                   &= \frac{4\pi r^3 - 3000}{r^2} \\
+            0                       &= \frac{4\pi r^3 - 3000}{r^2} \\
+            r                       &= \sqrt[3]{\frac{750}{\pi}} \\
+            r                       &= 6.2035 \\
+            h                       &= \frac{1500}{\pi(6.2035)^2} \\
+            h                       &= 12.4070
+        \end{align*}
+
+        \noindent Thus, the dimensions of the can that will minimize the material required to
+        construct the box are a radius of 6.2035 cm and a height of 12.4070 cm.
 
     \pagebreak
 %%%-------------------------------------------NEW SECTION--------------------------------------%%%
 
     \section{Integration}
 
-        \subsection{Differentials}
+        \subsection{Riemann Sums and Definite Integrals}
+
+            \textbf{Riemann Sums} are approximations of a region's area, obtained by summing the
+            areas of numerous simplified slices of said region. The area approximation gets better
+            if more slices are used to simplify the area. As you can see from the figures below,
+            the figure with more and smaller rectangles takes up more of the area we are trying to
+            approximate.
+
+            \begin{figure} [hbt!]
+                \centering
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann1}
+                \end{subfigure}
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann2}
+                \end{subfigure}
+            \end{figure}
+
+            \noindent \textbf{Left Riemann Sums} have rectangles that touch the curve with their
+            top-left corners, while \textbf{Right Riemann Sums} have rectangles that touch the curve
+            with their top-right corners. \textbf{Midpoint Riemann Sums} have rectangles that touch
+            the curve with the middle of their top edges. If the graph is increasing on the interval,
+            then the left sum is an underestimate and the right sum is an overestimate. If the graph
+            is decreasing on the interval, then the left sum is an overestimate and the left sum is
+            an underestimate. Conventionally, we use $i=0$ for left and midpoint sums and $i=1$ for
+            right sums. \\
+
+            \noindent Subdivisions of Riemann Sums can be \textbf{uniform}, meaning they are of
+            equal width, or \textbf{nonuniform}, meaning they are not of equal length. \\
+
+            \noindent \textbf{Trapezoidal Sums} have subdivisions which touch the curve with both of
+            its top vertices. The figures below display left, right, midpoint, and trapezoidal sums.
+
+            \begin{figure}[hbt!]
+                \centering
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann_Left}
+                \end{subfigure}
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann_Right}
+                \end{subfigure}
+            \end{figure}
+
+            \begin{figure}[hbt!]
+                \centering
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann_Mid}
+                \end{subfigure}
+                \begin{subfigure}[b]{.45\textwidth}
+                    \includegraphics[scale=0.8]{Resources/Unit4Integration/Riemann_Trapezoid}
+                \end{subfigure}
+            \end{figure}
+
+            \noindent If $f(x)$ is defined on the closed interval $[a,b]$ and $c_k$ is any point in
+            $[x_{k-1}, x_k]$, then a Riemann Sum is defined as
+
+            \begin{equation*}
+                \sum_{i=1}^n f(x_i)\Delta x
+            \end{equation*}
+
+            \noindent The Riemman Sum of a function is related to the \textbf{definite integral} as
+            follows:
+
+            \begin{equation*}
+                \lim_{n\rightarrow\infty}\sum^n_{i=1}f(x_i)\Delta x_i = \int^b_a f(x)dx
+            \end{equation*}
+
+            \noindent \color{blue} \textit{Example 1: Approximate the area between $f(x)=|x+3|$ and
+            the $x$-axis on the interval $[-5,5]$ using a left Riemann sum with 10 equal subdivisions.}
+            \color{black} \\
+
+            \noindent The width of each rectangle, $\Delta x$, is given by
+
+            \begin{equation*}
+                \Delta x = \frac{5-(-5)}{10} = 1
+            \end{equation*}
+
+            \noindent Since we are using left sums, let $i=0$. Since we have 10 equal subdivisions, the other
+            indice of our summation will be 9 such that our area is given by $\sum^9_{i=0}$. We now
+            want to find $f(x_i)$. Each time $i$ increases by 1, the value of $x_i$ also increases
+            by 1. Its initial value is the left endpoint of the interval, which is -5.
+
+            \begin{equation*}
+                x_i = -5 + 1i = -5 + i
+            \end{equation*}
+
+            \noindent To confirm that $x_i$ gives us the correct first left endpoint, we substitute 0 for $i$:
+
+            \begin{equation*}
+                x_0=-5+0=-5
+            \end{equation*}
+
+            \noindent Thus,
+
+            \begin{align*}
+                f(x)    &= |x+3| \\
+                f(x_i)  &= |(-5+i) +3| \\
+                A       &= \sum_{i=0}^9 |(-5+i) + 3| \cdot 1 \\
+                A       &= \sum_{i=0}^9 |i-2|
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 2: Approximate the area between $f(x)=\cos{(x)}$
+            and the $x$-axis on the interval $\left[-\frac{3}{10}\pi, \frac{1}{2}\pi\right]$ using
+            a right Riemann sum with 8 equal subdivisions.} \color{black}
+
+            \begin{align*}
+                \Delta x    &= \frac{\frac{\pi}{2}-\left(-\frac{3\pi}{10}\right)}{8} = \frac{\pi}{10} \\
+                x_8         &= \frac{\pi}{2} \\
+                x_i - x_8   &= \frac{\pi}{10} (i-8) \\
+                x_i         &= \frac{\pi i}{10} - \frac{3\pi}{10} \\
+                f(x)        &= \cos{(x)} \\
+                f(x_i)      &= \cos{\left(\frac{\pi i}{10}-\frac{3\pi}{10}\right)} \\
+                A           &= \sum^8_{i=1}\cos{\left(\frac{\pi i}{10}-\frac{3\pi}{10}\right)}
+                               \cdot\frac{\pi}{10}
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 3: Write the definite integral $\int^3_0 e^x dx$
+            as a limit of a left Riemann sum.} \color{black} \\
+
+            \begin{align*}
+                \Delta x                                    &= \frac{b-a}{n} = \frac{3-0}{n} = \frac{3}{n} \\
+                \sum^{n-1}_{i=0}f(a+i\Delta x)\cdot\Delta x &= \sum^{n-1}_{i=0} f\left(0+\frac{3i}{n}\right)
+                                                               \cdot \frac{3}{n} \\
+                                                            &= \sum^{n-1}_{i=0} e^{\frac{3i}{n}}\cdot\frac{3}{n}
+            \end{align*}
+
+
+        \subsection{Fundamental Theorem of Calculus}
+            If $f(x)$ is continous over an interval $[a,b]$ and the function $F(x)$ is defined by
+
+            \begin{equation*}
+                F(x) = \int^x_a f(t)dt,
+            \end{equation*}
+
+            \noindent then $F'(x)=f(x)$ over $[a,b]$. Additionally, \\
+
+            \noindent If $f(x)$ is continuous over the interval $[a,b]$ and $F(x)$ is any
+            antiderivative of $f(x)$ then
+
+            \begin{equation*}
+                \int^b_a f(x)dx = F(b) - F(a)
+            \end{equation*}
+
+            \pagebreak
+            \noindent \color{blue} \textit{Example 1: Let $F(x)=\int_1^{\sqrt{x}}\sin{t} dt$.
+            Find $F'(x)$ using the FTC.} \color{black} \\
+
+            \noindent Let $u(x)=\sqrt{x}$. Then $F(x)=\int_1^{u(x)}\sin{t}dt$. Thus, by the FTC,
+
+            \begin{align*}
+                F'(x) &= \sin{(u(x))}\frac{du}{dx} \\
+                      &= \sin{(u(x))}\cdot\left(\frac{1}{2}x^{-\frac{1}{2}}\right) \\
+                      &= \frac{\sin{\sqrt{x}}}{2\sqrt{x}}
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 2: Let $F(x)=\int^{2x}_x t^3 dt$. Find $F'(x).$}
+            \color{black} \\
+
+            \begin{align*}
+                F(x)    &= \int_x^{2x} t^3 dt \\
+                        &= \int_x^0 t^3 dt + \int_0^{2x} t^3 dt \\
+                        &= -\int_0^x t^3 dt + \int_0^{2x} t^3 dt \\
+                F'(x)   &= \frac{d}{dx}\left[-\int_0^x t^3 dt\right] +
+                        \frac{d}{dx}\left[\int_0^2x t^3 dt\right] \\
+                        &= -x^3 + 16x^3 \\
+                        &= 15x^3
+            \end{align*}
+
+
+        \subsection{Indefinite Integrals}
+            Given a function, $f(x)$, an \textbf{antiderivative} of $f(x)$ is any function $F(x)$ such that
+
+            \begin{equation*}
+                F'(x) = f(x)
+            \end{equation*}
+
+            \noindent If $F(x)$ is any antiderivative of $f(x)$ then the most general antiderivative
+            of $f(x)$ is called an \textbf{indefinite integral} and denoted
+
+            \begin{equation*}
+                \int f(x)dx = F(x) + k,\text{    where $k$ is any constant}
+            \end{equation*}
+
+            \noindent Here, $\int$ is the \textbf{integral symbol}, $f(x)$ is the \textbf{integrand},
+            $x$ is the integration variable, and $k$ is the constant of integration. \\
+
+
+
+        \subsection{Basic Integral Rules}
+            \begin{center}
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $\int^a_a f(x) dx = 0$ & Integral with Equal Bounds \\
+                    \hline
+                    $\int^b_a f(x)dx = -\int^a_b f(x)dx$ & Opposite of Integral \\
+                    \hline
+                    $\int k dx = kx + C$ & Constant \\
+                    \hline
+                    $\int kf(x)dx = k\int f(x)dx$ & Constant Multiple \\
+                    \hline
+                    $\int^b_a[f(x)\pm g(x)]dx = \int^b_a f(x)dx\pm\int^b_a g(x)dx$ & Sum/Difference \\
+                    \hline
+                    $\int x^n dx = \frac{x^{n+1}}{n+1}+C, n\not =-1$ & Reverse Power Rule \\
+                    \hline
+                \end{tabular}
+            \end{center} \\
+
+            \begin{center}
+                \begin{tabular}{|c|}
+                    \hline
+                    If $f(x)\geq 0$ on $[a,b]$, then $\int^b_a f(x)dx\geq 0$  \\
+                    \hline
+                    If $f(x)\leq 0$ on $[a,b]$, then $\int^b_a f(x)dx\leq 0$  \\
+                    \hline
+                    If $f(x)\geq g(x)$ on $[a,b]$, then $\int^b_a f(x)dx\pm\int^b_a g(x)dx$  \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+
+        \subsection{Integrals of Exponential and Logarithmic Functions}
+            \begin{center}
+                \begin{tabular} {|c|c|}
+                    \hline
+                    $\int \frac{1}{x} dx = \ln{|x|}+C$ & Reciprocal \\
+                    \hline
+                    $\int \frac{1}{ax+b}dx = \frac{1}{a}\ln{|ax+b|}+C$ & \\
+                    \hline
+                    $\int \frac{u'(x)}{u(x)}dx = \ln{|u(x)|+C}$ & \\
+                    \hline
+                    $\int e^x dx = e^x+C$ & Exponential \\
+                    \hline
+                    $\int a^x dx = \frac{a^x}{\ln{a}}+C$ & \\
+                    \hline
+                    $\int \ln{x} dx = x\ln{x}-x + C$ & \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \pagebreak
+        \subsection{Integrals of the Trig Functions}
+            \begin{center}
+                \begin{tabular} {|c|c|}
+                    \hline
+                    $\int \sin{x} dx = -\cos{x}+C$ & Sine \\
+                    \hline
+                    $\int \cos{x} dx = \sin{x}+C$ & Cosine \\
+                    \hline
+                    $\int \tan{x} dx = -\ln{|\cos{x}|}+C=\ln{|\sec{x}|}+C$ & Tangent \\
+                    \hline
+                    $\int \cot{x} dx = -\ln{|\sin{x}|}+C = \ln{|\cos{x}|}+C$ & Cotangent \\
+                    \hline
+                    $\int \sec{x} dx = -\ln{|\sec{x}+\tan{x}|}+C=$ & Secant \\
+                    \hline
+                    $\int \csc{x} dx = -\ln{|\csc{x}+\cot{x}|}+C$ & Cosecant \\
+                    \hline
+                \end{tabular}
+            \end{center}
+            \begin{center}
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $\int \sec^2{x}dx = \tan{x}+C$ & \\
+                    \hline
+                    $\int \csc^2{x}dx = -\cot{x}+C$ & \\
+                    \hline
+                    $\int \sec{x}\tan{x}dx = \sec{x}+C$ & \\
+                    \hline
+                    $\int \csc{x}\cot{x}dx = -\csc{x}+C$ & \\
+                    \hline
+                    %%%
+                    $\int \frac{1}{1-x^2}, x\not =\pm 1 = \arcsin{x}$ & \\
+                    \hline
+                    $\int -\frac{1}{1-x^2}, x\not =\pm 1 = \arccos{x}$ & \\
+                    \hline
+                    $\int \frac{1}{1+x^2}=\arctan{x}$ & \\
+                    \hline
+                    $\int -\frac{1}{1+x^2}=\arccot{x}$ & \\
+                    \hline
+                    $\int \frac{1}{|x|\sqrt{x^2-1}}, x\not = \pm 1,0=\arcsec{x}$ & \\
+                    \hline
+                    $\int -\frac{1}{|x|\sqrt{x^2-1}}, x\not = \pm 1,0=\arccsc{x}$ & \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+
+        \subsection{Integration Using Substitution}
+            To use integration by substitution, we must first be able to write our integral in the
+            form $\int f(g(x))g'(x)dx=\int f(u)du$, where $u=g(x)$. \\
+
+            \noindent \color{blue} \texit{Example 1 Compute $\int \cos{(x^2)}2xdx$} \color{black}
+
+            \begin{align*}
+                u                   &= x^2 \\
+                du                  &= 2xdx \\
+                \int \cos{(u)}du    &= \sin{(u)}+C \\
+                                    &= \sin{(x^2)} + C
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 2: Compute $\int x\sqrt{3x^2-1}dx$} \color{black}
+
+            \begin{align*}
+                u                                   &= 3x^2-1 \\
+                du                                  &= 6x \\
+                \int \frac{1}{6}(6x)\sqrt{3x^2-1}dx &= \frac{1}{6}\int\sqrt{u}du \\
+                                                    &= \frac{1}{9}u^{\frac{3}{2}}+C \\
+                                                    &= \frac{1}{9}(3x^2-1)^{\frac{3}{2}} + C
+            \end{align*}
+
+
+        \noindent \color{blue} \texit{Example 3: Compute $\int \sin^2{\theta}\cos^2{\theta}d\theta$} \color{black}
+
+        \begin{align*}
+            \sin^2{\theta}\cos^2{\theta}                     &= (\sin{\theta}\cos{\theta})^2 \\
+                                                             &= \left(\frac{1}{2}\sin{(2\theta)}\right)^2 \\
+                                                             &= \frac{1}{4}\sin^2{(2\theta)} \\
+            \int\sin^2{\theta}\cos^2{\theta}d\theta          &= \frac{1}{4}\int\sin^2{2\theta}d\theta \\
+            \because \cos{2x}                                &= 1-2\sin^2{x} \\
+            \therefore \sin^2{x}                             &=\frac{1}{2}(1-\cos{2x}) \\
+            \implies \int\sin^2{\theta}\cos^2{\theta}d\theta &= \frac{1}{8}\int(1-\cos{4\theta})d\theta \\
+                                                             &= \frac{1}{8}\left(\theta-\frac{1}{4}\sin{4\theta}\right)+C \\
+                                                             &= \frac{\theta}{8}-\frac{\sin{4\theta}}{32}+C
+        \end{align*}
+
+
+        \pagebreak
+        \subsection{Integrating Using Long Division and Completing the Square}
+            When we have a rational function of the form $\frac{P(x)}{Q(x)}$, we can use long
+            division and completing the squre to simplify the integral prior to integration. \\
+
+            \noindent \color{blue} \textit{Example 1: Compute $\int\frac{x^3+2x^2+9x-17}{x+4}dx$} \color{black} \\
+
+            \begin{align*}
+                \frac{x^3+2x^2+9x-17}{x+4}          &= x^2-2x+17-\frac{85}{x+4} \\
+                \int\frac{x^3+2x^2+9x-17}{x+4}dx    &= \int x^2-2x+17-\frac{85}{x+4}dx \\
+                                                    &= \frac{x^3}{3}-x^2+17x-85\ln{|x+4|}+C
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 2: Compute $\int\frac{dx}{\sqrt{1-2x-x^2}}$} \color{black}
+
+            \begin{align*}
+                1-2x-x^2                        &= 1-(x^2+2x) \\
+                                                &= 2-(x^2+2x+1) \\
+                                                &= 2-(x+1)^2 \\
+                                                &= (\sqrt{2})^2-(x+1)^2 \\
+                u                               &= x+1 \\
+                du                              &= dx \\
+                \int\frac{dx}{\sqrt{1-2x-x^2}}  &= \int\frac{dx}{\sqrt{(\sqrt{2})^2-(x+1)^2}} \\
+                                                &= \int\frac{du}{\sqrt{(\sqrt{2})^2-u^2}} \\
+                                                &= \arcsin{\left(\frac{u}{\sqrt{2}}\right)}+C \\
+                                                &= \arcsin{\left(\frac{x+1}{\sqrt{2}}\right)}+C
+            \end{align*}
+
+        \subsection{Integration by Parts}
+            Recall the differentiation product rule, $(uv)'=uv'+u'v$. Rearranging the equation, we
+            get $uv'=(uv)'-u'v$. Hence,
+
+            \begin{align*}
+                \int uv'dx  &= \int ((uv)'-u'v)dx \\
+                            &= uv - \int u'vdx \\
+                du          &= u'dx \\
+                dv          &= v'dx
+            \end{align*}
+
+            \noindent \color{purple} \textbf{Integration by Parts:} \color{black} \\
+
+            \begin{equation*}
+                \int udv = uv - \int v du
+            \end{equation*}
+
+            \noindent \textbf{Guidelines for Choosing $u$ and $dv$:} \\
+            \noindent "LIATE" (Choose $u$ in the following order): \\
+            \noindent L: Logarithmic Functions \\
+            \noindent I: Inverse Trig Functions \\
+            \noindent A: Algebraic Functions \\
+            \noindent T: Trig Functions \\
+            \noindent E: Exponential Functions \\
+
+            \noindent We want $u$ to be an expression whose derivative $du$ is a simpler function
+            than $u$ itself. We want $dv$ to be the most complicated part of the integrand that
+            can be easily integrated.
+
+            \pagebreak
+            \noindent \color{blue} \textit{Example 1: Compute $\int x^3\ln{x}dx$} \color{black}
+
+            \begin{align}
+                u                   &= \ln{x} \\
+                dv                  &= x^3 dx \\
+                du                  &= \frac{dx}{x} \\
+                v                   &= \int x^3 dx = \frac{x^4}{4} \\
+                \int x^3\ln{x}dx    &= uv - \int vdu \\
+                                    &= (\ln{x})\frac{x^4}{4}-\int\frac{x^4}{4}\frac{1}{x}dx \\
+                                    &= \frac{x^4\ln{x}}{4}-\frac{1}{4}\int x^3 dx \\
+                                    &= \frac{x^4\ln{x}}{4}-\frac{x^4}{16}+C
+            \end{align*}
+
+            \noindent \color{blue} \textit{Example 2: Compute $\int x^3\sqrt{4-x^2}dx$} \color{black}
+
+            \begin{align*}
+                dv                      &= x\sqrt{4-x^2}dx \\
+                u                       &= x^2 \\
+                du                      &= 2xdx \\
+                v                       &= \int x\sqrt{4-x^2}dx = -\frac{1}{3}(4-x^2)^{\frac{3}{2}} \\
+                \int x^3\sqrt{4-x^2}dx  &= uv - \int vdu \\
+                                        &= x^2\left(-\frac{1}{3}(4-x^2)^\frac{3}{2}\right)
+                                        - \int -\frac{1}{3}(4-x^2)^\frac{3}{2}(2x)dx \\
+                                        &= -\frac{x^2}{3}(4-x^2)^\frac{3}{2}
+                                        -\frac{2}{15}(4-x^2)^\frac{5}{2}+C
+            \end{align*}
+
+
+        \subsection{Tabular Integration}
+            \textbf{Tabular Integration} is a shortcut for performing repeated integration by parts.
+            We want to create a table like so, until one of the derivatives/integrals reaches 0:
+
+            \begin{center}
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                        & u         & dv \\
+                    \hline
+                    1   & $f(x)$    & $g(x)$ \\
+                    \hline
+                    2   & $f'(x)$   & $\int g(x)$ \\
+                    \hline
+                    3   & $f"(x)$   & $\int \int g(x)$ \\
+                    \hline
+                    n   & $f^{(n)}(x)$  & $\int\dots\int g(x), \text{where there is one $\int$ for each $n$}$ \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+            \noindent Then, we multiply $f(x)$ by $\int g(x)$, $f'(x)$ by $\int \int g(x)$, and so
+            on until we reach the last antiderivative. We then alternatively add and subtract these
+            products, starting with addition. \\
+
+            \noindent \color{blue} \textit{Example 1: Compute $\int (x^3+2x-1)\cos{(4x)}$} \color{black} \\
+
+            \noindent Let $f(x)=x^3+2x-1$ and $g(x)=\cos{(4x)}$. Then we can make a table like so:
+
+            \begin{figure}[hbt!]
+                \centering
+                \includegraphics[scale=0.75]{Resources/Unit4Integration/Tabular}
+            \end{figure}
+
+            \pagebreak
+            \noindent Thus, the antiderivative becomes \\
+
+            \begin{align*}
+                &\frac{1}{4}(x^3+2x-1)\sin{(4x)}+\frac{1}{16}(3x^2+2)\cos{(4x)}
+                -\frac{3x}{32}\sin{(4x)}-\frac{3}{128}\cos{(4x)} \\
+                &=\sin{(4x)}\left(\frac{x^3}{4}+\frac{13x}{32}-\frac{1}{4}\right)
+                +\cos{(4x)}\left(\frac{3x^2}{16}+\frac{13}{128}\right) + C
+            \end{align*}
+
+
+
+        \subsection{Partial Fraction Decomposition}
+
+        \color{blue} \textit{Example 1: $\int\frac{3x+11}{x^2-x-6}dx$} \color{black}
+
+        \begin{align*}
+            \frac{3x+11}{(x-3)(x+2)}    &= \frac{A}{x-3}+\frac{B}{x+2} \\
+                                        &= \frac{A(x+2)+B(x-3)}{(x-3)(x+2)} \\
+            3x+11                       &= A(x+2)+B(x-3) \\
+            x                           &= -2\implies B=-1 \\
+            x                           &= 3\implies A=4 \\
+            \int\frac{3x+11}{x^2-x-6}dx &= \int \frac{4}{x-3}dx-\frac{1}{x+2}dx \\
+                                        &= 4\ln{|x-3|}-\ln{|x+2|}+C
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: Compute $\int\frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)}dx$} \color{black}
+
+        \begin{align*}
+            \frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)}    &= \frac{A}{x-1} + \frac{Bx+C}{x^2+4}
+                                                    + \frac{Dx+E}{(x^2+4)^2} \\
+            x^3+10x^2+3x+36                         &= A(x^2+4)^2+(Bx+C)(x-1)(x^2+4)+(Dx+E)(x-1) \\
+                                                    &= x^4(A-B)+x^3(C-B)+x^2(8A+4B-C+D)
+                                                    + x(-4B+4C-D+E)+16A-4C-E
+        \end{align*}
+
+        \begin{align*}
+                x^4: & A+B=0 \\
+                x^3: & C-B=1 \\
+                x^2: & 8A+4B-C+D=10 \\
+                x^1: & -4B+4C-D+E=3 \\
+                x^0: & 16A-4C-E=36
+        \end{align*}
+
+        \noindent $\implies A=2,B=-2,C=-1,D=1,E=0$
+
+        \begin{align*}
+            \int\frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)}dx  &= \int\frac{2}{x-1}-\frac{2x}{x^2+4}
+                                                        -\frac{1}{x^2+4}+\frac{x}{(x^2+4)^2}dx \\
+                                                        &= 2\ln{|x-1|}-\ln{|x^2+4|}-\frac{1}{2}
+                                                        \arctan{\left(\frac{x}{2}\right)}
+                                                        -\frac{1}{2(x^2+4)}+C
+        \end{align*}
+
+
+        \subsection{Improper Integrals}
+            \color{purple} \textbf{The 3 Common Methods to Compute Improper Integrals} \color{black} \\
+
+            \noindent 1. If $\int^t_a f(x)dx$ exists for every $t>a$ then,
+            \begin{equation*}
+                \int^\infty_a f(x)dx = \lim_{t\rightarrow\infty}\int^t_a f(x)dx
+            \end{equation*}
+            \noindent as long as the limit exists and is finite. \\
+
+            \noindent 2. If $\int^b_t f(x)dx$ exists for every $t<b$ then,
+            \begin{equation*}
+                \int^b_{-\infty}f(x)dx = \lim_{t\rightarrow-\infty}\int^b_t f(x)dx
+            \end{equation*}
+            \noindent as long as the limit exists and is finite. \\
+
+            \noindent 3. if $\int^c_{-\infty} f(x)dx$ and $\int^\infty_c f(x)dx$ are both convergent then,
+            \begin{equation*}
+                \int^\infty_{-\infty}f(x)dx = \int^c_{-\infty}f(x)dx+\int^\infty_c f(x)dx
+            \end{equation*}
+            \noindent where $c$ is any constant. If either of the two integrals are divergent then so
+            is this integral.
+
+            \noindent \color{blue} \textit{Example 1: Determine if the integral $\int^0_{-\infty}
+            \frac{1}{\sqrt{3-x}}dx$ is convergent or divergent and find its value if it is
+            convergent.} \color{black}
+
+            \begin{align*}
+                \int^0_{-\infty}\frac{dx}{\sqrt{3-x}}   &= \lim_{t\rightarrow-\infty}\int^0_t
+                                                        \frac{dx}{\sqrt{3-x}} \\
+                                                        &= \lim_{t\rightarrow-\infty}-2\sqrt{3-x}
+                                                        \big|^0_t \\
+                                                        &= \lim_{t\rightarrow-\infty}
+                                                        (-2\sqrt{3}+2\sqrt{3-t}) \\
+                                                        &= -2\sqrt{3}+\infty \\
+                                                        &= \infty
+            \end{align*}
+
+        \noindent Since the limit is infinite, this integral is divergent. \\
+
+        \noindent \color{blue} \textit{Example 2: Determine if the integral $\int^\infty_{-\infty}
+        xe^{-x^2}dx$ is convergent or divergent and find its value if it is convergent.} \color{black}
+
+        \begin{align*}
+            \int^\infty_{-\infty}xe^{-x^2}dx    &= \lim^0_{-\infty}xe^{-x^2}dx+\int^\infty_0 xe^{-x^2}dx \\
+                                                &= \lim_{t\rightarrow-\infty}\int^0_t xe^{-x^2}dx
+                                                + \lim_{t\rightarrow\infty}\int^t_0 xe^{-x^2}dx \\
+                                                &= -\frac{1}{2} + \frac{1}{2} \\
+                                                &= 0
+        \end{align*}
+
+
+        \subsection{Integration Strategy}
+                        1. See if you can simplify the integrand \\
+            \noindent   2. See if a simple substitution will work \\
+            \noindent   3. Identify the type of integrand: \\
+            \textbullet    If the integrand is a rational expression, partial fractions may work \\
+            \textbullet     If the integrand is a polynomial times a trig, exponential, or logarithmic
+                        function, then try integration by parts \\
+            \textbullet     If the integrand is a product of trig functions then try rewriting the
+                        integrand in terms of other trig function or try integration by parts
+                        or substitution \\
+            \textbullet     Look for trig substitutions if the integrand contains some form of
+                        $\sqrt{b^2x^2\pm a^2}$ or $\sqrt{a^2-b^2x^2}$ \\
+            \textbullet     If the integrand contains a quadratic then try completing the square \\
+            \noindent   4. Remember that you can use multiple techniques on the same integral. \\
+            \noindent   5. If it doesn't work then try another method.
+
+
+
+    \pagebreak
+%%%-------------------------------------------NEW SECTION--------------------------------------%%%
 
     \section{Applications of Integration}
-    \section{Introduction to Differential Equations}
+
+        \subsection{Average Value of a Function}
+        \subsection{Motion}
+        \subsection{Areas between Curves}
+        \subsection{Volumes with Cross Sections}
+        \subsection{Volumes with Disk Method}
+        \subsection{Volumes with Washer Method}
+        \subsection{Arc Length}
+
+    \pagebreak
+%%%-------------------------------------------NEW SECTION--------------------------------------%%%
+
+    \section{Differential Equations}
+
+        \subsection{Intro to Differential Equations}
+        \subsection{Slope Fields}
+        \subsection{Euler's Method}
+        \subsection{Finding General and Particular Solutions}
+        \subsection{Exponential and Logistic Models}
+
+    \pagebreak
+%%%-------------------------------------------NEW SECTION--------------------------------------%%%
+
     \section{Infinite Sequences and Series}
+
+        \subsection{Sequences and Series Basics}
+        \subsection{Arithmetic and Geometric Series}
+        \subsection{Binomial Series}
+        \subsection{The $n$th Term Test for Divergence}
+        \subsection{Integral Test for Convergence}
+        \subsection{Harmonic and $p$-Series}
+        \subsection{Comparison Tests for Convergence}
+        \subsection{Alternating Series Tests for Convergence}
+        \subsection{Ratio Test for Convergence}
+        \subsection{Absolute and Conditional Convergence}
+        \subsection{Alternating Series Error Bound}
+        \subsection{Taylor Polynomial Approximations}
+        \subsection{Lagrange Error Bound}
+        \subsection{Radius and Interval of Convergence of Power Series}
+        \subsection{Taylor and Maclaurin Series of a Function}
+        \subsection{Power Series}
+        \subsection{Series Strategy}
 
 \end{document}
