@@ -1,0 +1,277 @@
+\section{Differential Equations}
+
+    \subsection{Differential Equation Basics}
+        \color{purple} \textbf{Differentials:} \color{black} Given a function $y=f(x)$,
+        $dy$ and $dx$ are differentials and they are related by the following equality.
+
+        \begin{equation*}
+            dy = f'(x)dx
+        \end{equation*}
+
+        \noindent A \color{purple} \textbf{Differential Equation} \color{black} is any equation
+        that contains derivatives. If it contains ordinary derivatives, the equation is called
+        an \color{purple} \textbf{Ordinary Differential Equation (ODE)} \color{black}. If the
+        equation contains partial derivatives, the equation is called a \color{purple}
+        \textbf{Partial Differential Equation (PDE).} \color{black} . The \color{purple}
+        \textbf{order} \color{black} of a differential equation is the largest derivative in the
+        DE. A \color{purple} \textbf{solution} \color{black} to a DE on an interval
+        $\alpha<t<\beta$ is any function $y(t)$ that satisfies the DE on the given interval.
+        Note that solutions are often accompanied by intervals. \\
+
+        \noindent \color{blue} \textit{Example 1: Show that $y(x)=x^{-\frac{3}{2}}$ is a solution
+        to $4x^2 y" + 12xy'+3y=0$ for $x>0$.} \color{black}
+
+        \begin{align*}
+            y'(x)   &= -\frac{3}{2}x^{-\frac{5}{2}} \\
+            y"(x)   &= \frac{15}{4}x^{-\frac{7}{2}} \\
+            0       &= 4x^2\left(\frac{15}{4}x^{-\frac{7}{2}}\right)
+                    + 12x\left(-\frac{3}{2}x^{-\frac{5}{2}}\right)
+                    + 3\left(x^{-\frac{3}{2}}\right) \\
+            0       &= 15x^{-\frac{3}{2}} - 18x^{-\frac{3}{2}} + 3x^{-\frac{3}{2}} \\
+            0       &= 0
+        \end{align*}
+
+        \noindent Hence, $y(x)=x^{-\frac{3}{2}}$ is a solution with condition $x>0$. We can see
+        the need for this condition in $y(x)=x^-\frac{3}{2}=\frac{1}{\sqrt{x^3}}$, where $x$ must
+        be greater than 0 in order to get a real-valued solution and avoid division by zero. \\
+
+        \noindent \color{purple} \textbf{Initial Condition(s)} \color{black} \\
+        \noindent Initial conditions are conditions imposed on solutions to DEs that allow us
+        to determine which solution we are targeting. They are of the form:
+
+        \begin{equation*}
+            y(t_0) = y_0 \text{ and/or } y^{(k)}(t_0)=y_k
+        \end{equation*}
+
+        \noindent In other words, initial conditions are values of the solution and/or its
+        derivative(s) at specific points. The number of initial conditions required for a given
+        DE depends on the order of the DE. \\
+
+        \noindent The \color{purple} \textbf{Interval of Validity} \color{black} is the largest
+        possible interval on which the solution is valid and contains $t_0$. \\
+
+        \noindent The \color{purple} \textbf{General Solution} \color{black} to a DE is the
+        generalized form of the solution, not considering any initial conditions. The
+        \color{purple} \textbf{Particular Solution} \color{black} to a DE is the
+        solution that not only satisfies the DE, but also satisfies the given initial condition(s). \\
+
+        \noindent An \color{purple} \textbf{Explicit Solution} \color{black} is any solution
+        given in the form $y=y(t)$. An \color{purple} \textbf{Implicit Solution} \color{black}
+        is any solution that is not in explicit form.
+
+
+
+    \subsection{Slope Fields}
+        A \color{purple} \textbf{Slope Field} \color{black} is a visual representation of a DE.
+        At each point on the slope field, there is a small line segment whose slope equals the
+        value of $f(x,y)$ at that point. \\
+
+        \noindent \color{blue} \textit{Example: Build a slope field for the DE $\frac{dy}{dx}
+        = x-y$.} \color{black}
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                $\bm{x-y}$ & $\bm{x=-2}$ & $\bm{x=-1}$ & $\bm{x=0}$ & $\bm{x=1}$ & $\bm{x=2}$ \\
+                \hline
+                $y=2$ & $-2-2=-4$ & $-1-2=-3$ & $0-2=-2$ & $1-2=-1$ & $2-2=0$ \\
+                \hline
+                $y=1$ & $-2-1=-3$ & $-1-1=-2$ & $0-1=-1$ & $1-1=0$ & $2-1=1$ \\
+                \hline
+                $y=0$ & $-2-0=-2$ & $-1-0=-1$ & $0-0=0$ & $1-0=1$ & $2-0=2$ \\
+                \hline
+                $y=-1$ & $-2-(-1)=-1$ & $-1-(-1)=0$ & $0-(-1)=1$ & $1-(-1)=2$ & $2-(-1)=3$ \\
+                \hline
+                $y=-2$ & $-2-(-2)=0$ & $-1-(-2)=1$ & $0-(-2)=2$ & $1-(-2)=3$ & $2-(-2)=4$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Below, the left figure depicts our slope field by drawing out the slopes
+        from the table. The right figure depicts the slope field made by a graphing calculator.
+        Notice how it has many more sample points than we do.
+
+        \begin{figure} [hbt!]
+            \centering
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale=0.5]{Resources/Unit6DEs/Dirfield1}
+            \end{subfigure}
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale=0.5]{Resources/Unit6DEs/Dirfield2}
+            \end{subfigure}
+        \end{figure}
+
+
+    \pagebreak
+    \subsection{Euler's Method}
+        \color{purple} \textbf{Euler's Method} \color{black} is used for approximating solutions
+        to DEs and it works by approximating the solution curve with line segments. For a DE
+        of the form $y'=f(x)$ where $y(x_0)=y_0$, we can use a sequence of points $(x_n,y_n)$
+        satisfying $x_{n+1}=x_n+h$ and $y_{n+1}=y_n+hf(x_n)$, where $h$ is the step size, so that
+        one of the $x_n$ will be the $y$-value to be estimated. \\
+
+        \noindent \color{blue} \textit{Example 1: Consider a function $f(x)$ such that $f(2)=10$
+        and $f'(x)=x^2+3x$. Using Euler's method with a step size of 1, find the resulting
+        approximation of $f(5)$.} \color{black} \\
+
+        \noindent We have $(x_0,y_0)=(2,10)$. Using Euler's method with $h=1$, we compute
+
+        \begin{align*}
+            (x_1,y_1) &= (2+1,10+1\cdot f'(2)) = (3,20) \\
+            (x_2,y_2) &= (3+1,20+1\cdotf'(3)) = (4,38) \\
+            (x_3,y_3) &= (4+1,38+1\cdotf'(4)) = (5,78)
+        \end{align*}
+
+        \noindent Hence, $f(5)\approx 78$. \\
+
+        \noindent \color{blue} \textit{Example 2: For the DE $y'-y=-\frac{1}{2}e^{\frac{t}{2}}
+        \sin{(5t)}+5e^{\frac{t}{2}}\cos{(5t)}$ with initial condition $y(0)=0$, use Euler's
+        Method to find the approximation to the solution at $t=1,2,3,4,5$. Use step sizes of
+        0.1,0.05,0.01,0.005, and 0.001 for the approximations. }\color{black} \\
+
+        \noindent The solution to this linear first order DE is
+
+        \begin{equation*}
+            y(t)    = e^{\frac{t}{2}}\sin{(5t)}
+        \end{equation*}
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                $\bm{t}$ & \textbf{Exact} & $\bm{h=0.1}$ & $\bm{h=0.05}$ & $\bm{h=0.01}$
+                & $\bm{h=0.005}$ & $\bm{h=0.001}$ \\
+                \hline
+                $t=1$ & -1.58100 & -0.97167 & -1.26512 & -1.51580 & -1.54826 & -1.57443 \\
+                \hline
+                $t=2$ & -1.47880 & 0.65270 & -0.34327 & -1.23907 & -1.35810 & -1.45453 \\
+                \hline
+                $t=3$ & 2.91439 & 7.30209 & 5.34682 & 3.44488 & 3.18259 & 2.96851 \\
+                \hline
+                $t=4$ & 6.74580 & 15.56128 & 11.84839 & 7.89808 & 7.33093 & 6.86429 \\
+                \hline
+                $t=5$ & -1.61237 & 21.95465 & 12.24018 & 1.56056 & 0.0018864 & -1.28498 \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Below is a graph of the solution, the red line, and the approximations for $h=5$.
+        Note how the approximations become less accurate as $t$ increases.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Unit6DEs/Euler}
+        \end{figure}
+
+
+    \subsection{Separable Differential Equations}
+        A \color{purple} \textbf{Separable DE} \color{black} is any DE that can be written
+        in the form
+
+        \begin{equation*}
+            g(y)\frac{dy}{dx} = f(x)
+        \end{equation*}
+
+        \noindent We can rearrange the equation and integrate both sides to get
+
+        \begin{equation*}
+            \int g(y)dy = \int f(x)dx
+        \end{equation*}
+
+        \noindent And solving this for $y$ gives us our solution. \\
+
+        \pagebreak
+        \noindent \color{blue} \textit{Example 1: Solve the equation $\frac{dy}{dx}=
+        8x^3 y-8xy$.} \color{black}
+
+        \begin{align*}
+            \frac{dy}{dx}       &= 8x^3 y-8xy \\
+            \frac{dy}{dx}       &= y(8x^3-8x) \\
+            \frac{dy}{y}        &= (8x^3-8x)dx \\
+            \int \frac{dy}{y}   &= \int (8x^3-8x)dx \\
+            \ln{|y|}            &= 2x^4-4x^2+C \\
+            e^{\ln{|y|}}        &= e^{2x^4-4x^2+C} \\
+            |y|                 &= e^{2x^4-4x^2}e^{C} \\
+            y                   &= Ce^{2x^4-4x^2}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: Solve the DE $\frac{dy}{dt}=e^{y-t}\sec{(y)}
+        (1+t^2)$ with initial condition $y(0)=0$.} \color{black}
+
+        \begin{align*}
+            \frac{dy}{dt}                                   &= \frac{e^y e^{-t}}{\cos{(y)}}(1+t^2) \\
+            e^{-y}\cos{(y)}dy                               &= e^{-t}(1+t^2)dt \\
+            \int e^{-y}\cos{(y)}dy                          &= \int e^{-t}(1+t^2)dt \\
+            \frac{e^{-y}}{2}(\sin{(y)}-\cos{(y)})           &= -e^{-t}(t^2+2t+3)+C \\
+            \frac{1}{2}(-1)                                 &= -(3)+c \\
+            c                                               &= \frac{5}{2} \\
+            \implies \frac{e^{-y}}{2}(\sin{(y)}-\cos{(y)}   &= -e^{-t}(t^2+2t+3)+\frac{5}{2}
+        \end{align*}
+
+
+    \subsection{Exponential and Logistic Models}
+        A \color{purple} \textbf{Exponential DE} \color{black} is an ODE of the form
+
+        \begin{equation*}
+            \frac{df}{dt} = kf
+        \end{equation*}
+
+        \noindent where $k$ is any constant. The solution to this DE describing an exponential
+        model is then
+
+        \begin{align*}
+            f(t) &= Ce^{kt}
+        \end{align*}
+
+        \noindent A \color{purple} \textbf{Logistic DE} \color{black} is an ODE of the form
+
+        \begin{equation*}
+            \frac{df}{dt} = kf\left(1-\frac{f}{L}\right)
+        \end{equation*}
+
+        \noindent where $k$ is the constant of proportionality and $L$ is the constant
+        \color{purple} \textbf{Limiting (Carrying) Capacity.} \color{black} \\
+
+        \noindent \color{blue} \textit{Example 1: The balance of a certain loan increases at a
+        rate proportional at any time to the balance at that time. Initially, the loan balance
+        is $1600$. It is $1920$ after one year. What is the balance of the loan after 90 days?}
+        \color{black} \\
+
+        \noindent Let $B(t)$ model the balance of the loan after $t$ days. We are given that
+        the rate of change of $B$ is proportional to $B$, so
+
+        \begin{equation*}
+            \frac{dB}{dt} = kB
+        \end{equation*}
+
+        \noindent whose solution is given by $B(t) = C\cdot e^{kt}$. As the initial balance was
+        \$1600, we know that $C=1600$. We are given that the loan balance was \$1920 after 365
+        days. Then
+
+        \begin{align*}
+            k               &= \frac{\ln{(1.2)}}{365} \\
+            \implies B(t)   &= 1600e^{\frac{\ln{(1.2)}t}{365}} \\
+            B(90)           &= 1600e^{\frac{90\ln{(1.2)}}{365}} \\
+            B(90)           &\approx \$ 1673.57
+        \end{align*}
+
+        \pagebreak
+        \noindent \color{blue} \textit{Example 2: The population $P(t)$ of mice in a meadow
+        after $t$ years satisfies the logistic DE $\frac{dP}{dt}=3P\cdot
+        \left(1-\frac{P}{2500}\right)$ where the initial population is 1000 mice. What is the
+        population when it is growing the fastest?} \color{black} \\
+
+        \noindent Notice that $\frac{dP}{dt}$ as a function of $P$ is quadratic, hence the
+        maximum value of $\frac{dP}{dt}$ is obtained when the population is equal to the $P$-value
+        of the vertex of the parabola. We can find the $P$-value of the vertex by finding the
+        roots and taking their average.
+
+        \begin{align*}
+            \frac{dP}{dt}                           &= 0 \\
+            3P\cdot\left(1-\frac{P}{2500}\right)    &= 0 \\
+            3P=0,                                   &  1-\frac{P}{2500} = 0 \\
+            P                                       &= 0,2500 \\
+            P_{avg}                                 &= \frac{0+2500}{2} \\
+            P_{avg}                                 &= 1250
+        \end{align*}
+
+        \noindent Hence, the population when the model is growing the fastest is 1250 mice.

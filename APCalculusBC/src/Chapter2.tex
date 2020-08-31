@@ -1,0 +1,674 @@
+\section{Differentiation}
+
+    \subsection{Rates of Change and Derivatives}
+        An \textbf{average rate of change} describes the overall
+        $\frac{\text{rise}}{\text{run}}$-value over an interval $[a,b]$. Geometrically,
+        this can be represented by the slope of a secant line through $f(a)$ and $f(b)$ of a
+        function $f(x)$. In the graph below, the average rate of change between $x=0$ and
+        $x=2$ is given by \\
+
+        \begin{equation*}
+            m_{\text{avg}} = \frac{f(b)-f(a)}{b-a} = \frac{4-0}{2-0} = 2
+        \end{equation*}
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis} [
+                    axis lines = center,
+                    xmin = -5,
+                    xmax = 5,
+                    ymin = -5,
+                    ymax = 5
+                ]
+                %f(x)
+                \addplot[
+                    color = red,
+                    samples = 100,
+                ]
+                {-(x-2)^2+4};
+                \addlegendentry{$f(x)$}
+                %f(a)
+                \fill[red] (0,0) circle [radius = 0.1];
+                \node [
+                    above left = 10pt of {(0,0)}
+                ]
+                {$f(a)$};
+                %f(b)
+                \fill[red] (2,4) circle [radius = 0.1];
+                \node[
+                    left = 10pt of
+                    {(2,4)}
+                ]
+                {$f(b)$};
+                %secant
+                \draw [
+                    dashed,
+                    color = blue
+                ]
+                (0,0) -- (2,4);
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent A derivative is an \textbf{instantaneous rate of change}, or the slope of the
+        tangent to a function at a particular point, $a$. Derivatives are always taken
+        \textit{with respect} to a variable. For example, a derivative representing the
+        instantaneous rate of change between distance and time is a derivative of distance
+        with respect to time, the independent variable. For reference, the derivative of a
+        function $f(x)$ at $x=1$ is shown in the graph below. \\
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis} [
+                    axis lines = center,
+                    xmin = -5,
+                    xmax = 5,
+                    ymin = -5,
+                    ymax = 5
+                ]
+                %f(x)
+                \addplot[
+                    color = red,
+                    samples = 100,
+                ]
+                {-(x-2)^2+4};
+                \addlegendentry{$f(x)$}
+                %f(1)
+                \fill[red] (1,3) circle [radius = 0.1];
+                \node [
+                    above left = 10pt of {(0,2)}
+                ]
+                {$f'(1)$};
+                %tangent
+                \draw [
+                    dashed,
+                    color = blue
+                ]
+                (5,11) -- (-5,-9);
+                %rise
+                \draw[
+                    dashed,
+                    color = purple
+                ]
+                (1,0) -- (1,3);
+                %run
+                \draw[
+                    dashed,
+                    color = purple
+                ]
+                (-0.5,0) -- (1,0);
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent Since the derivative is an instantaneous rate of change, we can define the
+        derivative as below. \\
+        \color{purple} \textbf{$1^{st}$ Limit Definition of the Derivative} \color{black} \\
+        The derivative of $f(x)$ with respect to $x$ is the function $f'(x)$, defined as \\
+
+        \begin{equation*}
+            f'(x) = \lim_{x\to a} \frac{f(x)-f(a)}{x-a}
+        \end{equation*}
+
+        \noindent Then, if we let $x=a+h$ and change the variable of inspection from $a$ to $x$,
+        we can realize the most commonly used definition of the derivative, given below. This
+        definition is preferred to the above definition, as finding the derivative only requires
+        one value of $x$, rather than 2.  \\
+        \color{purple} \textbf{$2^{nd}$ Limit Definition of the Derivative} \color{black} \\
+        The derivative of $f(x)$ with respect to $x$ is the function $f'(x)$, defined as \\
+
+        \begin{equation*}
+            f'(x) = \lim_{h\to 0} \frac{f(a+h)-f(x)}{h}
+        \end{equation*}
+
+        \noindent The expression consisting the right side of the equation above is known as the
+        \textbf{difference quotient}. \\
+
+        \noindent A function is $f(x)$ is \textbf{differentiable} at $x=a
+        $ if $f'(a)$ exists. Since derivatives are defined by limits, for a derivative to exist,
+        its limit must also exist. Hence, \\
+
+        \begin{equation*}
+            \text{If $f(x)$ is differentiable at $x=a$ then $f(x)$ is continuous at $x=a$}
+        \end{equation*}
+
+        \noindent By this, we can also say that differentiability implies continuity. It is
+        important to note that its converse is not always true, as not all continuous functions
+        are differentiable. \\
+
+
+        \noindent A few examples of contexts where a derivative may not exist are at vertical
+        tangents, corners, and cusps. Take, for example, the graph below, which does not have a
+        derivative at $x=0$ since the respective slopes immediately right and left of $x=0$ are
+        different. \\
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    axis lines = center,
+                    axis equal image
+                ]
+                %f(x)
+                \addplot [
+                    samples = 50,
+                    color = red,
+                ]
+                {abs(x)};
+                \addlegendentry{$f(x)=|x|$}
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent \color{purple} \textbf{Derivative Notations:} \\
+        \noindent \textbf{Leibniz's Notation:} \color{black} \\
+        The Leibniz notation is popular throughout mathematics, most commonly used when the
+        equation $y=f(x)$ is regarded as a functional relationship between dependent and
+        independent variables $y$ and $x$. Leibniz's notation makes this relationship explicit
+        by representing the derivative as \\
+
+        \begin{equation*}
+            \frac{dy}{dx}=\frac{d}{dx}y
+        \end{equation*}
+
+        \noindent The Leibniz notation is also called \textbf{differential notation}, where
+        $dy$ and $dx$ are \textbf{differentials}. Where the function $y=f(x)$, we can write \\
+
+        \begin{equation*}
+            \frac{df}{dx}(x)=\frac{df(x)}{dx}=\frac{d}{dx}f(x)
+        \end{equation*}
+
+        \noindent A \textbf{differential equation} is an equation relating one or more functions
+        and their derivatives. As long as the precondition ($f(x)$ is satisfied), a function can
+        be differentiated indefinite times. For example, in physics, acceleration is the
+        derivative of velocity, the derivative of position. The \textbf{order} of a differential
+        equation is the highest derivative of said equation. Higher-order derivatives can be
+        written in the Leibniz's notation as \\
+
+        \begin{equation*}
+            \frac{d^2y}{dx^2}, \frac{dy^3}{dx^3}, \frac{dy^4}{dx^4},\dots,\frac{d^ny}{dx^n}
+        \end{equation*}
+
+        \noindent With Leibniz's notation, the value of a derivative at a particular point, $a$,
+        can be expressed as \\
+
+        \begin{equation*}
+            \frac{dy}{dx}\Bigr|_{x=a}
+        \end{equation*}
+
+        \noindent This notation is particularly useful in expressing partial derivatives
+        (covered later) and making the chain rule intuitive: \\
+
+        \begin{equation*}
+            \frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{Lagrange's Notation:} \color{black} \\
+        In Lagrange's notation, each prime mark denotes a derivative. For higher-order derivatives,
+        the order is enclosed by parantheses in front and above the function. \\
+
+        \begin{equation*}
+            f'(x), f''(x), f'''(x), f^{(4)}(x),f^{(5)}(x),f^{(6)}(x),f^{(n)}(n)
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{Newton's Notation:} \color{black} \\
+
+        This notation is often applied to physics contexts, where time ($t$) is the independent
+        variable. The number of dots over the dependent variable represent the order the
+        derivative is in. If $y$ is a function of $t$, then the first $n$ derivatives of
+        the function are as below. \\
+
+        \begin{equation*}
+            \dot{y}, \ddot{y}, \dddot{y}, _{\dot{y}}^4, _{\dot{y}}^5, _{\dot{y}}^n
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{Euler's Notation:} \color{black} \\
+        This notation is quite inconvenient, as it leaves the variable being differentiated with
+        respect to entirely implicit. However, we can modify the notation to explicitly write
+        said variable. This notation is defined by \\
+
+        \begin{equation*}
+            (Df)(x) = \frac{df(x)}{dx}
+        \end{equation*}
+
+        \pagebreak
+        \noindent Higher-order Derivatives are expressed by \\
+
+        \begin{equation*}
+            D^2f=D^2_xf, D^3f=D^3_xf, D^nf=D^n_xf
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example 1: Find the derivative, $g'(t)$, given the function} \\
+
+        \begin{equation}
+            g(t) = \frac{t}{t+1}
+        \end{equation} \color{black}
+
+        \begin{align*}
+            g'(t) &= \lim_{h\to 0} \frac{g(t+h)-g(t)}{h} \\
+            &= \lim_{h\to 0} \frac{1}{h}\left(\frac{t+h}{t+h+1}-\frac{t}{t+1}\right) \\
+            &= \lim_{h\to 0}\left(\frac{(t+h)(t+1)-t(t+h+1)}{(t+h+1)(t+1)}\right) \\
+            &= \lim_{h\to 0} \frac{1}{h}\left(\frac{t^2+t+th+h-(t^2+th+t)}{(t+h+1)(t+1)}\right) \\
+            &= \lim_{h\to 0} \frac{1}{h} \left(\frac{h}{(t+h+1)(t+1)}\right) \\
+            &= \frac{1}{(t+1)(t+1)} \\
+            g'(t) &= \frac{1}{(t+1)^2}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: Find the derivative, $f'(x)$, of } \\
+
+        \begin{equation*}
+            f(x) = 2x^2-16x+35
+        \end{equation*} \color{black}
+
+        \begin{align*}
+            f'(x) &= \lim_{h\to 0} \frac{2(x+h)^2-16(x+h)+35-(2x^2-16x+35)}{h} \\
+            &= \lim_{h\to 0} \frac{4xh+2h^2-16h}{h} \\
+            &= \lim_{h\to 0} (4x+2h-16) \\
+            f'(x) &= 4x-16
+        \end{align*}
+
+
+    \subsection{Basic Derivative Rules}
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $\frac{d}{dx}a = 0$ & \textbf{Constant} \\
+                \hline
+                $\frac{d}{dx}au = a\frac{du}{dx}$ & \textbf{Constant Multiple} \\
+                \hline
+                $\frac{d}{dx}x^n=nx^{n-1}$ & \color{purple} \textbf{The Power Rule} \color{black} \\
+                \hline
+                $\frac{d}{dx}(u\pm v) = \frac{d}{dx}u \pm \frac{d}{dx}v$ & \textbf{Sum/Difference}\\
+                \hline
+                $\frac{d}{dx}(uv) = u\frac{dv}{dx}+v\frac{du}{dx}$ & \color{purple}
+                \textbf{The Product Rule} \color{black} \\
+                \hline
+                $\frac{d}{dx}\left(\frac{u}{v}\right)=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2},
+                v\not = 0$ & \color{purple} \textbf{The Quotient Rule} \color{black} \\
+                \hline
+                $[f^{-1}]'(b)=\frac{1}{f'(a)}$ & \textbf{Inverse Functions} \\
+                \hline
+                $\frac{d}{dx}[f^{-1}(x)]=\frac{1}{f'(f^{-1}(x))}=\frac{1}{\frac{dy}{dx}}$ &
+                \textbf{Alternate Inverse Functions} \\
+                \hline
+                $\frac{d(1/f)}{dx}=-\frac{1}{f^2}\frac{df}{dx}$ & \textbf{Reciprocal} \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+    \subsection{Derivatives of Exponential and Logarithmic Functions}
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $\frac{d}{dx}e^x=e^x$ & \textbf{Natural Exponent} \\
+                \hline
+                $\frac{d}{dx}\ln{x}=\frac{1}{x}$ & \textbf{Natural Logarithm} \\
+                \hline
+                $\frac{d}{dx}a^x=a^x\ln{a}$ & \textbf{Exponent} \\
+                \hline
+                $\frac{d}{dx}\log_b{x}=\frac{1}{x\ln{b}}$ & \textbf{Logarithm} \\
+                \hline
+                $\frac{d}{dx}x^x=x^x(1+\ln{x})$ & \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+    \pagebreak
+    \subsection{Derivatives of the Trigonometric Functions}
+        The derivatives of $\sin{x}$ and $\cos{x}$ help us derive the others through applying
+        the quotient and reciprocal differentiation rules. \\
+
+        \begin{center}
+            \begin{tabular}{|c|}
+                \hline
+                $\frac{d}{dx}\sin{x}=\cos{x}$ \\
+                \hline
+                $\frac{d}{dx}\cos{x}=-\sin{x}$ \\
+                \hline
+                $\frac{d}{dx}\tan{x}=\sec^2{x}$ \\
+                \hline
+                $\frac{d}{dx}\csc{x}=-\cot{x}\csc{x}$ \\
+                \hline
+                $\frac{d}{dx}\sec{x}=\tan{x}\sec{x}$ \\
+                \hline
+                $\frac{d}{dx}\cot{x}=-\csc^2{x}$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent The derivatives of the inverse trigonometric functions can be derived through
+        applying the inverse differentiation rule. \\
+
+        \begin{center}
+            \begin{tabular}{|c|}
+                \hline
+                $\frac{d}{dx}\arcsin{x} = \frac{1}{\sqrt{1-x^2}}$ \\
+                \hline
+                $\frac{d}{dx}\arccos{x} = -\frac{1}{\sqrt{1-x^2}}$ \\
+                \hline
+                $\frac{d}{dx}\arctan{x} = \frac{1}{1+x^2}$ \\
+                \hline
+                $\frac{d}{dx}\arccsc{x} = -\frac{1}{|x|\sqrt{x^2-1}}$ \\
+                \hline
+                $\frac{d}{dx}\arcsec{x} = \frac{1}{|x|\sqrt{x^2-1}}$ \\
+                \hline
+                $\frac{d}{dx}\arccot{x} = -\frac{1}{1+x^2}$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+        \noindent \color{purple} \textbf{Derivation of the Inverse Sine Derivative:} \color{black} \\
+        \begin{align*}
+            \frac{d(\arcsin{x})}{dx} &= \frac{1}{\frac{d(\sin{y})}{dy}} \\
+            &= \frac{1}{\cos{y}} \\
+        \end{align*}
+        \noindent From the Pythagorean Identity, \\
+        \begin{align*}
+            \cos^2{y} + \sin^2{y} &= 1 \\
+            \cos^2{y} &= 1 - \sin^2{y} \\
+            \cos{y} &= \sqrt{1-\sin^2{y}}
+        \end{align*}
+        \noindent Substituting this back into the original equation, we get \\
+        \begin{align*}
+            \frac{d(\arcsin{x})}{dx} &= \frac{1}{\sqrt{1-\sin^2{y}}}
+        \end{align*}
+        \noindent By the definition of the inverse sine function, we can express the equation as \\
+        \begin{align*}
+            \frac{d}{dx}\arcsin{x} &= \frac{1}{\sqrt{1-x^2}}
+        \end{align*}
+
+        \noindent \color{purple} \textbf{Derivation of the Inverse Cosine Derivative} \color{black} \\
+        The derivatives of the inverse trigonometric functions are the \textit{negatives} of the
+        derivatives of their cofunctions. This is because \\
+
+        \begin{align*}
+            \arccos{x} &= \frac{\pi}{2} - \arcsin{x} \\
+            \frac{d}{dx}\arccos{x} &= -\frac{d}{dx}\arcsin{x} \\
+            &= -\frac{1}{\sqrt{1-x^2}}
+        \end{align*}
+
+        \noindent \color{purple} \textbf{Derivation of the Inverse Tangent Derivative} \color{black} \\
+
+        \begin{align*}
+            \frac{d}{dx}\arctan{x} &= \frac{1}{\frac{d(\tan{y})}{dy}} \\
+            &= \frac{1}{\sec^2{y}} \\
+            &= \frac{1}{1+\tan^2{y}} \\
+            &= \frac{1}{1+x^2}
+        \end{align*}
+
+    \pagebreak
+    \subsection{The Chain Rule}
+        The Chain Rule is incredibly useful for finding the derivative of composite functions.
+        If $y=f(u)$ and $u=g(x)$ then \\
+
+        \begin{align*}
+            (f(g(x)))' &= f'(g(x)) \cdot g'(x) \\
+            &= f'(u) \cdot g'(x) \\
+            \frac{dy}{dx} &= \frac{dy}{du} \cdot \frac{du}{dx}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 1:} \color{black} \\
+
+        \begin{align*}
+            f(x) &= \sqrt{5x-8} \\
+        \end{align*}
+
+        \noindent We let the inside function be expressed as $u=5x-8$. Then \\
+
+        \begin{align*}
+            f'(x) &= \frac{du}{dx}u^{\frac{1}{2}}\cdot\frac{dy}{du}(5x-8) \\
+            &= \frac{1}{2\sqrt{u}}\cdot 5 \\
+            &= \frac{5}{2\sqrt{5x-8}}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2:} \color{black} \\
+        \noindent Let $u=\cos{t}$ and $v=t^4$
+
+        \begin{align*}
+            g(t) &= \cos^4{t} + \cos{(t^4)} \\
+            g'(t) &= \frac{d(u^4)}{du} \cdot \frac{d}{dt}\cos{t}
+            +
+            \frac{d(t^4)}{dt} \cdot \frac{d(\cos{v})}{dv} \\
+            &= 4u^3(-\sin{t}) + 4t^3(-\sin{v}) \\
+            &= -4\cos^3{t}\sin{t} - 4t^3\sin{(t^4)}
+        \end{align*}
+
+    \subsection{Implicit Differentiation}
+        \color{purple} \textbf{Implicit Differentiation} \color{black} is an approach to
+        differentiating a function that may not be in the explicit form, $y=f(x)$. It
+        considers all other variables as functions of one of its variables, then uses the
+        chain rule to find the derivative. \\
+
+        \noindent \color{blue} \textit{Example 1: Given $x^2+x+y^2=15$, what is $\frac{dy}{dx}$
+        at the point $(2,3)$?} \color{black} \\
+
+        \begin{align*}
+            \frac{dy}{dx}(x^2+x+y^2) &= \frac{dy}{dx}15 \\
+            2x + 1 + 2y\left(\frac{dy}{dx}\right) &= 0 \\
+            \frac{dy}{dx} &= -\frac{2x+1}{2y} \\
+            \frac{dy}{dx}\Bigr|_{(2,3)} &= -\frac{2(2)+1}{2(3)} \\
+            &= -\frac{5}{6}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: Find the derivative of
+        $\ln{y}+e^y=\sin{y^2}-3\cos{x}$} \color{black} \\
+
+        \begin{align*}
+            \frac{dy}{dx}\ln{y} + \frac{dy}{dx}e^y &= \frac{d}{dx}\sin{y^2}-\frac{d}{dx}3\cos{x} \\
+            \frac{d}{dy}\ln{y}\cdot\frac{dy}{dx}+\frac{d}{dy}e^y\cdot\frac{dy}{dx}
+            &= \frac{d}{dy}\sin{y^2}\cdot\frac{dy}{dx}+3\sin{x} \\
+            \frac{dy}{dx}\left(\frac{1}{y}+e^y-2y\cos{y^2}\right) &= 3\sin{x} \\
+            \frac{dy}{dx} &= \frac{3\sin{x}}{\frac{1}{y}+e^y-2y\cos{y^2}}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 3: Find $\frac{dy}{dx}$ if $y^2 &= x^2 + \sin{(xy)}$}
+        \color{black} \\
+
+        \begin{align*}
+            \frac{d}{dx}(y^2) &= \frac{d}{dx}(x^2) + \frac{d}{dx}(\sin{(xy)} \\
+            2y\frac{d}{dx} &= 2x + (\cos{(xy)})\left(y+x\frac{d}{dx}\right) \\
+            (2y-x\cos{(xy)})\frac{d}{dx} &= 2x + y\cos{(xy)} \\
+            \frac{dy}{dx} &= \frac{2x+y\cos{(xy)}}{2y-x\cos{(xy)}}
+        \end{align*}
+
+
+    \subsection{Logarithmic Differentiation}
+        This method of finding derivatives uses the basic properties of logarithms outside
+        of calculus to simply a function prior to differentiating it. \\
+
+        \noindent \color{blue} \textit{Example 1:} \color{black} \\
+
+        \begin{align*}
+            y &= \frac{x^5}{(1-10x)\sqrt{x^2+2}} \\
+            \ln{y} &= \ln{\left(\frac{x^5}{(1-10x)\sqrt{x^2+2}}\right)} \\
+            &= \ln{(x^5)} - \ln{\left((1-10x)\sqrt{x^2+2}\right)} \\
+            &= \ln{(x^5)} - \ln{(1-10x)} - \ln{(\sqrt{x^2+2})}
+        \end{align*}
+
+        \noindent By Implicit Differentiation, \\
+
+        \begin{align*}
+            \fra{y'}{y} &= \frac{5x^4}{x^5}- \frac{-10}{1-10x} - \frac{\frac{1}{2}(x^2+2)^{-\frac{1}{2}}(2x)}{(x^2+2)^{\frac{1}{2}}} \\
+            &= \frac{5}{x} + \frac{10}{1-10x} - \frac{x}{x^2+2} \\
+            \frac{dy}{dx} &= \frac{x^5}{(1-10x)\sqrt{x^2+2}}\left(\frac{5}{x}+\frac{10}{1-10x}-\frac{x}{x^2+2}\right)
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2:} \color{black} \\
+
+        \begin{align*}
+            y &= \frac{x+3}{(x+4)^3} \\
+            \ln{y} &= \ln{\left(\frac{x+3}{(x+4)^3}\right)} \\
+            &= \ln{(x+3)} - \ln{(x+4)^3} \\
+            &= \ln{(x+3)}  - 3\ln{(x+4)} \\
+            \frac{1}{y}\cdot\frac{dy}{dx} &= \frac{1}{x+3}-3\cdot\frac{1}{x+4} \\
+            &= \frac{1}{x+3}-\frac{3}{x+4} \\
+            \frac{dy}{dx} &= y\left(\frac{1}{x+3}-\frac{3}{x+4}\right)
+        \end{align*}
+
+
+    \subsection{Derivatives of Parametric Functions}
+        If $x=f(t)$ and $y=g(t)$ are differentiable functions of parameter $t$, then \\
+
+        \begin{equation*}
+            \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+        \end{equation*}
+
+        \noindent and
+
+        \begin{equation*}
+            \frac{d^2y}{dx^2} = \frac{d}{dx}\left(\frac{dy}{dx}\right)
+            = \frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}}
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example: If $x=2\sin{\theta}$ and $y=\cos{2\theta}$,
+        find $\frac{d^2y}{dx^2}$} \color{black} \\
+
+        \begin{align*}
+            \frac{dy}{dx} &= \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \\
+            &= \frac{-2\sin{2\theta}}{2\cos{\theta}} \\
+            &= -\frac{2\sin\theta\cos\theta}{\cos\theta} \\
+            &= -2\sin\theta
+        \end{align*}
+
+        \begin{align*}
+            \frac{d^2y}{dx^2} &= \frac{\frac{d}{d\theta}\left(\frac{dy}{dx}\right)}{\frac{dx}{d\theta}} \\
+            &= \frac{-2\cos\theta}{2\cos\theta} \\
+            &= -1
+        \end{align*}
+
+
+
+    \subsection{Derivatives of Polar Functions}
+        We know that $x=r\cos\theta$ and $y=r\sin\theta$. Then, by using the parametric derivative
+        formula, we can determine the rule for differentiating polar functions. \\
+
+        \begin{align*}
+            \frac{dy}{dx} &= \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \\
+            &= \frac{f'(\theta)\sin\theta+f(\theta)\cos\theta}{f'(\theta)\cos\theta-f(\theta)\sin\theta} \\
+            &= \frac{r'\sin\theta+r\cos\theta}{r'\cos\theta-r\sin\theta}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example: Find the slope of the cardioid
+        $r=2(1+\cos\theta)$ at $\theta=\frac{\pi}{6}$} \color{black} \\
+
+        \begin{align*}
+            r=2(1+\cos\theta) \\
+            r' = -2\sin\theta
+        \end{align*}
+
+        \noindent Then \\
+
+        \begin{align*}
+            \frac{dy}{dx} &= \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \\
+            &= \frac{(-2\sin\theta)\sin\theta+2(1+\cos\theta)(\cos\theta)}{(-2\sin\theta)\cos\theta-2(1+\cos\theta)(\sin\theta)} \\
+            \frac{dy}{dx}\Bigr|_{\frac{\pi}{6}} &= -1
+        \end{align*}
+
+
+
+    \subsection{Derivatives of Vector-Valued Functions}
+        If a point moves along a curve defined parametrically by $P(t)=\langle x(t), y(t)\rangle$,
+        where $t$ represents time, then the vector from the origin to $P$ is called the
+        \textbf{position vector}. Then the derivative of the position vector is called the
+        \textbf{velocity vector}, and its derivative is called the \textbf{acceleration vector}.  \\
+
+        \noindent \color{purple} \textbf{The Velocity Vector:} \color{black} \\
+
+        \begin{equation*}
+            \overrightarrow{v}(t) = \left\langle\frac{dx}{dt},\frac{dy}{dt}\right\rangle
+        \end{equation*}
+
+        \noindent The slope of $\overrightarrow{v}$ is given by \\
+
+        \begin{equation*}
+            \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{The Magnitude of a Velocity Vector:} \color{black} \\
+
+        \begin{equation*}
+            |v| = \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2} = \sqrt{v^2_x+v^2_y}
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{The Acceleration Vector:} \color{black} \\
+
+        \begin{equation*}
+            \overrightarrow{a}(t) = \left\langle\frac{d^2x}{dt^2},\frac{d^2y}{dt^2}\right\rangle
+        \end{equation*}
+
+        \noindent \color{purple} \textbf{The Magnitude of an Acceleration Vector:} \color{black} \\
+
+        \begin{equation*}
+            |a| = \sqrt{\left(\frac{d^2x}{dt^2}\right)^2+\left(\frac{d^2y}{dt^2}\right)^2} = \sqrt{a^2_x+a^2_y}
+        \end{equation*}
+
+
+
+    \subsection{Rolle's Theorem}
+        \color{purple} \textbf{Rolle's Theorem:} \color{black} \\
+        \noindent Suppose $f(x)$ is a function that is both continuous on the closed interval
+        $[a,b]$ and differentiable on the open interval $(a,b)$, and that $f(a)=f(b)$.
+        Then there is a number $c$ such that $a<c<b$ and $f'(c)=0$. Or rather, $f(x)$ has a
+        critical point in $(a,b)$. \\
+
+
+
+    \subsection{The Mean Value Theorem}
+        \color{purple} \textbf{The Mean Value Theorem:} \color{black} \\
+        \noindent Suppose $f(x)$ is a function that is both continuous on the closed interval
+        $[a,b]$ and differentiable on the open interval $(a,b)$. Then there is a number
+        $c$ such that $a<c<b$ and \\
+
+        \begin{equation*}
+            f'(c) = \frac{f(b)-f(a)}{b-a}
+        \end{equation*}
+
+        \noindent Or, \\
+
+        \begin{equation*}
+            f(b) - f(a) = f'(c) (b-a)
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example 1: Determine all the numbers $c$ satisfying
+        $f(x)=x^3+2x^2-x$ on $[-1,2]$} \color{black} \\
+
+        \begin{align*}
+            f'(x) &= 3x^2+4x-1 \\
+            f'(c) &= \frac{f(2)-f(-1)}{2-(-1)} \\
+            3c^2+4c-1 &= \frac{14-2}{3} \\
+            3c^2+4c-1 &= 4 \\
+            3c^2+4c-5 &= 0 \\
+            c &= \frac{-4\pm\sqrt{16-4(3)(-5)}}{6} \\
+            c &= 0.7863, -2.1196 \\
+            c &= 0.7863
+        \end{align*}
+
+        \noindent Notice we were able to remove the other $c$, as it is outside of the desired interval.
+
+        \noindent \color{blue} \textit{Example 2: Suppose we know that $f(x)$ is continuous and
+        differentiable on $[6,15]$ and that $f(6)=-2$ and $f'(x)\leq10$. Find the
+        largest possible value for $f(15)$.} \color{black} \\
+
+        \noindent The MVT tells us that \\
+
+        \begin{equation*}
+            f(15) - f(6) = f'(c)(15-6)
+        \end{equation*}
+
+        \noindent Plugging in known quantities and simplifying, we get \\
+
+        \begin{equation*}
+            f(15) = -2 + 9f'(c)
+        \end{equation*}
+
+        \noindent Since we are given $f'(x)\leq 10$, we know that $f'(c)\leq 10$. This gives us \\
+
+        \begin{align*}
+            f(15) &= -2 + 9f'(c) \\
+            &\leq -2 + (9)10 \\
+            &\leq 88
+        \end{align*}
+
+        \noindent Hence, the largest possible value of $f(15)=88$.

@@ -1,0 +1,600 @@
+\section{Infinite Sequences and Series}
+
+    \subsection{Sequences and Series Basics}
+        \color{purple} \textbf{Sequences} \color{black} are a list of terms in a definite order,
+        whereas \color{purple} \textbf{series} \color{black} are the sum of terms of an infinite
+        sequence. \\
+
+        \noindent Given any sequence $\{a_n\}$, the sequence is: \\
+        \noindent \color{purple} \textbf{increasing} \color{black} if $a_n<a_{n+1}$ for every $n$ \\
+        \noindent \color{purple} \textbf{decreasing} \color{black} if $a_n>a_{n+1}$ for every $n$ \\
+        \noindent \color{purple} \textbf{monotonic} \color{black} if $\{a_n\}$ is strictly
+        increasing or decreasing along its entire domain \\
+        \noindent \color{purple} \textbf{bounded below} \color{black} if there exists a number
+        $m$ such that $m\leq a_n$ for every $n$. $m$ is called the \color{purple} \textbf{lower bound}
+        \color{black} of $\{a_n\}$ \\
+        \noindent \color{purple} \textbf{bounded above} \color{black} if there exists a number
+        $m$ such that $m\geq a_n$ for every $n$. $m$ is called the \color{purple} \textbf{upper bound}
+        \color{black} of $\{a_n\}$ \\
+        \noindent \color{purple} \textbf{bounded} \color{black} if $a_n$ is both bounded below
+        and bounded above \\
+
+        \noindent A series is \color{purple} \textbf{convergent} \color{black} if a given partial
+        sum of the sequence has a finite limit. If $\sum a_n$ converges then $\lim_{n\rightarrow\infty}a_n=0$.
+        A series is \color{purple} \textbf{divergent} \color{black} if it is not convergent. \\
+
+        \noindent \color{purple} \textbf{Properties of Sequences:} \color{black}
+        \noindent If $\{a_n\}$ and $\{b_n\}$ are both convergent sequences then
+
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $\lim_{n\rightarrow\infty}(a_n\pm b_n)=\lim_{n\rightarrow\infty}a_n
+                \pm\lim_{n\rightarrow\infty}b_n$                                     & Sum/Difference    \\
+                \hline
+                $\lim_{n\rightarrow\infty}ca_n=c\lim_{n\rightarrow\infty}a_n$        & Constant Multiple \\
+                \hline
+                $\lim_{n\rightarrow\infty}(a_n b_n)=\left(\lim_{n\rightarrow\infty a_n}\right)
+                \left(\lim_{n\rightarrow\infty b_n}\right)$                          & Product           \\
+                \hline
+                $\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=\frac{\lim_{n\rightarrow\infty}a_n}
+                {\lim_{n\rightarrow\infty}b_n}, \lim_{n\rightarrow\infty}b_n\not =0$ & Quotient          \\
+                \hline
+                $\lim_{n\rightarrow\infty} a^p_n=\left[\lim_{n\rightarrow\infty}a_n\right]^p,
+                a_n\geq 0$                                                           & Power             \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent \color{blue} \textit{Example 1: Determine if the series $\sum^\infty_{n=2}
+        \frac{1}{n^2-1}$ converges or diverges and find its sum if it converges.} \color{black} \\
+
+        \noindent The partial sum, $s_n$, is given by
+        \begin{align*}
+            s_n &= \sum^n_{i=2}\frac{1}{i^2-1} \\
+            &= \frac{3}{4}-\frac{1}{2n}-\frac{1}{2(n+1)}
+        \end{align*}
+
+        \noindent Then
+
+        \begin{align*}
+            \lim_{n\rightarrow\infty}s_n &= \lim_{n\rightarrow\infty}
+            \left(\frac{3}{4}-\frac{1}{2n}-\frac{1}{2(n+1)}\right) \\
+            &= \frac{3}{4}
+        \end{align*}
+
+        \noindent Hence, the series converges and its sum is $\frac{3}{4}$. \\
+
+        \noindent \color{blue} \textit{Example 2: Determine if the series $\sum^\infty_{n=0}
+        \frac{4n^2-n^3}{10+2n^3}$ is convergent or divergent.} \color{black}
+
+        \begin{align*}
+            \lim_{n\rightarrow\infty} \frac{4n^2-n^3}{10+2n^3} &= -\frac{1}{2} \not =0
+        \end{align*}
+
+        \noindent Since the limit of the series is not 0, the series diverges.
+
+    \subsection{Arithmetic and Geometric Sequences and Series}
+        \color{purple} \textbf{Arithmetic Sequences} \color{black} have terms that are found by
+        adding a constant to the the previous term. The general formula for arithmetic sequences
+        is
+
+        \begin{equation*}
+            a_n = a + d(n-1)
+        \end{equation*}
+
+        \noindent where $a_n$ is the $n$-th term, $a$ is the first term, $d$ is the common
+        difference, and $n$ is the term. Since the limit of any arithmetic sequence approaches
+        $\pm\infty$, all arithmetic sequences diverge. \\
+
+        \noindent \color{purple} \textbf{Geometric Series} \color{black} are any series that
+        can be written in one of the forms below.
+
+        \begin{align*}
+            \sum^\infty_{n=1} ar^{n-1} \text{ or } \sum^\infty_{n=0} ar^n
+        \end{align*}
+
+        \noindent A geometric series converges if $|r|<1$ and its sum is $\frac{a}{1-r}$. \\
+
+        \pagebreak
+        \noindent \color{blue} \textit{Example: Determine if the series $\{a_n\}=\sum^\infty_{n=0}
+        \frac{(-4)^{3n}}{5^{n-1}}$ converges or diverges and find the value of the series if
+        it converges.} \color{black} \\
+
+        \noindent Let us first rewrite the series so we can clearly see the value of $r$.
+
+        \begin{align*}
+            \sum^\infty_{n=0} \frac{(-4)^{3n}}{5^{n-1}} &= \sum^\infty_{n=0}
+            \frac{\left((-4)^3\right)^n}{5^n 5^{-1}} \\
+            &= \sum^\infty_{n=0} 5\frac{(-64)^n}{5^n} \\
+            &= \sum^\infty_{n=0} 5 \left(\frac{-64}{5}\right)^n \\
+            \implies r &= -\frac{64}{5} \\
+            \because |r| & \geq 1 \\
+            \therefore \{a_n\} & \text{ diverges}
+        \end{align*}
+
+    \subsection{Binomial Series}
+
+        \begin{align*}
+            (1+x)^\alpha                        &= \sum^\infty_{n=0}\left(^\alpha_n\right)x^n \\
+            \text{where }\left(^\alpha_n\right) &= \frac{\alpha!}{(\alpha-n)!n!},n,k\in\mathbb{N}
+        \end{align*}
+
+        \noindent Binomial Series converge when:
+
+        \begin{align*}
+            -1<x<1,         & \alpha<-1 \\
+            -1<x\leq1,      & -1<n<0 \\
+            -1\leq x\leq 1, & n>0
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example: Find the first four terms in the binomial series
+        for $\sqrt{9-x}$} \color{black} \\
+
+        \noindent In this case, $k=\frac{1}{2}$ and we must rewrite the given expression to put it
+        into binomial form. Then,
+
+        \begin{align*}
+            \sqrt{9-x}  &= 3\left(1+\left(-\frac{x}{9}\right)\right)^\frac{1}{2} \\
+                        &= 3\sum^\infty_{n=0}\left(^{\frac{1}{2}}_n\right)\left(-\frac{x}{9}\right)^n \\
+                        &= 3\left[1+\left(\frac{1}{2}\right)\left(-\frac{x}{9}\right)
+                         + \frac{\frac{1}{2}\left(-\frac{1}{2}\right)}{2}\left(-\frac{x}{9}\right)^2
+                         + \frac{\frac{1}{2}\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)}{6}
+                          \left(-\frac{x}{9}\right)^3+\dots\right] \\
+                        &= 3-\frac{x}{6}-\frac{x^2}{216}-\frac{x^3}{3888}-\dots
+        \end{align*}
+
+
+    \subsection{The $n$th Term Test for Divergence}
+        \color{purple} \textbf{The $n$th Term Test:} \color{black}
+
+        \begin{align*}
+            \text{If } \lim_{n\to\infty}a_n\not = 0 \text{ or the limit does not exist, then }
+            a_n \text{ diverges}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example: Does the series $a_n=\sum^\infty_{n=1}\frac{(-1)^{n+1}}{n}$
+        converge?} \color{black}
+
+        \begin{align*}
+            \lim_{n\to\infty}\frac{(-1)^{n+1}}{n} &= 0
+        \end{align*}
+
+        \noindent Hence, the $n$th term test is inconclusive for $a_n$.
+
+    \subsection{Integral Test for Convergence}
+        \color{purple} \textbf{Integral Test:} \color{black} \\
+
+        \noindent Suppose that $f(x)$ is a continuous, positive, and decreasing function on the
+        interval $[k,\infty)$ and that $f(n)=a_n$. Then,
+
+        \begin{align*}
+            \text{If }\int^\infty_k f(x)dx & \text{ is convergent then so is } \sum^\infty_{n=k}a_n \\
+            \text{If }\int^\infty_k f(x)dx & \text{ is divergent then so is} \sum^\infty_{n=k}a_n
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example: Determine if the series $a_n=\sum^\infty_{n=2}
+        \frac{1}{n\ln{n}}$ is convergent or divergent.} \color{black} \\
+
+        \noindent Let $f(x)=\frac{1}{x\ln{x}}$. This function is clearly positive and as $x$ grows
+        larger, the denominator also gets larger and so the function is decreasing.
+
+        \begin{align*}
+            \int^\infty_{2} \frac{1}{x\ln{x}}dx     &= \lim_{t\to\infty}\int^t_2 \frac{1}{x\ln{x}}dx,
+                                                    u=\ln{x} \\
+                                                    &= \lim_{t\to\infty}(\ln(\ln{x}))\Big|^t_2 \\
+                                                    &= \lim_{t\to\infty}(\ln(\ln{t})-\ln(\ln{2})) \\
+                                                    &= \infty
+        \end{align*}
+
+        \noindent Since the integral diverges, so does $a_n$.
+
+
+    \subsection{Harmonic and $p$-Series}
+        \color{purple} \textbf{$p$-Series} \color{black} have the form
+
+        \begin{align*}
+            \sum^\infty_{n=1} \frac{1}{n^p} &= \frac{1}{1^p}+\frac{1}{2^p}+\frac{1}{3^p}+\dots
+        \end{align*}
+
+        \noindent for any real-valued number $p, p>0$. \\
+
+        \noindent \color{purple} \textbf{Harmonic Series} \color{black} are $p$-Series with $p=1$
+        such that
+
+        \begin{align}
+            \sum^\infty_{n=1} \frac{1}{n} &= 1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+\dots
+        \end{align}
+
+        \noindent For any $p$-Series,
+
+        \begin{align*}
+            \text{If } p>1, & \text{ then the series converges} \\
+            \text{If } 0<p\leq 1, & \text{ then the series diverges}
+        \end{align*}
+
+
+    \subsection{Comparison Tests for Convergence}
+        \color{purple} \textbf{Comparison Test:} \color{black} \\
+        \noindent Suppose we have two series $\sum a_n$ and $\sum b_n$ with $a_n,b_n\geq 0\forall n$
+        and $a_n\leq b_n\forall n$. Then,
+
+        \begin{align*}
+            \text{If }\sum b_n \text{ is convergent then so is } \sum a_n \\
+            \text{If }\sum a_n \text{ is divergent then so is } \sum b_n
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 1: Determine if the series $a_n=\sum^\infty_{n=1}
+        \frac{e^{-n}}{n+\cos^2{(n)}}$ converges or diverges.} \color{black}
+
+        \begin{equation*}
+            \frac{e^{-n}}{n+\cos^2{(n)}}    \leq \frac{e^{-n}}{n}
+        \end{equation*}
+
+        \noindent We know that $n\geq 1$ so we can replace the $n$ in the denominator with its
+        smallest possible value (1) as the term will get larger anyway. Then
+
+        \begin{align*}
+            \frac{e^{-n}}{n+\cos^2{(n)}}  \leq \frac{e^{-n}}{n} \leq \frac{e^{-n}}{1}=e^{-n}
+        \end{align*}
+
+        \noindent Let us now determine if $\sum^\infty_{n=1}e^{-n}$ converges or diverges. Notice
+        how $f(x)=e^{-x}$ is always positive and is also decreasing, hence we can use the integral
+        test:
+
+        \begin{align*}
+            \int^\infty_1 e^{-x}dx  &= \lim_{t\to\infty}\int^t_1 e^{-x}dx \\
+                                    &= \lim_{t\to\infty}\left(-e^{-x}\right)\Big|^t_1 \\
+                                    &= \lim_{t\to\infty}\left(-e^{-t}+e^{-1}\right) \\
+                                    &= e^{-1}
+        \end{align*}
+
+        \noindent Since the integral converges, the series $\sum^\infty_{n=1}e^{-n}$ also must
+        converge. Furtheremore, because $\sum^\infty_{n=1}e^{-n}$ is larger than $a_n$ we know that
+        $a_n$ must also converge. \\
+
+        \pagebreak
+        \noindent \color{purple} \textbf{Limit Comparison Test:} \color{black} \\
+        \noindent Suppose we have two series $\sum a_n$ and $\sum b_n$ with $a_n\geq 0,b_n\geq0\forall n$.
+        Let us define $c$ such that
+
+        \begin{equation*}
+            c = \lim_{n\to\infty} \frac{a_n}{b_n}
+        \end{equation*}
+
+        \noindent If $0<c<\infty$ then either both series converge or both series diverge. \\
+
+        \noindent \color{blue} \textit{Example 2: Determine if the series $a_n=\sum^\infty_{n=0}
+        \frac{1}{3^n-n}$ converges or diverges.} \color{black} \\
+
+        \noindent Let us use $b_n=\sum^\infty_{n=0}$ for our second series because we know that $b_n$
+        converges and it is possible that since both series contain $3^n$ the limit won't be too
+        complex. Then
+
+        \begin{align*}
+            c   &= \lim_{n\to\infty} \frac{1}{3^n}\frac{3^n-n}{1} \\
+                &= \lim_{n\to\infty} 1-\frac{n}{3^n} \\
+                &= 1-\lim_{n\to\infty} \frac{1}{3^n\ln{(3)}} \\
+                &= 1
+        \end{align*}
+
+        \noindent Since $c>0,c\not=\infty$, both series must converge since $b_n$ converges.
+
+
+    \subsection{Alternating Series Test for Convergence}
+        \color{purple} \textbf{Alternating Series Test:} \color{black} \\
+        If $a_n$ is a decreasing sequence of positive integers such that $\lim_{n\to\infty}a_n=0$,
+        then $\sum^\infty_{n=1}(-1)^n a_n$ and $\sum^\infty_{n=1} (-1)^{n+1}a_n$ converge. \\
+
+        \noindent \color{blue} \textit{Example 1: What are all of the positive values of $p$ such
+        that $\sum^\infty_{n=1}(-1)^{n-1}\left(\frac{2}{p}\right)^n$ converges?}. \color{black} \\
+
+        \noindent We can write the series as $\sum^\infty_{n=1}(-1)^{n+1}a_n$, where
+        $a_n=\left(\frac{2}{p}\right)^n$. If $p>0$ then $a_n$ is always positive, forming an
+        alternating series. For the sequence $a_n$ to be decreasing and for the limit
+        $\lim_{n\to\infty}a_n=0$, we must have $0<\frac{2}{p}<1$. Solving for $p$, we get $p>2$.
+
+    \subsection{Absolute and Conditional Convergence}
+        A series $\sum a_n$ is \color{purple} \textbf{absolutely convergent} \color{black} if
+        $\sum |a_n|$ is convergent. If $\sum a_n$ is convergent and $\sum |a_n|$ is divergent
+        then the series is \color{purple} \textbf{conditionally convergent} \color{black}. \\
+
+        \noindent \color{blue} \textit{Example: Determine if the series $\sum^\infty_{n=1}
+        \frac{\sin{n}}{n^3}$ is absolutely convergent, conditionally convergent, or divergent.}
+        \color{black}
+
+        \begin{align*}
+            \sum^\infty_{n=1}\Bigg|\frac{\sin{n}}{n^3}\Bigg| &= \sum^\infty_{n=1}\frac{|\sin{n}|}{n^3} \\
+            -1\leq\sin{n}\leq 1     \implies                 &  |\sin{n}|\leq 1 \\
+            \frac{|\sin{n}|}{n^3}                            &\leq \frac{1}{n^3}
+        \end{align*}
+
+        \noindent Hence, $\sum^\infty_{n=1}\frac{1}{n^3}$ converges by the $p$-series test and so by
+        the comparison test we know that $\sum^\infty_{n=1}\frac{|\sin{n}|}{n^3}$ converges.
+        Therefore, the original series is absolutely convergent.
+
+
+    \subsection{Ratio Test for Convergence}
+        Suppose we have the series $\sum a_n$. For
+
+        \begin{align*}
+            L    &= \lim_{n\to\infty}\Bigg|\frac{a_{n+1}}{a_n}\Bigg|, \\
+            \text{If } L<1 & \text{ the series is absolutely convergent} \\
+            \text{If } L>1 & \text{ the series diverges} \\
+            \text{If } L=1 & \text{ the test is inconclusive}
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example: Determine if the series $\sum^\infty_{n=0}
+        \frac{n!}{5^n}$ is convergent or divergent.} \color{black}
+
+        \begin{align*}
+            L   &= \lim_{n\to\infty}\Bigg|\frac{(n+1)!}{5^{n+1}}\frac{5^n}{n!}\Bigg| \\
+                &= \lim_{n\to\infty}\frac{(n+1)!}{5n!}
+        \end{align*}
+
+        \pagebreak
+        \noindent Recall that we can always take out terms from a factorial. Doing that with the
+        numerator, we get
+
+        \begin{align*}
+            L   &= \lim_{n\to\infty}\frac{(n+1)!n!}{5n!} \\
+                &= \lim_{n\to\infty}\frac{(n+1)}{5} \\
+                &= \infty \\
+                &> 1
+        \end{align*}
+
+        \noindent Hence, this series diverges.
+
+
+    \subsection{Alternating Series Error Bound}
+        \color{purple} \textbf{Alternating Series Estimation Theorem}: \color{black} \\
+        \noindent Let $\sum^\infty_{n=1}a_n$ be a series satisfying all conditions of the
+        Alternating Series Test. The error estimation between the sum $S$ and the $n$th partial sum
+        $S_n$ can be evaluated by
+
+        \begin{equation*}
+            |s-s_n|\leq|a_{n+1}|=|s_{n+1}-s_n|
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example: Determine the number of terms of the series
+        $\sum^\infty_{n=1}\frac{2(-1)^n}{n}$ needed to be computed in order for the sum of the series
+        to have an error less than 0.01.} \color{black} \\
+
+        \noindent We can verify that this series satisfies all conditions of the alternating series
+        test and so we need to find a value of $n$ such that
+
+        \begin{equation*}
+            |s-s_n|\leq|a_{n+1}|=\left|\frac{2(-1)^{n+1}}{n+1}\right|=\frac{2}{n+1}<0.01
+        \end{equation*}
+
+        \noindent Note that the above equality holds if the following inequality holds.
+
+        \begin{equation*}
+            \frac{n+1}{2} > 100\equiv n>199
+        \end{equation*}
+
+        \noindent Hence, if $n\geq 200$ then $|s-s_n|\leq0.01$ and so the error between the partial
+        sum $s_n$ and the actual sum $s$ is less than 0.01.
+
+
+    \subsection{Taylor and Maclaurin Series of a Function}
+        \color{purple} \textbf{Taylor's Theorem} \color{black} states that any differentiable
+        function may be represented by a Taylor Series such that
+
+        \begin{align*}
+            f(x) &= \sum^\infty_{n=0}\frac{f^{(n)}(a)}{n!}(x-a)^n \\
+                 &= f(a)+f'(a)(x-a)+\frac{f"(a)(x-a)^2}{2!}+\frac{f'''(a)(x-a)^3}{3!}+\dots
+        \end{align*}
+
+        \noindent A \color{purple} \textbf{Maclaurin Series} \color{black} is a special case of a
+        Taylor series where $a=0$ such that
+
+        \begin{align*}
+            f(x) &= \sum^\infty_{n=0} \frac{f^{(n)}(0)}{n!}x^n \\
+                 &= f(0) + f'(0)x + \frac{f"(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3+\dots
+        \end{align*}
+
+        \noindent \color{purple} \textbf{Important Taylor Expansions to Know:} \color{black}
+
+        \begin{align*}
+            e^x     &= \sum^\infty_{n=0} \frac{x^n}{n!} \\
+            \cos{x} &= \sum^\infty_{n=0} \frac{(-1)^n x^{2n}}{(2n)!} \\
+            \sin{x} &= \sum^\infty_{n=0} \frac{(-1)^n x^{2n+1}}{(2n+1)!}
+        \end{align*}
+
+
+    \subsection{Taylor Polynomial Approximations}
+        A \color{purple} \textbf{Taylor Polynomial Approximation} \color{black} uses a Taylor series
+        to represent a number as a polynomial that has a very similar value to a number near
+        a particular $x$ value:
+
+        \begin{equation*}
+            f(x)    = f(a) + \frac{f'(a)(x-a)}{1!} + \frac{f"(a)(x-a)^2}{2!}
+                    + \frac{f^{(3)}(a)(x-a)^3}{3!} + \dots
+        \end{equation*]}
+
+        \pagebreak
+        \noindent \color{blue} \textit{Example 1: Use the first three terms of the Taylor series
+        expansion of $f(x)=\sqrt[3]{x}$ centered at $x=8$ to approximate $\sqrt[3]{8.1}$.} \color{black}
+
+        \begin{align*}
+            f(x)    &= \sqrt[3]{x} \\
+                    &\approx 2+\frac{(x-8)}{12}-\frac{(x-8)^2}{288} \\
+                    &= 2.008298611111\dots
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: Use the quadratic Taylor polynomial for
+        $f(x)=\frac{1}{x^2}$ to approximate the value of $\frac{1}{4.41}$.} \color{black} \\
+
+        \noindent The quadratic Taylor polynomial is given by
+
+        \begin{align*}
+            T_2(x)  &= f(a) + \frac{f'(a)(x-a)}{1!} + \frac{f"(a)(x-a)^2}{2!}
+        \end{align*}
+
+        \noindent Let us rewrite the approximated value as
+
+        \begin{align*}
+            4.41        &= (2+0.1)^2 \\
+            \implies    & a=2,x=2.1
+        \end{align*}
+
+        \noindent Then
+
+        \begin{align*}
+            T_2(2.1)    &= f(2) + \frac{f'(2)(2.1-2)}{1!} + \frac{f"(2)(2.1-2)^2}{2!} \\
+                        &= 0.226875
+        \end{align*}
+
+
+    \subsection{Lagrange Error Bound}
+        The \color{purple} \textbf{Lagrange Error Bound} \color{black} gives us an interval of the
+        magntiude of error in a Taylor series expansion of a particular function:
+
+        \begin{align*}
+            |R_n| \leq \frac{M|x-a|^{n+1}}{(n+1)!}
+        \end{align*}
+
+        \noindent where \\
+        $R_n$ is the remainder (error) \\
+        $x$ is the given $x$-value \\
+        $a$ is where the polynomial is centered \\
+        $n$ is the degree of the polynomial \\
+        $M$ is the maximum absolute value of the $(n+1)$-order derivative on the interval between
+        $c$ and $x$.
+
+        \noindent \color{blue} \textit{Example: Use the Lagrange error bound to estimate the error
+        in using a 4th degree Maclaurin polynomial to approximate $\cos{\left(\frac{\pi}{4}\right)}$}.
+        \color{black}
+
+        \begin{align*}
+            T(x)    &= 1-\frac{x^2}{2} + \frac{x^4}{24}
+        \end{align*}
+
+        \noindent For the error bound, we will need to know what the 5th-derivative of $f(x)=\cos{x}$
+        is:
+
+        \begin{align*}
+            f(x)        &= \cos{x} \\
+            f'(x)       &= -\sin{x} \\
+            f"(x)       &= -\cos{x} \\
+            f'''(x)     &= \sin{x} \\
+            f^{(4)}(x)  &= \cos{x} \\
+            f^{(5)}(x)  &= -\sin{x}
+        \end{align*}
+
+        \noindent Note how the largest that $|-\sin{x}|$ could possibly be is 1, so let's use $M=1$.
+        Then
+
+        \begin{align*}
+            \text{Error }   &\leq \frac{M}{(n+1)!}(x-c)^{n+1} \\
+                            &\leq \frac{1}{5!}\left(\frac{\pi}{4}-0\right)^5 \\
+                            &= \frac{\left(\frac{\pi}{4}\right)^5}{120} \\
+                            &\approx 0.00249
+        \end{align*}
+
+
+    \subsection{Power Series}
+        A \color{purple} \textbf{Power Series} \color{black} is any series that can be written in
+        the form
+
+        \begin{equation*}
+            \sum^\infty_{n=0} c_n (x-a)^n = a_0 + a_1(x-c)^1 + a_2(x-c)^2+\dots
+        \end{equation*}
+
+        \noindent where $a$ and $c_n$ are numbers and $c_n$ is often called the \textit{coefficients
+        of the series}. \\
+
+        \noindent For a number $R$ called the \color{purple} \textbf{Radius of Convergence}
+        \color{black}, any power series will:
+
+        \begin{align*}
+            \text{converge if } & a-R<x<a+R \\
+            \text{diverge if }  & x<a-R \text{ and } x>a+R
+        \end{align*}
+
+        \noindent The \color{purple} \textbf{Interval of Convergence} \color{black} of a power
+        series is the interval of all $x$'s, endpoints inclusive if need be, for which the series
+        converges. \\
+
+        \noindent \color{blue} \textit{Example: Determine the radius of convergence and interval
+        of convergence for the power series $\sum^\infty_{n=1} \frac{(-1)^nn}{4^n}(x+3)^n$}
+        \color{black} \\
+
+        \noindent So far, we know that this power series will converge for $x=-3$. To determine the
+        remainder of the $x$'s we will get convergence we will use the ratio test:
+
+        \begin{align*}
+            L   &= \lim_{n\to\infty} \left|\frac{(-1)^{n+1}(n+1)(x+3)^{n+1}}{4^{n+1}}\cdot
+                   \frac{4^n}{(-1)^n(n)(x+3)^n}\right| \\
+                &= \lim_{n\to\infty}\left|\frac{-(n+1)(x+3)}{4n}\right|
+        \end{align*}
+
+        \noindent Notice that we can remove $x$ from the limit as $x$ does not depend on the limit:
+
+        \begin{align*}
+            L   &= |x+3|\lim_{n\to\infty}\frac{n+1}{4n} \\
+                &= \frac{|x+3|}{4}
+        \end{align*}
+
+        \noindent The ratio test tells us that if $L<1$ then the series will converge, if $L>1$ then
+        the series will diverge, and if $L=1$ then the test is inconclusive. So,
+
+        \begin{align*}
+            \frac{|x+3|}{4}<1   &\implies |x+3|<4   & \text{ series converges} \\
+            \frac{|x+3|}{4}>1   &\implies |x+3|>4   & \text{ series diverges}
+        \end{align*}
+
+        \noindent Hence, the radius of convergence for this series is $R=4$. Now we can find the
+        interval of convergence. We can get most of the interval by solving the inequality above:
+
+        \begin{align*}
+            -4 < x &+ 3 < 4 \\
+            -7 < x & < 1
+        \end{align*}
+
+        \noindent So, most of the interval of validity is given by $-7<x<1$ and now we only need to
+        determine if the power series will converge or diverge at the interval's endpoints. Such
+        values of $x$ correspond to the value of $x$ that gives $L=1$. Now we determine convergence
+        at these points by plugging them into the original power series and checking the series
+        that we get for convergence/divergence. Let $x=-7$. Then the series is:
+
+        \begin{align*}
+            \sum^\infty_{n=1} \frac{(-1)^nn}{4n}(-4)^n  &= \sum^\infty_{n=1}\frac{(-1)^nn}{4^n}(-1)^n 4^n \\
+                                                        &= \sum^\infty_{n=1}(-1)^n(-1)^n n \\
+                                                        &= \sum^\infty_{n=1} (-1)^{2n}n \\
+                                                        &= \sum^\infty_{n=1} 1n \\
+                                                        &= \sum^\infty_{n=1} n
+        \end{align*}
+
+        \pagebreak
+        \noindent Since $\lim_{n\to\infty}=\infty\not =0$ the series is divergent. Now let $x=1$.
+        The series we get is
+
+        \begin{align*}
+            \sum^\infty_{n=1} \frac{(-1)^nn}{4^n}(4)^n &= \sum^\infty_{n=1}(-1)^n n
+        \end{align*}
+
+        \noindent Since $\lim_{n\to\infty}(-1)^n n$ does not exist this series is also divergent. \\
+
+        \noindent Hence, our power series will not converge for either endpoint. Then the interval
+        of convergence is $-7<x<1$.
+
+
+    \subsection{Series Strategy}
+        1. Does the series look like its terms don't converge to zero? if so, use the $n$th term
+        test for divergence. \\
+        2. Is the series a $p$-series $\left(\sum\frac{1}{n^p}\right)$ or a geometric series
+        $\left(\sum^\infty_{n=0}ar^n\text{ or }\sum^\infty_{n=1}ar^{n-1}\right)$? If so, recall that
+        $p$-series will only converge if $p>1$ and geometric series will only converge if $|r|<1$. \\
+        3. Is the series similar to a $p$-series or geometric series? Try the Comparison Test. \\
+        4. Is the series a rational expression containing only polynomials or radical polynomials?
+        Try the Comparison Test and/or the Limit Comparison Test. Note that in order to use the
+        Comparison Tests the series' terms all need to be positive. \\
+        5. Does the series contain factorials or constants raised to powers involving $n$? Try the
+        Ratio Test. \\
+        6. Can the series' terms be written in the form $a_n=(-1)^n b_n$ or $a_n=(-1)^{n+1}b_n$?
+        Try the Alternating Series Test. \\
+        7. Can the series' terms be written in the form $a_n=(b_n)^n$? Try the Root Test. \\
+        8. if $a_n=f(n)$ for some positive, decreasing function and $\int^\infty_a f(x)dx$ is
+        relatively easy to evaluate then try the Integral Test.
