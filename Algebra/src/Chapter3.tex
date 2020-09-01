@@ -1,0 +1,197 @@
+\section{Polynomials}
+
+    \subsection{Long Division}
+        \color{purple} \textbf{Dividend = Divisor $\cdot$ Quotient + Remainder} \color{black} \\
+        \noindent $f(x)=d(x)\cdot q(x)+r(x)$ \\
+        \noindent Note that the degree of $r(x)$ is always less than that of $d(x)$. \\
+
+        \noindent \color{blue} \textit{Example 1: Divide $2x^2-5x-1$ by $x-3$} \color{black} \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale = 0.8] {Resources/Unit3Polynomials/longdiv.PNG}
+        \end{figure}
+
+        \begin{equation*}
+            \therefore 2x^2-5x-1 = (x-3)(2x+1)+2
+        \end{equation*}
+
+        \noindent where the remainder is 2. \\
+
+        \noindent \color{purple} \textbf{The Remainder Theorem:} \color{black} \\
+        \noindent When a polynomial $f(x)$ is divided by $x-c$ the remainder is $f(c)$. \\
+
+        \noindent \color{blue} \textit{Example 2: Find the remainder when $2x^2-5x-1$ is
+        divided by $x-5$} \color{black} \\
+
+        \begin{align*}
+            f(5) &= 2(5)^2-5(5)-1 \\
+            &= 50-25-1 \\
+            &= 24
+        \end{align*}
+
+        \noindent Thus, the remainder is 24. \\
+        \noindent \color{purple} \textbf{The Factor Theorem:} \color{black} \\
+        When $f(c)=0$, $x=c$ is a factor of $f(x)$. The converse of this is also true.
+
+
+
+    \subsection{Synthetic Division}
+        Synthetic division is a shortcut for long division. It only works when the divisor is
+        of the first degree. The remainder produced by synthetic division is also the the value
+        of the function at the remainder, $f(r)$ when $r$ is the remainder. \\
+
+        \noindent \color{blue} \textit{Example: Divide $x^3-2x^2+3x-4$ by $x-2$} \color{black} \\
+
+        \noindent 1. Draw a table like so and write $c$ on the left side of the table, for a
+        divisor in the form $x-c$. In this case, $c=2$. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv1.png}
+        \end{figure}
+
+        \noindent 2. Add the coefficients of the polynomial's terms under the line as is. In
+        this case, the coefficients corresponding to $x^3, x^2, x^1,$ and $x^0$ are $1,-2,3,$
+        and $-4$, respectively. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv2.png}
+        \end{figure}
+
+        \noindent 3. Drop the first coefficient, in this case 1, below the newly made bar. Then
+        write the product of $c$ and the first coefficient below the second coefficient. Now
+        write the sum of the second coefficient and this product below the bar. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv3.png}
+        \end{figure}
+
+        \noindent 4. Find the product of $c$ and the calculated sum, in this case the second
+        green number. Find the sum of this product and the third coefficient. Repeat this
+        process for the rest of the coefficients. The last calculated sum is the remainder,
+        in this case the purple number.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv4.png}
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv5.png}
+        \end{figure}
+
+        \noindent 5. The three green sums are the coefficients of the quotient. The quotient
+        should be of degree 2, since its largest term $x^3$ divided by the divisor's largest
+        term, $x$, is $x^2$. Thus, $x^2$ corresponds to the first green number, and so on.
+        Here, $c$ refers to the constant term of the polynomial.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale = 0.5] {Resources/Unit3Polynomials/synthdiv6.png}
+        \end{figure}
+
+        \noindent Thus,
+
+        \begin{align*}
+            \frac{x^3-2x^2+3x-4}{x-2} &= 1x^2+0x+3+\frac{2}{x-2} \\
+            &= x^2+3+\frac{2}{x-2}
+        \end{align*}
+
+
+
+    \subsection{Vieta's Formulas}
+        Vieta’s Formulas relate the coefficients of polynomials to the sums and products of their
+        roots. Whereas Vieta’s Formulas seem trivial in quadratic applications, they become
+        extremely useful in complex polynomials with many roots or roots that are hard to derive.
+        Vieta’s Formulas can be viewed as a shortcut for finding solutions of a polynomial quickly
+        simply through the sums and products of the roots. \\
+
+        \noindent Consider the polynomial $x^2+2x-15=(x-3)(x+5) \implies x=-5,3$. Using Vieta's
+        Formulas, we can find the sum of the roots $3+(-5)=-2$ and $3\cdot(-5)=-15$ directly,
+        without having to find each root directly. \\
+
+        \noindent By the Remainder Factor Theorem, a polynomial $f(x)$ has roots $r_1$ and $r_2$
+        in the form $f(x)=A(x-r_1)(x-r_2)=Ax^2-A(r_1+r_2)x+Ar_1 r_2$ for some constant $A$.
+        Comparing coefficients with $f(x) = ax^2+bx+c$, we can conclude that $a=A, b=-A(r_1+r_2)$,
+        and $c=Ar_1 r_2$. Hence, we get: \\
+
+        \noindent \color{purple} \textbf{Vieta's Formulas for Quadratics:} \color{black} \\
+        \noindent Given $f(x) = ax^2+bx+c$ if the equation $f(x)=0$ has roots $r_1$ and $r_2$, then
+
+        \begin{equation*}
+            r_1 + r_2 = -\frac{b}{a}, r_1 r_2 = \frac{c}{a}
+        \end{equation*}
+
+        \noindent Alternatively,
+
+        \begin{equation*}
+            b=-(p+q),c=pq
+        \end{equation*}
+
+        \noindent It is important to note that the precondition for using Vieta's Formula is that
+        the polynomial $f(x)$ must be put in a \textbf{monic} form, that is, the leading coefficient
+        $a$ must be 1. \\
+
+        \noindent \color{blue} \textit{Example 1: If $\alpha$ and $\Beta$ are the roots of the
+        quadratic $x^2-4x+9=0$, what are the values of} \\
+        \noindent 1. $\alpha+\Beta$ \\
+        \noindent 2. $\alpha\Beta$ \\
+        \noindent 3. $\alpha^2\Beta^2$ \color{black} \\
+
+        \noindent 1.
+        \begin{equation*}
+            \alpha + \Beta = -\frac{b}{a} = -\frac{-4}{1} = 4
+        \end{equation*}
+
+        \noindent 2.
+        \begin{equation*}
+            \alpha\Beta = \frac{c}{a} = \frac{9}{1} = 9
+        \end{equation*}
+
+        \noindent 3.
+        \begin{align*}
+            \alpha^2+\Beta^2 &= (\alpha + \Beta)^2 - 2\alpha\Beta \\
+            &= 4^2 - 2(9) \\
+            &= -2
+        \end{align*}
+
+        \noindent For this question, the roots were $2\pm i\sqrt{5}$. vieta's Formulas offer a
+        simpler approach to compute these expressions without potentially making calculation
+        mistakes. \\
+
+        \noindent \color{blue} \textit{Example 2: What are the roots of the quadratic $x^2-5x+6$?} \color{black} \\
+        \noindent If $p$ and $q$ are the roots of the quadratic, then $p+q=5$ and $pq=6$. Solving
+        this system, it's easy to see that the roots are 2 and 3. \\
+
+        \noindent \color{blue} \textit{Example 3: Find a quadratic with roots 2 and 5.} \color{black} \\
+        $b=-(2+5)=-7, c=(2)(5)=10$ \\
+        Hence, the desired quadratic is $x^2-7x+10$.
+
+        \pagebreak
+        \noindent \color{blue} \textit{Example 4: Find a quadratic with roots $3+2i$ and $3-2i$.} \color{black} \\
+        \noindent $b=-[(3+2i)+(3-2i)] = -6,c=(3+2i)(3-2i)=13$. \\
+        \noindent The desired quadratic is $x^2-6x+13$.
+
+        \noindent We can also generalize these formulas to higher-degree polynomials: \\
+        \noindent \color{purple} \textbf{Vieta's Formula:} \color{black} \\
+        Let $P(x)=a_n x^n + a_{n-1}x^{n-1}+\dots+a_0$ be a polynomial with complex coefficients
+        and degree $n$, having complex roots $r_n, r_{n-1},\dots,r_1$. Then for any integer
+        $0\leq k \leq n$, \\
+
+        \begin{equation*}
+            \sum\limits_{1\leq i_1 < i_2<\dots<i_k\leq n}   r_{i_1}r_{i_2}\dots r_{i_k}
+            = (-1)^k \frac{a_{n-k}}{a_n}
+        \end{equation*}
+
+        \noindent Vieta's Formulas for quadratic polynomials written in summation notation is \\
+        \begin{equation*}
+            \sum\limits_{i=1}^n r_i     = -\frac{a_{n-1}}{a_n}, r_1r_2\dots r_n=(-1)^n\frac{a_0}{a_n}
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example 5: Suppose $k$ is a number such that the cubic
+        polynomial $P(x)=-2x^3+48x^2+k$ has three integer roots that are all prime numbers. How
+        many possible distinct values are there for $k$?} \color{black} \\
+
+        \noindent Let $p,q,$ and $r$ denote the three integer roots of $P(x)$. Then by Vieta's
+        Formula, we have $pq+qr+pr=0$ but since $p,q,r$ are prime, each of them are strictly
+        greater than 1 and hence no such $P(x)$ exists.

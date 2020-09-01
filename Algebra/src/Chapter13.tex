@@ -1,0 +1,128 @@
+\section{Symbolic Logic and Proofs}
+
+    \subsection{Statements and Logical Operators}
+        A \textbf{proof} is an argument from \textbf{hypotheses} to a \textbf{conclusion}.
+        Proofs usually begin with \textbf{premises}, statements that are known to be true.
+        The \textbf{Rule of Premises} says that you may write down a premise at any point in a
+        proof. The rule of \textbf{modus ponendo ponens} says that if you know $P$ and
+        $P\rightarrow Q$, you can write down $Q$. \\
+
+        \noindent Mathematical statements can only be true or false. The letters $p$ and $q$
+        often denote statements. \\
+
+        \noindent \color{purple} \textbf{Logical Operators:} \color{black} \\
+        \textbf{Not ($\neg$)}: The statement "not $p$" is called the \textbf{negation} of $p$. \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                $p$ & $\neg p$ \\
+                \hline
+                0   & 1        \\
+                \hline
+                1   & 0        \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent \textbf{Double Negation} states that $\neg\neg P$ is logically equivalent to $P$.
+
+        \noindent \textbf{And (\&)}: \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|c|}
+                \hline
+                $p$ & $q$ & $p\& q$ \\
+                \hline
+                1 & 1 & 1 \\
+                \hline
+                1 & 0 & 0 \\
+                \hline
+                0 & 1 & 0 \\
+                \hline
+                0 & 0 & 0 \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent \textbf{Or: ($\vert\vert$)} \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|c|}
+                \hline
+                $p$ & $q$ & $p||q$ \\
+                \hline
+                1   & 1   & 1      \\
+                \hline
+                1   & 0   & 1      \\
+                \hline
+                0   & 1   & 1      \\
+                \hline
+                0   & 0   & 0      \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent\textbf{If\dots then ($\rightarrow)$:} \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|c|}
+                \hline
+                $p$ & $q$ & $p\rightarrow q$ \\
+                \hline
+                1   & 1   & 1                \\
+                \hline
+                1   & 0   & 0                \\
+                \hline
+                0   & 1   & 1                \\
+                \hline
+                0   & 0   & 1                \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent If $p$ is false then $p\rightarrow q$ is \textbf{vacuously true}.
+        For example, the statement all cell phones in the room are turned off is true even
+        if there are no cell phones in the room. \\
+
+        \noindent \textbf{If and only if ($\iff$):} \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|c|}
+                \hline
+                1 & 1 & 1 \\
+                \hline
+                1 & 0 & 0 \\
+                \hline
+                0 & 1 & 0 \\
+                \hline
+                0 & 0 & 1 \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent When $p\iff q$ is true, $p$ and $q$ are \textbf{equivalent}. \\
+
+        \noindent \textbf{Quantifiers} include the phrases "for every ($\forall$)" and
+        "there exists (\exists)". $Consider the sentence "$x$ is even". This does not count
+        as a statement since we can't say whether or not it is true or false since we don't
+        know what $x$ is. We can make this a statement by saying "an integer $x$ is even if
+        there exists an integer $y$ such that $x=2y$".$
+
+
+
+    \subsection{Proof Methods}
+        \noindent \color{purple} \textbf{Proof by Cases:} \color{black} \\
+        \color{blue} \textit{Example: For every integer $x$, the integer $x(x+1)$ is even.} \color{black}  \\
+        Let $x$ be any integer. Then $x$ is even or odd. \\
+        Case 1: suppose $x$ is even. Choose an integer $k$ such that $x=2k$. Then $x(x+1)=2k(2k+1)$.
+        Let $y=k(2k+1)$; then $y$ is an integer and $x(x+1)=2y$ so $x(x+1)$ is even. \\
+        Case 2: suppose $x$ is odd. Choose an integer $k$ such that $x=2k+1$. Then
+        $x(x+1)=(2k+1)(2k+2)$. Let $y=(2k+1)(k+1)$; then $x(x+1)=2y$, so $x(x+1)$ is even.
+        $\blacksquare$ \\
+
+        \noindent \color{purple} \textbf{Proof by Contradiction:} \color{black} \\
+        Suppose we want to prove that statement $p$ is true. We begin by assuming $p$ is false.
+        We then deduce a \textbf{contradiction} (some statement about $q$ we know to be false).
+        If we succeed, then our assumption that $p$ is false must be wrong. Hence $p$ would have
+        to be true.

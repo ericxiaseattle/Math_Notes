@@ -1,0 +1,160 @@
+\section{Sequences and Series}
+
+    \subsection{Introduction to Sequences and Series}
+        A \textbf{sequence} is an ordered list of numbers, whereas a \textbf{series} is the
+        sum of the terms of a sequence. We can represent a series with $\{a_n\}^\infty_{n=1}$,
+        where the sequence starts with index $n=1$ and runs to infinity. The other notation,
+        summation notation, is written $\sum^{10}_{n=1}a_n$, where the sequence runs from $n=1$
+        to infinity. \\
+
+        \noindent For example, the expansion of
+        $\{a_n\}_{n=1}^{n=10}$ is $a_n=n^2=1,4,,9,16,25,36,49,64,81,100$. \\
+
+        \noindent Conventionally, the following symbols are used:
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                $a$
+                & first term in sequence                                                    \\
+                \hline
+                $n$
+                & number of terms in sequence                                               \\
+                \hline
+                $S_n$
+                & sum of first $n$ terms in sequence                                        \\
+                \hline
+                $d$
+                & Common difference between any two consecutive terms, arithmetic sequences \\
+                \hline
+                $r$
+                & Common ratio between two consecutive terms, geometric sequences           \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+
+    \subsection{Arithmetic Progressions} \\
+        \textbf{Arithmetic Progressions} are sequences containing numbers which differ from each
+        other by a common difference, $d$. \\
+
+        \noindent \textbf{Formula for Arithmetic Sequences} \\
+
+        \begin{equation*}
+            a_n=a_1+d(n-1)
+        \end{equation*}
+
+        \noindent $a_n$ is the $n^{th}$ term, $a_1$ is the first term, $n$ is the index \\
+
+        \noindent  The sum of the first $n$ terms is given by one of the three formulas. \\
+
+        \begin{align*}
+            S_n=\frac{n}{2}[2a+d(n-1)] \\
+            S_n=\frac{n}{2}[a+a_n] \\
+            S_n=n\cdot (middle term)
+        \end{align*}
+
+        \noindent Find the sum of the first 50 odd positive integers. \\
+
+        \begin{equation*}
+            S_n=\frac{n}{2}(2a+d(n-1))
+            \implies
+            S_{50}=25\cdot (2+49\cdot 2)=2500
+        \end{equation*}
+
+
+
+    \subsection{Geometric Sequences and Series}
+        \textbf{Geometric Sequences} include terms that are multiplied by a ratio iteratively.
+        They are given by the following formula. \\
+
+        \begin{equation*}
+            a_n=a\cdot r^{n-1}
+        \end{equation*}
+
+        \noindent $a_n$ is the $n^{th}$ term, $a$ is the first term, $r$ is the common ratio. \\
+
+        \noindent The sum of a geometric sequence is given by \\
+
+        \begin{equation*}
+            S_n = \begin{cases}
+                      a\cdot (\frac{r^n-1}{r-1}), & r\not=1 \\
+                      a\cdot n, & r=1
+            \end{cases}
+        \end{equation*}
+
+        \noindent The sum to infinity of a geometric sequence, where $|r|<1$, is given by \\
+
+        \begin{equation*}
+            S_\infty=\frac{a}{1-r}
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example: After striking the floor, a tennis ball bounces
+        to $\frac{2}{3}$ of the height from which it last fell. What is the total vertical
+        distance it travels before it comes to rest when it is dropped from a vertical height of
+        100$m$?} \color{black} \\
+
+        \noindent If $h$ is the height in meters, $e$ is a number such that $0<e<1$, and $S$ is
+        the total vertical distance covered before coming to rest, then \\
+
+        \begin{align*}
+            S &= h+2(eh)+2(e^2h)+2(e^3h)+2(e^4)h + \dots \\
+            &= h+2eh(1+e+e^2+e^3+\dots) \\
+            &= h+2eh \cdots \frac{1}{1-e}, \because e<1 \\
+            &= h\left(\frac{1+e}{1-e}\right)
+        \end{align*}
+
+        \noindent Since it is given that $h=100$ and $e=\frac{2}{3}$, \\
+
+        \begin{equation*}
+            S=100\left(\frac{1+\frac{2}{3}}{1-\frac{2}{3}}\right)=500 \text{ meters}
+        \end{equation*}
+
+
+
+    \subsection{Binomial Expansion}
+        The \textbf{Binomial Theorem} allows us to expand binomials such that \\
+
+        \begin{equation*}
+            (a+b)^n
+            = \sum^n_{k=0}\binom{n}{k}a^{n-k}b^k
+        \end{equation*}
+
+        \noindent where $\binom{n}{k}$, pronounced "n choose k" because it describes how many
+        ways to choose $k$ elements from a set of $n$, is given by the formula \\
+
+        \begin{equation*}
+            \binom{n}{k}=\frac{n!}{k!(n-k)!}
+        \end{equation*}
+
+        \noindent In the Binomial Theorem, $\binom{n}{k}$ determines the coefficients of the
+        expanded binomial. Coefficients of Binomials follow Pascal's Triangle and they match up
+        like so: \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale = 0.5] {Resources/Unit11Sequences/pascal.PNG}
+        \end{figure}
+
+        \noindent \color{blue} \textit{Example 1: Expand $(y+5)^4$} \color{black} \\
+
+        \begin{align*}
+            (y+5)^4 &= \binom{4}{0}y^45^0
+            + \binom{4}{1}y^35^1
+            + \binom{4}{2}y^25^2
+            + \binom{4}{3}y^15^3
+            + \binom{4}{4}y^05^4 \\
+            &= y^4+20y^3+150y^2+500y+625
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 2: What is the coefficient of $x^3 in (2x+4)^8?$}
+        \color{black} \\
+        The term containing $x^3$ is \\
+
+        \begin{align}
+            \binom{8}{5}(2x)^34^5 &= 56(2x^3)(4^5) \\
+            &= 458752x^3
+        \end{align}
+
+        \noindent Hence, the coefficient is 458752.

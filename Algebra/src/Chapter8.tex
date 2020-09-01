@@ -1,0 +1,110 @@
+\section{Rational Functions}
+
+    A rational function is any function that can be expressed as the ratio of two polynomial
+    functions, where the denominator is not equal to 0. The domain of a rational function
+    $f(x)=\frac{P(x)}{Q(x)}$ is the set of all points for which $Q(x)\not=0$.
+    \textbf{Singularities} are the $x$-values at which rational functions are undefined, for
+    which $Q(x)\not=0$. \\
+
+    \noindent \textbf{Oblique Asymptotes} are asymptotes that are neither perpendicular nor
+    parallel, rather, they are inclined. Vertical asymptotes occur at all singularities for
+    rational functions, and a rational function can have at most one horizontal/oblique asymptote. \\
+
+    \noindent If a function $f(x)=\frac{P(x)}{Q(x)}$ has a highest degree of $n$ in the numerator
+    and $m$ in the denominator then: \\
+
+    % Table with asymptote types
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            $n>m$ & No Horizontal Asymptote (Although if $n=m+1$ then there is an Oblique Asymptote)            \\
+            \hline
+            $n<m$ & $x$-axis is a Horizontal Asymptote                                                          \\
+            \hline
+            $n=m$ & Horizontal Asymptote exists at $y=\frac{\text{Coefficient of }        n}{\text{Coefficient of } m}$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \noindent \color{blue} \textit{Example 1: Find any horizontal or oblique asymptotes for
+    $f(x)=\frac{2x^2+x+1}{x^2+16}$} \color{black} \\
+    Because $n=m$, there will be one horizontal asymptote and no oblique asymptote, given by
+    $y=\frac{2}{1}=2$. \\
+
+    \noindent \color{purple} \textbf{Steps for Graphing Rational Functions:} \color{black} \\
+    1. Find the intercepts \\
+    2. Find the vertical asymptotes if they exist by setting the denominator equal to zero and solving \\
+    3. Find the horizontal or oblique asymptote if it exists \\
+    4. Sketch at least one point in each region divided by the vertical asymptotes.
+    Add more points for more accuracy. \\
+    5. Sketch the graph \\
+
+    \noindent \color{blue} \textit{Example 1: Sketch the graph of $f(x)=\frac{3x+6}{x-1}$}
+    \color{black} \\
+    Starting with the intercepts, the $y$-intercept is \\
+
+    \begin{equation*}
+        f(0)=\frac{6}{-1}=-6\implies (0, -6)
+    \end{equation*}
+
+    \noindent and the $x$-intercepts will be \\
+
+    \begin{equation*}
+        3x+6=0, x=-2\implies (-2,0)
+    \end{equation*}
+
+    \noindent Now let's find the asymptotes, starting with the vertical asypmtote. \\
+
+    \begin{equation*}
+        x-1=0\implies x=1
+    \end{equation*}
+
+    \noindent Since $n=m$, there will be a horizontal asymptote a \\
+
+    \begin{equation*}
+        y=\frac{3}{1}=3
+    \end{equation*}
+
+    \noindent After plugging some $x$-values into the function, we can find the general shape of the graph.
+    Now we sketch the graph with its asymptotes. \\
+
+    % Graph of f(x) with asymptotes identified
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = center,
+                xmin = -20,
+                xmax = 20,
+                ymin = -20,
+                ymax = 20,
+            ]
+            % f(x)
+            \addplot [unbounded coords=jump,
+                domain=-20:-2,
+                samples=41,
+                color=red,
+            ]
+            {(3*x+6)/(x-1)};
+            \addlegendentry{$f(x)$}
+            % Asymptote 1
+            \addplot [unbounded coords=jump,
+                domain=-2:1,
+                samples=16,
+                color=red,
+            ]
+            {(3*x+6)/(x-1)};
+            % Asymptote 2
+            \addplot [unbounded coords=jump,
+                domain=1:20,
+                samples=46,
+                color=red,
+            ]
+            {(3*x+6)/(x-1)};
+            %Vertical Asymptote
+            \draw[dashed] (1,\pgfkeysvalueof{/pgfplots/ymin}) --
+            (1,\pgfkeysvalueof{/pgfplots/ymax})
+            (\pgfkeysvalueof{/pgfplots/xmin},3) --
+            (\pgfkeysvalueof{/pgfplots/xmax},3);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}

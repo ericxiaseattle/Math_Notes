@@ -1,0 +1,58 @@
+% Preamble
+\documentclass{article}
+
+
+% Packages
+\usepackage[legalpaper, portrati, margin=0.9in]{geometry}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+
+% Macros
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand*{\longunderscore}
+{
+    \rule{0.25cm}{0.15mm}
+}
+
+
+% File info
+\title{Algebra Notes}
+\author{Eric Xia}
+\date{Last Updated 21 August 2020}
+
+
+% Document
+\begin{document}
+
+    \maketitle
+    \tableofcontents
+    \pagebreak
+
+    \include{Chapter1}  % Linear Functions
+    \include{Chapter2}  % Quadratic Functions
+    \include{Chapter3}  % Polynomials
+    \include{Chapter4}  % Higher-degree Polynomials
+    \include{Chapter5}  % More Functions
+    \include{Chapter6}  % Exponents and Logarithms
+    \include{Chapter7}  % Radical Functions
+    \include{Chapter8}  % Rational Functions
+    \include{Chapter9}  % Even More Functions
+    \include{Chapter10} % Conics
+    \include{Chapter11} % Sequences and Series
+    \include{Chapter12} % The Cauchy-Schwartz Inequality
+    \include{Chapter13} % Symbolic Logic and Proofs
+
+\end{document}

@@ -1,0 +1,78 @@
+\section{Exponents and Logarithms}
+
+    \subsection{Review of Exponents and Logarithms}
+        \color{purple} \textbf{Exponent Laws:} \color{black} \\
+        1. $a^ma^n=a^{m+n}$ \\
+        2. $(a^m)^n=a^{mn}$ \\
+        3. $(ab)^m=a^mb^m$ \\
+        4. $\frac{a^m}{a^n}=a^{m-n},a\not=0$ \\
+        5. $(\frac{a}{b})^m=\frac{a^m}{b^m},b\not=0$ \\
+        6. $a^-m=\frac{1}{a^m},a\not=0$ \\
+        7. $a^{\frac{1}{n}}=\sqrt[n]{a}$ \\
+        8. $a^0=1,a\not=0$ \\
+        9. $a^{\frac{m}{n}}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m$ \\
+
+        \noindent Logarithms are the inverse operation of exponents. In other words, \\
+        $y=\log_ax\iff x=a^y, a>0$ \\
+        where $a$ is the base. Conventionally, if a base is unspecified then it is 10 such that
+        $\log x = \log _{10} x$. \\
+
+        \noindent The natural logarithm, $\ln{x}$, is a logarithm with base $e$. \\
+
+        \noindent \color{purple} \textbf{Logarithm Properties:} \color{black} \\
+        1. $\log _a xy=\log _a x+\log _a y$ \\
+        2. $\log _a \frac{x}{y}=\log _a x - \log _a y$ \\
+        3. $\log _a x^y=y\cdot\log _a x$ \\
+        4. $\log _a a^x=x$ \\
+        5. $a^{\log _a x} = x$ \\
+        6. $\log _a \frac{1}{x}=-\log _a {x}$ \\
+
+        \noindent \color{purple} \textbf{Common Logarithms:} \color{black} \\
+        1. $\ln{e}=1$ \\
+        2. $\log _a {1}=0, a>0$ \\
+        3. $\log _a {0} = $ UND \\
+        4. $\log _a {a} = 1, a>0$
+
+
+
+    \subsection{Graphing Exponential and Logarithmic Functions}
+        The function $y=e^x$ is the inverse of $y=\ln{x}$. From the graph, we can see that the
+        two functions are symmetric across the line $y=x$. There is a horizontal asymptote at
+        $y=0$ in the graph of $e^x$ and a vertical asymptote at $x=0$ in the graph of $y=\ln{x}$.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    axis lines = center,
+                    xmin = -10,
+                    xmax = 10,
+                    ymin = -10,
+                    ymax = 10
+                ]
+                %y=ln(x)
+                \addplot [
+                    domain=0:10,
+                    samples=100,
+                    color=red
+                ]
+                {ln(x)};
+                \addlegendentry{$y=\ln{x}$}
+                %y=e^x
+                \addplot [
+                    domain=-5:10,
+                    samples=100,
+                    color=blue
+                ]
+                {e^x};
+                \addlegendentry{$y=e^x$}
+                %y=x
+                \addplot[
+                    domain = -10:10,
+                    samples=100,
+                    color=black,
+                    style=dashed
+                ]
+                {x};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}

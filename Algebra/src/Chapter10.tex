@@ -1,0 +1,253 @@
+\section{Conics}
+
+    \subsection{Introduction to Conics}
+        From Analytic Geometry, \textbf{Conic Sections} are the intersection of a plane and
+        2 opposite-facing solid cones from different angles. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.6] {Resources/Unit10Conics/conics.PNG}
+        \end{figure}
+
+        \noindent These curves can be defined using a straight line (\textbf{directrix}) and a
+        point (\textbf{focus}). The distance from the focus to a point on the curve and the
+        distance perpendicularly from the directrix to that point will always be the same ratio.
+        For ellipses, this ratio is less than 1. For parabolas, the ratio is 1, hence the
+        distances are equal. For hyperbolas, this ratio is greater than 1. This ratio is called
+        \textbf{eccentricity}, which graphically shows us how "un-circular" the curve is. The
+        larger the eccentricity, the less curved it is. Circles have an eccentricity of 0. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.5] {Resources/Unit10Conics/ecc.PNG}
+        \end{figure}
+
+        \noindent The \textbf{latus rectum} runs parallel to the directrix and passes through the focus. \\
+        \noindent \textbf{Length of the Latus Rectum:} \\
+
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Parabolas} & 4x focal length  \\
+                \hline
+                \textbf{Circles}   & the diameter     \\
+                \hline
+                \textbf{Ellipses}  & $\frac{2b^2}{a}$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Above, $a$ and $b$ are the \textbf{major} and \textbf{minor axes}, respectively.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale = 0.6] {Resources/Unit10Conics/latrect.PNG}
+            \includegraphics[scale = 0.6] {Resources/Unit10Conics/lactrect2.PNG}
+        \end{figure}
+
+        \noindent The \textbf{General Equation} that covers all conic equations is given by \\
+
+        \begin{equation*}
+            Ax^2+Bxy+Cy^2+Dx+Ey+F=0
+        \end{equation*}
+
+        \noindent where $A,B,C,D,E,F$ are all constants. \\
+
+        \noindent \color{purple} \textbf{Process to Determine Conic Type from General Form:} \color{black} \\
+        1. Are both variables squared? \\
+        If no, it's a parabola. If yes, go to next step. \\
+        2. Do the squared terms have opposite signs? \\
+        If yes, it's a hyperbola. If no, go to next step. \\
+        3. Are the squared terms multiplied by the same number? \\
+        If yes, it's a circle. If no, it's an ellipse.
+
+
+
+    \pagebreak
+    \subsection{Ellipses}
+        For the equations below, $a$ is the length of half of the major axis, $b$ is the length of
+        half of the minor axis, and $A,C,D,E,F$ are constants, respectively. \\
+
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{General Form}
+                & $Ax^2+Cy^2+Dx+Ey+F=0$                       \\
+                \hline
+                \textbf{Standard Form, Horizontal Major Axis}
+                & $\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1$ \\
+                \hline
+                \textbf{Standard Form, Vertical Major Axis}
+                & $\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Center: $(h,k)$ \\
+        Length of Major Axis: $2a$ \\
+        Length of Minor Axis: $2b$ \\
+        Distance between center and foci, represented by $c$, is $c^2=a^2-b^2,a>b>0$ \\
+
+        \noindent The major axis runs between the vertices, whereas the minor axis runs between
+        the co-vertices. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.6] {Resources/Unit10Conics/ellipse1.jpg}
+        \end{figure}
+
+        \noindent \color{purple} \textbf{Graphing Ellipses:} \color{black} \\
+        Determine the major axis, vertices, co-vertices, and foci. \\
+        \textbf{Equation is in form $\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1, a>b$}
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                Center                         & $(h,k)$              \\
+                \hline
+                Major Axis                     & parallel to $x$-axis \\
+                \hline
+                Coordinates of the Vertices    & $(h\pm a, k)$        \\
+                \hline
+                Coordinates of the Co-vertices & $(h,k \pm b)$        \\
+                \hline
+                Coordinates of the Foci        & $(h\pm c, k)$        \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent \textbf{Equation is in form $\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1, a>b$} \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                Center                         & $(h,k)$              \\
+                \hline
+                Major Axis                     & parallel to $y$-axis \\
+                \hline
+                Coordinates of the Vertices    & $(h, k\pm a)$        \\
+                \hline
+                Coordinates of the Co-vertices & $(h\pm b, k)$        \\
+                \hline
+                Coordinates of the Foci        & $(h, k\pm c)$        \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent \color{blue} \textit{Example 1: Graph $\frac{(x+2)^2}{4}+\frac{(y-5)^2}{9}=1$}
+        \color{black} \\
+        \noindent Because $a$ is the always the bigger number, $a^2=9$ and $b^2=4$. Because
+        $9>4$ the major axis is parallel to the $y$-axis. The center $(h,k)$ is then $(-2,5)$. The
+        vertices are $(h,k\pm a)=(-2,2),(-2,8)$. The co-vertices are $(h\pm b,k)=(-4,5),(0,5)$.
+        Since $c^2=a^2-b^2=9-4=5\implies c=\pm\sqrt{5}$, the foci are $(h,k\pm c)=(-2,5-\sqrt{5}),
+        (-2,5\pm 5)$. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.5] {Resources/Unit10Conics/ellipse2.PNG}
+        \end{figure}
+
+        \noindent \color{blue} \textit{Example 2: Graph the ellipse given by
+        $4x^2+9y^2-40x+36y+100=0$} \color{black}  \\
+
+        \begin{align*}
+            (4x^2-40x)+(9y^2+36y) &= -100 \\
+            4(x^2-10x) + 9(y^2+4y) &= -100 \\
+            4(x^2-10x+25)+9(y^2+4y+4) &= -100 + 100 +36 \\
+            4(x-5)^2+9(y+2)^2 &= 36 \\
+            \frac{(x-5)^2}{9}+\frac{(y+2)^2}{4}=1
+        \end{align*}
+
+        \noindent Because $9>4$. the major axis is parallel to the $x$-axis. Since $a^2=9$ and
+        $b^2=4$, $c^2=9-4\implies c=\pm \sqrt{5}$. The center is $(5, -2)$. The vertices are
+        $(2,-2),(8,-2)$. The co-vertices are $(5,-4),(5,0)$. The foci are $(5-\sqrt{5},-2),
+        (5+\sqrt{5},-2)$. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.5] {Resources/Unit10Conics/ellipse3.PNG}
+        \end{figure}
+
+
+
+    \subsection{Circles}
+        A \textbf{circle} is the set of all points on a plane that are a fixed distance from the
+        center. A circle is not a function because it fails the vertical line test. A circle is a
+        special type of ellipse with equations below. \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                \textbf{General Form}
+                & $x^2+y^2+Cx+Dy+E=0$   \\
+                \hline
+                \textbf{Standard Form}
+                & $(x-h)^2+(y-k)^2=r^2$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Above, the center is given by $(h,k)$ and the radius as $r$.
+
+        \noindent \color{purple} \textbf{Graphing Circles:} \color{black} \\
+        Determine the center $(h,k)$ and radius $r$ and graph it.
+
+
+
+    \subsection{Parabolas}
+        We have already graphed and worked with parabolas in the past, so here are the general
+        forms of parabolas when used in the context of conics. \\
+
+        \begin{center}
+            \begin{tabular} {|c|c|c|}
+                \hline
+                \textbf{Parabola, Horizontal Axis}
+                & $(y-k)^2=4p(x-h),p\not=0$
+                & Vertex is $(h,k)$ \\
+                & & Focus is $(h+p,k)$            \\
+                & & Directrix is the line $x=h-p$ \\
+                & & Axis is the line $y=k$        \\
+                \hline
+                \textbf{Parabola, Vertical Axis}
+                & $(x-h)^2=4p(y-k),p\not=0$
+                & Vertex is $(h,k)$ \\
+                & & Focus is $(h,k+p)$            \\
+                & & Directrix is the line $y=k-p$ \\
+                & & Axis is the line $x=h$        \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+
+    \subsection{Hyperbolas}
+        Hyperbolas look like this: \\
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics [scale=0.3] {Resources/Unit10Conics/hyperbola.png}
+        \end{figure}
+
+        \begin{center}
+            \begin{tabular} {|c|c|}
+                \hline
+                \textbf{General Form}
+                & $Ax^2-Cy^2+Dx+Ey+F=0$                       \\
+                \hline
+                \textbf{Hyperbola, Horizontal Transverse Axis}
+                & $\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1$ \\
+                \hline
+                \textbf{Hyperbola, Vertical Transverse Axis}
+                & $\frac{(y-k)^2}{a^2}-\frac{(x-h)^2}{b^2}=1$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \noindent Center: $(h,k)$ \\
+        Distance between vertices: $2a$ \\
+        Distance between foci: $2c$ \\
+        $c^2=a^2+b^2$ \\
+
+        \noindent The eccentricity, $e$, has the formula \\
+        $e=\frac{\sqrt{a^2+b^2}}{a}$  \\
+
+        \noindent The reciprocal function $f(x)=\frac{1}{x}$ is a hyperbola.
