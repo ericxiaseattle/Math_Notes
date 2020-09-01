@@ -1,0 +1,117 @@
+\section{Matrices}
+
+    \subsection{Fundamentals of Matrices}
+        A \textbf{matrix} is an array of numbers. The \textbf{Identity Matrix} is a special matrix
+        equivalent to the number 1 and of the form \\
+
+        \noindent $I$ =
+
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}. \\
+
+        \noindent It has the same number of rows as columns and has 1s on the main diagonal and 0s
+        everywhere elsewhere. When we multiply by $I$ the original is unchanged. \\
+
+        \noindent The \textbf{determinant} is a number that can be calculated from a
+        \textbf{square matrix} (same number of rows as columns) that gives us information regarding
+        systems of linear equations and matrix inverses. The symbol for determinants are two pipes on
+        either side of a matrix, much like the absolute value symbol. For example, $|A|$ is the
+        determinant of $A$.
+
+        \noindent \textbf{Addition/Subtraction:} add the values in the corresponding positions \\
+        \noindent
+        \begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+            e & f \\
+            g & h
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            a+e & b+f \\
+            c+g & d+h
+        \end{bmatrix} \\
+
+        \noindent \textbf{Negation:} Distribute the opposite sign \\
+
+        \noindent -
+        \begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            -a & -b \\
+            -c & -d
+        \end{bmatrix} \\
+
+        \noindent \textbf{Constant Multiple:} Distribute the constant \\
+
+        \noindent k
+        \begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            ka & kb \\
+            kc & kd
+        \end{bmatrix} \\
+
+        \noindent \textbf{Matrix Multiplication:} Take the dot product of the rows and columns
+        of the matrices being multiplied together. When matrices are multiplied together,
+        the number of columns in the $1^{st}$ matrix must equal the number of rows in the $2^{nd}$
+        matrix. The resulting matrix will always have the same number of rows as the $1^{st}$ matrix
+        and the same number of columns as the $2^{nd}$ matrix. \\
+
+        \noindent \textit{Example:} \\
+
+        \noindent
+        \begin{bmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6
+        \end{bmatrix}
+        $\times$
+        \begin{bmatrix}
+            7 & 8 \\
+            9 & 10 \\
+            11 & 12
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            58 & 64 \\
+            139 & 154
+        \end{bmatrix} \\
+
+        \noindent $1^{st}$ row and $1^{st}$ column: \\
+        \begin{align*}
+            (1,2,3) \bullet (7,9,11) &= 1\cdot 7 + 2\cdot 9 + 3\cdot 11 \\
+            &= 58
+        \end{align*}
+
+        \noindent $1^{st}$ row and $2^{nd}$ column: \\
+        \begin{align*}
+            (1,2,3) \bullet (8,10,12) &= 1\cdot 8 +2\cdot 10+3\cdot 12 \\
+            &= 64
+        \end{align*}
+
+        \noindent $2^{nd}$ row and $1^{st}$ column: \\
+        \begin{align*}
+            (4,5,6) \bullet (7,9,11) &= 4\cdot 7+5\cdot 9+6\cdot 11 \\
+            &= 139
+        \end{align*}
+
+        \noindent $2^{nd}$ row and $2^{nd}$ column: \\
+        \begin{align*}
+            (4,5,6) \bullet (8,10,12) &= 4\cdot 8+5\cdot 10+6 \cdot 12 \\
+            &= 154
+        \end{align*}
+
+    \subsection{Solving Higher-Order Systems Using Augmented Matrices}
+    \subsection{The Gauss-Jordan Method}

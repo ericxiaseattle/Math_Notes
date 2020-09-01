@@ -1,0 +1,406 @@
+\section{Trigonometry}
+
+    \subsection{Trigonometric Functions}
+        For any angles $A$,$B$, and $C$, the following definitions hold true. \\
+
+        \begin{center}
+            \begin{tabular}{ccc}
+                $\sin A = \frac{a}{c}$
+                & $\cos A = \frac{b}{c}$
+                & $\tan A = \frac{a}{b}$ \\
+                $\csc A = \frac{c}{a}$
+                & $\sec A = \frac{c}{b}$
+                & $\cot A = \frac{b}{a}$\\\\
+                $\sin B = \frac{b}{c}$
+                & $\cos B = \frac{a}{c}$
+                & $\tan B = \frac{b}{a}$
+            \end{tabular}
+        \end{center}
+
+        \begin{figure} [h]
+            \centering
+            \includegraphics [scale=0.4] {Resources/Unit2Trig/Trig.fig1.png}
+        \end{figure}
+
+        \noindent From the figure, it is easy to tell that $\sin A$ and $\csc A$, $\cos A$ and
+        $\sec A$, and $\tan A$ and $\cot A$ are reciprocal functions. Hence, it is usually
+        easier to just work with $\sin A$, $\cos A$, and $\tan A$ Additionally,
+
+        \begin{center}
+            \begin{tabular}{ccc}
+                $\frac{\sin A}{\cos A}=\tan A$
+                & and &
+                $\frac{\cos A}{\sin A}=\cot A$
+            \end{tabular}
+        \end{center}
+
+        \noindent Manipulating the trigonometric definitions, we get
+
+        \begin{center}
+            \begin{tabular}{cccc}
+                $a=c\sin A$
+                & $a=c\cos B$
+                & $a = b\tan A$ & \\
+                %%%
+                $b=c\sin B$
+                & $b=c\cos A$
+                & $b=a\tan B$ & \\
+                %%%
+                $c=a\csc A$
+                & $c=a\sec B$
+                & $c=b\csc B$
+                & $c=b\sec A$
+            \end{tabular}
+        \end{center}
+
+        \noindent For $\triangle ABC$, we have $a^2+b^2=c^2$. It follows that
+
+        \begin{equation*}
+            (\sin ^2 A) + (\cos ^2 A) = \frac{a^2}{c^2} + \frac{b^2}{c^2}=1
+        \end{equation*}
+
+        \noindent Simplified,this is known as the \color{purple} \textbf{Pythagorean Identity}
+        \color{black}. Dividing both sides of the equation by $\sin ^2 A$ and $\cos ^2 A$
+        respectively, we get
+
+        \begin{align*}
+            sin^2 A + cos^2 A = 1 \\
+            1 + cot^2 A = csc^2 A \\
+            tan^2 A + 1 = sec^2 A
+        \end{align*}
+
+
+
+    \subsection{Sum and Difference}
+        \begin{align*}
+            \sin (\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta \\
+            \cos (\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta
+        \end{align*}
+
+        \noindent By the definition of the tangent function, we have
+
+        \begin{align*}
+            tan(\alpha \pm \beta) &= \frac{sin(\alpha \pm \beta)}{cos(\alpha \pm \beta)}
+            = \frac{\sin \alpha \cos \beta \pm \cos \alpha \sin \beta}{\cos \alpha \cos \beta \mp \sin \alpha \sin \beta} \\
+            &= \frac{\frac{\sin\alpha}{\cos\alpha}\pm\frac{\sin\beta}{\cos\beta}}{1\mp\frac{\sin\alpha\sin\beta}{\cos\alpha\cos\beta}}
+            = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
+        \end{align*}
+
+
+
+    \subsection{Multiple Angle Formulas}
+
+        By defining $\alpha = \beta$ in the sum formulas, we get
+
+        \begin{align*}
+            \sin (2\alpha) = 2 \sin\alpha \cos\alpha \\
+            \cos (2\alpha) = \cos ^2 \alpha - \sin ^2 \alpha \\
+            \tan (2\alpha) = \frac{2\tan\alpha}{1-\tan ^2\alpha}
+        \end{align*}
+
+        \noindent We can derive the half-angle and triple angle formulas similarly using the
+        same method by manipulating the sum formulas.
+
+
+
+    \subsection{The Unit Circle}
+        By rotating a right triangle around and reflecting across a unit circle, we can clearly
+        see the periodic properties of the basic trig functions, $\sin\theta$, $\cos\theta$,
+        and $\tan\theta$.
+
+        \begin{center}
+            \begin{tabular}{cc}
+                $\sin(\theta \pm \frac{\pi}{2})=\pm\cos\theta$
+                & $\cos(\theta+\frac{\pi}{2})=\mp\sin\theta$ \\
+                $\sin(-\theta)=-\sin\theta$
+                & $\cos(-\theta)=\cos\theta$ \\
+                $\sin(\pi-\theta)=\sin\theta$
+                & $\cos(\pi-\theta)=-\cos\theta$
+            \end{tabular}
+        \end{center}
+
+        \noindent Through computing the $\sin x$ and $\cos x$ of the 30-60-90 and 45-45-90
+        triangles, we find the coordinates of chosen points on the unit circle to be given in
+        the figure below.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale = 0.2] {Resources/Unit2Trig/unit_circle.png}
+            \caption*{Figure 2}
+        \end{figure}
+
+
+
+    \subsection{Sum and Product}
+        \noindent The \color{purple} \textbf{product to sum} \color{black} identities can be
+        realized through expanding the sum and difference functions on\textbf{} the right side
+        of the identity.
+
+        \begin{align*}
+            \cos(\alpha)\cos(\beta)=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2} \\
+            \sin(\alpha)\sin(\beta)=\frac{\cos(\alpha-\beta)-\cos(\alpha+\beta)}{2} \\
+            \sin(\alpha)\cos(\beta)=\frac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2}
+        \end{align*}
+
+        \noindent The \color{purple} \textbf{sum to product identities} \color{black} can be
+        proved through expanding the sums within the product side of the identity. We can also
+        infer the \color{purple} \textbf{difference to product} \color{black} identities by the
+        same method.
+
+        \begin{align*}
+            \sin x + \sin y = 2\sin(\frac{x+y}{2})\cos(\frac{x-y}{2}) \\
+            \cos x + \cos y = 2\cos(\frac{x+y}{2})\cos(\frac{x-y}{2}) \\
+            \sin x - \sin y = 2 \cos (\frac{x+y}{2}) \sin(\frac{x-y}{2}) \\
+            \cos x - \cos y = 2 \sin (\frac{x+y}{2}) \sin(\frac{y-x}{2}) \\
+            \tan x \pm \tan y = \tan(x\pm y)(1\mp \tan x \tan y)
+        \end{align*}
+
+
+
+    \pagebreak
+    \subsection{Graphing Trig Functions}
+        All of the six fundamental trigonometric functions are \textbf{odd} functions
+        (symmetric across origin) except $\cos x$ and $\sec x$, \textbf{even} functions
+        (symmetric across $y$-axis). Recall that for odd functions $f(-x)=-f(x)$ and for even
+        functions $f(-x)=f(x)$. A function $f(x)$ is \textbf{sinusoidal} if it can be written in
+        the form $f(x)=a\sin[b(x+c)]+d$ for real constants $a, b, c,$ and $d$. Since
+        $\cos x = sin (x+\frac{\pi}{2})$, $f(x)=\cos x$ is sinusoidal. \\
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[width=4in,axis equal image,
+                    xmin = -8,
+                    xmax = 8,
+                    ymin = -6,
+                    ymax = 6,
+                    axis lines = center,
+                    no marks,
+                    xticklabels={-2$\pi$,-1.5$\pi$,...$\pi$,2$\pi$},
+                    xtick={-6.2832,-4.7124,...,6.2832},
+                    xlabel=$x$,
+                    ylabel=$y$
+                ]
+                %sin
+                \addplot[
+                    domain = -8:8,
+                    samples=200,
+                    color=red
+                ]
+                {sin(deg(x))};
+                \addlegendentry{$f(x)=\sin{x}$}
+                %cos
+                \addplot[
+                    domain = -8:8,
+                    samples=200,
+                    color=blue
+                ]
+                {cos(deg(x))};
+                \addlegendentry{$f(x)=\cos{x}$}
+                %tan part 1
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -7.85:-4.72,
+                    samples=200,
+                    color=purple
+                ]
+                {tan(deg(x))};
+                \addlegendentry{$f(x)=\tan{x}$}
+                %tan part 2
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -4.70:-1.58,
+                    samples=200,
+                    color=purple
+                ]
+                {tan(deg(x))};
+                %tan part 3
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -1.56:1.56,
+                    samples=200,
+                    color=purple
+                ]
+                {tan(deg(x))};
+                %tan part 4
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 1.58:4.68,
+                    samples=200,
+                    color=purple
+                ]
+                {tan(deg(x))};
+                %tan part 5
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 4.73:7.81,
+                    samples=200,
+                    color=purple
+                ]
+                {tan(deg(x))};
+                % TODO: Fix dysfunctional asymptote
+                % \draw[dashed,thick,green] (-4.70,4) -- (-4.71,-4);
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent The graph of $f(x)=\tan x$ has vertical asymptotes at $x=\frac{\pi}{2}\pm\pi$. \\
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[width=4in,axis equal image,
+                    xmin = -8,
+                    xmax = 8,
+                    ymin = -6,
+                    ymax = 6,
+                    axis lines = center,
+                    no marks,
+                    xticklabels={-2$\pi$,-1.5$\pi$,...$\pi$,2$\pi$},
+                    xtick={-6.2832,-4.7124,...,6.2832},
+                    xlabel=$x$,
+                    ylabel=$y$
+                ]
+                %csc part 1
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -7.84:-6.36,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                \addlegendentry{$f(x)=\csc{x}$}
+                %sec part 1
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -7.85:-4.84,
+                    samples=200,
+                    color=blue
+                ]
+                {sec(deg(x))};
+                \addlegendentry{$f(x)=\sec{x}$}
+                %cot part 1
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -7.85:-6.3,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                \addlegendentry{$f(x)=\cot{x}$}
+                %csc part 2
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -6.15:-3.25,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                %csc part 3
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -3.02:-0.11,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                %csc part 4
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 0.10:3.02,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                %csc part 5
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 3.26:6.16,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                %csc part 6
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 6.4:7.85,
+                    samples=200,
+                    color=red
+                ]
+                {cosec(deg(x))};
+                %sec part 2
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -4.59:-1.68,
+                    samples=200,
+                    color=blue
+                ]
+                {sec(deg(x))};
+                %sec part 3
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -1.45:1.45,
+                    samples=200,
+                    color=blue
+                ]
+                {sec(deg(x))};
+                %sec part 4
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 1.67:4.60,
+                    samples=200,
+                    color=blue
+                ]
+                {sec(deg(x))};
+                %sec part 5
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 4.81:7.85,
+                    samples=200,
+                    color=blue
+                ]
+                {sec(deg(x))};
+                %cot part 2
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -6.17:-3.26,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                %cot part 3
+                \addplot[
+                    unbounded coords=jump,
+                    domain = -3.0:-0.1,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                %cot part 4
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 0.1:3.03,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                %cot part 5
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 3.26:6.16,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                %cot part 6
+                \addplot[
+                    unbounded coords=jump,
+                    domain = 6.36:7.85,
+                    samples=200,
+                    color=purple
+                ]
+                {cot(deg(x))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent The above three graphs of the functions all have vertical asymptotes at
+        sections where the function is undefined and $x$ is a multiple of $\frac{\pi}{2}$.

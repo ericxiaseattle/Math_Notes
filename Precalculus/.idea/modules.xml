@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Precalculus.iml" filepath="$PROJECT_DIR$/Precalculus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Precalculus.iml" filepath="$PROJECT_DIR$/.idea/Precalculus.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,211 @@
+\section{Introductory Set Theory}
+
+    \subsection{Introduction to Sets}
+        Forget what you think math is. Forget even what numbers are. Instead of numbers, think
+        about math in terms of "things". What is a set? Simply put, a \textbf{set} is a
+        \textit{collection} of "things" with a shared defining characteristic. This is
+        exactly like the array data structure in Computer Science. For example, a set of
+        clothing may include shirts, pants, hats, jackets, socks, etc. and a set of colors
+        may include red, blue, green, purple, brown, etc. \\
+
+        \noindent In their purest form, sets are pretty useless. However, they are the
+        foundation of mathematics and can be seen in the many branches of mathematics,
+        including graph theory, algebra, real analysis, complex analysis, number theory,
+        and so on. Set theory is important because it is all about using logic to connect
+        numbers, models, axioms, and more. Without set theory, mathematics would not have
+        meaning, and may as well be a bunch of scribbles.\\
+
+        \noindent The \textbf{universal set} is one that contains everything relevant to the
+        focus. For example, in number theory the universal set is all of the integers.
+        In Calculus the universal set is generally the real numbers and in complex analysis
+        the universal set is the complex numbers.\\
+
+        \noindent Sets are composed of many \textbf{elements}, separated by commas and enclosed
+        by curly braces. For example, a set of clothes may be defined as \{shirts, pants, socks,
+        jackets,\dots\}. We add the \textbf{ellipsis} (dots) after all the definite elements to
+        indicate that the set can keep going on forever, as there are many more types of clothing
+        that we don't need to bother defining.
+
+
+
+    \subsection{Order and Equality}
+        For sets, the arrangement of the elements does not matter. For example, the set
+        $\{1,2,3,4\}$ is the same set as $\{4,1,3,2\}$. In set theory, \textbf{order} is not the
+        arrangement of the elements, rather it is \textit{the size of the set}. The preferred
+        term for this is \textbf{cardinality}, the \textit{number of elements a set has}. \\
+
+        \noindent In general, mathematicians use capital letters to represent sets and lowercase
+        letters to represent elements in that set. For example, in the set $A=\{a,\dots\}$, $a$
+        is an element of the set $A$. If an element $a$ is in the set $A$, then we can write this
+        with the symbol $\in$. If $a$ is not in $A$ then we denote this with $\notin$. For
+        example, if $A=\{1,2,3\}$ then it is valid to say that $1\in A$ and $5\notin A$. \\
+
+        \noindent Two sets are equal if they have the same elements. We use the equals sign to
+        show equality. For example, if $A$ is the set defined by the first four positive whole
+        numbers and $B=\{4,2,1,3\}$, then $A=B$. Remember that the arrangement of the elements
+        in a set do not matter.
+
+
+
+    \pagebreak
+    \subsection{Notation}
+        Some of these symbols and their corresponding topics will be covered in later sections.
+        It's just convenient to put everything on set notation in one section.
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{Symbol} & \textbf{Meaning} & \textbf{Example} \\\hline
+                $\{ \}$ & \textbf{Set} & $\{1,2,3,4\}$ \\ \hline
+                $A \cup B$ & \textbf{Union}: in A or B or both & $C\cup D=\{1,2,3,4,5\}$ \\ \hline
+                $A\cap B$ & \textbf{Intersection}: in both A and B & $C\cap D=\{3,4\}$ \\ \hline
+                $A\subseteq B$ & \textbf{Subset}: A has some or all elements of B & $\{3,4,5\}\subseteq D$ \\ \hline
+                $A\subset B$ & \textbf{Proper Subset}: A has some elements of B & $\{3,5\}\subset D$ \\ \hline
+                $A\not\subset B$ & \textbf{Not Subset}: A is not a subset of B & $\{ 1,6 \} \not\subset C$ \\ \hline
+                $A\supseteq B$ & \textbf{Superset}: A has the same elements of B or more & $\{1,2,3\}\supseteq \{1,2,3\}$ \\ \hline
+                $A \supset B$ & \textbf{Proper Superset}: A has all of B's elements and more & $\{1,2,3,4\} \supset \{1,2,3\}$ \\ \hline
+                $A \not\supset B$ & \textbf{Not Superset}: A is not a superset of B & $\{1,2,6\} \not\supset \{1,9\}$ \\ \hline
+                %%%
+                $A^c$ & \textbf{Complement}: elements not in A & $D^c=\{1,2,6,7\}$  \\
+                & & when $\mathbb{U}=\{1,2,3,4,5,6,7\}$ \\ \hline
+                $A-B$ & \textbf{Difference}: in A but not in B & $\{1,2,3,4\}-\{3,4\}=\{1,2\}$ \\ \hline
+                $a \in A$ & \textbf{Element}: $a$ is in $A$ & $3 \in \{1,2,3,4\}$ \\ \hline
+                $b \notin A$ & \textbf{Not Element}: $b$ is not in $A$ & $6 \notin \{1,2,3,4\}$ \\ \hline
+                $\emptyset$ & \textbf{Empty Set}: $\{\}$ & $\{1,2\} \cap\{3,4\}=\emptyset$ \\ \hline
+                $\mathbb{U}$ & \textbf{Universal Set}: set of all possible values in the area of interest &   \\ \hline
+                $P(A)$ & \textbf{Power Set}: all subsets of A & $P(\{1,2\})=\{\{\},\{1\},\{2\},\{1,2\}\}$ \\ \hline
+                %%%
+                $A=B$ & \textbf{Equality}: both A and B have the same elements & $\{3,4,5\}=\{5,4,3\}$ \\ \hline
+                $A\times B$ & \textbf{Cartesian Product}: set of ordered pairs from A and B & $\{1,2\}\times\{3,4\}$ \\
+                & & $=\{(1,3),(1,4),(2,3),(2,4)\}$  \\ \hline
+                $|A|$ & \textbf{Cardinality}: the number of elements in $A$ & $|\{3,4\}|=2$ \\ \hline
+                %%%
+                $|,:$ & \textbf{Such That} & $\{n|n>0\}=\{1,2,3,\dots\}$ \\ \hline
+                $\forall$ & \textbf{For All} & $\forall x>1,x^2.x$ \\ \hline
+                $\exists$ & \textbf{There Exists} & $\exists$  $x|x^2>x$ \\ \hline
+                $\therefore$ & \textbf{Therefore} & $a=b \therefore b =a$ \\ \hline
+                $\because$ & \textbf{Because} & \\ \hline
+                %%%
+                $\mathbb{N}$ & \textbf{Natural Numbers} & $\{1,2,3,\dots\}$ or $\{0,1,2,3,\dots\}$ \\ \hline
+                $\mathbb{Z}$ & \textbf{Integers} & $\{\dots,-3,-2,-1,0,1,2,3,\dots\}$ \\ \hline
+                $\mathbb{Q}$ & \textbf{Rational Numbers} & \\ \hline
+                $\mathbb{A}$ & \textbf{Algebraic Numbers} & \\ \hline
+                $\mathbb{R}$ & \textbf{Real Numbers} & \\ \hline
+                $\mathbb{I}$ & \textbf{Imaginary Numbers} & $3i$ \\ \hline
+                $\mathbb{C}$ & \textbf{Complex Numbers} & $2+5i$ \\ \hline
+            \end{tabular}
+        \end{center}
+
+
+
+    \subsection{Fundamental Laws of Set Algebra}
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $A\cup B=B \cap A$ & \textbf{Commutative} Property \\
+                $A\cap B = B\cap A$ & \\ \hline
+                $(A\cup B)\cup C = A\cup (B\cup C)$ & \textbf{Associative} Property \\
+                $(A\cap B)\cap C = A\cap (B\cap C)$ & \\ \hline
+                $A\cup (B \cap C) = (A\cup B) \cap (A\cup C)$ & \textbf{Distributive} Property \\
+                $A\cap (B \cup C) = (A\cap B) \cup (A\cap C)$ & \\ \hline
+            \end{tabular}
+
+            \begin{tabular}{|c|c|}
+                \hline
+                $A \cup \emptyset = A$ & \textbf{Identity} \\
+                $A \cap \mathbb{U}=A$ & \\ \hline
+                $A \cup A^C = \mathbb{U}$ & \textbf{Complement} \\
+                $A \cap A^C = \emptyset$ & \\ \hline
+            \end{tabular}
+        \end{center}\\
+
+        \noindent \color{purple} \textbf{The Principle of Duality} \color{black} states that
+        for any true statement about sets, the \textit{dual }statement obtained by interchanging
+        $\cup$ and $\cap$, $\cup$ and $\emptyset$, and reversing inclusions is also true. A
+        statement is \textbf{self-dual} if it is equal to its dual. \\
+
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $A\cup A=A$ & \textbf{Idempotent} Laws \\
+                $A \cap A = A$ & \\ \hline
+                $A\cup \mathbb{U}=\mathbb{U}$ & \textbf{Domination} Laws\\
+                $A\cap \emptyset = \emptyset$ & \\ \hline
+                $A\cup (A \cap B) = A$  & \textbf{Absorption} Laws \\
+                $A\cap (A \cup B) = A$ & \\ \hline
+            \end{tabular}
+        \end{center}
+
+
+
+    \pagebreak
+    \subsection{Complements}
+        The \textbf{complement} of a set $A$ refers to the elements not in $A$. In the figure
+        below, if $A$ is the area colored red in the left image, then the complement of $A$,
+        denoted $A^c$ is everything else, as shown in the right image.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit1SetTheory/complement1.PNG}
+            \caption*{Figure 1}
+        \end{figure}
+
+        \noindent Below are some laws about complements.
+
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $(A\cup B)^C = A^C \cap B^C$ & \textbf{De Morgan's Laws} \\
+                $(A\cap B)^C = A^C \cup B^C$ & \\ \hline
+                $(A^C)^C=A$ & \textbf{Involution} Law, \textit{also known as "double complement law"} \\ \hline
+                $\emptyset^C=\mathbb{U}$ & \\ \hline
+                $\mathbb{U}^C=\emptyset$ & \\ \hline
+            \end{tabular}
+        \end{center}\\
+
+        \noindent If $A\cup B=\mathbb{U}$ and $A\cap B=\emptyset$, then $B=A^C$.
+
+
+
+    \subsection{Inclusion}
+        \noindent \textbf{Subsets} are parts of a set. For example, in the set $\{1,2,3,4,5\}$,
+        one subset is $\{1,2,3\}$. Two others are $\{3,4\}$ and $\{1\}$. However, $\{1,6\}$ is
+        not a subset since the element 6 is not in the parent set. We use \textbf{$A \subseteq B$}
+        to denote that A is a subset of B.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit1SetTheory/subsets.PNG}
+            \caption*{Figure 2}
+        \end{figure}
+
+        \noindent \color{blue} \textit{Example 1: Let $A$ be all the multiples of 4 and let
+        $B$ be all the multiples of 2.} Is $A$ a subset of $B$? Is $B$ a subset of $A$?
+        \color{black} \\
+
+        $A=\{\dots,-8,-4,0,4,8,\dots\}$\\
+        $B=\{\dots,-8,-6,-4,-2,0,2,4,6,8,\dots\}$\\
+        By pairing elements from $A$ and $B$, we can see that every element of $A$ is also an
+        element of $B$, but not every element of $B$ is an element of $A$.\\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit1SetTheory/subset2.PNG}
+            \caption*{Figure 3}
+        \end{figure}
+
+        \noindent $\therefore A \subseteq B, B\not\subseteq A$ \\
+        \noindent $A$ is a \textbf{proper subset} of $B$ if and only if every element in $A$ is
+        also in $B$ and there exists \textit{at least one element} in $B$ that is \textit{not}
+        in $A$. We use $\{1,2,3\}\subset\{1,2,3,4\}$ to denote that the first set is a proper
+        subset of the second set since the element $4$ is not in the first set. In another
+        example, $\{1,2,3\}\subseteq\{1,2,3\}$ but $\{1,2,3\}\not\subset\{1,2,3\}$.
+
+
+
+    \subsection{Null Sets}
+        An \textbf{empty} set, or \textbf{null} set, is one with \textit{no elements}.
+        Represented by $\emptyset$, an example of this is "even numbers that are also odd".
+        Obviously, no number like this exists, so the set is null. Furthermore,
+        \textit{every empty set is a subset}. Intuitively, since we cannot find any elements
+        in the empty set that are not in set $A$, then all elements in the empty set are in $A$.

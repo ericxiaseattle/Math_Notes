@@ -1,0 +1,721 @@
+\section{Vectors and Other Coordinate Systems}
+
+    \subsection{3D Coordinate Systems}
+        In the 2D Rectangular (Cartesian) Coordinate System, we have the $x$-axis and the
+        $y$-axis. Points are of the form $(x,y)$. In the 3D Rectangular Coordinate System,
+        we add the $z$-axis and points are of the form $(x,y,z)$. In the 2D system, we divided
+        space into quadrants. Similarly, in the 3D system, we divide space into octants, numbered
+        from I to VIII.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.3]{Resources/Unit3Vectors/Octants.png}
+            \caption*{Figure 1}
+        \end{figure}
+
+        \noindent We refer to the set of all ordered triples of real numbers $(x,y,z)$ as
+        $\mathbb{R}^3$, where
+        $\mathbb{R}^3\implies\mathbb{R}*\mathbb{R}*\mathbb{R}=\{(x,y,z)|x,y,z\in\mathbb{R}\}$.
+        Collectively, the $xy, xz,$ and $yz$-planes are known as the coordinate planes, where
+        the $xy$-plane has $z=0$. Likewise, the $xz$ and $yz$ planes have $y=0$ and $x = 0$,
+        respectively. \\
+
+        \noindent Let's say we wanted to find the distance between two points given by
+        $P_1(x_1,y_1,z_1)$ and $P_2(x_2,y_2,z_2)$. We first construct a rectangular box as
+        in Figure 2, where $P_1$ and $P_2$ are opposite vertices and the faces of the box are
+        parallel to the coordinate planes. If $A(x_2,y_1,z_1)$ and $B(x_2,y_2,z_1)$ are the
+        vertices of the box indicated in the figure, then
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.1]{Resources/Unit3Vectors/Fig2.jpg}
+            \caption*{Figure 2}
+        \end{figure}
+
+        \begin{center}
+            \begin{tabular}{ccc}
+                $|P_1A|=|x_2-x_1|$
+                &  $|AB|=|y_2-y_1|$
+                &  $|BP_2|=|z_2-z_1|$
+            \end{tabular}
+        \end{center}
+
+        \noindent Because triangles $P_1BP_2$ and $P_1AB$ are both right-angled, two applications
+        of the Pythagorean Theorem give
+
+        \begin{align*}
+            |P_1P_2|^2=|P_1B|^2+|BP_2|^2 \\
+            |P_1B|^2=|P_1A|^2+|AB|^2
+        \end{align*}
+
+        \noindent Combining these equations, we get
+
+        \begin{align*}
+            |P_1P2|^2 &= |P_1B|^2+|BP_2|^2\\
+            &= |x_2-x_1|^2+|y_2-y_1|^2+|z_2-z_1|^2\\
+            &= (x_2-x_1)^2+(y_2-y_1)^2+(z^2-z^1)^2
+        \end{align*}
+
+        \noindent \color{purple} \textbf{Distance Formula in 3D} \color{black} The distance
+        $|P_1P_2|$ between the points $P_1(x_1,y_1,z_1)$ and $P_2(x_2,y_2,z_2)$ is given by
+
+        \begin{equation*}
+            |P_1, P_2|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}
+        \end{equation*}
+
+        \noindent Using this formula, we can find the \color{purple} \textbf{Standard Form of
+        a $\mathbb{R}^3$ Sphere}\color{black}, centered at $C(h,k,l)$ and radius $r$:
+
+        \begin{equation*}
+            (x-h)^2+(y-k)^2+(z-l)^2=r^2
+        \end{equation*}
+
+        \noindent \color{blue} \textit{Example 1 Show that $x^2+y^2+z^2+4x-6y+2z+6=0$ is the
+        equation of a sphere, and find its center and radius.}\color{black}\\
+
+        \noindent We rewrite the given equation by completion of squares:
+        \begin{align*}
+            (x^2+4x+4)+ &= (y^2-6y+9)+(z^2+2z+1)=-6+4+9+1\\
+            &= (x+2)^2+(y-3)^2+(z+1)^2=8
+        \end{align*}
+
+        \noindent Comparing this equation with the standard form, we find the center to be
+        $(-2,3,-1)$ and the radius to be $\sqrt{8}=2\sqrt{2}.$
+
+        \noindent \color{blue} \textit{Example 2 What region in $\mathbb{R}^3$ is represented
+        by the following inequalities?}
+
+        \begin{center}
+            \begin{tabular}{cc}
+                $1\leqx^2+y^2+z^2\leq4$
+                & $z\leq0$
+            \end{tabular}
+        \end{center}
+        \color{black}
+
+        \noindent The inequalities can be rewritten as
+
+        \begin{equation*}
+            1\leq\sqrt{x^2+y^2+z^2}\leq2
+        \end{equation*}
+
+        \noindent so they represent the points $(x,y,z)$ whose distance from the origin is at least 1 and
+        at most 2. But we are also given that $z\leq0$, so the points lie on or below the
+        $xy$-plane. Thus, the given inequalities represent the region that lies between or on
+        the spheres $x^2+y^2+z^2=1$ and $x^2+y^2+z^2=4$ and beneath or on the $xy$-plane.
+        This region is drawn in Figure 3.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.1]{Resources/Unit3Vectors/Fig3.jpg}
+            \caption*{Figure 3}
+        \end{figure}
+
+
+
+    \subsection{Introduction to Vectors}
+        A \textbf{vector} is a quantity specifying both \emph{magnitude} and \emph{direction},
+        often represented by an arrow. The length of the arrow corresponds with the magnitude
+        of the vector. We denote vectors with the boldface letter "\textbf{v}" or with
+        "\overrightarrow{$v$}". \\
+
+        \noindent\textbf{Displacement vectors}, of the form $v=\overrightarrow{AB}$ or
+        $u=\overrightarrow{CD}$, represent the magnitude and direction travelled from the
+        \textbf{initial point}, A (the \emph{tail}), to the \textbf{terminal point}, B
+        (the \emph{tip}). If the vectors $v$ and $u$ have the same magnitude and direction,
+        even if they are in different positions, then we can say that $u$ and $v$ are
+        \textbf{equivalent} (or \emph{equal}) and we write \textbf{$u=v$}. The
+        \textbf{zero vector} (also known as the \emph{null vector}) is denoted by a point with a
+        0 next to it. It has a magnitude of 0 since all its components are 0 and it is the only
+        vector with no specific direction. The \textbf{position vector}
+        (also known as \emph{location vector} or \emph{radius vector}) always starts at the
+        origin, \emph{O}.\\
+
+        \noindent To represent the movement of a particle between the points $A(x_1,y_1,z_1)$
+        and $B(x_2,y_2,z_2)$, where the \textbf{components} are separated by commas, we use the
+        following two notations. It is extremely important to remember to not mix up
+        \overrightarrow{v} and \overrightarrow{w}
+        $when describing the magnitude and distance travelled between $A$ and $B$ or $B$ and $ A.
+
+        \begin{align*}
+            \overrightarrow{AB} = \overrightarrow{v} = \langle x_2-x_1, y_2-y_1, z_2-z_1\rangle\\
+            \overrightarrow{BA} = \overrightarrow{w} = \langle x_1-x_2, y_1-y_2, z_1-z_2\rangle
+        \end{align*}
+
+        \noindent \color{blue} \textit{Example 1: Give the vector from $(a)$ $(1,-3,-5)$ to
+        $(2,-7,0)$ and $(b)$ the position vector for $(-90,4)$.} \color{black} \\
+        $(a)$ $\langle2-1,-7-(-3),0-(-5)\rangle$\\
+        $=\langle1,-4,5\rangle$\\
+        $(b)$ There isn't much to this problem besides acknowledging that the position vector
+        is just the components of the vector. The answer is $\langle-90,4\rangle$. \\
+
+        \noindent The \textbf{magnitude} of the vector
+        $\overrightarrow{v}=\langle x_1,y_1,z_1\rangle$ is given by
+
+        \begin{align*}
+            ||\overrightarrow{v}||=\sqrt{x_1^2+y_1^2+z_1^2}
+        \end{align*}
+
+        \noindent Hence, if $||\overrightarrow{v}||=0$ then $\overrightarrow{v}=\overrightarrow{0}.$
+
+        \noindent\color{blue} \textit{Example 2: Determine the magnitude of
+        $(a)$ $\overrightarrow{u}=\langle\frac{1}{\sqrt{5}},-\frac{2}{\sqrt{5}}\rangle$ and
+        $(b)$ $\overrighatarrow{w}=\langle0,0,0\rangle.$} \color{black} \\
+        (a) $||\overrightarrow{u}||=\sqrt{\frac{1}{5}+\fraq{4}{5}}=\sqrt{1}=1$\\
+        (b) $||\overrightarrow{w}||=\sqrt{0+0}=0$\\
+
+        \noindent A \textbf{unit vector} is a vector with a magnitude of 1 and is represented
+        by a circumflex over a variable. (Example: $\hat{j}$ has a magnitude of 1) In
+        $\mathbb{R}^3$ there are three \textbf{standard basis vectors}, given by
+
+        \begin{center}
+            \begin{tabular}{ccc}
+                $i=\langle1,0,0\rangle$
+                & $j=\langle0,1,0\rangle$
+                & $k=\langle0,0,1\rangle$
+            \end{tabular}
+        \end{center}
+
+        \noindent Note that standard basis vectors are also unit vectors.\\
+
+        \noindent \color{blue} Example 3 \color{black} The vector
+        $\overrightarrow{v}=\langle6,-4,0\rangle$ starts at the point $P=(-2,5,-1)$. At what
+        point does the vector end?\\
+
+        \noindent \emph{Solution} Recall that the components of a vector are always the coordinates of the
+        terminal point minus the coordinates of the starting point. So, if the ending point of the
+        vector is given by $Q=(x_2,y_2,z_2)$ then we know that the vector $\overrightarrow{v}$ can
+        be written as
+
+        \begin{equation*}
+            \overrightarrow{v}=\overrightarrow{PQ}=\langle x_2+2,y_2-5,z_2+1\rangle
+        \end{equation*}
+
+        \noindent We are given the components of $\overrightarrow{v}$ so we can set the components
+        of the vector above to the given components. Doing so gives
+
+        \begin{equation*}
+            \langle x_2+2,y_2-5,z_2+1\rangle=\langle6,-4,0\rangle
+        \end{equation*}
+
+        \noindent If two vectors are equal then their components must also be equal. Hence,
+
+        \begin{center}
+            \begin{align*}
+                x_2+2=6\implies x_2=4\\
+                y_2-5=-4\implies y_2=1\\
+                z_2+1=0\implies z_2=-1
+            \end{align*}
+        \end{center}
+
+        \noindent The endpoint of the vector is then $Q(4,1,-1)$.
+
+
+
+    \subsection{Vector Arithmetic}
+        \textbf{Sum/Difference Rule} The sum and difference of two vectors $\overrightarrow{a}$
+        and $\overrightarrow{b}$ are given by
+
+        \begin{equation}
+            \overrightarrow{a}\pm\overrightarrow{b}=\langle x_1\pm x_2, y_1 \pm y_2, z_1 \pm z_2\rangle
+        \end{equation}
+
+        \noindent The addition and subtraction of two vectors can easily be visualized with the
+        \textbf{Triangle Law} (Fig 4) and the \textbf{Parallelogram Law} (Fig 5).
+
+        \begin{figure}[h]
+            \centering
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[scale=0.3]{Resources/Unit3Vectors/Triangle.PNG}
+                \captionOf{Figure 4}
+            \end{minipage}%
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[scale = 0.3] {Parallelogram.PNG}
+                \captionOf{Figure 5}
+            \end{minipage}
+        \end{figure}
+
+        \noindent \textbf{Scalar Multiplication} If $c$ is a scalar and $\overrightarrow{v}$ is
+        a vector, then the \textbf{scalar multiple} $c\overrightarrow{v}$ is the vector whose
+        magnitude is $|c|$ times the magnitude of $\overrightarrow{v}$ and whose direction is
+        the same as $v$ if $c>0$ and is opposite to $\overrightarrow{v}$ if $c<0$. If $c=0$ or
+        $\overrightarrow{v}=0$, then $c\overrightarrow{v}=0$.
+
+        \begin{equation}
+            c\overrightarrow{v}=\langle cx_1, cy_1, cz_1 \rangle
+        \end{equation}
+
+        \noindent Two nonzero vectors are \textbf{parallel} if they are scalar multiples of one
+        another. In particular, the vector $-\overrightarrow{v}=(-1)\overrightarrow{v}$ has the
+        same magnitude as $\overrightarrow{v}$ but faces the opposite direction. We refer to
+        this as the \textbf{negative} of $\overrightarrow{v}$. Suppose that $\overrightarrow{v}$
+        and $\overrightarrow{u}$ are parallel vectors. Then there must be a number $c$ such that
+        $\overrightarrow{a}=c\overrightarrow{b}$.
+
+        \noindent \color{blue} Example 1 \color{black} Determine if
+        $\overrightarrow{a} = \langle 2,-4,1\rangle, \overrightarrow{b}=\langle -6,12,-3\rangle$ \\
+        \emph{Solution} The vectors are parallel since $\overrightarrow{b}=-3\overrightarrow{a}$. \\
+
+        \noindent \color{blue} Example 2 \color{black} Find a unit vector that faces the same
+        direction as $\overrightarrow{w}=\langle-5,2,1\rangle.$\\
+        \emph{Solution} We first need to determine the magnitude of $\overrightarrow{w}$.\\
+        $||\overrightarrow{w}||=\sqrt{25+4+1}=\sqrt{30}$.
+        Then the unit vector, $\overrightarrow{u}$ is given by\\
+        $\overrightarrow{u}=\frac{1}{||\overrightarrow{w}||}\overrightarrow{w}
+        =\frac{1}{\sqrt{30}}\langle-5,2,1\rangle=\langle-\frac{5}{\sqrt{30}},
+        \frac{2}{\sqrt{30}},\frac{1}{\sqrt{30}}\rangle$.\\
+        We can check that $\overrightarrow{u}$ is an unit vector by finding its magnitude.\\
+        $||\overrightarrow{u}||=\sqrt{\frac{25}{30}+\frac{4}{30}+\frac{1}{30}}=\sqrt{\frac{30}{30}}=1$\\
+        $\overrightarrow{u}$ also faces the same direction as $\overrightarrow{w}$ since it is
+        only a scalar multiple of $\overrightarrow{w}$ and $c > 0$.\\
+
+        \noindent This example helps us establish the generality that, \emph{given a vector}
+        $\overrightarrow{w}$, $\overrightarrow{u}=\frac{\overrightarrow{w}}{||\overrightarrow{w}||}$
+        \emph{will be a unit vector that faces the same direction as} $\overrightarrow{w}$.\\
+
+        \noindent Revising standard basis vectors, using scalar multiplication we can write
+        $\overrightarrow{v}=\langle x_1,y_1,z_1\rangle$ as
+
+        \begin{equation*}
+            \overrightarrow{v}=x_1\textbf{i}+y_1\textbf{j}+z_1\textbf{k}
+        \end{equation*}
+
+        \noindent Using this concept, any vector in $\mathbb{R}^3$ can be written in terms of the
+        standard basis vectors $i, j$, and $k$. For instance,
+
+        \begin{equation*}
+            \langle 1,-2,6 \rangle= \textbf{i} - 2\textbf{j} + 6\textbf{k}
+        \end{equation*}
+
+        \noindent \color{blue} Example 3 \color{black} If $\overrightarrow{v}=\langle3,-9,1\rangle$
+        and $\overrightarrow{w}=-i+8k$ then compute $2\overrightarrow{v}-3\overrightarrow{w}.$\\
+
+        \emph{Solution}
+
+        \begin{align*}
+            2\overrightarrow{v}-3\overrightarrow{w} &= 2\langle3,-9,1\rangle-3\langle-1,0,8\rangle\\
+            &= \langle6,-18,2\rangle-\langle-3,0,24\rangle\\
+            &= \langle9,-18,-22\rangle
+        \end{align*}
+
+        \noindent \color{blue} Example 4 \color{black} Find the unit vector in the direction of
+        the vector $2i-j-2k$.\\
+
+        \noindent \emph{Solution} The magnitude of the given vector is\\
+        $|2i-j-2k|=\sqrt{2^2+(-1)^2+(-2)^2}=\sqrt{9}=3$\\
+        Hence, the unit vector with the same direction is\\
+        $\frac{1}{3}(2i-j-2k)=\frac{2}{3}i-\frac{1}{3}j-\frac{2}{3}k$.\\
+
+        \noindent \color{purple} \textbf{Vector Properties} \color{black} If
+        $\overrightarrow{v}$, $\overrightarrow{w}$, and $\overrightarrow{u}$ are vectors with the
+        same number of components and $a$ and $b$ are two numbers, then
+
+        \begin{center}
+            \begin{tabular}{c|c}
+                $(1)\overrightarrow{v}+\overrightarrow{w}=\overrightarrow{w}+\overrightarrow{v}$
+                & $\overrightarrow{v}+(\overrightarrow{w}+\overrightarrow{u})=(\overrightarrow{v}
+                +\overrightarrow{w})+\overrightarrow{u}(2)$ \\
+                $(3)\overrightarrow{v}+0=\overrightarrow{v}$
+                & $\overrightarrow{v}+(-\overrightarrow{v})=0(4)$\\
+                $(5)a(\overrightarrow{v}+\overrightarrow{w})=a\overrightarrow{v}+a\overrightarrow{w}$
+                & $(a+b)\overrightarrow{v}=a\overrightarrow{v}+b\overrightarrow{v}(6)$\\
+                $(7)(ab)\overrightarrow{v}=a(b\overrightarrow{v})$
+                & $1\overrightarrow{v} = \overrightarrow{v}(8)$
+            \end{tabular}
+        \end{center}
+
+
+
+    \subsection{The Dot Product}
+        A vector can be \emph{multiplied} by another vector but not \emph{divided} by another.
+        There are two types of products of vectors: one that produces a scalar quantity
+        (the dot product) and one that produces a vector quantity (the cross product). \\\\
+
+        \noindent \textbf{The Dot Product} Given two vectors $\overrightarrow{a}=\langle x_1, y_1, z_1\rangle$
+        and $\overrightarrow{b}=\langle x_2, y_2, z_2\rangle$, the dot product is given by
+
+        \begin{equation*}
+            \overrightarrow{a}\bullet\overrightarrow{b}=x_1x_2+y_1y_2+z_1z_2
+        \end{equation*}
+
+        \noindent Alternatively, where $\theta$ is the angle between $\overrightarrow{a}$
+        and $\overrightarrow{b}$,
+
+        \begin{equation*}
+            \overrightarrow{a}\bullet\overrightarrow{b}=ab\cos{\theta}
+        \end{equation*}
+
+        \noindent The dot product is also referred to as the \emph{scalar product} and is a type
+        of an \emph{inner product}. Intuitively, the dot product of $\overrightarrow{a}$ and
+        $\overrightarrow{b}$ is the product of $|b|$ with $|a_b|$ where $a_b$ is the
+        \textbf{projection} of $\overrightarrow{a}$ onto $\overrightarrow{b}$.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/dotproduct1.PNG}
+            \caption*{Figure 6}
+        \end{figure}
+
+        \noindent Now taking any two vectors $\overrightarrow{a}$ and $\overrightarrow{b}$, we
+        can decompose them into horizontal and vertical components. Then
+        $\overrightarrow{a}=a_xi+a_yj$ and $\overrightarrow{b}=b_xi+b_yj$.
+
+        \begin{figure}[h]
+            \centering
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[scale=0.3]{Resources/Unit3Vectors/dotproduct2.PNG}
+                \captionOf{Figure 7}
+            \end{minipage}%
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[scale = 0.3] {dotproduct3.PNG}
+                \captionOf{Figure 8}
+            \end{minipage}
+        \end{figure}
+
+        \noindent Hence, $\overrightarrow{a}\bullet\overrightarrow{b}=(a_xi+a_yj)*(b_xi+b_yj)$.
+        And since the perpendicular components have a dot product of zero,
+        $\overrightarrow{a}\bullet\overrightarrow{b}=a_xb_x+a_yb_y$.\\
+
+        \noindent The second dot product formula involving $\theta$ can be derived first by
+        sketching Figure 9.
+
+        \begin{figure} [h]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Unit3Vectors/Fig9.PNG}
+            \caption*{Figure 9}
+        \end{figure}
+
+        \noindent The three vectors in the figure form $\Delta AOB$. Note that the length of
+        each side of the triangle is just the magnitude of the vector forming that side.
+        By the Law of Cosines,
+
+        \begin{equation*}
+            ||\overrightarrow{a}-\overrightarrow{b}||
+            =||\overrightarrow{a}||^2+||\overrightarrow{b}||^2-2||\overrightarrow{a}||||\overrightarrow{b}
+            ||\cos{\theta}
+        \end{equation*}
+
+        \pagebreak
+        \noindent We can rewrite the left side as
+
+        \begin{align*}
+            ||\overrightarrow{a}-\overrightarrow{b}||^2 &
+            = (\overrightarrow{a}-\overrightarrow{b})\bullet(\overrightarrow{a}-\overrightarrow{b})\\
+            &= \overrightarrow{a}\bullet\overrightarrow{a}
+            -\overrightarrow{a}\bullet\overrightarrow{b}-\overrightarrow{b}\bullet\overrightarrow{a}
+            +\overrightarrow{b}\bullet\overrightarrow{b}\\
+            &= ||\overrightarrow{a}||^2-2\overrightarrow{a}\bullet\overrightarrow{b}+||\overrightarrow{b}||^2
+        \end{align*}
+
+        \noindent We can substitute this for the left side of the first equation.
+
+        \begin{align*}
+            ||\overrightarrow{a}-\overrightarrow{b}||^2
+            &= ||\overrightarrow{a}||^2+||\overrightarrow{b}||^2-2||\overrightarrow{a}
+            ||||\overrightarrow{b}||\cos{\theta}\\
+            ||\overrightarrow{a}||^2-2\overrightarrow{a}\bullet\overrightarrow{b}
+            +||\overrightarrow{b}||^2 &= ||\overrightarrow{a}||^2+||\overrightarrow{b}||^2-2
+            ||\overrightarrow{a}||||\overrightarrow{b}||\cos{\theta}\\
+            -2\overrightarrow{a}\bullet\overrightarrow{b} &= -2||\overrightarrow{a}||||\overrightarrow{b}
+            ||\cos{\theta}\\\overrightarrow{a}\bullet\overrightarrow{b} &= ||\overrightarrow{a}
+            ||||\overrightarrow{b}||\cos{\theta}
+        \end{align*}
+
+        \noindent \color{red} \textbf{Dot Product Properties}\\ \color{black} If
+        $\overrightarrow{u}, \overrightarrow{v},$ and $\overrightarrow{w}$ are vectors and
+        $c$ is a scalar, then
+
+        \begin{center}
+            \begin{tabular} {c|c}
+                $\overrightarrow{u}\bullet(\overrightarrow{v}+\overrightarrow{w})
+                =\overightarrow{u}\bullet\overrightarrow{v}+\overrightarrow{u}\bullet\overrightarrow{w}$
+                & $(c\overrightarrow{v})\bullet\overrightarrow{w}
+                =\overrightarrow{v}\bullet(c\overrightarrow{w})
+                =c(\overrightarrow{v}\bullet\overrightarrow{w})$ \\
+                $\overrightarrow{v}\bullet\overrightarrow{w}
+                =\overrightarrow{w}\bullet\overrightarrow{v}$
+                & $\overrightarrow{v}\bullet\overrightarrow{0}=0$\\
+                $\overrightarrow{v}\bullet\overrightarrow{v}=||\overrightarrow{v}||^2$
+                & If $\overrightarrow{v}\bullet\overrightarrow{v}=0$ then
+                $\overrightarrow{v}=\overrightarrow{0}$
+            \end{tabular}
+        \end{center}
+
+        \noindent \color{blue} Example 1 \color{black} Compute the dot product for
+        $\overrightarrow{v}=5i-8j, \overrightarrow{w}=i+2j$.\\
+
+        \noindent \textit{Solution} $\overrightarrow{v}\bullet\overrightarrow{w}=5-16=-11$.
+
+        \noindent \color{blue} Example 2 \color{black} Compute the dot product for
+        $\overrightarrow{a}=\langle0,3,-7\rangle, \overrightarrow{b}=\langle 2,3,1\rangle$\\
+
+        \noindent \textit{Solution} $\overrightarrow{a}\bullet\overrightarrow{b}=0+9-7=2$
+
+        \noindent \color{blue} Example 3 \color{black} Determine the angle between
+        $\overrightarrow{a}=\langle 3,-4,1\rangle$ and $\overrightarrow{b}=\langle 0,5,2\rangle$.\\
+        \textit{Solution} We need both the dot product and the magnitude to find the angle.
+
+        \begin{align*}
+            \overrightarrow{a}\bullet\overrightarrow{b} &= -22\\
+            ||\overrightarrow{a}|| &= \sqrt{26}\\
+            ||\overrightarrow{b}|| &= \sqrt{29}
+        \end{align*}
+
+        \noindent The angle is then given by
+
+        \begin{align*}
+            \cos{\theta} &= \frac{\overrightarrow{a}\bullet\overrightarrow{b}}{||\overrightarrow{a}||||\overrightarrow{b}||}=\frac{-22}{\sqrt26\sqrt29}=-0.8011927\\
+            \theta &= \arccos(-0.8011927)=2.5 rad = 143.24\degree
+        \end{align*}
+
+
+
+    \pagebreak
+    \subsection{Projections}
+    \subsection{Direction Angles and Cosines}
+    \subsection{The Cross Product}
+    \subsection{Lines and Planes}
+    \subsection{Cylinders and Quadric Surfaces}
+    \pagebreak
+
+
+
+    \subsection{Polar Coordinates}
+        The \textbf{Polar Coordinate System} is a 2D coordinate system which defines each point
+        in the form $(r,\theta)$, where $r$ is the distance from the reference point
+        (usually radius) and $\theta$ is an angle from a reference direction. The
+        \textbf{pole} is the reference point and the \textbf{polar axis} is the ray from the
+        pole in the reference direction. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.8]{Resources/Unit3Vectors/polar.PNG}
+            \caption*{The Polar System}
+        \end{figure}
+
+        \noindent To convert between Polar and Cartesian coordinates we use the trigonometric
+        function definitions. \\
+        $\cos\theta=\frac{x}{r}\implies x=r\cos\theta$ \\
+        $\sin\theta=\frac{y}{r}\implies y=r\sin\theta$ \\
+        $r^2=x^2+y^2$ \\
+        $\tan\theta=\frac{y}{x}$ \\
+        \noindent If either $x$ or $y$ is negative, we have to determine $\theta$ through
+        observing which quadrant $\theta$ belongs to. We know that Quadrant I,II,III,IV refer to
+        $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$ respectively. \\
+
+        \noindent \textbf{Transformations on Polar Curves}: \\
+        \textbf{Rotations}: Replace the parameter $\theta$ with $(\theta-\phi)$ and the curve
+        will be rotated anticlockwise $\phi$ radians. \\
+        \textbf{Dilations:} Replace the parameter $r$ with $\frac{r}{s}$, where $s$ is the scale
+        factor. \\
+        \textbf{Reflections:} For a reflection about the line $\theta=\phi$, replace the parameter
+        $\theta$ with $(2\phi-\theta)$. For a reflection about the pole, replace the parameter
+        $\theta$ with $(\theta-\pi)$. \\
+
+        \noindent \textbf{Line:} \\
+        The general form is given by $\theta=\alpha$ where $\alpha$ is the angle between the line
+        and the positive $x$-axis. Note that any line $\theta=\alpha+\pi k$ is the same as the
+        line $\theta=\alpha$ for any integer $k$. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/line.PNG}
+            \caption*{$\theta=\frac{\pi}{6}$}
+        \end{figure}
+
+        \noindent \textbf{Circle:} \\
+        The general form is given by $r=\alpha$, where $\alpha$ is the radius of the circle. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/circle.PNG}
+            \caption*{$r=2$}
+        \end{figure}
+
+        \pagebreak
+        \noindent \textbf{Cardioid:} \\
+        A heart-shaped curve with the general form $r=\alpha+\alpha\cos\theta$, where $\alpha$ is
+        the radii of the circles being traced by the cardioid. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/cardioid.PNG}
+            \caption*{$r=1+\cos\theta$}
+        \end{figure}
+
+        \noindent \textbf{Limacon:} \\
+        Limacons are general forms of cardioids, formed from the path traced by any point fixed
+        to a circle. The general form of a limacon is $r=a+b\cos\theta$ where $\frac{b}{a}$
+        determines the shape of the limacon. If $\frac{b}{a}<1$ then the limacon will have a
+        smoothed heart shape. If $\frac{b}{a}=1$ then the limacon will be a cardioid.
+        If $\frac{b}{a}>1$ then the limacon will have an inner loop.
+
+        % @TODO: Fix alignemnt of limacon images
+        \begin{figure} [hbt!]
+            \centering
+            %%%
+            \begin{subfigure}{.5\textwidth}
+                \includegraphics[width=.4\linewidth]{Resources/Unit3Vectors/limacon1.PNG}
+                \caption*{$r=1.5+\cos\theta$}
+            \end{subfigure}
+            %%%
+            \begin{subfigure}{.5\textwidth}
+                \includegraphics[width=.4\linewidth]{Resources/Unit3Vectors/limacon2.PNG}
+                \caption*{$r=0.5+\cos\theta$}
+            \end{subfigure}
+        \end{figure}
+
+        \noindent \textbf{Rose:} \\
+        A rose curve is a sinusoidal curve graphed in polar coordinates. Its loops are called
+        \textbf{petals}. The general form of a rose is $r=a+b\cos(k\theta)$ where $\alpha$ is
+        the magnitude of each petal and $k$ is an integer that determines the number of petals.
+        If $k$ is odd then the number of petals is $k$. If $k$ is even then the number of petals
+        is $2k$. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/rose.PNG}
+            \caption*{$r=\cos{3\theta}$}
+        \end{figure}
+
+        \pagebreak
+        \noindent \textbf{Archimedian Spiral:} \\
+        An Archimedian Spiral is a spiral-shaped curve extending infinitely outward from the pole.
+        The general form is $r=a+b\theta$ where the parameter $a$ affects the initial position of
+        the graph and the parameter $b$ affects the spacing of the turns of the spiral. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/spiral.PNG}
+            \caption*{$r=\frac{\theta}{2\pi}$}
+        \end{figure}
+
+        \noindent \textbf{Lemniscate:} \\
+        An lemniscate is shaped like a figure-eight and the infinity symbol, for which it is named for.
+        It is the locus of points where the product of the distances to two points (loci) is a
+        constant value. The general form is $r^2=a^2\cos{2\theta}$, where $a$ is the magntiude
+        of one of the petals.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Unit3Vectors/lemniscate.PNG}
+            \caption*{$r=\sqrt{\cos{2\theta}}$}
+        \end{figure}
+
+
+
+    \subsection{Cylindrical Coordinates}
+        The Cylindrical Coordinate System is the extension of the Polar System to $\mathbb{R}^3$,
+        where a point is represented by the ordered triple $(r,\theta,z)$. $(r,\theta)$ is the
+        polar coordinate in $\mathbb{R}^2$ and $z$ is the usual $z-$coordinate in the Cartesian
+        Coordinate System. \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.5]{Resources/Unit3Vectors/cylindrical.png}
+            \caption*{The Cylindrical Coordinate System}
+        \end{figure}
+
+        \noindent \textbf{Cylindrical $\rightarrow$ Rectangular:} \\
+        $   x=r\cos\theta$ \\
+        $   y=r\sin\theta$ \\
+        $   z=z$ \\
+        \textbf{Rectangular $\rightarrow$ Cylindrical:} \\
+        $   r^2=x^2+y^2$ \\
+        $   \tan\theta=\frac{y}{x}$ \\
+        $   z=z$ \\
+
+
+
+    \pagebreak
+    \subsection{Spherical Coordinates}
+
+        In the Spherical Coordinate System, a point in space, $P$, is represented by the ordered
+        triple $(\rho, \theta, \phi)$, where \\
+        $   \pho $ is the distance between $P$ and the origin $(\rho\not=0)$ \\
+        $   \theta $ is the angle between $P$ and the reference direction \\
+        $   \phi $ is the angle formed between the positive $z-$axis and the line segment
+        $\overline{OP}$, where $O$ is the origin and $0\leq\phi\leq\pi$.
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit3Vectors/relation.PNG}
+            \caption*{Relation Between Spherical, Rectangular, and Cylindrical Systems}
+        \end{figure}
+
+        \noindent \textbf{Spherical $\rightarrow$ Rectangular:} \\
+        $  x=\rho\sin\phi\cos\theta$ \\
+        $  y=\rho\sin\phi\sin\theta$ \\
+        $  z=\rho\cos\phi$ \\
+        \textbf{Rectangular $\rightarrow$ Spherical:} \\
+        $  \rho^2=x^2+y^2+z^2$ \\
+        $  \tan\theta=\frac{y}{x}$ \\
+        $  \phi=\arccos{(\frac{z}{\sqrt{x^2+y^2+z^2}})}$ \\
+        \textbf{Spherical $\rightarrow$ Cylindrical:} \\
+        $  r=\rho\sin\phi$ \\
+        $  \theta=\theta$ \\
+        $  z=\rho\cos\phi$ \\
+        \textbf{Cylindrical $\rightarrow$ Spherical:} \\
+        $  \rho=\sqrt{r^2+z^2}$ \\
+        $  \theta=\theta$ \\
+        $  \phi=\arccos{(\frac{z}{\sqrt{r^2+z^2}})}$
+
+        %Adding captions screws up the figure alignment / need to fix
+        \noindent \textbf{Common Spherical Surfaces:} \\
+
+        % @TODO: Fix figure alignment
+        \begin{figure} [hbt!]
+            \centering
+            \begin{subfigure}{.33\textwidth}
+                \includegraphics[scale=0.6]{Resources/Unit3Vectors/sphere.PNG}
+            \end{subfigure}
+            %%%
+            \begin{subfigure}{.33\textwidth}
+                \includegraphics[scale=0.6]{Resources/Unit3Vectors/halfplane.PNG}
+            \end{subfigure}
+            %%%
+            \begin{subfigure}{.33\textwidth}
+                \includegraphics[scale=0.6]{Resources/Unit3Vectors/halfcone.PNG}
+            \end{subfigure}
+        \end{figure}
+
+        \noindent $(1)$ Sphere of Radius $\rho$, $\rho=c$ \\
+        $(2)$ Half-Plane of Distance $\theta$, $\theta=c$ \\
+        $(3)$ Half-Cone of Angle $\phi$, $\phi=0$
+
+    \pagebreak
+    \subsection{Functions Defined by Vectors}
+        A \textbf{vector function} is a function that takes one or more variables and returns a
+        vector. A single-variable vector function in $\mathbb{R}^2$ and $\mathbb{R}^3$ will
+        have the following forms, respectively: \\
+
+        \begin{equation*}
+            \overrightarrow{r}(t)=\langle f(t), g(t)\rangle
+            ,
+            \overrightarrow{r}(t)=\langle f(t), g(t), h(t) \rangle
+        \end{equation*}
+
+        \noindent The domain of a vector function is the set of all $ts$ for which all the
+        component functions are defined. \\
+
+        \noindent \textit{Example 1: Determine the domain of
+        $\overrightarrow{r}(t)=\langle \cos t, \ln{(4-t)}, \sqrt{t+1}\rangle$} \\
+        The first component is defined for all $ts$. The second component is defined for $t<4$.
+        The third component is defined for $t\geq-1$. Combining these, we get the domain $[-1,4)$. \\
+
+        \noindent \textit{Example 2: Sketch the graph of the function
+        $\overrightarrow{r}(t)=\langle t,t^3-10t+7\rangle$} \\
+        Evaluating the function several times gives us \\
+        $\overrightarrow{r}(-3)=\langle -3,10\rangle$ \\
+        $\overrightarrow{r}(-1)=\langle -1,16 \rangle$ \\
+        $\overrightarrow{r}(1)=\langle 1, -2 \rangle$ \\
+        $\overrightarrow{r}(3)=\langle 3,4 \rangle$ \\
+
+        \begin{figure} [hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Unit3Vectors/vectorfunction.PNG}
+        \end{figure}
