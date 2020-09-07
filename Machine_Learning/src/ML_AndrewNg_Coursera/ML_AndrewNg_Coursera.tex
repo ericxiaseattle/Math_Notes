@@ -1,0 +1,393 @@
+% Preamble
+\documentclass{article}
+
+% Packages
+\usepackage[legalpaper, portrati, margin=0.9in]{geometry}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+
+% File info
+\title{My Notes to Andrew Ng's Coursera "Machine Learning"}
+\author{Eric Xia}
+\date{Last Updated 5 September 2020}
+
+
+% Document
+\begin{document}
+
+    \maketitle
+    \tableofcontents
+    \pagebreak
+
+    \section{Introduction}
+        \textbf{Machine Learning (ML):} the field of study that gives computers the ability to learn without
+        being explicitly programmed \\
+        \noindent \textbf{Learning Problems:} a computer program is said to learn from experience E with respect to some
+        task T and some performance measure P, if its performance on T, as measured by P, improves with
+        experience E. \\
+
+        \noindent \textit{Example: Suppose your email program watches which emails you do or do not mark as spam, and based on
+        that learns how to better filter spam. Identify the experience E, task T, and performance measure P
+        in this scenario.}
+        \noindent \textbf{T:} Classifying emails as spam or not spam. \\
+        \noindent \textbf{E:} Watching you label emails as spam or not spam. \\
+        \noindent \textbf{P:} The number (or fraction) of emails correctly classified as spam/not spam. \\
+
+        \noindent \textbf{Supervised Learning:} we give the computer a dataset and the right/wrong answers
+        and then attempt to produce more correct answers. \\
+        \noindent \textbf{Unsupervised Learning:} we approach problems with little to no idea of what our
+        results should look like and we derive structure from data where we don't necessarily know the effect
+        of the variables; we let the computer learn itself, e.g. organizing computing clusters, social network
+        analysis, market segmentation, astronomical data analysis. \\
+        
+        \noindent \textbf{Clustering:} finding natural groups in the feature space of input data \\
+        \noindent \textbf{Regression:} attempting to predict continuous values \\
+        \noindent \textbf{Classification:} attemping to predict discrete-valued output or map input variables
+        into discrete categories, e.g. Benign vs. Malignant Tumor \\
+
+
+
+    \pagebreak
+    \section{Univariate Linear Regression}
+        \noindent \textbf{Training Set:} the dataset used to train a model \\
+        $\bm{m}$: number of training examples \\
+        $\bm{x}$'s: input variables/features \\
+        $\bm{y}$'s: output variables/features \\
+        $\bm{(x,y)}$: one training example \\
+        $\bm{(x^{(i)}, y^{(i)})}$: the $i$th training example \\
+        \textbf{Hypothesis Function ($h:x\to y,h(x)=h_\theta (x)=\theta_0+\theta_1 x$)}: given a training set,
+        we want to choose \textbf{parameters ($\theta_0$ and $\theta_1$)}such that the mean distance between
+        $h(x)$ and the training examples are as close to the true mean distance:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.2]{Resources/Linear_Regression.png}
+            \caption*{\textbf{Linear Regression}}
+        \end{figure}
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Hypothesis_Function.png}
+            \caption*{\textbf{Hypothesis Function}}
+        \end{figure}
+
+        \noindent We can measure the error of a hypothesis function by using a \textbf{cost function} $J$,
+        given by
+
+        \begin{align*}
+            J(\theta_0,\theta_1)    &= \frac{1}{2m}\sum^m_{i=1}(h_\theta(x_i)-y_i)^2
+        \end{align*}
+
+        \noindent This function is really just the average of the differences between the produced outputs
+        with the hypothesis function being tested, and the actual outputs. The cost function is also referred
+        to as the squared error function. We half the mean in the cost function out of convenience for
+        computing the gradient descent, since the derivative term of the square function will cancel out the
+        half. \\
+
+        \noindent The contour plot display of the cost function for a particular hypothesis function:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Contour.PNG}
+        \end{figure}
+
+        \noindent \textbf{Gradient Descent:} an optimization algorithm used to minimize some function, e.g. the
+        cost function, by iteratively moving in the direction of the steepest descent as defined by the negative
+        of the gradient. \\
+
+        \noindent Putting $\theta_0$ on the $x$-axis and $\theta_1$ on the $y$-axis, with the cost function
+        on the $z$-axis, the points on the graph are the outputs of our cost function. We know we have succeeded
+        in finding parameters for $J(\theta_0,\theta_1)$ that minimize the cost when our gradient descent leads
+        us to the blue area of the graph (lowest $z$-value). The red arrows on the graph show the minimum points
+        on the graph.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Gradient_Descent}
+        \end{figure}
+
+        \noindent We implement this algorithm by taking the derivative of the cost function. This gives us the
+        slope of the cost function at a point, and a direction to move towards. We then iteratively step down
+        the cost function in the direction of the steepest descent. The size of each step is determined by the
+        \textbf{learning rate}, the parameter $\alpha$. Note that $\alpha$ is fixed and its value need not variate
+        because the cost function is parabolic, hence as we approach the minimum, the derivative decreases in
+        magnitude and flattens out. \\
+
+        \noindent We want to choose a value of $\alpha$ that is not too small or too large:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.5]{Resources/Learning_Rate.PNG}
+        \end{figure}
+
+        \noindent Then our implementation of gradient descent is given by repeating the following equation until
+        convergence.
+
+        \begin{equation*}
+            \theta_j := \theta_j-\alpha\frac{\partial}{\partial \theta_j}J(\theta_0,\theta_1)
+        \end{equation*}
+
+        \noindent where $j=0,1$ represents the index and "$:=$" is the assignment operator. \\
+
+        \noindent Note that the gradient descent equations for $\theta_0$ and $\theta_1$ should be updated
+        simultaneously, such that updating of $\theta_0$ does not interfere with the accurate updating of $\theta_1$:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Simultaneous_Update}
+        \end{figure}
+
+        \noindent The current gradient descent algorithm we are using is called \textbf{batch gradient descent}
+        because it accounts for every training example to determine the descent steps. For a single training
+        example,
+
+        \begin{align*}
+            \frac{\partial}{\partial\theta_j}J(\theta)  &= \frac{\partial}{\partial\theta_j}\frac{1}{2}(h_\theta(x)-y)^2 \\
+                                                        &= 2\cdot\frac{1}{2}(h_\theta(x)-y)\cdot
+                                                           \frac{\partial}{\partial\theta_j}(h_\theta(x)-y) \\
+                                                        &= (h_\theta(x)-y)\cdot\frac{\partial}{\partial\theta_j}
+                                                           \left(\sum^n_{i=0}\theta_i x_i-y\right) \\
+                                                        &= (h_\theta(x)-y)x_j
+        \end{align*}
+
+        \noindent Hence, we repeat the following equations until convergence.
+
+        \begin{align*}
+            \theta_0 &:= \theta_0-\alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x_i)-y_i) \\
+            \theta_1 &:= \theta_1-\alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x_i)-y)x_i
+        \end{align*}
+
+        \noindent While gradient descent can be susceptible to local minima, simple optimization problems for
+        linear regression only have one global, and no other local or optima. Thus, gradient descent will always
+        converge here to the global minimum. Assuming we have a well-chosen $\alpha$, we see that $J$ is indeed
+        a convex quadratic function, and the below contour plot depicts the trajectory of an implementation of
+        gradient descent to minimize a quadratic function. The points start from the warm outermost colors and
+        move towards the cooler innermost colors, until they converge at the global minimum of the cost function.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Contour2}
+        \end{figure}
+
+
+
+    \pagebreak
+    \section{Linear Algebra Review}
+        \textbf{Matrix:} a 2D array \\
+        $\bullet$ The dimension of a matrix is given by "number of rows $\times$ number of columns" \\
+        $\bullet$ Dimension may be written $\mathbb{R}^{4\times 2}$, representing a $4\times2$ matrix of the
+        real-valued set $\mathbb{R}$ \\
+        $\bullet$ In the declaration below, $A_{iy}=$ "$i,j$ entry" in the $i$th row, $j$th column
+
+        \begin{equation*}
+            A = \begin{bmatrix}
+                    1402 & 191 \\
+                    1371 & 821 \\
+                    949  & 1437 \\
+                    147  & 1448
+                \end{bmatrix}
+        \end{equation*}
+
+        \noindent \textbf{Vector:} A $n\times1$ matrix \\
+        $\bullet$ Can be 1-indexed or 0-indexed, where 1-indexed is more conventional \\
+        $\bullet$ It is conventional to name matrices with capital letters and vectors with lowercase letters \\
+        $\bullet$ In the declaration below, $y_i=i$th element of the given 4D Vector, $\mathbb{R}^4$
+
+        \begin{equation*}
+            y = \begin{bmatrix}
+                    460 \\
+                    232 \\
+                    315 \\
+                    178
+                \end{bmatrix}
+        \end{equation*}
+
+        \noindent \textbf{Matrix Addition:} a defined matrix sum must have two addends with the same dimensions.
+
+        \begin{equation*}
+            \begin{bmatrix}
+                a_1 & d_1 \\
+                b_1 & e_1 \\
+                c_1 & f_1
+            \end{bmatrix}
+            +
+            \begin{bmatrix}
+                a_2 & d_2 \\
+                b_2 & e_2 \\
+                c_2 & f_2
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                a_1 + a_2   &= d_1 + d_2 \\
+                b_1 + b_2   &= e_1 + e_2 \\
+                c_1 + c_2   &= f_1 + f_2
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent \textbf{Scalar Matrix Multiplication:}
+
+        \begin{equation*}
+            C   \begin{bmatrix}
+                    a & d \\
+                    b & e \\
+                    c & f
+                \end{bmatrix}
+            =
+                \begin{bmatrix}
+                    Ca & Cd \\
+                    Cb & Ce \\
+                    Cc & Cf
+                \end{bmatrix}
+        \end{equation*}
+
+        \noindent Division example:
+
+        \begin{equation*}
+            \begin{bmatrix}
+                4 & 0 \\
+                6 & 3
+            \end{bmatrix}
+            /4
+            =
+            \frac{1}{4}
+            \begin{bmatrix}
+                4 & 0 \\
+                6 & 3
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                1   & 0 \\
+                3/2 & 3/4
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent \textbf{Matrix-Vector Multiplication:} if $A$ is a $m\times n$ matrix then the product $Ax$
+        is defined by $n\times 1$ column vectors $x$. If $Ax=b$ then $b$ is a $m\times 1$ column vector.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Matrix_Vector_Mult}
+        \end{figure}
+
+        \noindent Example:
+
+        \begin{equation*}
+            \begin{bmatrix}
+                1 & -1 & 2 \\
+                0 & -3 & 1
+            \end{bmatrix}
+            \begin{bmatrix}
+                2 \\
+                1 \\
+                0
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                2\cdot 1    & -1\cdot 1 & 0\cdot 2 \\
+                2\cdot 0    & -1\cdot 3 & 0\cdot 1
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                1 \\
+                -3
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent \textbf{Matrix-Matrix Multiplication to Combine Hypotheses:} If we wanted to make a
+        hypothesis from 3 hypotheses we could represent the hypotheses by matrices and the dataset by another
+        matrix and multiply them to get the product matrix which would be the combined hypothesis:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.4]{Resources/Hypothesis_Combination}
+        \end{figure}
+
+        \pagebreak
+        \noindent \textbf{Properties of Matrix-Matrix Multiplication:} \\
+        $\bullet$ In general, $A\timesB\not = B\timesA$ (not commutative) \\
+        $\bullet$ $A\times(B\timesC)=(A\timesB)\timesC$ (is associative) \\
+
+        \noindent \textbf{Identity Matrix:} a special square matrix that has 1's along the main diagonal
+        (upper left to lower right) and 0's for all other elements \\
+        $\bullet$ Denoted $I$ or $I_{n\timesm}$ \\
+        $\bullet$ For any matrix $A,A_{m\times n}\cdot I_{n\times n}=I_{m\times m}\cdot A_{m\times n}=
+        A_{m\times n}$ (the subscripts are usually omitted) \\
+        $\bullet$ $A\timesB=B\timesA$ when $B=I$ (matrices are commutative when at least one of them is the
+        identity matrix) \\
+
+        \noindent Example of an identity matrix:
+
+        \begin{equation*}
+            I_3 =
+            \begin{bmatrix}
+                1 & 0 & 0 \\
+                0 & 1 & 0 \\
+                0 & 0 & 1
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent Informally,
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=1.2]{Resources/Identity2}
+        \end{figure}
+
+        \noindent \textbf{Matrix Inverse:} If $A$ is a $m\times m$ matrix, and if it has an inverse
+        (only square matrices have inverses), then $A(A^{-1})=A^{-1}A=I$ \\
+
+        \noindent \textbf{Matrix Transpose:} If $A$ is a $m\times n$ matrix, $B=A^T$ then $B$ is a $n\times m$
+        matrix, and $B_{ij}=A_{ij}$ \\
+        $\bullet$ Basically, the rows of $A$ become the columns of $B$ and the columns of $A$ become the
+        rows of $B$
+
+        \begin{equation*}
+            A =
+            \begin{bmatrix}
+                1 & 2 & 0 \\
+                0 & 5 & 6 \\
+                7 & 0 & 9
+            \end{bmatrix}
+            , A^T =
+            \begin{bmatrix}
+                1 & 0 & 7 \\
+                2 & 5 & 0 \\
+                0 & 6 & 9
+            \end{bmatrix}
+        \end{equation*}
+
+
+
+    \pagebreak
+    \section{Multivariate Linear Regression}
+
+
+
+    \section{Octave / Matlab Tutorial}
+    \section{Logistic Regression}
+    \section{Regularization}
+    \section{Neural Networks: Representation}
+    \section{Neural Networks: Learning}
+    \section{Advice for Applying Machine Learning}
+    \section{Machine Learning System Design}
+    \section{Support Vector Machines (SVMs)}
+    \section{Unsupervised Learning}
+    \section{Dimensionality Reduction}
+    \section{Anomaly Detection}
+    \section{Recommender Systems}
+    \section{Large Scale Machine Learning}
+    \section{Application Example: Photo OCR}
+
+\end{document}
