@@ -2,17 +2,17 @@
 \contentsline {section}{\numberline {2}Univariate Linear Regression}{3}%
 \contentsline {section}{\numberline {3}Linear Algebra Review}{6}%
 \contentsline {section}{\numberline {4}Multivariate Linear Regression}{8}%
-\contentsline {section}{\numberline {5}Octave / Matlab Tutorial}{8}%
-\contentsline {section}{\numberline {6}Logistic Regression}{8}%
-\contentsline {section}{\numberline {7}Regularization}{8}%
-\contentsline {section}{\numberline {8}Neural Networks: Representation}{8}%
-\contentsline {section}{\numberline {9}Neural Networks: Learning}{8}%
-\contentsline {section}{\numberline {10}Advice for Applying Machine Learning}{8}%
-\contentsline {section}{\numberline {11}Machine Learning System Design}{8}%
-\contentsline {section}{\numberline {12}Support Vector Machines (SVMs)}{8}%
-\contentsline {section}{\numberline {13}Unsupervised Learning}{8}%
-\contentsline {section}{\numberline {14}Dimensionality Reduction}{8}%
-\contentsline {section}{\numberline {15}Anomaly Detection}{8}%
-\contentsline {section}{\numberline {16}Recommender Systems}{8}%
-\contentsline {section}{\numberline {17}Large Scale Machine Learning}{8}%
-\contentsline {section}{\numberline {18}Application Example: Photo OCR}{8}%
+\contentsline {section}{\numberline {5}Computing Parameters Analytically}{10}%
+\contentsline {section}{\numberline {6}Logistic Regression}{13}%
+\contentsline {section}{\numberline {7}Regularization}{13}%
+\contentsline {section}{\numberline {8}Neural Networks: Representation}{13}%
+\contentsline {section}{\numberline {9}Neural Networks: Learning}{13}%
+\contentsline {section}{\numberline {10}Advice for Applying Machine Learning}{13}%
+\contentsline {section}{\numberline {11}Machine Learning System Design}{13}%
+\contentsline {section}{\numberline {12}Support Vector Machines (SVMs)}{13}%
+\contentsline {section}{\numberline {13}Unsupervised Learning}{13}%
+\contentsline {section}{\numberline {14}Dimensionality Reduction}{13}%
+\contentsline {section}{\numberline {15}Anomaly Detection}{13}%
+\contentsline {section}{\numberline {16}Recommender Systems}{13}%
+\contentsline {section}{\numberline {17}Large Scale Machine Learning}{13}%
+\contentsline {section}{\numberline {18}Application Example: Photo OCR}{13}%
