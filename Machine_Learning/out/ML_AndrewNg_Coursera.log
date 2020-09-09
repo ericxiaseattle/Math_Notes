@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.27)  8 SEP 2020 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.27)  8 SEP 2020 20:38
 entering extended mode
 **./ML_AndrewNg_Coursera.tex
 (ML_AndrewNg_Coursera.tex
@@ -1196,22 +1196,22 @@ ndrewNg_Coursera.toc")
  [1
 
 {C:/Users/pixia.PIXIA40/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 39--44
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--51
+Underfull \hbox (badness 10000) in paragraph at lines 75--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 89--93
 
  []
 
@@ -1219,27 +1219,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--63
 <Resources/Linear_Regression.png, id=41, 1204.5pt x 796.9775pt>
 File: Resources/Linear_Regression.png Graphic file (type png)
 <use Resources/Linear_Regression.png>
-Package pdftex.def Info: Resources/Linear_Regression.png  used on input line 80
-.
+Package pdftex.def Info: Resources/Linear_Regression.png  used on input line 11
+0.
 (pdftex.def)             Requested size: 240.89574pt x 159.39267pt.
 <Resources/Hypothesis_Function.png, id=43, 200.75pt x 191.21437pt>
 File: Resources/Hypothesis_Function.png Graphic file (type png)
 <use Resources/Hypothesis_Function.png>
 Package pdftex.def Info: Resources/Hypothesis_Function.png  used on input line 
-86.
+116.
 (pdftex.def)             Requested size: 150.56212pt x 143.41042pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--102
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
 
  []
 
 <Resources/Contour.PNG, id=44, 532.99126pt x 261.97874pt>
 File: Resources/Contour.PNG Graphic file (type png)
 <use Resources/Contour.PNG>
-Package pdftex.def Info: Resources/Contour.PNG  used on input line 107.
+Package pdftex.def Info: Resources/Contour.PNG  used on input line 137.
 (pdftex.def)             Requested size: 399.74246pt x 196.48357pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
@@ -1248,21 +1248,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--113
 <Resources/Gradient_Descent.png, id=59, 425.08812pt x 217.81375pt>
 File: Resources/Gradient_Descent.png Graphic file (type png)
 <use Resources/Gradient_Descent.png>
-Package pdftex.def Info: Resources/Gradient_Descent.png  used on input line 122
+Package pdftex.def Info: Resources/Gradient_Descent.png  used on input line 152
 .
 (pdftex.def)             Requested size: 318.8153pt x 163.3599pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--131
+Underfull \hbox (badness 10000) in paragraph at lines 155--161
 
  []
 
 <Resources/Learning_Rate.PNG, id=60, 807.015pt x 297.61188pt>
 File: Resources/Learning_Rate.PNG Graphic file (type png)
 <use Resources/Learning_Rate.PNG>
-Package pdftex.def Info: Resources/Learning_Rate.PNG  used on input line 136.
+Package pdftex.def Info: Resources/Learning_Rate.PNG  used on input line 166.
 (pdftex.def)             Requested size: 403.50652pt x 148.80557pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
@@ -1270,36 +1270,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 File: Resources/Simultaneous_Update.png Graphic file (type png)
 <use Resources/Simultaneous_Update.png>
 Package pdftex.def Info: Resources/Simultaneous_Update.png  used on input line 
-153.
+183.
 (pdftex.def)             Requested size: 360.59628pt x 79.42151pt.
 [4 <./Resources/Gradient_Descent.png> <./Resources/Learning_Rate.PNG> <./Resour
 ces/Simultaneous_Update.png>]
 <Resources/Contour2.png, id=66, 229.85875pt x 190.21063pt>
 File: Resources/Contour2.png Graphic file (type png)
 <use Resources/Contour2.png>
-Package pdftex.def Info: Resources/Contour2.png  used on input line 185.
+Package pdftex.def Info: Resources/Contour2.png  used on input line 215.
 (pdftex.def)             Requested size: 172.39362pt x 142.65761pt.
  [5 <./Resources/Contour2.png>]
 <Resources/Matrix_Vector_Mult.png, id=71, 462.22687pt x 101.37875pt>
 File: Resources/Matrix_Vector_Mult.png Graphic file (type png)
 <use Resources/Matrix_Vector_Mult.png>
-Package pdftex.def Info: Resources/Matrix_Vector_Mult.png  used on input line 2
-85.
+Package pdftex.def Info: Resources/Matrix_Vector_Mult.png  used on input line 3
+15.
 (pdftex.def)             Requested size: 346.6693pt x 76.03386pt.
 <Resources/Hypothesis_Combination.png, id=72, 814.04124pt x 508.90125pt>
 File: Resources/Hypothesis_Combination.png Graphic file (type png)
 <use Resources/Hypothesis_Combination.png>
 Package pdftex.def Info: Resources/Hypothesis_Combination.png  used on input li
-ne 318.
+ne 348.
 (pdftex.def)             Requested size: 325.61072pt x 203.55688pt.
  [6 <./Resources/Matrix_Vector_Mult.png> <./Resources/Hypothesis_Combination.pn
 g>]
-Underfull \hbox (badness 10000) in paragraph at lines 322--325
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
 
  []
 
-ML_AndrewNg_Coursera.tex:328: Undefined control sequence.
-l.328 ...    $\bullet$ Denoted $I$ or $I_{n\timesm
+ML_AndrewNg_Coursera.tex:358: Undefined control sequence.
+l.358 ...    $\bullet$ Denoted $I$ or $I_{n\timesm
                                                   }$ \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1307,8 +1307,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-ML_AndrewNg_Coursera.tex:331: Undefined control sequence.
-l.331         $\bullet$ $A\timesB
+ML_AndrewNg_Coursera.tex:361: Undefined control sequence.
+l.361         $\bullet$ $A\timesB
                                  =B\timesA$ when $B=I$ (matrices are commuta...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1316,8 +1316,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-ML_AndrewNg_Coursera.tex:331: Undefined control sequence.
-l.331         $\bullet$ $A\timesB=B\timesA
+ML_AndrewNg_Coursera.tex:361: Undefined control sequence.
+l.361         $\bullet$ $A\timesB=B\timesA
                                           $ when $B=I$ (matrices are commuta...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1326,29 +1326,29 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+Underfull \hbox (badness 10000) in paragraph at lines 356--363
 
  []
 
 <Resources/Identity2.png, id=78, 71.76813pt x 42.1575pt>
 File: Resources/Identity2.png Graphic file (type png)
 <use Resources/Identity2.png>
-Package pdftex.def Info: Resources/Identity2.png  used on input line 349.
+Package pdftex.def Info: Resources/Identity2.png  used on input line 379.
 (pdftex.def)             Requested size: 86.12129pt x 50.58871pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--354
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
 [7 <./Resources/Identity2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 379--384
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
 
  []
 
-ML_AndrewNg_Coursera.tex:422: Undefined control sequence.
+ML_AndrewNg_Coursera.tex:452: Undefined control sequence.
 <recently read> \x 
                    
-l.422 ...   $x=\begin{bmatrix}x_0\\x_1\\\vdots\\\x
+l.452 ...   $x=\begin{bmatrix}x_0\\x_1\\\vdots\\\x
                                                   _n\end{bmatrix}$. Together...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1357,22 +1357,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 451--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--434
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 
  []
 
 <Resources/Contour3.png, id=83, 602.25pt x 394.47375pt>
 File: Resources/Contour3.png Graphic file (type png)
 <use Resources/Contour3.png>
-Package pdftex.def Info: Resources/Contour3.png  used on input line 444.
+Package pdftex.def Info: Resources/Contour3.png  used on input line 474.
 (pdftex.def)             Requested size: 240.89572pt x 157.7867pt.
 [8 <./Resources/Contour3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 468--473
+Underfull \hbox (badness 10000) in paragraph at lines 498--503
 
  []
 
@@ -1380,46 +1380,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 468--473
 File: Resources/Gradient_Descent_Debug.png Graphic file (type png)
 <use Resources/Gradient_Descent_Debug.png>
 Package pdftex.def Info: Resources/Gradient_Descent_Debug.png  used on input li
-ne 479.
+ne 509.
 (pdftex.def)             Requested size: 139.01903pt x 74.77919pt.
 <Resources/Gradient_Descent_Debug2.png, id=88, 183.68625pt x 82.3075pt>
 File: Resources/Gradient_Descent_Debug2.png Graphic file (type png)
 <use Resources/Gradient_Descent_Debug2.png>
 Package pdftex.def Info: Resources/Gradient_Descent_Debug2.png  used on input l
-ine 482.
+ine 512.
 (pdftex.def)             Requested size: 146.94917pt x 65.84607pt.
 [9 <./Resources/Gradient_Descent_Debug.png> <./Resources/Gradient_Descent_Debug
 2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 496--498
+Underfull \hbox (badness 10000) in paragraph at lines 526--528
 
  []
 
 [10]
-ML_AndrewNg_Coursera.tex:668: Double subscript.
+ML_AndrewNg_Coursera.tex:698: Double subscript.
 <argument> ...l \theta _1} = (2\theta _1 x^2_{11}_
                                                   \theta _2 X^2_{12}+\dots +...
-l.668         \end{align*}
+l.698         \end{align*}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-ML_AndrewNg_Coursera.tex:668: Double subscript.
+ML_AndrewNg_Coursera.tex:698: Double subscript.
 <argument> ... _1} = (2\theta _1 x^2_{11}_\theta _
                                                   2 X^2_{12}+\dots + \theta ...
-l.668         \end{align*}
+l.698         \end{align*}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-ML_AndrewNg_Coursera.tex:668: Double subscript.
+ML_AndrewNg_Coursera.tex:698: Double subscript.
 <argument> ...l \theta _1} = (2\theta _1 x^2_{11}_
                                                   \theta _2 X^2_{12}+\dots +...
-l.668         \end{align*}
+l.698         \end{align*}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-ML_AndrewNg_Coursera.tex:668: Double subscript.
+ML_AndrewNg_Coursera.tex:698: Double subscript.
 <argument> ... _1} = (2\theta _1 x^2_{11}_\theta _
                                                   2 X^2_{12}+\dots + \theta ...
-l.668         \end{align*}
+l.698         \end{align*}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1427,23 +1427,23 @@ I treat `x_1_2' essentially like `x_1{}_2'.
 File: Resources/Norm_Equation_Example.png Graphic file (type png)
 <use Resources/Norm_Equation_Example.png>
 Package pdftex.def Info: Resources/Norm_Equation_Example.png  used on input lin
-e 700.
+e 730.
 (pdftex.def)             Requested size: 421.32304pt x 140.77559pt.
 [11 <./Resources/Norm_Equation_Example.png>]
 <Resources/Norm_Equation_Example2.png, id=101, 900.36375pt x 449.68pt>
 File: Resources/Norm_Equation_Example2.png Graphic file (type png)
 <use Resources/Norm_Equation_Example2.png>
 Package pdftex.def Info: Resources/Norm_Equation_Example2.png  used on input li
-ne 707.
+ne 737.
 (pdftex.def)             Requested size: 360.13911pt x 179.8688pt.
 <Resources/Norm_Equation_Example3.png, id=102, 881.79437pt x 501.875pt>
 File: Resources/Norm_Equation_Example3.png Graphic file (type png)
 <use Resources/Norm_Equation_Example3.png>
 Package pdftex.def Info: Resources/Norm_Equation_Example3.png  used on input li
-ne 712.
+ne 742.
 (pdftex.def)             Requested size: 352.7115pt x 200.74643pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 
  []
 
@@ -1480,7 +1480,7 @@ pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "C:/Users\pixia.PIXIA40\OneDrive - UW\LaTeX_Projects\Machine_
-Learning\out\ML_AndrewNg_Coursera.pdf" (13 pages, 3736609 bytes).
+Learning\out\ML_AndrewNg_Coursera.pdf" (13 pages, 3737604 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
