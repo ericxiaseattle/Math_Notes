@@ -6,3 +6,6 @@
 * [Precalculus](https://github.com/ericxiaseattle/Math_Notes/raw/master/Precalculus/out/main.pdf)
 
 * [Andrew Ng's "Machine Learning" on Coursera](https://github.com/ericxiaseattle/Math_Notes/raw/master/Machine_Learning/out/ML_AndrewNg_Coursera.pdf)
+
+## Information:
+I'm thinking of changing this reposity's name to "Notes" so I can generalize it and add notes from non-mathematics courses.
