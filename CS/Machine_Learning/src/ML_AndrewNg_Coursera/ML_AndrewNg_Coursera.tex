@@ -1,4 +1,4 @@
-% Preamble
+\usepackage{latexsymb}\usepackage{latexsymb}% Preamble
 \documentclass{article}
 
 
@@ -772,10 +772,567 @@
 
     \pagebreak
     \section{Logistic Regression}
+        Because classification is not actually a linear function, it is often unwise to use linear regression
+        to map predictions greater than 0.5 as a 1 and less than 0.5 as a 0. \textbf{Logistic Regression} is
+        a classification algorithm, \textbf{binary logistic regression} being a scenario where the output, $y$,
+        can take on only two values, 0 and 1. Conventionally, the 0 is the "negative" class for which the
+        output does not show signs of a particular feature, and the 1 is the "positive" class. For example, if
+        we are trying to build a spam filter for email, then $x^{(i)}$ may be some features of an email, and
+        $y$ may be 1 if it is a spam mail, and 0 otherwise. Then $y\in \{0,1\}$. Given $x^{(i)}$, the
+        corresponding $y^{(i)}$ is also called the \textbf{label} for the training example. \\
+
+        \noindent We use the \textbf{sigmoid} function, $g(z)$ for logistic regression:
+
+        \begin{align*}
+            \text{Desired } & 0\leq h_{\theta}(x)\leq 1 \\
+            h_{\theta}(x)  &= g(\theta^T x) \\
+            z              &= \theta^T x \\
+            g(z)           &= \frac{1}{1+e^{-z}}
+        \end{align*}
+
+        \noindent The graph for the sigmoid function looks like this:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin = -7.5,
+                    xmax = 7.5,
+                    ymin = -0.1,
+                    ymax = 1.1,
+                    axis lines = center,
+                    xlabel = $x$,
+                    ylabel = $y$,
+                    xtick={-7.5,-5,-2.5,0,2.5,5,7.5},
+                    ytick={0,0.5,1},
+                    height=4cm,
+                    width=15cm
+                ]
+                \addplot[
+                    domain = -7.5:7.5,
+                    range = 0:1
+                ]
+                {1/(1+exp(-x))};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+        \noindent $h_{\theta}(x)$ gives us the probabilities of the outputs such that
+
+        \begin{align*}
+            h_{\theta}(x)   &= P(y=1|x;\theta) = 1 - P(y=0|x;\theta) \\
+                            & \text{and} \\
+            1               &= P(y=0|x;\theta) + P(y=1|x;\theta)
+        \end{align*}
+
+        \noindent In order to get a 0 or 1 classification, we can translate the hypothesis function output as
+        follows:
+
+        \begin{align*}
+            h_{\theta}(x) \geq 0.5 &\to y=1 \\
+            h_{\theta}(x) < 0.5    &\to y=0 \\
+            \implies \\
+            \theta^T x \geq 0  &\to y=1 \\
+            \theta^T x < 0     &\to y=0
+        \end{align*}
+
+        \noindent Say we have a dataset such that our training examples can be plotted with red X's
+        representing positive outputs and blue circle's representing negative outputs, like so:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics{Resources/Decision_Boundary}
+        \end{figure}
+
+        \noindent Then we can add two more training terms to the hypothesis function, which becomes
+
+        \begin{align*}
+            h_{\theta}(x)   &= g(\theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_1^2 + \theta_4 x_2^2) \\
+                            &= g(-1 + 0x_1 + 0x_2 + 1x_1^2 + 1x_2^2)
+        \end{align*}
+
+        \noindent The $\theta$ parameter vector is then
+
+        \begin{equation*}
+            \theta =
+            \begin{bmatrix}
+                -1 \\
+                0 \\
+                0 \\
+                1 \\
+                1
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent Thus, by looking at the values of the parameter vector $\theta$, we can predict $y=1$ if
+        $-1+x_1^2 + x_2^2\geq 0$, or if $x_1^2+x_2^2\geq 1$. Notice that $x_1^2+x_2^2=1$ forms the equation
+        for a circle. This circle with radius 1 centered at $(0,0)$ is our \textbf{decision boundary}, as
+        graphed below. Hence, everything inside the circle may be predicted as $y=0$, whereas everything
+        outside the circle may be predicted as $y=1$.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.5]{Resources/Decision_Boundary2}
+        \end{figure} \\\\
+
+        \noindent \textbf{Cost Function for Logistic Regression:}
+
+        \begin{align*}
+            J(\theta)   &= \frac{1}{m}\sum^m_{i=1}\text{ Cost}(h_{\theta}(x^{(i)}),y^{(i)}) \\
+            \text{Cost}(h_{\theta}(x),y) &=
+            \begin{cases}
+                -\log{(h_{\theta}(x))}   & \text{ if } y=1 \\
+                -\log{(1-h_{\theta}(x))} & \text{ if } y=0
+            \end{cases} \\
+            J(\theta)   &= -\frac{1}{m}\left[
+            \sum^m_{i=1}y^{(i)}\log({h_\theta (x^{(i)})}) + (1-y^{(i)})\log{(1-h_\theta (x^{(i)}))}
+            \right]
+        \end{align*}
+
+        \noindent Vectorized, this is implemented as follows:
+
+        \begin{align*}
+            h   &= g(X\theta) \\
+            J(\theta) &= \frac{1}{m}\cdot\left(-y^T \log{(h)}-(1-y)^T \log{(1-h)}\right)
+        \end{align*}
+
+        \begin{figure}[hbt!]
+            \centering
+            \begin{subfigure}[b]{.45\linewidth}
+                \includegraphics[scale=0.6]{Resources/Log_Model}
+            \end{subfigure}
+            \begin{subfigure}[b]{.45\linewidth}
+                \includegraphics[scale=0.6]{Resources/Log_Model2}
+            \end{subfigure}
+        \end{figure}
+
+        \noindent \textbf{Properties of the Logistic Cost Function:}
+
+        \begin{align*}
+            \text{Cost }(h_{\theta}(x),y)   &= 0 \text{ if } h_{\theta}(x) = y \\
+            \text{Cost }(h_{\theta}(x),y)   &\to\infty \text{ if } y=0 \text{ and } h_{\theta}(x)\to 1 \\
+            \text{Cost }(h_{\theta}(x),y)   &\to\infty \text{ if } y=1 \text{ and } h_{\theta}(x)\to 0
+        \end{align*}
+
+        \noindent \textbf{Gradient Descent on Logistic Models:} \\
+
+        \noindent We want to minimize $J(\theta)$ by repeating the following equation.
+
+        \begin{align*}
+            \thea_j     &:= \theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta) \\
+            \theta_j    &:= \theta_j-\alpha\sum^m_{i=1} (h_{\theta}(x^{(i)})-y^{(i)})x_j^{(i)} \\
+            \text{where} \\
+            h_{\theta}(x^{(i)}) &= \frac{1}{1+e^{-\theta^T x}}
+        \end{align*}
+
+        \noindent Notice how this equation is the same as the one for linear models, except for the value of
+        $h_{\theta}(x^{(i)})$. A vectorized implementation of logistic gradient descent is below.
+
+        \begin{equation*}
+            \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta)-\overrightarrow{y})
+        \end{equation*}
+
+        \pagebreak
+
+        \noindent \textbf{Optimization Algorithm:} \\
+        Given $\theta$, we have code that can compute \\
+        $\bullet$ $J(\theta)$ \\
+        $\bullet$ $\frac{\partial}{\partial\theta_j}J(\theta)$ for $j=0,1,\dots,n$
+
+        \noindent Optimization Algorithms: \\
+        $\bullet$ Gradient Descent \\
+        $\bullet$ Conjugate Gradient \\\
+        $\bullet$ BFGS \\
+        $\bullet$ L-BFGS \\
+        $\bullet$ Advantages: No need to pick $\alpha$, often faster than gradient descent \\
+        $\bullet$ Disadvantages: More complex \\
+
+        \noindent \textbf{One vs. All Multiclass Classification:} \\
+        Recall how binary classification has output $y=\{0,1\}$. In multiclass classification, $y=\{0,1,\dots,n\}$.
+        We can divide our problem by repeatedly applying binary logistic regression to each output case and
+        then use the hypothesis that returned the highest value as our prediction. The following are some
+        algebraic and visual representations of this.
+
+        \begin{align*}
+            y                   & \in\{0,1,\dots,n\} \\
+            h_{\theta}^{(0)}(x) &= P(y=0|x;\theta) \\
+            h_{\theta}^{(1)}(x) &= P(y=1|x;\theta) \\
+            \vdots \\
+            h_{\theta}^{(n)}(x) &= P(y=n|x;\theta) \\
+            \text{prediction }  &= \text{ max}(h_{\theta}^{(i)}(x))
+        \end{align*}
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.9]{Resources/Multiclass_Classification}
+        \end{figure}
 
 
+
+    \pagebreak
     \section{Regularization}
+        Consider the challenge of predicting $y$ from $x\in\mathbb{R}$. The leftmost figure shows the result
+        of using linear regression on a dataset. If we added a second feature to the regression, making it
+        $y=\theta_0+\theta_1 x+\theta_2 x^2$, then we get a better fit (the middle figure). If we continue
+        adding features such that we have the 5th order polynomial $y=\sum^5_{j=0}\theta_j x^j$ (displayed
+        on the right). Notice that the left figure has high bias and we call this \textbf{underfitting}.
+        This is usually caused by having too simple of a regression curve, or not using enough features.
+        At the other extreme, the right figure has high variance caused by too many features and is referred
+        to as \textbf{overfitting}. The hypothesis function for overfitting fits the available data but
+        does not generalize well to predict new data. \\
+
+        \noindent \textbf{Ways to Address Overfitting:} \\
+        1) Reduce the number of features: \\
+        $\bullet$ Manually select which features to keep \\
+        $\bullet$ Use a model selection algorithm \\
+        2) Regularization \\
+        $\bullet$ Keep all the features, but reduce the magnitude of parameters $\theta_j$ \\
+        $\bullet$ Works well when we have a lot of slightly useful features \\
+
+        \noindent Let's say we wanted to make the function $\theta_0 + \theta_1 x + \theta_2 x^2 + \theta_3 x^3
+        + \theta_4 x^4$. We will want to reduce the influence of $\theta_3 x^3$ and $\theta_4 x^4$. We can
+        modify our cost function like so:
+
+        \begin{align*}
+            \text{min }_{\theta} \frac{1}{2m} \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2 + 1000\theta^2_3 +
+            1000\theta^2_4
+        \end{align*}
+
+        \noindent We have added two extra terms to inflate the cost of $\theta_3$ and $\theta_4$. In order for
+        the cost function to get close to zero we will have to reduce the values of $\theta_3$ and $\theta_4$.
+        We can see that the new hypothesis (pink curve) looks like a quadratic function but fits the data
+        better because of the extra small terms $\theta_3 x^3$ and $\theta_4 x^4$.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/Regularization}
+        \end{figure}
+
+        \noindent We can also regularize all of the $\theta$ parameters in a single summation as:
+
+        \begin{align*}
+            \text{min }_{\theta}\frac{1}{2m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2
+            \color{blue} + \lambda \sum^n_{j=1}\theta^2_j \color{black}
+        \end{align*}
+
+        \noindent where $\lambda$ is the \textbf{regularization parameter}, determining to what magnitude the
+        costs of our $\theta$ parameters are inflated. By convention, the $\sum^n_{j=1}\theta^2_j=\theta_1+
+        \theta_2+\dots+\theta_n$. If $\lambda$ is chosen to be too large, the function may be smoothed out too
+        much and cause underfitting. Conversely, if $\lambda$ is chosen to be too small, the function may not
+        be smoothed out enough and cause overfitting. \\
+
+        \noindent \textbf{Regularized Linear Regression:} \\
+        We wish to repeat
+
+        \begin{align*}
+            \theta_0    &:= \theta_0-\alpha\frac{1}{m}\sum^m_{i=1} (h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} \\
+            \theta_j    &:= \theta_j-\alpha\left[\left(\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}
+                            \right)+\frac{\lambda}{m}\theta_j\right], j\in\{1,2,\dots,n\}
+        \end{align*}
+
+        \noindent We can manipulate these equations to represent our update rule as
+
+        \begin{align*}
+            \theta_j    &:= \theta_j\left(1-\alpha\frac{\lambda}{m}\right)-\alpha\frac{1}{m}\sum^m_{i=1}
+                        (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}
+        \end{align*}
+
+        \noindent The first term, $1-\alpha\frac{\lambda}{m}$ will always be less than 1, hence it reduces the
+        value of $\theta_j$ by some amount on every update. \\
+
+        \noindent \textbf{Regularized Normal Equation:} \\
+        The equation is the same as before, except with another term inside the parantheses.
+
+        \begin{align*}
+            \theta          &= \left(X^T X+\lambda\cdot L\right)^{-1} X^T y \\
+            \text{where } L &= \begin{bmatrix} 0 & & & & \\ & 1 & & & \\ & & 1 & & \\ & & & \ddots & \\
+                                & & & & 1 \\ \end{bmatrix}
+        \end{align*}
+
+        \pagebreak
+        \noindent $L$ has dimensions $(n+1)\times(n+1)$. Intuitively, this is the identity matrix multiplied
+        by a real number $\lambda$. Recall that if $m<n$ then $X^T X$ is non-invertible, and if $m=n$, then
+        $X^T X$ may be invertible. However, by adding the term $\lambda\cdot L$, $X^T X+\lamda\cdot L$ becomes
+        invertible. Hence, if $\lambda>0$, then
+
+        \begin{equation*}
+            \theta=\left(X^T X +\lambda
+            \begin{bmatrix} 0 & & & & \\ & 1 & & & \\ & & 1 & & \\ & & & \ddots & \\
+            & & & & 1 \\ \end{bmatrix}\right)^{-1} X^T y
+        \end{equation*}
+
+        \noindent \textbf{Regularized Logistic Cost Function:} \\
+        The blue term is the only difference from the original logistic cost function.
+
+        \begin{equation*}
+            J(\theta) = -\frac{1}{m}\sum^m_{i=1}\left[y^{(i)}\log{(h_\theta(x^{(i)}))}
+                        + (1-y^{(i)})\log{(1-h_\theta(x^{(i)}))}\right]
+                        \color{blue} + \frac{\lambda}{2m}\sum^n_{j=1} \theta^2_j \color{black}
+        \end{equation*}
+
+
+
+    \pagebreak
     \section{Neural Networks: Representation}
+        On an oversimplified level, neurons are computational units that take inputs (\textbf{dendrites}) as
+        electrical inputs, called "spikes", that are channeled to outputs (\textbf{axons}). In our model,
+        the dendrites are the input features $x_1,\dots, x_n$, and the output is the result of the hypothesis
+        function. The input node $x_0$ is referred to as the \textbf{bias unit} and is always equal to 1. In
+        neural networks, we use the same logistic function as in classification, $\frac{1}{1+e^{-\theta^T x}}$,
+        referred to as the \textbf{activation function}. Our $\theta$ parameters are referred to as
+        \textbf{weights}. \\
+
+        \noindent A simplistic representation looks like:
+
+        \begin{align*}
+            [x_0 x_1 x_2]\to [\text{ }] \to h_{\theta}(x)
+        \end{align*}
+
+        \noindent where the input nodes (layer 1) go into another node (layer 2), which then outputs the
+        hypothesis function (output layer). We can have intermediate layers of nodes between the input and
+        output layers called the \textbf{hidden layers}. In the figure below, layer 2 is a hidden layer and so
+        the nodes are $a^2_0\dots a^2_n$ and called \textbf{activation units}.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.5]{Resources/Neural_Net}
+        \end{figure}
+
+        \begin{align*}
+            a_i^{(j)}       &= \text{ "activation" of unit $i$ in layer $j$} \\
+            \Theta^{(j)}    &= \text{ matrix of weights controlling function mapping from layer $j$ to layer
+                                $j+1$}
+        \end{align*}
+
+        \noindent If we have one hidden layer, then the model looks like
+
+        \begin{equation*}
+            [x_0 x_1 x_2 x_3]\to \left[a_1^{(2)} a_2^{(2)} a_3^{(2)}\right] \to h_{\theta}(x)
+        \end{equation*}
+
+        \noindent where the values for each of the activation nodes is obtained as follows:
+
+        \begin{align*}
+            a_1^{(2)}   &= g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 +
+                           \Theta_{13}^{(1)}x_3) \\
+            a_2^{(2)}   &= g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 +
+                           \Theta_{23}^{(1)}x_3) \\
+            a_3^{(2)}   &= g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 +
+                           \Theta_{33}^{(1)}x_3) \\
+            h_\Theta(x) &= a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} +
+                           \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)})
+        \end{align*}
+
+        \noindent From the equations above, we know that we can compute our activation nodes by using a
+        $3\times 4$ parameter matrix. Our hypothesis output is the logistic function applied to the sum of the
+        values of our activation nodes, which have been multiplied by yet another parameter matrix $\Theta^{(2)}$
+        containing the weights for our second layer of nodes. Each layer of the model gets its own matrix of
+        weights, $\Theta^{(j)}$, where the dimensions of these matrices of weights is determined as follows:
+
+        \begin{center}
+            "If network has $s_j$ units in layer $j$ and $s_{j+1}$ units in layer $j+1$, then $\Theta^{(j)}$
+            will be of dimension $s_{j+1}\times (s_j + 1)$."
+        \end{center}
+
+        \noindent Here, if layer 1 has 2 activation nodes and layer 2 has 4 activation nodes, then the dimension of
+        $\Theta^{(1)}$ is going to be $4\times 3$ where $s_j=2$ and $s_{j+1}=4$, so $s_{j+1}\times(s_j+1)=
+        4\times 3$. \\
+
+        \noindent Recall the activation nodes above. We can vectorize these functions, defining a new variable
+        $z_k^{(j)}$ that encompasses the parameters inside function $g$. If we replace the parameters by $z$
+        for all the activation node equations, then we get
+
+        \begin{align*}
+            a_1^{(2)}   &= g\left(z_1^{(2)}\right) \\
+            a_2^{(2)}   &= g\left(z_2^{(2)}\right) \\
+            a_3^{(2)}   &= g\left(z_3^{(2)}\right)
+        \end{align*}
+
+        \noindent where, for layer $j=2$ and node $k$, the variable $z$ is
+
+        \begin{equation*}
+            z_k^{(2)}   = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 +\dots+ \Theta_{k,n}^{(1)}x_n
+        \end{equation*}
+
+        \noindent We represent $x$ and $z^j$ as vectors like so:
+
+        \begin{equation*}
+            x       &= \begin{bmatrix}x_0\\ x_1\\ \vdots\\ x_n\right\end{bmatrix},
+            z^{(j)} &= \begin{bmatrix}z_1^{(j)}\\ z_2^{(j)} \\ \vdots \\ z_n^{(j)}\end{bmatrix}
+        \end{equation*}
+
+        \noindent Setting $x=a^{(1)}$, we can rewrite the equation as
+
+        \begin{equation*}
+            z^{(j)} = \Theta^{(j-1)} a^{(j-1)}
+        \end{equation*}
+
+        \noindent We are multiplying the matrix $\Theta^{(j-1)}$ with dimensions $s_j\times (n+1)$, where $s_j$
+        is the number of our activation nodes by our vector $a^{(j-1)}$ with height $(n+1)$. This gives us a
+        vector $z^{(j)}$ with height $s_j$. Now we get a vector of our activation nodes for layer $j$ as
+        follows:
+
+        \begin{equation*}
+            a^{(j)} = g\left(z^{(j)}\right)
+        \end{equation*}
+
+        \noindent where function $g$ can be applied element-wise to the vector $z^{(j)}$. We can then add a
+        bias unit (equal to 1) to layer $j$ after we have computed $a^{(j)}$. This will be element $a_0^{(j)}$
+        and will be equal to 1. To compute the final hypothesis function, we compute another $z$ vector:
+
+        \begin{equation*}
+            z^{(j+1)} = \Theta^{(j)} a^{(j)}
+        \end{equation*}
+
+        \noindent This final $z$ vector was computed by multiplying the next $\Theta$ matrix after
+        $\Theta^{(j-1)}$ with the values of all the activation nodes we just got. The last $\Theta$ matrix
+        $\Theta^{(j)}$ will have only one row which is multiplied by one column $a^{(j)}$ so that our result
+        is a single number. We then get our final result with:
+
+        \begin{align*}
+            h_{\Theta}(x) = a^{(j+1)} = g\left(z^{(j+1)}\right)
+        \end{align*}
+
+        \noindent Notice that between layer $j$ and layer $j+1$, we are doing the exact same thing as performed
+        in logistic regression. Adding intermediate layers in neural networks allow us to more elegantly produce
+        interesting and more complex non-linear hypotheses. \\
+
+        \noindent \textbf{Forward Propogation} is a type of Neural Network architecture in which connections
+        are fed "forward", from the input layer to the hidden layers then to the output layer.
+        \textbf{Backpropogation} is a training algorithm consisting of first forward propogation then
+        calculating the error and propogating the connections back to the early layers. \\
+
+        \noindent An example of an application of neural networks is predicting $x_1$ AND $x_2$, where "AND"
+        is the logical operator. The graph of the functions will look like
+
+        \begin{equation*}
+            \begin{bmatrix}x_0 \\ x_1 \\ x_2 \end{bmatrix}
+            \to
+            \left[g(z^{(2)})\right]
+            \to
+            h_{\Theta}(x)
+        \end{equation*}
+
+        \noindent Remember that $x_0$ is the bias variable and always equal to 1. We set our first $\Theta$
+        matrix as
+
+        \begin{align*}
+            \Theta^{(1)} = \begin{bmatrix}-30 & 20 & 20\end{bmatrix}
+        \end{align*}
+
+        \noindent This declaration causes the hypothesis function's output to only be positive if both $x_1$
+        and $x_2$ are 1. In other words,
+
+        \begin{align*}
+            h_{\Theta}(x)   &= g(-30+20x_1 + 20x_2) \\
+            x_1             &= 0 \text{ and } x_2=0 \text{ then } g(-30)\approx 0 \\
+            x_1             &= 0 \text{ and } x_2=1 \text{ then } g(-10)\approx 0 \\
+            x_1             &= 1 \text{ and } x_2=0 \text{ then } g(-10)\approx 0 \\
+            x_1             &= 1 \text{ and } x_2=1 \text{ then } g(10)\approx 1
+        \end{align*}
+
+        \noindent Notice that these outputs are exactly the values of a typical AND logic table. \\
+
+        \noindent Example: OR Function
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/OR_Net}
+        \end{figure}
+
+        \pagebreak
+        \noindent where $g(z)$ is the sigmoid function below:
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/OR_Net_Sigmoid}
+        \end{figure}
+
+        \noindent Let us make $\Theta^{(1)}$ matrices for AND, NOR, and OR:
+
+        \begin{align*}
+            \text{AND:} \\
+            \Theta^{(1)} &= \begin{bmatrix} -30 & 20 & 20 \end{bmatrix} \\
+            \text{NOR:} \\
+            \Theta^{(1)} &= \begin{bmatrix}  10 & -20 & -20 \end{bmatrix} \\
+            \text{OR:} \\
+            \Theta^{(1)} &= \begin{bmatrix}  -10 & 20 & 20 \end{bmatrix}
+        \end{align*}
+
+        \noindent We can combine these to get the XNOR logical operator, which outputs 1 if $x_1$ and $x_2$
+        are both 0 or both 1.
+
+        \begin{equation*}
+            \begin{bmatrix}
+                x_0 \\
+                x_1 \\
+                x_2
+            \end{bmatrix}
+            \to
+            \begin{bmatrix}
+                a_1^{(2)} \\
+                a_2^{(2)}
+            \end{bmatrix}
+            \to
+            \begin{bmatrix}
+                a^{(3)}
+            \end{bmatrix}
+            \to h_\Theta(x)
+        \end{equation*}
+
+        \noindent For the transition between the first and second layer, we will use a $\Theta^{(1)}$ matrix
+        which combines the values for AND and NOR:
+
+        \begin{equation*}
+            \Theta^{(1)} =
+            \begin{bmatrix}
+                -30 & 20 & 2010 & -20 & 20
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent For the transition between the second and third layer, we will use a $\Theta^{(2)}$ matrix
+        that uses the value for OR:
+
+        \begin{equation*}
+            \Theta^{(2)} =
+            \begin{bmatrix}
+                -10 & 20 & 20
+            \end{bmatrix}
+        \end{equation*}
+
+        \noindent Let us write out the values for all our nodes:
+
+        \begin{align*}
+            a^{(2)}         &= g\left(\Theta^{(1)}\cdot x\right) \\
+            a^{(3)}         &= g\left(\Theta^{(2)}\cdot a^{(2)}\right) \\
+            h_\Theta (x)    &= a^{(3)}
+        \end{align*}
+
+        \noindent Hence, we get the XNOR operator using a hidden layer with two nodes. Below, a visual
+        representation of this algorith is shown for reference.
+
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/XNOR}
+        \end{figure}
+
+        \pagebreak
+
+        \noindent For multiclass classification, we set our hypothesis function to return a vector of values.
+        Let's say we wanted to classify our data into one of four categories. The algorithm takes an input as
+        an image and classifies it accordingly.
+
+        \begin{figure}[hbt!]
+            \centering
+            \begin{subfigure}[b]{.45\linewidth}
+                \includegraphics[scale=0.5]{Resources/Multiclass_Nets.PNG}
+            \end{subfigure}
+            \begin{subfigure}[b]{.45\linewidth}
+                \includegraphics[scale=0.5]{Resources/Multiclass_Nets2}
+            \end{subfigure}
+        \end{figure}
+
+
+    \pagebreak
     \section{Neural Networks: Learning}
     \section{Advice for Applying Machine Learning}
     \section{Machine Learning System Design}

@@ -1,9 +1,34 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.27)  8 SEP 2020 20:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.27)  10 SEP 2020 14:49
 entering extended mode
 **./ML_AndrewNg_Coursera.tex
 (ML_AndrewNg_Coursera.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-08-07>
+
+ML_AndrewNg_Coursera.tex:1: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage{
+                latexsymb}\usepackage{latexsymb}% Preamble
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+ML_AndrewNg_Coursera.tex:1: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage{latexsymb}\usepackage{
+                                      latexsymb}% Preamble
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
 (C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cl
 s
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -1082,8 +1107,8 @@ j-rep.tex
 -obj-eu-triangles.tex
 2020/03/18 3.06c tkz-obj-eu-triangles.tex
 ))
-("C:/Users\pixia.PIXIA40\OneDrive - UW\LaTeX_Projects\Machine_Learning\out\ML_A
-ndrewNg_Coursera.aux")
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera.aux")
 \openout1 = `ML_AndrewNg_Coursera.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -1188,8 +1213,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-("C:/Users\pixia.PIXIA40\OneDrive - UW\LaTeX_Projects\Machine_Learning\out\ML_A
-ndrewNg_Coursera.toc")
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera.toc")
 \tf@toc=\write4
 \openout4 = `ML_AndrewNg_Coursera.toc'.
 
@@ -1448,41 +1473,278 @@ Underfull \hbox (badness 10000) in paragraph at lines 764--765
  []
 
 [12 <./Resources/Norm_Equation_Example2.png> <./Resources/Norm_Equation_Example
-3.png>] [13]
-("C:/Users\pixia.PIXIA40\OneDrive - UW\LaTeX_Projects\Machine_Learning\out\ML_A
-ndrewNg_Coursera.aux") ) 
+3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 775--783
+
+ []
+
+<Resources/Decision_Boundary.png, id=106, 127.97812pt x 109.40875pt>
+File: Resources/Decision_Boundary.png Graphic file (type png)
+<use Resources/Decision_Boundary.png>
+Package pdftex.def Info: Resources/Decision_Boundary.png  used on input line 84
+3.
+(pdftex.def)             Requested size: 127.9778pt x 109.40846pt.
+<Resources/Decision_Boundary2.png, id=107, 347.79938pt x 293.59688pt>
+File: Resources/Decision_Boundary2.png Graphic file (type png)
+<use Resources/Decision_Boundary2.png>
+Package pdftex.def Info: Resources/Decision_Boundary2.png  used on input line 8
+74.
+(pdftex.def)             Requested size: 173.89926pt x 146.79807pt.
+
+ML_AndrewNg_Coursera.tex:875: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.875         \end{figure} \\\\
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+ML_AndrewNg_Coursera.tex:876: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.876 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[13 <./Resources/Decision_Boundary.png>]
+<Resources/Log_Model.png, id=113, 220.32312pt x 186.19562pt>
+File: Resources/Log_Model.png Graphic file (type png)
+<use Resources/Log_Model.png>
+Package pdftex.def Info: Resources/Log_Model.png  used on input line 901.
+(pdftex.def)             Requested size: 132.19489pt x 111.71823pt.
+<Resources/Log_Model2.png, id=114, 235.88126pt x 221.82875pt>
+File: Resources/Log_Model2.png Graphic file (type png)
+<use Resources/Log_Model2.png>
+Package pdftex.def Info: Resources/Log_Model2.png  used on input line 904.
+(pdftex.def)             Requested size: 141.52983pt x 133.09825pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
+
+ []
+
+ML_AndrewNg_Coursera.tex:925: Undefined control sequence.
+<argument>  \thea 
+                  _j &:= \theta _j-\alpha \frac {\partial }{\partial \theta ...
+l.925         \end{align*}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ML_AndrewNg_Coursera.tex:925: Undefined control sequence.
+<argument>  \thea 
+                  _j &:= \theta _j-\alpha \frac {\partial }{\partial \theta ...
+l.925         \end{align*}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[14 <./Resources/Decision_Boundary2.png> <./Resources/Log_Model.png> <./Resourc
+es/Log_Model2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 941--948
+
+ []
+
+<Resources/Multiclass_Classification.png, id=122, 364.36125pt x 203.25937pt>
+File: Resources/Multiclass_Classification.png Graphic file (type png)
+<use Resources/Multiclass_Classification.png>
+Package pdftex.def Info: Resources/Multiclass_Classification.png  used on input
+ line 966.
+(pdftex.def)             Requested size: 327.92209pt x 182.93173pt.
+[15 <./Resources/Multiclass_Classification.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 973--982
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 983--990
+
+ []
+
+<Resources/Regularization.png, id=127, 331.73938pt x 123.46124pt>
+File: Resources/Regularization.png Graphic file (type png)
+<use Resources/Regularization.png>
+Package pdftex.def Info: Resources/Regularization.png  used on input line 1007.
+
+(pdftex.def)             Requested size: 248.80391pt x 92.59569pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1022
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1041
+
+ []
+
+[16 <./Resources/Regularization.png>]
+ML_AndrewNg_Coursera.tex:1054: Undefined control sequence.
+l.1054 ...the term $\lambda\cdot L$, $X^T X+\lamda
+                                                  \cdot L$ becomes
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1083
+
+ []
+
+<Resources/Neural_Net.png, id=135, 604.75937pt x 351.3125pt>
+File: Resources/Neural_Net.png Graphic file (type png)
+<use Resources/Neural_Net.png>
+Package pdftex.def Info: Resources/Neural_Net.png  used on input line 1097.
+(pdftex.def)             Requested size: 302.37894pt x 175.6558pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1139
+
+ []
+
+ML_AndrewNg_Coursera.tex:1159: Misplaced alignment tab character &.
+l.1159             x       &
+                            = \begin{bmatrix}x_0\\ x_1\\ \vdots\\ x_n\right\...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+ML_AndrewNg_Coursera.tex:1159: Missing delimiter (. inserted).
+<to be read again> 
+                   \unskip 
+l.1159 ...\\ x_1\\ \vdots\\ x_n\right\end{bmatrix}
+                                                  ,
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+ML_AndrewNg_Coursera.tex:1159: Extra \right.
+<to be read again> 
+                   \unskip 
+l.1159 ...\\ x_1\\ \vdots\\ x_n\right\end{bmatrix}
+                                                  ,
+I'm ignoring a \right that had no matching \left.
+
+ML_AndrewNg_Coursera.tex:1160: Misplaced alignment tab character &.
+l.1160             z^{(j)} &
+                            = \begin{bmatrix}z_1^{(j)}\\ z_2^{(j)} \\ \vdots...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[18 <./Resources/Neural_Net.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1234
+
+ []
+
+<Resources/OR_Net.png, id=141, 431.6125pt x 173.64874pt>
+File: Resources/OR_Net.png Graphic file (type png)
+<use Resources/OR_Net.png>
+Package pdftex.def Info: Resources/OR_Net.png  used on input line 1239.
+(pdftex.def)             Requested size: 258.96948pt x 104.19005pt.
+[19 <./Resources/OR_Net.png>]
+<Resources/OR_Net_Sigmoid.png, id=147, 238.39063pt x 139.52126pt>
+File: Resources/OR_Net_Sigmoid.png Graphic file (type png)
+<use Resources/OR_Net_Sigmoid.png>
+Package pdftex.def Info: Resources/OR_Net_Sigmoid.png  used on input line 1247.
+
+(pdftex.def)             Requested size: 178.79251pt x 104.64067pt.
+<Resources/XNOR.png, id=148, 463.7325pt x 264.99pt>
+File: Resources/XNOR.png Graphic file (type png)
+<use Resources/XNOR.png>
+Package pdftex.def Info: Resources/XNOR.png  used on input line 1315.
+(pdftex.def)             Requested size: 347.79851pt x 198.742pt.
+ [20 <./Resources/OR_Net_Sigmoid.png> <./Resources/XNOR.png>]
+<Resources/Multiclass_Nets.PNG, id=154, 418.56375pt x 253.44687pt>
+File: Resources/Multiclass_Nets.PNG Graphic file (type png)
+<use Resources/Multiclass_Nets.PNG>
+Package pdftex.def Info: Resources/Multiclass_Nets.PNG  used on input line 1327
+.
+(pdftex.def)             Requested size: 209.28136pt x 126.72311pt.
+<Resources/Multiclass_Nets2.png, id=155, 478.78876pt x 267.49937pt>
+File: Resources/Multiclass_Nets2.png Graphic file (type png)
+<use Resources/Multiclass_Nets2.png>
+Package pdftex.def Info: Resources/Multiclass_Nets2.png  used on input line 133
+0.
+(pdftex.def)             Requested size: 239.39378pt x 133.74934pt.
+
+Overfull \hbox (21.50082pt too wide) in paragraph at lines 1330--1331
+[][] 
+ []
+
+[21 <./Resources/Multiclass_Nets.PNG> <./Resources/Multiclass_Nets2.png>]
+[22]
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera.aux") ) 
 Here is how much of TeX's memory you used:
- 30882 strings out of 481212
- 788383 string characters out of 2902221
- 1131727 words of memory out of 3000000
- 45791 multiletter control sequences out of 15000+200000
+ 31439 strings out of 481212
+ 804447 string characters out of 2902221
+ 1145902 words of memory out of 3000000
+ 46336 multiletter control sequences out of 15000+200000
  548208 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,16n,127p,744b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pixia.PIXIA
-40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/U
-sers/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pixia.PIXIA40/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/pixia.
-PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib
-7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pixia.PIXIA40/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/
-pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "C:/Users\pixia.PIXIA40\OneDrive - UW\LaTeX_Projects\Machine_
-Learning\out\ML_AndrewNg_Coursera.pdf" (13 pages, 3737604 bytes).
+ 74i,16n,127p,744b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/pixia.PIXIA40/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pixia.PIXIA40/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pi
+xia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.
+pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/pixia.PIXIA40/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users
+/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+ib10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cmextra/cmmib7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pixia.PIXIA40/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pixia.
+PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/pixia.PIXIA40/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/pixia
+.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
+b><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on "C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects
+\Machine_Learning\out\ML_AndrewNg_Coursera.pdf" (22 pages, 5331010 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
