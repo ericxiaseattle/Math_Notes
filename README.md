@@ -6,6 +6,6 @@
 * [Geometry](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/Geometry/out/main.pdf)
 * [Precalculus](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/Precalculus/out/main.pdf)
 
-## CS Notes:
+## CS Notes (In Progress)
 * [AP Computer Science A and CSE143](https://github.com/ericxiaseattle/Math_Notes/raw/master/CS/CSE14x/out/main.pdf)
 * [Andrew Ng's "Machine Learning" on Coursera](https://github.com/ericxiaseattle/Math_Notes/raw/master/CS/Machine_Learning/out/ML_AndrewNg_Coursera.pdf)
