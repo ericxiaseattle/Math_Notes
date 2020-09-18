@@ -9,3 +9,4 @@
 ## CS Notes (In Progress)
 * [AP Computer Science A and CSE143](https://github.com/ericxiaseattle/Math_Notes/raw/master/CS/CSE14x/out/main.pdf)
 * [Andrew Ng's "Machine Learning" on Coursera](https://github.com/ericxiaseattle/Math_Notes/raw/master/CS/Machine_Learning/out/ML_AndrewNg_Coursera.pdf)
+* [Hands-on Machine Learning with Scikit_Learn, Keras & Tensorflow](https://github.com/ericxiaseattle/Notes/raw/master/CS/Machine_Learning/out/HandsOn_ML/HandsOn_ML.pdf)
