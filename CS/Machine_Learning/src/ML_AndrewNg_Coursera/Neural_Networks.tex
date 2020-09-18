@@ -1,0 +1,324 @@
+\section{Neural Networks: Representation}
+    On an oversimplified level, neurons are computational units that take inputs (\textbf{dendrites}) as
+    electrical inputs, called "spikes", that are channeled to outputs (\textbf{axons}). In our model,
+    the dendrites are the input features $x_1,\dots, x_n$, and the output is the result of the hypothesis
+    function. The input node $x_0$ is referred to as the \textbf{bias unit} and is always equal to 1. In
+    neural networks, we use the same logistic function as in classification, $\frac{1}{1+e^{-\theta^T x}}$,
+    referred to as the \textbf{activation function}. Our $\theta$ parameters are referred to as
+    \textbf{weights}. \\
+
+    \noindent A simplistic representation looks like:
+
+    \begin{align*}
+    [x_0 x_1 x_2]
+        \to [\text{ }] \to h_{\theta}(x)
+    \end{align*}
+
+    \noindent where the input nodes (layer 1) go into another node (layer 2), which then outputs the
+    hypothesis function (output layer). We can have intermediate layers of nodes between the input and
+    output layers called the \textbf{hidden layers}. In the figure below, layer 2 is a hidden layer and so
+    the nodes are $a^2_0\dots a^2_n$ and called \textbf{activation units}.
+
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[scale=0.5]{Resources/Neural_Net}
+    \end{figure}
+
+    \begin{align*}
+        a_i^{(j)}       &= \text{ "activation" of unit $i$ in layer $j$} \\
+        \Theta^{(j)}    &= \text{ matrix of weights controlling function mapping from layer $j$ to layer
+        $j+1$}
+    \end{align*}
+
+    \noindent If we have one hidden layer, then the model looks like
+
+    \begin{equation*}
+    [x_0 x_1 x_2 x_3]
+        \to \left[a_1^{(2)} a_2^{(2)} a_3^{(2)}\right] \to h_{\theta}(x)
+    \end{equation*}
+
+    \noindent where the values for each of the activation nodes is obtained as follows:
+
+    \begin{align*}
+        a_1^{(2)}   &= g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 +
+        \Theta_{13}^{(1)}x_3) \\
+        a_2^{(2)}   &= g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 +
+        \Theta_{23}^{(1)}x_3) \\
+        a_3^{(2)}   &= g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 +
+        \Theta_{33}^{(1)}x_3) \\
+        h_\Theta(x) &= a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} +
+        \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)})
+    \end{align*}
+
+    \noindent From the equations above, we know that we can compute our activation nodes by using a
+    $3\times 4$ parameter matrix. Our hypothesis output is the logistic function applied to the sum of the
+    values of our activation nodes, which have been multiplied by yet another parameter matrix $\Theta^{(2)}$
+    containing the weights for our second layer of nodes. Each layer of the model gets its own matrix of
+    weights, $\Theta^{(j)}$, where the dimensions of these matrices of weights is determined as follows:
+
+    \begin{center}
+        "If network has $s_j$ units in layer $j$ and $s_{j+1}$ units in layer $j+1$, then $\Theta^{(j)}$
+        will be of dimension $s_{j+1}\times (s_j + 1)$."
+    \end{center}
+
+    \noindent Here, if layer 1 has 2 activation nodes and layer 2 has 4 activation nodes, then the dimension of
+    $\Theta^{(1)}$ is going to be $4\times 3$ where $s_j=2$ and $s_{j+1}=4$, so $s_{j+1}\times(s_j+1)=
+    4\times 3$. \\
+
+    \noindent Recall the activation nodes above. We can vectorize these functions, defining a new variable
+    $z_k^{(j)}$ that encompasses the parameters inside function $g$. If we replace the parameters by $z$
+    for all the activation node equations, then we get
+
+    \begin{align*}
+        a_1^{(2)}   &= g\left(z_1^{(2)}\right) \\
+        a_2^{(2)}   &= g\left(z_2^{(2)}\right) \\
+        a_3^{(2)}   &= g\left(z_3^{(2)}\right)
+    \end{align*}
+
+    \noindent where, for layer $j=2$ and node $k$, the variable $z$ is
+
+    \begin{equation*}
+        z_k^{(2)}   = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 +\dots+ \Theta_{k,n}^{(1)}x_n
+    \end{equation*}
+
+    \noindent We represent $x$ and $z^j$ as vectors like so:
+
+    \begin{equation*}
+        x       &= \begin{bmatrix}
+                       x_0\\ x_1\\ \vdots\\ x_n\right
+        \end{bmatrix},
+        z^{(j)} &= \begin{bmatrix}
+                       z_1^{(j)}\\ z_2^{(j)} \\ \vdots \\ z_n^{(j)}
+        \end{bmatrix}
+    \end{equation*}
+
+    \noindent Setting $x=a^{(1)}$, we can rewrite the equation as
+
+    \begin{equation*}
+        z^{(j)} = \Theta^{(j-1)} a^{(j-1)}
+    \end{equation*}
+
+    \noindent We are multiplying the matrix $\Theta^{(j-1)}$ with dimensions $s_j\times (n+1)$, where $s_j$
+    is the number of our activation nodes by our vector $a^{(j-1)}$ with height $(n+1)$. This gives us a
+    vector $z^{(j)}$ with height $s_j$. Now we get a vector of our activation nodes for layer $j$ as
+    follows:
+
+    \begin{equation*}
+        a^{(j)} = g\left(z^{(j)}\right)
+    \end{equation*}
+
+    \noindent where function $g$ can be applied element-wise to the vector $z^{(j)}$. We can then add a
+    bias unit (equal to 1) to layer $j$ after we have computed $a^{(j)}$. This will be element $a_0^{(j)}$
+    and will be equal to 1. To compute the final hypothesis function, we compute another $z$ vector:
+
+    \begin{equation*}
+        z^{(j+1)} = \Theta^{(j)} a^{(j)}
+    \end{equation*}
+
+    \noindent This final $z$ vector was computed by multiplying the next $\Theta$ matrix after
+    $\Theta^{(j-1)}$ with the values of all the activation nodes we just got. The last $\Theta$ matrix
+    $\Theta^{(j)}$ will have only one row which is multiplied by one column $a^{(j)}$ so that our result
+    is a single number. We then get our final result with:
+
+    \begin{align*}
+        h_{\Theta}(x) = a^{(j+1)} = g\left(z^{(j+1)}\right)
+    \end{align*}
+
+    \noindent Notice that between layer $j$ and layer $j+1$, we are doing the exact same thing as performed
+    in logistic regression. Adding intermediate layers in neural networks allow us to more elegantly produce
+    interesting and more complex non-linear hypotheses. \\
+
+    \noindent \textbf{Forward Propogation} is a type of Neural Network architecture in which connections
+    are fed "forward", from the input layer to the hidden layers then to the output layer.
+    \textbf{Backpropogation} is a training algorithm consisting of first forward propogation then
+    calculating the error and propogating the connections back to the early layers. \\
+
+    \noindent An example of an application of neural networks is predicting $x_1$ AND $x_2$, where "AND"
+    is the logical operator. The graph of the functions will look like
+
+    \begin{equation*}
+        \begin{bmatrix}
+            x_0 \\ x_1 \\ x_2
+        \end{bmatrix}
+        \to
+        \left[g(z^{(2)})\right]
+        \to
+        h_{\Theta}(x)
+    \end{equation*}
+
+    \noindent Remember that $x_0$ is the bias variable and always equal to 1. We set our first $\Theta$
+    matrix as
+
+    \begin{align*}
+        \Theta^{(1)} = \begin{bmatrix}
+                           -30 & 20 & 20
+        \end{bmatrix}
+    \end{align*}
+
+    \noindent This declaration causes the hypothesis function's output to only be positive if both $x_1$
+    and $x_2$ are 1. In other words,
+
+    \begin{align*}
+        h_{\Theta}(x)   &= g(-30+20x_1 + 20x_2) \\
+        x_1             &= 0 \text{ and } x_2=0 \text{ then } g(-30)\approx 0 \\
+        x_1             &= 0 \text{ and } x_2=1 \text{ then } g(-10)\approx 0 \\
+        x_1             &= 1 \text{ and } x_2=0 \text{ then } g(-10)\approx 0 \\
+        x_1             &= 1 \text{ and } x_2=1 \text{ then } g(10)\approx 1
+    \end{align*}
+
+    \noindent Notice that these outputs are exactly the values of a typical AND logic table. \\
+
+    \noindent Example: OR Function
+
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[scale=0.6]{Resources/OR_Net}
+    \end{figure}
+
+    \pagebreak
+    \noindent where $g(z)$ is the sigmoid function below:
+
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[scale=0.75]{Resources/OR_Net_Sigmoid}
+    \end{figure}
+
+    \noindent Let us make $\Theta^{(1)}$ matrices for AND, NOR, and OR:
+
+    \begin{align*}
+        \text{AND:} \\
+        \Theta^{(1)} &= \begin{bmatrix}
+                            -30 & 20 & 20
+        \end{bmatrix} \\
+        \text{NOR:} \\
+        \Theta^{(1)} &= \begin{bmatrix}
+                            10 & -20 & -20
+        \end{bmatrix} \\
+        \text{OR:} \\
+        \Theta^{(1)} &= \begin{bmatrix}
+                            -10 & 20 & 20
+        \end{bmatrix}
+    \end{align*}
+
+    \noindent We can combine these to get the XNOR logical operator, which outputs 1 if $x_1$ and $x_2$
+    are both 0 or both 1.
+
+    \begin{equation*}
+        \begin{bmatrix}
+            x_0 \\
+            x_1 \\
+            x_2
+        \end{bmatrix}
+        \to
+        \begin{bmatrix}
+            a_1^{(2)} \\
+            a_2^{(2)}
+        \end{bmatrix}
+        \to
+        \begin{bmatrix}
+            a^{(3)}
+        \end{bmatrix}
+        \to h_\Theta(x)
+    \end{equation*}
+
+    \noindent For the transition between the first and second layer, we will use a $\Theta^{(1)}$ matrix
+    which combines the values for AND and NOR:
+
+    \begin{equation*}
+        \Theta^{(1)} =
+        \begin{bmatrix}
+            -30 & 20 & 2010 & -20 & 20
+        \end{bmatrix}
+    \end{equation*}
+
+    \noindent For the transition between the second and third layer, we will use a $\Theta^{(2)}$ matrix
+    that uses the value for OR:
+
+    \begin{equation*}
+        \Theta^{(2)} =
+        \begin{bmatrix}
+            -10 & 20 & 20
+        \end{bmatrix}
+    \end{equation*}
+
+    \noindent Let us write out the values for all our nodes:
+
+    \begin{align*}
+        a^{(2)}         &= g\left(\Theta^{(1)}\cdot x\right) \\
+        a^{(3)}         &= g\left(\Theta^{(2)}\cdot a^{(2)}\right) \\
+        h_\Theta (x)    &= a^{(3)}
+    \end{align*}
+
+    \noindent Hence, we get the XNOR operator using a hidden layer with two nodes. Below, a visual
+    representation of this algorith is shown for reference.
+
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[scale=0.75]{Resources/XNOR}
+    \end{figure}
+
+    \pagebreak
+
+    \noindent For multiclass classification, we set our hypothesis function to return a vector of values.
+    Let's say we wanted to classify our data into one of four categories. The algorithm takes an input as
+    an image and classifies it accordingly.
+
+    \begin{figure}[hbt!]
+        \centering
+        \begin{subfigure}[b]{.45\linewidth}
+            \includegraphics[scale=0.5]{Resources/Multiclass_Nets.PNG}
+        \end{subfigure}
+        \begin{subfigure}[b]{.45\linewidth}
+            \includegraphics[scale=0.5]{Resources/Multiclass_Nets2}
+        \end{subfigure}
+    \end{figure}
+
+
+\pagebreak
+\section{Neural Networks: Learning}
+    Let
+
+    \begin{align*}
+        L   &= \text{ total number of layers in the network} \\
+        s_l &= \text{ number of units (not counting bias unit) in layer } l \\
+        K   &= \text{ number of output units/classes}
+    \end{align*}
+
+    \noindent Recall that in neural networks we may have multiple output nodes. We denote $h_{\Theta} (x)_k$
+    as being a hypothesis that results in the $k$th output. Our cost function for neural networks is going to
+    be a generalization of the one we used for logistic regression. Recall that the cost function for
+    regularized logistic regression is:
+
+    \begin{equation*}
+        J(\theta) = -\frac{1}{m}\sum^m_{i=1}
+        \left[
+            y^{(i)}\log{\left(h_\theta (x^{(i)})\right)} + \left(1-y^{(i)}\right) \log{\left(1-h_\theta (x^{(i)})\right)}
+        \right]
+        + \frac{\lambda}{2m}\sum^n_{j=1} \theta^2_j
+    \end{equation*}
+
+    \noindent The \textbf{Cost Function for Neural Networks} is a generalization of the above equation, where
+    $\Theta_0=\frac{\lambda}{2m}\sum^n_{j=1}\theta^2_j$ and $J(\Theta)$ may have $K$ outputs. Let
+    $h_\Theta (x)\in\mathbb{R}^K$ be a vector. Then $(h_\Theta (x))_i=i$th output, where $i$ represents a
+    single element of the vector $h_\Theta (x)$. Then the cost function is given by:
+
+    \begin{equation*}
+        J(\Theta) = -\frac{1}{m} \sum^m_{i=1} \sum^K_{k=1}
+        \left[
+            y_k^{(i)} \log{\left(\left(h_\Theta \left(x^{(i)}\right)\right)_k \right)}
+            + \left(1-y_k^{(i)} \right)
+            \log{\left(1-\left(h_\Theta \left(x^{(i)}\right)\right)_k \right)}
+        \right]
+        + \frac{\lambda}{2m} \sum^{L-1}_{l=1} \sum^{s_l}_{i=1} \sum^{s_l +1}_{j=1}
+        \left(\Theta^{(l)}_{j,i} \right)^2
+    \end{equation*}
+
+    \noindent We have multiple nested summations to account for our multiple output nodes. Prior the square
+    brackets in the equation, we have an additional nested summation that loops through the number of output
+    nodes. In the regularization part of the equation, we have to account for multiple $\Theta$ matrices. The
+    number of columns in our current $\Theta$ matrix is equal to the number of nodes in our current layer
+    (including the bias unit). The number of rows in our current $\Theta$ matrix is equal to the number of
+    nodes in the next layer (excluding the bias unit). As before with logistic regression, we square every
+    term. Note that the double sum simply adds up the logistic regression costs calculated for each cell in
+    the output layer, the triple sum simply adds up the squares of all the individual $\Theta$s in the entire
+    network, and the $i$ in the triple sum \textit{does not} refer to training example $i$.

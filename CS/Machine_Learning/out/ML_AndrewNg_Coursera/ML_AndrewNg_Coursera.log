@@ -1,0 +1,1745 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.17)  17 SEP 2020 13:00
+entering extended mode
+**./ML_AndrewNg_Coursera.tex
+(ML_AndrewNg_Coursera.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-08-07>
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cl
+s
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval
+.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.
+sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.s
+ty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.cfg)
+
+C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty:1005: Package keyval Error: portrati undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1005 \ProcessOptionsKV[p]{Gm}
+                               %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath
+.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext
+.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.
+sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen143
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.
+sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.
+sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count179
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count180
+\leftroot@=\count181
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count182
+\DOTSCASE@=\count183
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count184
+\c@MaxMatrixCols=\count185
+\dotsspace@=\muskip16
+\c@parentequation=\count186
+\dspbrk@lvl=\count187
+\tag@help=\toks18
+\row@=\count188
+\column@=\count189
+\maxfields@=\count190
+\andhelp@=\toks19
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssym
+b.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfon
+ts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/was\gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\matht
+ools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count191
+\calc@Bcount=\count192
+\calc@Adimen=\dimen152
+\calc@Bdimen=\dimen153
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count193
+\calc@Cskip=\skip54
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhset
+up.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count194
+\l_MT_multwidth_dim=\dimen154
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen155
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen156
+\l_MT_above_intertext_sep=\dimen157
+\l_MT_below_intertext_sep=\dimen158
+\l_MT_above_shortintertext_sep=\dimen159
+\l_MT_below_shortintertext_sep=\dimen160
+\xmathstrut@box=\box47
+\xmathstrut@dim=\dimen161
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.s
+ty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\co
+lor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pd
+ftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
+.sty
+Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
+3.sty
+Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen162
+\captionmargin@=\dimen163
+\captionwidth=\dimen164
+\caption@tempdima=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count195
+\c@continuedfloat=\count196
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcapt
+ion.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count197
+\c@subtable=\count198
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplo
+ts.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.revision.tex)
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
+cx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
+cs.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.s
+ty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gr
+aphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlay
+er\tikz.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgf.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gfrcs.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-common.tex
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen171
+\pgfutil@tempdimb=\dimen172
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-common-lists.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-latex.def
+\pgfutil@abb=\box48
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfrcs.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revis
+ion.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgfcore.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer
+\pgfsys.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\pgf@xd=\dimen181
+\pgf@yd=\dimen182
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count199
+\c@pgf@countb=\count266
+\c@pgf@countc=\count267
+\c@pgf@countd=\count268
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count269
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count270
+\pgfsyssoftpath@bigbuffer@items=\count271
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athcalc.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athutil.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athparser.code.tex
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count272
+\pgfmath@box=\box49
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.basic.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.trigonometric.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.random.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.comparison.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.base.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.round.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.misc.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.integerarithmetics.code.tex)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count273
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfi
+nt.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box50
+\pgf@hbox=\box51
+\pgf@layerbox@main=\box52
+\pgf@picture@serial@count=\count274
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen258
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen262
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count275
+\pgf@shadingcount=\count276
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box53
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box54
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gffor.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gfkeys.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeys.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmat
+h.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex)
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz\tikz.code.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count277
+\pgfplotmarksize=\dimen268
+)
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikz@lastmovetox=\dimen273
+\tikz@lastmovetoy=\dimen274
+\tikzleveldistance=\dimen275
+\tikzsiblingdistance=\dimen276
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count278
+\tikznumberofchildren=\count279
+\tikznumberofcurrentchild=\count280
+\tikz@fig@count=\count281
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count282
+\pgfmatrixcurrentcolumn=\count283
+\pgf@matrix@numberofcolumns=\count284
+)
+\tikz@expandcount=\count285
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotscore.code.tex
+\t@pgfplots@toka=\toks34
+\t@pgfplots@tokb=\toks35
+\t@pgfplots@tokc=\toks36
+\pgfplots@tmpa=\dimen277
+\c@pgfplots@coordindex=\count286
+\c@pgfplots@scanlineindex=\count287
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\
+pgfplotssysgeneric.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs
+\pgfplotslibrary.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldp
+gfcompatib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryfpu.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotsutil.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/list
+structure\pgfplotsliststructure.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/list
+structure\pgfplotsliststructureext.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/list
+structure\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count288
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/list
+structure\pgfplotsmatrix.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numt
+able\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count289
+\t@pgfplotstable@a=\toks37
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/list
+structure\pgfplotsdeque.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotsbinary.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotsbinary.data.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotsutil.verb.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs
+\pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count290
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\
+pgflibrarypgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotscolormap.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util
+\pgfplotscolor.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotsstackedplots.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotsplothandlers.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotsmeshplothandler.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotsmeshplotimage.code.tex)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.scaling.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotscoordprocessing.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.errorbars.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.markers.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lotsticks.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfp
+lots.paths.code.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen278
+\pgfdecoratedremainingdistance=\dimen279
+\pgfdecoratedinputsegmentcompleteddistance=\dimen280
+\pgfdecoratedinputsegmentremainingdistance=\dimen281
+\pgf@decorate@distancetomove=\dimen282
+\pgf@decorate@repeatstate=\count291
+\pgfdecorationsegmentamplitude=\dimen283
+\pgfdecorationsegmentlength=\dimen284
+)
+\tikz@lib@dec@box=\box59
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/decorations\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/decorations\pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count292
+\pgfplots@xmin@reg=\dimen285
+\pgfplots@xmax@reg=\dimen286
+\pgfplots@ymin@reg=\dimen287
+\pgfplots@ymax@reg=\dimen288
+\pgfplots@zmin@reg=\dimen289
+\pgfplots@zmax@reg=\dimen290
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs
+\tikzlibrarypgfplots.fillbetween.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfc
+ontrib\tikzlibraryfillbetween.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryintersections.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count293
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfc
+ontrib\tikzlibrarydecorations.softclip.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfc
+ontrib\pgflibraryfillbetween.code.tex)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs
+\tikzlibrarypgfplots.decorations.softclip.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-euclide.sty
+2020/03/18 3.06c tkz-euclide.sty
+Package: tkz-euclide 2020/03/18 3.06c for euclidan geometry 
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ba
+se.sty
+2020/03/18 3.06c tkz-base.sty
+Package: tkz-base 2020/03/18 3.06c tkz-base
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen291
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen292
+\pgfarrowlength=\dimen293
+\pgfarrowwidth=\dimen294
+\pgfarrowlinewidth=\dimen295
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarybabel.code.tex
+File: tikzlibrarybabel.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/decorations\pgflibrarydecorations.markings.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.shapes.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/decorations\pgflibrarydecorations.shapes.code.tex))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarydecorations.text.code.tex
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/decorations\pgflibrarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box60
+)
+\tikz@lib@dec@te@box=\box61
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/shapes\pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/numprint\numpri
+nt.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen296
+\ar@mcellbox=\box62
+\extrarowheight=\dimen297
+\NC@list=\toks38
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box63
+)
+\c@nprt@mantissa@digitsbefore=\count294
+\c@nprt@mantissa@digitsafter=\count295
+\c@nprt@exponent@digitsbefore=\count296
+\c@nprt@exponent@digitsafter=\count297
+\nprt@digitwidth=\skip58
+\nprt@sepwidth=\skip59
+\nprt@decimalwidth=\skip60
+\nprt@blockwidth=\skip61
+\nprt@digittoks=\toks39
+\nprt@pretoks=\toks40
+\nprt@posttoks=\toks41
+\nprt@thisdigit=\count298
+\nprt@curpos=\count299
+\nprt@rndpos=\count300
+\c@nprt@digitsfirstblock=\count301
+\c@nprt@blockcnt=\count302
+\c@nprt@cntprint=\count303
+ No configuration file `numprint.cfg' found.)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\
+xfp.sty
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.
+sty
+Package: expl3 2020-08-07 L3 programming layer (loader) 
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3bac
+kend-pdfmode.def
+File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count304
+\l__pdf_internal_box=\box64
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xpar
+se\xparse.sty
+Package: xparse 2020-05-15 L3 Experimental document command parser
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xpar
+se\xparse-generic.tex
+\l__xparse_current_arg_int=\count305
+\g__xparse_grabber_int=\count306
+\l__xparse_m_args_int=\count307
+\l__xparse_v_nesting_int=\count308
+))
+Package: xfp 2020-05-15 L3 Floating point unit
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.s
+ty
+Package: defpattern 1994/10/12
+\actioncount=\count309
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count310
+\FP@xia=\count311
+\FP@xib=\count312
+\FP@xfa=\count313
+\FP@xfb=\count314
+\FP@rega=\count315
+\FP@regb=\count316
+\FP@regs=\count317
+\FP@times=\count318
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.st
+y
+Package: fp-addons 1995/03/15
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-snap.sty
+Package: fp-snap 1995/04/05
+) (C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-trigo.sty
+Package: fp-trigo 1995/04/14
+) (C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.st
+y
+Package: fp-random 1995/02/23
+\FPseed=\count319
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\tkzRadius=\dimen298
+\tkzLength=\dimen299
+\tkz@radi=\dimen300
+\tkz@ax=\dimen301
+\tkz@ay=\dimen302
+\tkz@bx=\dimen303
+\tkz@by=\dimen304
+\tkz@cx=\dimen305
+\tkz@cy=\dimen306
+\tkz@dx=\dimen307
+\tkz@dy=\dimen308
+\tkz@tax=\dimen309
+\tkz@tay=\dimen310
+\tkz@tbx=\dimen311
+\tkz@tby=\dimen312
+\tkz@tcx=\dimen313
+\tkz@tcy=\dimen314
+\tkz@tdx=\dimen315
+\tkz@tdy=\dimen316
+\tkz@cntmk=\count320
+
+Local configuration file tkz-base.cfg found and used
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ba
+se.cfg
+2020/03/18 3.06c tkz-base.cfg
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-modules.tex
+2020/03/18 3.06c tkz-tools-utilities.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-li
+b-marks.tex
+2020/03/18 3.06c tkz-lib-symbols.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-base.tex
+2020/03/18 3.06c tkz-tools-base.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-utilities.tex
+2020/03/18 3.06c tkz-tools-utilities.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-tools-math.tex
+2020/03/18 3.06c tkz-tools-math.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-text.tex
+2020/03/18 3.06c tkz-tools-text.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-BB.tex
+2020/03/18 3.06c tkz-obj-BB.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-arith.tex
+2020/03/18 3.06c tkz-tools-arith.tex
+File: tkz-tool-arith.tex tkz-tool-arith 3.02 c
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-print.tex
+2020/03/18 3.06c tkz-tools-print.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-to
+ols-misc.tex
+2020/03/18 3.06c tkz-tools-misc.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ob
+j-axes.tex
+2020/03/18 3.06c tkz-obj-axes.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ob
+j-grids.tex
+2020/03/18 3.06c tkz-obj-grids.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ob
+j-marks.tex
+2020/03/18 3.07c tkz-obj-marks.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ob
+j-points.tex
+2020/03/18 3.06c tkz-obj-points.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-ob
+j-rep.tex
+2020/03/18 3.06c tkz-obj-rep.tex
+))
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-tools-intersections.tex
+2020/03/18 3.06c tkz-tools-intersections.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-tools-angles.tex
+2020/03/18 3.06c tkz-tools-angles.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-angles.tex
+2020/03/18 3.06c tkz-tool-eu-angles.tex
+\tkz@arcsize=\dimen317
+\tkz@fillsize=\dimen318
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-arcs.tex
+2020/03/23 3.06c tkz-obj-eu-arcs.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-compass.tex
+2020/03/18 3.06c tkz-obj-eu-compass.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-circles.tex
+2020/03/18 3.06c tkz-obj-eu-circles.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-draw-circles.tex
+2020/03/18 3.06c tkz-obj-eu-draw-circles.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-draw-lines.tex
+2020/03/18 3.06c tkz-obj-eu-draw-lines.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-draw-polygons.tex
+2020/03/18 3.06c tkz-obj-eu-polygons.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-draw-triangles.tex)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-lines.tex
+2020/03/18 3.06c tkz-obj-eu-lines.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-points.tex
+2020/03/18 3.06c tkz-obj-eu-points.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-points-by.tex
+2020/03/18 3.06c tkz-tools-eu-points-by.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-points-rnd.tex
+2020/03/18 3.06c tkz-obj-eu-points-rnd.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-points-with.tex
+2020/03/18 3.06c tkz-obj-eu-points-with.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-polygons.tex
+2020/03/18 3.06c tkz-obj-eu-polygons.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-protractor.tex
+2020/03/18 3.06c tkz-obj-eu-protractor.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-sectors.tex
+2020/03/18 3.06c tkz-obj-eu-sectors.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-show.tex
+2020/03/18 3.06c tkz-obj-eu-show.tex
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz
+-obj-eu-triangles.tex
+2020/03/18 3.06c tkz-obj-eu-triangles.tex
+))
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\ML_AndrewNg_Coursera.aux"
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\Math_Knowledge.aux")
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\Neural_Networks.aux"))
+\openout1 = `ML_AndrewNg_Coursera.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: legalpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(65.04256pt, 484.20988pt, 65.04256pt)
+* v-part:(T,H,B)=(65.04256pt, 881.69489pt, 65.04256pt)
+* \paperwidth=614.295pt
+* \paperheight=1011.78pt
+* \textwidth=484.20988pt
+* \textheight=881.69489pt
+* \oddsidemargin=-7.22743pt
+* \evensidemargin=-7.22743pt
+* \topmargin=-44.22743pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \celsius on input line 32.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 32.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 32.
+Package gensymb Info: Using \Omega for \ohm on input line 32.
+
+Package gensymb Warning: Not defining \micro.
+
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\sup
+p-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count321
+\scratchdimen=\dimen319
+\scratchbox=\box65
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen320
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks43
+)
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\ep
+stopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ ABD: EveryShipout initializing macros
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
+d
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+
+
+(C:\Users\pixia.PIXIA40\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
+d
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\ML_AndrewNg_Coursera.toc")
+\tf@toc=\write4
+\openout4 = `ML_AndrewNg_Coursera.toc'.
+
+ [1
+
+{C:/Users/pixia.PIXIA40/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+\openout2 = `Math_Knowledge.aux'.
+
+ (Math_Knowledge.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+[2
+
+]
+<Resources/Linear_Regression.png, id=41, 1204.5pt x 796.9775pt>
+File: Resources/Linear_Regression.png Graphic file (type png)
+<use Resources/Linear_Regression.png>
+Package pdftex.def Info: Resources/Linear_Regression.png  used on input line 43
+.
+(pdftex.def)             Requested size: 240.89574pt x 159.39267pt.
+<Resources/Hypothesis_Function.png, id=43, 200.75pt x 191.21437pt>
+File: Resources/Hypothesis_Function.png Graphic file (type png)
+<use Resources/Hypothesis_Function.png>
+Package pdftex.def Info: Resources/Hypothesis_Function.png  used on input line 
+49.
+(pdftex.def)             Requested size: 150.56212pt x 143.41042pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
+
+ []
+
+<Resources/Contour.PNG, id=44, 532.99126pt x 261.97874pt>
+File: Resources/Contour.PNG Graphic file (type png)
+<use Resources/Contour.PNG>
+Package pdftex.def Info: Resources/Contour.PNG  used on input line 70.
+(pdftex.def)             Requested size: 399.74246pt x 196.48357pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+
+ []
+
+[3 <./Resources/Linear_Regression.png> <./Resources/Hypothesis_Function.png> <.
+/Resources/Contour.PNG>]
+<Resources/Gradient_Descent.png, id=59, 425.08812pt x 217.81375pt>
+File: Resources/Gradient_Descent.png Graphic file (type png)
+<use Resources/Gradient_Descent.png>
+Package pdftex.def Info: Resources/Gradient_Descent.png  used on input line 85.
+
+(pdftex.def)             Requested size: 318.8153pt x 163.3599pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--94
+
+ []
+
+<Resources/Learning_Rate.PNG, id=60, 807.015pt x 297.61188pt>
+File: Resources/Learning_Rate.PNG Graphic file (type png)
+<use Resources/Learning_Rate.PNG>
+Package pdftex.def Info: Resources/Learning_Rate.PNG  used on input line 99.
+(pdftex.def)             Requested size: 403.50652pt x 148.80557pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+<Resources/Simultaneous_Update.png, id=61, 480.79625pt x 105.89563pt>
+File: Resources/Simultaneous_Update.png Graphic file (type png)
+<use Resources/Simultaneous_Update.png>
+Package pdftex.def Info: Resources/Simultaneous_Update.png  used on input line 
+116.
+(pdftex.def)             Requested size: 360.59628pt x 79.42151pt.
+[4 <./Resources/Gradient_Descent.png> <./Resources/Learning_Rate.PNG> <./Resour
+ces/Simultaneous_Update.png>]
+<Resources/Contour2.png, id=66, 229.85875pt x 190.21063pt>
+File: Resources/Contour2.png Graphic file (type png)
+<use Resources/Contour2.png>
+Package pdftex.def Info: Resources/Contour2.png  used on input line 148.
+(pdftex.def)             Requested size: 172.39362pt x 142.65761pt.
+ [5 <./Resources/Contour2.png>]
+<Resources/Matrix_Vector_Mult.png, id=71, 462.22687pt x 101.37875pt>
+File: Resources/Matrix_Vector_Mult.png Graphic file (type png)
+<use Resources/Matrix_Vector_Mult.png>
+Package pdftex.def Info: Resources/Matrix_Vector_Mult.png  used on input line 2
+48.
+(pdftex.def)             Requested size: 346.6693pt x 76.03386pt.
+<Resources/Hypothesis_Combination.png, id=72, 814.04124pt x 508.90125pt>
+File: Resources/Hypothesis_Combination.png Graphic file (type png)
+<use Resources/Hypothesis_Combination.png>
+Package pdftex.def Info: Resources/Hypothesis_Combination.png  used on input li
+ne 281.
+(pdftex.def)             Requested size: 325.61072pt x 203.55688pt.
+ [6 <./Resources/Matrix_Vector_Mult.png> <./Resources/Hypothesis_Combination.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
+
+ []
+
+Math_Knowledge.tex:291: Undefined control sequence.
+l.291 $\bullet$ Denoted $I$ or $I_{n\timesm
+                                           }$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Math_Knowledge.tex:294: Undefined control sequence.
+l.294 $\bullet$ $A\timesB
+                         =B\timesA$ when $B=I$ (matrices are commutative whe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Math_Knowledge.tex:294: Undefined control sequence.
+l.294 $\bullet$ $A\timesB=B\timesA
+                                  $ when $B=I$ (matrices are commutative whe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--296
+
+ []
+
+<Resources/Identity2.png, id=78, 71.76813pt x 42.1575pt>
+File: Resources/Identity2.png Graphic file (type png)
+<use Resources/Identity2.png>
+Package pdftex.def Info: Resources/Identity2.png  used on input line 312.
+(pdftex.def)             Requested size: 86.12129pt x 50.58871pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--317
+
+ []
+
+[7 <./Resources/Identity2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 342--347
+
+ []
+
+Math_Knowledge.tex:385: Undefined control sequence.
+<recently read> \x 
+                   
+l.385 $x=\begin{bmatrix}x_0\\x_1\\\vdots\\\x
+                                            _n\end{bmatrix}$. Together, $\th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+<Resources/Contour3.png, id=83, 602.25pt x 394.47375pt>
+File: Resources/Contour3.png Graphic file (type png)
+<use Resources/Contour3.png>
+Package pdftex.def Info: Resources/Contour3.png  used on input line 407.
+(pdftex.def)             Requested size: 240.89572pt x 157.7867pt.
+[8 <./Resources/Contour3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 431--436
+
+ []
+
+<Resources/Gradient_Descent_Debug.png, id=87, 139.01938pt x 74.77937pt>
+File: Resources/Gradient_Descent_Debug.png Graphic file (type png)
+<use Resources/Gradient_Descent_Debug.png>
+Package pdftex.def Info: Resources/Gradient_Descent_Debug.png  used on input li
+ne 442.
+(pdftex.def)             Requested size: 139.01903pt x 74.77919pt.
+<Resources/Gradient_Descent_Debug2.png, id=88, 183.68625pt x 82.3075pt>
+File: Resources/Gradient_Descent_Debug2.png Graphic file (type png)
+<use Resources/Gradient_Descent_Debug2.png>
+Package pdftex.def Info: Resources/Gradient_Descent_Debug2.png  used on input l
+ine 445.
+(pdftex.def)             Requested size: 146.94917pt x 65.84607pt.
+[9 <./Resources/Gradient_Descent_Debug.png> <./Resources/Gradient_Descent_Debug
+2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
+
+ []
+
+[10]
+Math_Knowledge.tex:631: Double subscript.
+<argument> ...l \theta _1} = (2\theta _1 x^2_{11}_
+                                                  \theta _2 X^2_{12}+\dots +...
+l.631 \end{align*}
+                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+Math_Knowledge.tex:631: Double subscript.
+<argument> ... _1} = (2\theta _1 x^2_{11}_\theta _
+                                                  2 X^2_{12}+\dots + \theta ...
+l.631 \end{align*}
+                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+Math_Knowledge.tex:631: Double subscript.
+<argument> ...l \theta _1} = (2\theta _1 x^2_{11}_
+                                                  \theta _2 X^2_{12}+\dots +...
+l.631 \end{align*}
+                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+Math_Knowledge.tex:631: Double subscript.
+<argument> ... _1} = (2\theta _1 x^2_{11}_\theta _
+                                                  2 X^2_{12}+\dots + \theta ...
+l.631 \end{align*}
+                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+<Resources/Norm_Equation_Example.png, id=97, 842.64813pt x 281.55188pt>
+File: Resources/Norm_Equation_Example.png Graphic file (type png)
+<use Resources/Norm_Equation_Example.png>
+Package pdftex.def Info: Resources/Norm_Equation_Example.png  used on input lin
+e 663.
+(pdftex.def)             Requested size: 421.32304pt x 140.77559pt.
+[11 <./Resources/Norm_Equation_Example.png>]
+<Resources/Norm_Equation_Example2.png, id=101, 900.36375pt x 449.68pt>
+File: Resources/Norm_Equation_Example2.png Graphic file (type png)
+<use Resources/Norm_Equation_Example2.png>
+Package pdftex.def Info: Resources/Norm_Equation_Example2.png  used on input li
+ne 670.
+(pdftex.def)             Requested size: 360.13911pt x 179.8688pt.
+<Resources/Norm_Equation_Example3.png, id=102, 881.79437pt x 501.875pt>
+File: Resources/Norm_Equation_Example3.png Graphic file (type png)
+<use Resources/Norm_Equation_Example3.png>
+Package pdftex.def Info: Resources/Norm_Equation_Example3.png  used on input li
+ne 675.
+(pdftex.def)             Requested size: 352.7115pt x 200.74643pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
+
+ []
+
+[12 <./Resources/Norm_Equation_Example2.png> <./Resources/Norm_Equation_Example
+3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 708--716
+
+ []
+
+<Resources/Decision_Boundary.png, id=106, 127.97812pt x 109.40875pt>
+File: Resources/Decision_Boundary.png Graphic file (type png)
+<use Resources/Decision_Boundary.png>
+Package pdftex.def Info: Resources/Decision_Boundary.png  used on input line 77
+6.
+(pdftex.def)             Requested size: 127.9778pt x 109.40846pt.
+<Resources/Decision_Boundary2.png, id=107, 347.79938pt x 293.59688pt>
+File: Resources/Decision_Boundary2.png Graphic file (type png)
+<use Resources/Decision_Boundary2.png>
+Package pdftex.def Info: Resources/Decision_Boundary2.png  used on input line 8
+07.
+(pdftex.def)             Requested size: 173.89926pt x 146.79807pt.
+
+Math_Knowledge.tex:808: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.808 \end{figure} \\\\
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Math_Knowledge.tex:809: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.809 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[13 <./Resources/Decision_Boundary.png>]
+<Resources/Log_Model.png, id=113, 220.32312pt x 186.19562pt>
+File: Resources/Log_Model.png Graphic file (type png)
+<use Resources/Log_Model.png>
+Package pdftex.def Info: Resources/Log_Model.png  used on input line 834.
+(pdftex.def)             Requested size: 132.19489pt x 111.71823pt.
+<Resources/Log_Model2.png, id=114, 235.88126pt x 221.82875pt>
+File: Resources/Log_Model2.png Graphic file (type png)
+<use Resources/Log_Model2.png>
+Package pdftex.def Info: Resources/Log_Model2.png  used on input line 837.
+(pdftex.def)             Requested size: 141.52983pt x 133.09825pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+
+ []
+
+Math_Knowledge.tex:858: Undefined control sequence.
+<argument>  \thea 
+                  _j &:= \theta _j-\alpha \frac {\partial }{\partial \theta ...
+l.858 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Math_Knowledge.tex:858: Undefined control sequence.
+<argument>  \thea 
+                  _j &:= \theta _j-\alpha \frac {\partial }{\partial \theta ...
+l.858 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[14 <./Resources/Decision_Boundary2.png> <./Resources/Log_Model.png> <./Resourc
+es/Log_Model2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 874--881
+
+ []
+
+<Resources/Multiclass_Classification.png, id=122, 364.36125pt x 203.25937pt>
+File: Resources/Multiclass_Classification.png Graphic file (type png)
+<use Resources/Multiclass_Classification.png>
+Package pdftex.def Info: Resources/Multiclass_Classification.png  used on input
+ line 899.
+(pdftex.def)             Requested size: 327.92209pt x 182.93173pt.
+[15 <./Resources/Multiclass_Classification.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 916--923
+
+ []
+
+<Resources/Regularization.png, id=127, 331.73938pt x 123.46124pt>
+File: Resources/Regularization.png Graphic file (type png)
+<use Resources/Regularization.png>
+Package pdftex.def Info: Resources/Regularization.png  used on input line 940.
+(pdftex.def)             Requested size: 248.80391pt x 92.59569pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 950--955
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--974
+
+ []
+
+[16 <./Resources/Regularization.png>]
+Math_Knowledge.tex:987: Undefined control sequence.
+l.987 ... the term $\lambda\cdot L$, $X^T X+\lamda
+                                                  \cdot L$ becomes
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [17]
+\openout2 = `Neural_Networks.aux'.
+
+ (Neural_Networks.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--9
+
+ []
+
+<Resources/Neural_Net.png, id=135, 604.75937pt x 351.3125pt>
+File: Resources/Neural_Net.png Graphic file (type png)
+<use Resources/Neural_Net.png>
+Package pdftex.def Info: Resources/Neural_Net.png  used on input line 24.
+(pdftex.def)             Requested size: 302.37894pt x 175.6558pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
+
+ []
+
+Neural_Networks.tex:87: Misplaced alignment tab character &.
+l.87         x       &
+                      = \begin{bmatrix}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Neural_Networks.tex:89: Missing delimiter (. inserted).
+<to be read again> 
+                   \unskip 
+l.89         \end{bmatrix}
+                          ,
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+Neural_Networks.tex:89: Extra \right.
+<to be read again> 
+                   \unskip 
+l.89         \end{bmatrix}
+                          ,
+I'm ignoring a \right that had no matching \left.
+
+Neural_Networks.tex:90: Misplaced alignment tab character &.
+l.90         z^{(j)} &
+                      = \begin{bmatrix}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[18
+
+
+ <./Resources/Neural_Net.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+<Resources/OR_Net.png, id=141, 431.6125pt x 173.64874pt>
+File: Resources/OR_Net.png Graphic file (type png)
+<use Resources/OR_Net.png>
+Package pdftex.def Info: Resources/OR_Net.png  used on input line 175.
+(pdftex.def)             Requested size: 258.96948pt x 104.19005pt.
+[19 <./Resources/OR_Net.png>]
+<Resources/OR_Net_Sigmoid.png, id=147, 238.39063pt x 139.52126pt>
+File: Resources/OR_Net_Sigmoid.png Graphic file (type png)
+<use Resources/OR_Net_Sigmoid.png>
+Package pdftex.def Info: Resources/OR_Net_Sigmoid.png  used on input line 183.
+(pdftex.def)             Requested size: 178.79251pt x 104.64067pt.
+<Resources/XNOR.png, id=148, 463.7325pt x 264.99pt>
+File: Resources/XNOR.png Graphic file (type png)
+<use Resources/XNOR.png>
+Package pdftex.def Info: Resources/XNOR.png  used on input line 257.
+(pdftex.def)             Requested size: 347.79851pt x 198.742pt.
+ [20 <./Resources/OR_Net_Sigmoid.png> <./Resources/XNOR.png>]
+<Resources/Multiclass_Nets.PNG, id=154, 418.56375pt x 253.44687pt>
+File: Resources/Multiclass_Nets.PNG Graphic file (type png)
+<use Resources/Multiclass_Nets.PNG>
+Package pdftex.def Info: Resources/Multiclass_Nets.PNG  used on input line 269.
+
+(pdftex.def)             Requested size: 209.28136pt x 126.72311pt.
+<Resources/Multiclass_Nets2.png, id=155, 478.78876pt x 267.49937pt>
+File: Resources/Multiclass_Nets2.png Graphic file (type png)
+<use Resources/Multiclass_Nets2.png>
+Package pdftex.def Info: Resources/Multiclass_Nets2.png  used on input line 272
+.
+(pdftex.def)             Requested size: 239.39378pt x 133.74934pt.
+
+Overfull \hbox (21.50082pt too wide) in paragraph at lines 272--273
+[][] 
+ []
+
+[21 <./Resources/Multiclass_Nets.PNG> <./Resources/Multiclass_Nets2.png>])
+[22] [23
+
+]
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\ML_AndrewNg_Coursera.aux"
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\Math_Knowledge.aux")
+("C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects\Machine_Learning
+\out\ML_AndrewNg_Coursera\Neural_Networks.aux")) ) 
+Here is how much of TeX's memory you used:
+ 31461 strings out of 481212
+ 806057 string characters out of 2902221
+ 1147028 words of memory out of 3000000
+ 46344 multiletter control sequences out of 15000+200000
+ 548208 words of font info for 77 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,16n,127p,744b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/pixia.PIXIA40/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pi
+xia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pixia.PIXIA40/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/User
+s/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmib10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/pixia.PIXIA40/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pixia
+.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pixia.PIXIA40/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/pixi
+a.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmti10.pfb><C:/Users/pixia.PIXIA40/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "C:/Users\pixia.PIXIA40\OneDrive - UW\CS_Stuff\LaTeX_Projects
+\Machine_Learning\out\ML_AndrewNg_Coursera\ML_AndrewNg_Coursera.pdf" (23 pages,
+ 5336039 bytes).
+PDF statistics:
+ 223 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+

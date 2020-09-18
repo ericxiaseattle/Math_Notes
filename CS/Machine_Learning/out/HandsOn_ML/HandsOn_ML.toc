@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}The Machine Learning Landscape}{2}%
+\contentsline {section}{\numberline {2}End-to-End Machine Learning Project}{8}%
+\contentsline {section}{\numberline {3}Classification}{8}%
+\contentsline {section}{\numberline {4}Training Models}{8}%
+\contentsline {section}{\numberline {5}Support Vector Machines}{8}%
+\contentsline {section}{\numberline {6}Decision Trees}{8}%
+\contentsline {section}{\numberline {7}Ensemble Learning And Random Forests}{8}%
+\contentsline {section}{\numberline {8}Dimensionality Reduction}{8}%
+\contentsline {section}{\numberline {9}Unsupervised Learning Techniques}{8}%
+\contentsline {section}{\numberline {10}Introduction to Artificial Neural Networks With Keras}{8}%
+\contentsline {section}{\numberline {11}Training Deep Neural Networks}{8}%
+\contentsline {section}{\numberline {12}Custom Models And Training With Tensorflow}{8}%
+\contentsline {section}{\numberline {13}Loading And Preprocessing Data With Tensorflow}{8}%
+\contentsline {section}{\numberline {14}Deep Computer Vision Using Convolutional Neural Networks}{8}%
+\contentsline {section}{\numberline {15}Processing Sequences Using RNNs And CNNs}{8}%
+\contentsline {section}{\numberline {16}NLP With RNNs And Attention}{8}%
+\contentsline {section}{\numberline {17}Representation Learning And Generative Learning Using Autoencoders And GANs}{8}%
+\contentsline {section}{\numberline {18}Reinforcement Learning}{8}%
+\contentsline {section}{\numberline {19}Training And Deploying TensorFlow Models At Scale}{8}%
