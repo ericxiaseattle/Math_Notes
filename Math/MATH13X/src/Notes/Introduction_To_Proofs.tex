@@ -1,0 +1,276 @@
+\section{Introduction to Proofs}
+
+    \textbf{Sets of Numbers:}
+
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            $\mathbb{C}$        & \textbf{Complex Numbers} \\
+            \hline
+            $\mathbb{A}$ & \textbf{Algebraic Numbers} \\
+            \hline
+            $\mathbb{R}$ & \textbf{Real Numbers} \\
+            \hline
+            $\mathbb{Q}$ & \textbf{Rational Numbers} \\
+            \hline
+            $\mathbb{Z}$ & \textbf{Integers} \\
+            \hline
+            $\mathbb{N}$       & \textbf{Natural Numbers} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \noindent Real numbers that are not \textbf{rational} are \textbf{irrational}: \\
+    $\bullet$ \textbf{Algebraic numbers:} solutions to polynomials with integer coefficients ($x^2 - 2 = 0, 2x^2 - 3 = 0$) \\
+    $\bullet$ \textbf{Transcendentals}: $e,\pi,\dots$ \\
+
+    \noindent The decimal expansion of an irrational number is eventually repeating \Big(e.g. $1.312312312\dots = \frac{p}{q}$\Big). Below is a cool trick to find $p$ and $q$ given an irrational number.
+
+    \begin{align*}
+        x   &= 1.312312312\dots = \frac{p}{q} \\
+        1000x &= 1312.312312\dots \\
+        1000x &= 1312.000000\dots \\
+        999x  &= 1311 \\
+        x     &= \frac{1311}{999} \\
+        1.312312312\dots &= \frac{1311}{999}
+    \end{align*}
+
+    \noindent \color{red} \textbf{Proof Guidelines} \color{black} \\
+    $\bullet$ Start with what you know or what you are given and end with what you need to show \\
+    $\bullet$ Justify every step unless it is a clear algebra step by: \\
+    - Algebra/computation from a previous step \\
+    - Reference to a previous result or step in the proof \\
+    $\bullet$ Proofs should read like a paragraph. Use words as much as equations and computations. \\
+    - So, then, therefore, let, given, we conclude, hence,\dots to make it flow. \\
+    $\bullet$ Keep your audience in mind \\
+
+    \noindent Below is an example of a well-written proof for the Triangle Inequality: \\
+
+    \begin{tbhtheorem}{Triangle Inequality}
+        For any $a,b,\in\mathbb{R}$, $|a+b| \leq |a| + |b|$
+    \end{tbhtheorem}
+
+    \begin{proof}
+        \noindent Let $a,b,\in\mathbb{R}$. Then,
+
+        \begin{align*}
+            |a+b|^2     &= a^2 + 2ab + b^2 \\
+            &= |a|^2 + 2ab + |b|^2, \sin(u)\text{ }x^2 = |x|^2 \forall x \\
+            &\leq |a|^2 + 2|ab| + |b|^2, \sin(u)  \text{ } x\leq |x|\forall x \\
+            &= |a|^2 + 2|a||b| + |b|^2 \\
+            &= \left(|a| + |b| \right)^2
+        \end{align*}
+
+        \noindent So, $\left(a+b\right)^2\leq\left(|a|+|b|\right)^2\forall a,b,\in\mathbb{R}$. Now, taking square roots and using $|x| = \sqrt{x^2},$, we get
+
+        \begin{equation*}
+            |a+b|   \leq  \left||a| + |b|\right|
+        \end{equation*}
+
+        \noindent Since $|a|+|b|\geq 0$, we can remove the absolute sign on the right.
+
+        \begin{equation*}
+            |a+b|   \leq |a| + |b|
+        \end{equation*}
+    \end{proof}
+
+    \noindent A \textbf{theorem} is an implication, consisting of a \textbf{hypothesis} and a \textbf{conclusion} in the form of:
+
+    \begin{center}
+        if (hypothesis) $\dots$, then (conclusion) $\dots$
+    \end{center}
+
+    \noindent A common mistake in writing proofs is to ignore the hypothesis and follow directly with the conclusion, for example, to say that $ab>0$ simply because $a$ and $b$ are numbers. Another common mistake is
+    to assume that a theorem's converse is true as well. A third mistake is to assume that that a theorem's hypothesis is the only condition under which the conclusion is true. In other words, it is common to
+    mistakenly write "iff", where \textbf{"iff"} is an abbreviation of "if and only if". Note that definitions by their nature are "iff statements", hence the "only if" part is convetionally omitted and assumed to
+    hold. \\
+
+    \noindent A \textbf{predicate} in mathematical logic is any statement that has a boolean value depending on the values of its variables.
+
+    \pagebreak
+
+    \noindent \textbf{Direct Proof:} if we wanted to prove
+
+    \begin{center}
+        if $A$, then $B$
+    \end{center}
+
+    \noindent we could assume that $A$ is true and use this information to deduce that $B$ is true. \\
+
+    \noindent \textbf{Contrapositive Proof:} We can use the concept that if $A$, then $B$ is true, then it is impossible for $A$ to be true while $B$ is false. Hence, we prove the statement "If $A$, then $B$" by showing
+    that if $B$ is false, then $A$ is false too. \\
+
+    \noindent \textbf{Proof by Contradiction:} if we wanted to prove
+
+    \begin{center}
+        if $A$, then $B$
+    \end{center}
+
+    \noindent we could assume that
+
+    \begin{equation}
+        A \text{ holds and } B \text{ does not hold}
+    \end{equation}
+
+    \noindent and then arrive at a contradiction. We can take this contradiction to mean that (1) is a false statement and therefore:
+
+    \begin{center}
+        if $A$ holds, then $B$ must hold.
+    \end{center}
+
+    \noindent \color{blue} \textit{Example 1: } Show that
+
+    \[
+        \text{if } a > b > 0, \text{ then } \frac{1}{a} < \frac{1}{b}
+    \]
+
+    \color{black}
+
+    \begin{proof}
+        \noindent Assume $a>b>0$. For a contradiction, assume $\frac{1}{a} > \frac{1}{b}$. Since $a>0$, multiplying both sides by $a$ gives
+
+        \[
+            1 \geq \frac{a}{b}
+        \]
+
+        \noindent Since $b>0$, using similar reasoning,
+
+        \[
+            b \geq a
+        \]
+
+        \noindent This assumption contradicts $a > b$, hence the assumption was wrong and $\frac{1}{a} < \frac{1}{b}$.
+    \end{proof}
+
+    \noindent \color{blue} \textit{Example 2:} Show that $\sqrt{2}$ is irrational. \color{black} \\
+
+    \begin{proof}
+        \noindent Assume
+
+        \[
+            \sqrt{2} = \frac{p}{q}
+        \]
+
+        \noindent where $p$ and $q$ have no common factor and $q\not = 0$. We now square both sides of the equality:
+
+        \[
+            2 = \frac{p^2}{q^2}
+        \]
+
+        \noindent Since $2q^2 = p^2$, $p^2$ is even. Hence, $p$ is even and $p=2r$ for some integer $r$.
+
+        \begin{align*}
+            \implies 2q^2 &= 4r^2 \\
+            q^2  &= 2r^2
+        \end{align*}
+
+        \noindent Since the equality above is even, so is $q$. So $p+q$ both have a common factor of 2, contradicting that they had no common factors. Therefore the assumption that $\sqrt{2}$ was rational was wrong and it is
+        irrational.
+    \end{proof}
+
+
+    \noindent \textbf{Mathematical induction} is a proof method that can be used to show that a certain property holds for all positive integers $n$, or in some cases for all positive integers $n\geq a$.
+
+    \begin{tbhtheorem}{Axiom of Induction}
+        Let $S\subset \{1,2,3,\dots\}$, or let $S$ be the set of $n$ for which a desired property holds. \\
+        If \\
+        $\bullet$ $1\in S$ \\
+        $\bullet$ $k\in S\implies k+1\in S$. \\
+        Then $S$ contains all positive integers hence it is equal to the set of all positive integers. \\
+
+        The substitution of "$k+1$" into the desired predicate is called the \textbf{induction hypothesis.} In your proofs by induction, you should always put the phrases "\textit{by the induction hypothesis}", and
+        "\textit{Therefore, by the principle of mathematical induction, the formula holds for all $n$}."
+    \end{tbhtheorem}
+
+    \noindent The axiom of induction can be thought of as an application of domino theory; if the first domino in a row of dominoes falls, and each domino that falls causes the next one to fall, then, according
+    to the axiom of induction, each domino in that row of dominoes will fall. Note that an induction does not necessarily have to begin with the integer 1. If, for example, you wished to show that some proposition is
+    true for all integers $n\geq 3$, you would just have to show that said proposition is true for $n=3$ and that, if is true for $n=k$, then it is true for $n=k+1$.
+
+    \pagebreak
+
+    \noindent \color{blue} \textit{Example 3:} Show that
+    \begin{equation*}
+        1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \forall n, n\in \mathbb{Z}^+
+    \end{equation*}
+    \color{black}
+
+    \begin{proof}
+        Let $S$ be the set of positive integers $n$ for which
+
+        \begin{equation*}
+            1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}
+        \end{equation*}
+
+        \noindent Then $1\in S$ since
+
+        \begin{equation*}
+            1 = \frac{1(1+1)}{2}
+        \end{equation*}
+
+        \noindent Assume that $k\in S$; that is, assume that
+
+        \begin{equation*}
+            1 + 2 + 3 \dots + k = \frac{k(k+1)}{2}
+        \end{equation*}
+
+        \noindent Adding up the first $k+1$ integers, we have
+
+        \begin{align*}
+            1 + 2 + 3 + \dots + k + (k+1)   &= [1+2+3+\dots+k] + (k+1) \\
+                                            &= \frac{k(k+1)}{2} + (k+1) \text{  $^*$by the induction hypothesis} \\
+                                            &= \frac{k(k+1)+2(k+1)}{2} \\
+                                            &= \frac{(k+1)(k+2)}{2}
+        \end{align*}
+
+        \noindent and so $k+1\in S$. Thus, by the axiom of induction, we can conclude that all positive integers are in $S$; that is, we can conclude that
+
+        \begin{equation*}
+            1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \forall n, n \in \mathbb{Z}^+
+        \end{equation*}
+    \end{proof}
+
+    \noindent \color{blue} \textit{Example 4:} Show that, if $x\geq -1$, then
+
+    \begin{equation*}
+        \left(1+x\right)^n \geq 1 + nx \forall n, n \in \mathbb{Z}^+
+    \end{equation*} \color{black}
+
+    \begin{proof}
+        \noindent Take $x\geq -1$ and let $S$ be the set of positive integers $n$ for which
+
+        \begin{equation*}
+            \left(1+x\right)^n \geq 1 + nx
+        \end{equation*}
+
+        \noindent Since
+
+        \begin{equation*}
+            \left(1+x\right)^1 = 1 + 1\cdot x,
+        \end{equation*}
+
+        \noindent we have $1\in S$. Assume that $k\in S$. By the definition of $S$,
+
+        \begin{equation*}
+            \left(1+x\right)^k \geq 1 + kx
+        \end{equation*}
+
+        \noindent Since
+
+        \begin{equation*}
+            \left(1+x\right)^{k+1} = \left(1+x\right)^k (1 + x) \geq (1 + kx)(1+x)
+        \end{equation*}
+
+        \noindent and
+
+        \begin{equation*}
+            (1+kx)(1+x) = 1+(k+1)x + kx^2 \geq 1 + (k+1) x,
+        \end{equation*}
+
+        \noindent we can conclude that
+
+        \begin{equation*}
+            \left(1+x\right)^{k+1} \geq 1 + (k+1)x
+        \end{equation*}
+
+        \noindent and thus $k+1\in S$. We have shown that $1\in S$ and that $k\in S\implies k+1 S$. Then by the axiom of induction, all positive integers are in $S$.
+    \end{proof}
