@@ -5,7 +5,7 @@
 * [Geometry](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/Geometry/out/main.pdf)
 * [Precalculus](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/Precalculus/out/main.pdf)
 * [AP Calculus BC](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/APCalculusBC/out/main.pdf)
-* MATH134: Accelerated [Honors] Calculus, covers univariate calculus, linear algebra, and differential equations with a strong theoretical approach, focusing on concepts and using proofs to solve problems
+* [MATH13X](https://github.com/ericxiaseattle/Notes/raw/master/Math/MATH13X/out/Notes/MATH134X_Notes.pdf): Honors Calculus, covers calculus, linear algebra, and differential equations with a strong theoretical approach, focusing on concepts and using proofs to solve problems
 
 ## CS Notes (In Progress):
 * [AP Computer Science A and CSE143](https://github.com/ericxiaseattle/Math_Notes/raw/master/CS/CSE14x/out/main.pdf)
