@@ -13,4 +13,4 @@
 * [Hands-on Machine Learning with Scikit_Learn, Keras & Tensorflow](https://github.com/ericxiaseattle/Notes/raw/master/CS/Machine_Learning/out/HandsOn_ML/HandsOn_ML.pdf)
 
 ## Physics Notes:
-* PHYS14X: Honors Mechanics, Honors Electromagnetism, and Honors Waves, Light, and Heat
+* [PHYS14X](https://github.com/ericxiaseattle/Notes/raw/master/Physics/PHYS14X/out/PHYS14X_Notes.pdf): Honors Mechanics, Honors Electromagnetism, and Honors Waves, Light, and Heat
