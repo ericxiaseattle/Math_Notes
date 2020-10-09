@@ -1,1 +1,5 @@
-\contentsline {section}{\numberline {1}Introduction to Proofs}{2}%
+\contentsline {section}{\numberline {1}Introduction to Proofs}{2}{}%
+\contentsline {section}{\numberline {2}Limits and Continuity}{5}{}%
+\contentsline {subsection}{\numberline {2.1}The $\epsilon -\delta $ Definition of the Limit}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Limit Theorems}{7}{}%
+\contentsline {subsection}{\numberline {2.3}The Squeeze Theorem}{7}{}%

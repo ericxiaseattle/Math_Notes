@@ -1,6 +1,131 @@
 \section{Constant Acceleration}
 
     \subsection{Motion with Constant Acceleration}
+        For an object moving with constant acceleration, the $v_x (t)$ curve is a straight line. We know $\Delta v_x$ and $v_{x,f}$ to be
+
+        \begin{align*}
+            \Delta v_x  &= v_{x,f}-v_{x,i} = a_x \Delta t & \text{ (constant acceleration)} \\
+            v_{x,f}     &= v_{x,i} + a_x \Delta t         & \text{ (constant acceleration)}
+        \end{align*}
+
+        We also know displacement to be the area under a velocity curve:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.8]{Resources/Constant_Acceleration}
+        \end{figure*}
+
+        Hence, the displacement is given by the area of the triangle and the area of the rectangle. The area of the triangle is
+
+        \[
+            \frac{1}{2}(v_{x,f}-v_{x,i})(t_f-t_i)=\frac{1}{2}\Delta v_x \Delta t = \frac{1}{2} a_x(\Delta t)^2
+        \]
+
+        and the area of the rectangle is
+
+        \[
+            (v_{x,i}-0(t_f-t_i)=v_{x,i}\Delta t
+        \]
+
+        Thus, the combined displacement is
+
+        \[
+            x_f - x_i = v_{x,i} \Delta t + \frac{1}{2} a_x (\Delta t)^2 \text{ (constant acceleration)}
+        \]
+
+        Below are \textbf{kinematics graphs for the three basic types of motion:}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics{Resources/Motion_Diagram2}
+        \end{figure*}
+
+
+    \pagebreak
     \subsection{Free-fall Equations}
+        Magnitude of \textbf{acceleration due to gravity (g)} is given by
+
+        \[
+            g = |\overrightarrow{a}_{\text{free fall}}|
+        \]
+
+        If an object is dropped from a certain height with zero initial velocity along an upward-pointing $x$ axis, then,
+
+        \begin{align*}
+            x_f &= x_i - \frac{1}{2} gt^2_f \\
+            v_{x,f} &= -gt_f
+        \end{align*}
+
+        Example of a Free-fall Diagram:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/Free_Fall_Diagram}
+        \end{figure*}
+
+
+
     \subsection{Inclined Planes}
+        \textit{When a ball rolls down an incline starting from rest, the ratio of the distance traveled to the square of the amount of time needed to travel that distance is constant}. For example, if a ball released
+        from position $x_i=0$ at $t_1=0$ reaches position $x_1$ at instant $t_1,x_2$ at $t_2$, and $x_3$ at $t_3$, then
+
+        \[
+            \frac{x_1}{t^2_1}=\frac{x_2}{t^2_2}=\frac{x_3}{t^2_3}
+        \]
+
+        Recall that for an object moving with constant acceleration and starting from rest, we have
+
+        \[
+            x_f = \frac{1}{2} a_x t^2_f
+        \]
+
+        Hence,
+
+        \[
+            \frac{x_f}{t^2_f} = \frac{1}{2} a_x
+        \]
+
+        As incline increases, so does the ratio $\frac{x_0}{t^2_0}$. Through experimentation, we can determine the component of acceleration along the incline to be related to $g$ by the equation
+
+        \[
+            a_x = g\sin\theta
+        \]
+
+
+
+
     \subsection{Instantaneous Acceleration}
+        \[
+            a_x = \lim_{\Delta t \to 0} \frac{\Delta v_x}{\Delta t}
+        \]
+
+        Hence,
+
+        \[
+            a_x = \frac{dv_x}{dt} = \frac{d}{dt} \left(\frac{dx}{dt}\right) = \frac{d^2 x}{dt^2}
+        \]
+
+        We can then express changes in velocity and position as:
+
+        \begin{align*}
+            \Delta v_x   &= \int^{t_f}_{t_1} a_x (t) dt \\
+            \Delta x     &= \int^{t_f}{t_i} v_x (t)dt
+        \end{align*}
+
+
+
+    \subsection{Summary of Topic}
+        \textbf{Free fall}: the motion of an object subject to only the influence of gravity \\
+        \textbf{Motion diagram:} a diagram that shows the position of a moving object at equally spaced time intervals and summarizes what is known about the object's initial and final conditions (its position, velocity,
+        and acceleration) \\
+        \textbf{Projectile motion}: the motion of an object that is luanched but not self-propelled (\textit{projectile}) \\
+        $\bullet$ The launch only affects the object's initial velocity \\
+        $\bullet$ Once the object is launched, its motion is determined by gravity only, hence \textit{the object is in free fall on the way up as well as on the way down} \\
+        \textbf{Trajectory:} the path taken by a projectile \\
+
+        For motion at constant acceleration, the $x$-coordinate and the $x$-component of the velocity of an object are given by
+
+        \begin{align*}
+            x_f     &= x_i + v_{x,i} \Delta t + \frac{1}{2} a_x (\Delta t)^2 \\
+            v_{x,f} &= v_{x,i} + a_x \Delta t
+        \end{align*}

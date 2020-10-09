@@ -1,0 +1,172 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Week 1 Assignment}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Week 2 Assignment}}\\
+    \normalsize\vspace{0.1in}\small{Due on October 12, 2020 at 5:45 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{page2}{\rhead{Section 2.2 Problem 38}}
+% \fancypagestyle{page3}{\rhead{Section 1.2 Problem 74}}
+% \fancypagestyle{page4}{\rhead{Section 1.3 Problem 58}\fancyfoot[L]{Section 1.4 Problem 52 continued on next page \ldots}}
+% \fancypagestyle{page5}{\rhead{Section 1.4 Problem 52}}
+% \fancypagestyle{page6}{\rhead{Section 1.8 Problem 6}\fancyfoot[L]{Section 1.8 Problem 6 continued on next page \ldots}}
+% \fancypagestyle{page7}{\rhead{Section 1.8 Problem 6}}
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+
+    \thispagestyle{page2}
+
+    \begin{tbhtheorem}{Section 2.2 Problem 38}
+        Give an $\epsilon,\delta$ proof for the statement
+        \[
+            \lim_{x\to 0} (2-5x) = 2
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $\epsilon$ be given (arbitrary) and $\delta=\frac{\epsilon}{5}$. Suppose that for every $\epsilon>0$ there exists $\delta >0$ such that $\forall x$,
+
+        \begin{align*}
+            0 < |x-0| < \delta           & \implies |(2-5x)-2|<\epsilon \\
+            0 < |x| < \frac{\epsilon}{5} & \implies |-5x| < \epsilon
+        \end{align*}
+
+        Because the inequality above is true, therefore
+
+        \[
+            \lim_{x\to 0} (2-5x) = 2
+        \]
+    \end{proof}
+
+
+    \begin{tbhtheorem}{Section 2.2 Problem 52}
+        Give an $\epsilon,\delta$ proof for the statement
+        \[
+            \lim_{x\to 3} \sqrt{x+1} = 2
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+
+    \end{proof}
+
+%    \begin{tbhtheorem}{Section 2.2 Problem 54}
+%        Prove that, for the function
+%        \begin{align*}
+%            g(x) &=
+%            \begin{cases}
+%                x,  & x \text{ is rational} \\
+%                0,  & x \text{ is irrational,}
+%            \end{cases}
+%            \\
+%            \lim_{x\to 0} g(x) &= 0
+%        \end{align*}
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.3 Problem 61E}
+%        Calculate
+%        \[
+%            \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
+%        \]
+%        for the function
+%        \[
+%            f(x) = x^n,
+%        \]
+%        where $n$ is an arbitrary positive integer. Make a guess and confirm your guess by induction.
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.4 Problem 36}
+%        Let
+%        \[
+%            f(x) =
+%            \begin{cases}
+%                A^2 x^2,        & x \leq 2 \\
+%                (1-A) x,        & x > 2.
+%            \end{cases}
+%        \]
+%        For what values of $A$ is $f$ continuous at 2?
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.4 Problem 49 (Important)}
+%        Prove that $f$ is continuous at $c$ if and only if
+%        \[
+%            \lim_{h\to 0} f(c+h) = f(c).
+%        \]
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.4 Problem 53}
+%        Suppose the function $f$ has the property that there exists a number $B$ such that
+%        \[
+%            |f(x) - f(c) | \leq B|x-c|, \forall c-p \leq x \leq c+p
+%        \]
+%        Prove that $f$ is continuous at $c$.
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.5 Problem 36}
+%        Evaluate the limit, taking $a$ and $b$ as nonzero constants:
+%        \[
+%            \lim_{x\to 0} \frac{\sin{(ax)}}{\sin{(bx)}}
+%        \]
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.5 Problem 43}
+%        Show that $lim_{x\to 0} x \sin{\left(\frac{1}{x}\right)}=0$. \\
+%        HINT: Use the pinching theorem.
+%    \end{tbhtheorem}
+%
+%    \begin{tbhtheorem}{Section 2.5 Problem 46}
+%        Let $f$ be the Dirichlet function
+%        \[
+%            f(x) =
+%            \begin{cases}
+%                1,  & x \text{ is rational} \\
+%                0,  & x \text{ is irrational.}
+%            \end{cases}
+%        \]
+%        Show that $\lim_{x\to 0} x f(x) = 0$. \\
+%        Note: This problem is basically the same as 2.2.38 but prof wants a distinct proof for this one.
+%    \end{tbhtheorem}
+
+
+\end{document}
+
+
+
+

@@ -1,80 +1,4 @@
 \section{Motion in One Dimension and Changes in Velocity}
-%
-%    \textbf{Kinematics}: only describes motion, it does not explain changes in motion.
-%
-%    \begin{center}
-%        \begin{tabular}{|c|c|}
-%            \hline
-%            \textbf{Position}   & $x$ \\
-%            \hline
-%            \textbf{Time}       & $t$ \\
-%            \hline
-%            \textbf{Displacement}   & $\Delta x \equiv x_2 - x_1$ \\
-%            \hline
-%            \textbf{Time interval}  & $\Delta t \equiv t_2 - t_1$ \\
-%            \hline
-%            \textbf{Distance}       & $s$ \\
-%            \hline
-%            \textbf{Average Velocity}   & $v_{avg} \equiv \frac{\Delta x}{\Delta t}  = \frac{x_2 - x_1}{t_2 - t_1}$ \\
-%            \hline
-%            \textbf{Position after Change}  & $x_2 = x_1 + v_{avg} \Delta t$ \\
-%            \hline
-%        \end{tabular}
-%    \end{center}
-%
-%    \noindent We can plot an object's position at an instant $t$ using a number line and a clock. It is important to note that distance ($s$) is not the same as displacement ($\Delta x$). If all travel is in the
-%    same direction, then $s=|\Delta x|$. \\
-%
-%    \noindent $\Delta \overrightarrow{x}$ and $\overrightarrow{v_{avg}}$ are vectors, having both magnitude and direction. \\
-%
-%    \noindent \textbf{Component Vector Notation:}
-%
-%    \[
-%        \overrightarrow{v} = v \bm{\hat{i}}
-%    \]
-%
-%    \noindent where $\bm{\hat{i}}$ is a unit vector in the positive $x$-direction, $\bm{\hat{j}}$ is a unit vector in the positive $y$-direction, and $\bm{\hat{k}}$ is a unit vector in the positive $z$-direction. \\
-%
-%    \noindent Below is a graph of an object with constant velocity. The blue line describes a negative constant velocity and the object is moving away from the origin in the negative direction. The red line describes a
-%    positive constant velocity and the object is moving away from the origin in the positive direction. We know that the lines describe constant velocities because their slopes on the position-time graph are constant
-%    throughout.
-%
-%    \begin{center}
-%        \begin{tikzpicture}[scale= ]
-%            \begin{axis}[
-%                axis lines = center,
-%                axis equal image,
-%                xlabel = $t$,
-%                ylabel = $x$,
-%                ticks = none,
-%                xmin = -1,
-%                xmax = 10,
-%                ymin = -5,
-%                ymax = 5,
-%            ]
-%            \addplot[
-%                samples = 2,
-%                color = blue,
-%            ]
-%            {-x+1};
-%            \addplot[
-%                samples = 2,
-%                color = red
-%            ]
-%            {x+2};
-%            \end{axis}
-%        \end{tikzpicture}
-%    \end{center}
-%
-%    \noindent \textbf{Instantaneous velocity} is when the ratio $\frac{\Delta x}{\Delta t}$ is changing in time. We can always still find a short enough time interval over which the ratio seems to be constant. Thus, if
-%    we represent $\Delta t \rightarrow dt$ and $\Delta x \rightarrow dx$, then $v_{avg} \rightarrow \frac{dx}{dt}$, then in this case the ratio $\frac{dx}{dt}$ describes instantaneous velocity, where
-%
-%    \[
-%        v \equiv \lim _{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}
-%    \]
-%
-%    \noindent If the motion of two objects were plotted on the same position-time graph, then their instantaneous velocities would be the same at any instant both motion curves had the same slope of the tangent line to
-%    the curves at said instant.
 
     \subsection{Position and Displacement}
         \textbf{Position-versus-time graph}: a graph that represents position ($x$) as a function of time ($t$).
@@ -332,7 +256,7 @@
             v = |\overrightarrow{v}|
         \]
 
-
+hp
 
     \subsection{Changes in Velocity}
         \textbf{Acceleration}: the rate of change of velocity with respect to time. The $\bm{x}$ \textbf{component of average acceleration} is the change in the $x$ component of the velocity divided by the time interval
@@ -393,6 +317,12 @@
 
         For an object launched upwards, the launch affects only the initial velocity. Once the object is released, the rest of its motion is determined by gravity alone (free fall). At the top of a trajectory of a ball
         launched upwards, there is instant at which the $x$ component of the velocity is zero. \textit{The $x$ component of the acceleration is not zero at the top}. To conceptualize this, consider the graph below.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.6]{Resources/Nonzero_Acceleration_Trajectory}
+        \end{figure*}
+
         Though velocity is zero at the apex of the trajectory, acceleration is defined as
 
         \[
@@ -403,7 +333,6 @@
 
 
 
-    \pagebreak
     \subsection{Motion Diagrams}
         \textbf{Motion diagrams} represent the positions of a moving object at equally spaced time intervals. We can make a motion diagrams by the following steps: \\
 
@@ -478,3 +407,11 @@
             \hline
         \end{tabular}
     \end{center}
+
+    \textbf{Average Velocity}: The constant velocity required to achieve the same displacement in the same time interval as the actual motion.
+
+    \[
+        v_{avg} = \frac{1}{t_2 - t_1} \int^{t_2}_{t_1} v(t) dt
+    \]
+
+    Note that this is just the average value of a function integral.

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  9 OCT 2020 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  8 OCT 2020 08:19
 entering extended mode
-**./MATH134X_Notes.tex
-(MATH134X_Notes.tex
+**./PHYS14X_Notes.tex
+(PHYS14X_Notes.tex
 LaTeX2e <2020-10-01>
 L3 programming layer <2020-09-24> xparse <2020-03-03>
 ("C:\Program Files\MiKTeX\tex/latex/base\article.cls"
@@ -21,7 +21,6 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(../../../../mypackages.sty
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -120,23 +119,6 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
-\f@nch@headwidth=\skip52
-\f@nch@O@elh=\skip53
-\f@nch@O@erh=\skip54
-\f@nch@O@olh=\skip55
-\f@nch@O@orh=\skip56
-\f@nch@O@elf=\skip57
-\f@nch@O@erf=\skip58
-\f@nch@O@olf=\skip59
-\f@nch@O@orf=\skip60
-)
-(C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\extramarks.sty
-Package: extramarks 2019/01/31 v3.10 Extra marks for LaTeX
-\@temptokenb=\toks22
-)
 ("C:\Program Files\MiKTeX\tex/latex/tools\bm.sty"
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
@@ -168,12 +150,12 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count199
 \calc@Adimen=\dimen156
 \calc@Bdimen=\dimen157
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count266
-\calc@Cskip=\skip63
+\calc@Cskip=\skip54
 )
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
@@ -184,7 +166,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \g_MT_multlinerow_int=\count267
 \l_MT_multwidth_dim=\dimen158
-\origjot=\skip64
+\origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen159
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen160
 \l_MT_above_intertext_sep=\dimen161
@@ -265,7 +247,7 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 ("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks23
+\pgfutil@everybye=\toks22
 \pgfutil@tempdima=\dimen175
 \pgfutil@tempdimb=\dimen176
 
@@ -285,11 +267,11 @@ Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
 Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks24
-\pgfkeys@temptoks=\toks25
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks26
+\pgfkeys@tmptoks=\toks25
 ))
 \pgf@x=\dimen177
 \pgf@y=\dimen178
@@ -307,9 +289,9 @@ Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 \c@pgf@countb=\count273
 \c@pgf@countc=\count274
 \c@pgf@countd=\count275
-\t@pgf@toka=\toks27
-\t@pgf@tokb=\toks28
-\t@pgf@tokc=\toks29
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
 \pgf@sys@id@count=\count276
 ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
@@ -339,9 +321,9 @@ Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
 \pgfmath@dimen=\dimen187
 \pgfmath@count=\count279
 \pgfmath@box=\box51
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex"
@@ -471,8 +453,8 @@ Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
 \pgffor@iter=\dimen270
 \pgffor@skip=\dimen271
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
@@ -514,9 +496,9 @@ File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )))
 ("C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks35
-\t@pgfplots@tokb=\toks36
-\t@pgfplots@tokc=\toks37
+\t@pgfplots@toka=\toks34
+\t@pgfplots@tokb=\toks35
+\t@pgfplots@tokc=\toks36
 \pgfplots@tmpa=\dimen281
 \c@pgfplots@coordindex=\count293
 \c@pgfplots@scanlineindex=\count294
@@ -541,7 +523,7 @@ e.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.cod
 e.tex"
 \c@pgfplotstable@counta=\count296
-\t@pgfplotstable@a=\toks38
+\t@pgfplotstable@a=\toks37
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code
 .tex")
@@ -623,42 +605,6 @@ s.softclip.code.tex"
 .code.tex")))
 ("C:\Program Files\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.decorat
 ions.softclip.code.tex"))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryautomata.code.tex"
-File: tikzlibraryautomata.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.multipart.code.tex"
-File: tikzlibraryshapes.multipart.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.mul
-tipart.code.tex"
-File: pgflibraryshapes.multipart.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfnodepartlowerbox=\box62
-\pgfnodeparttwobox=\box63
-\pgfnodepartthreebox=\box64
-\pgfnodepartfourbox=\box65
-\pgfnodeparttwentybox=\box66
-\pgfnodepartnineteenbox=\box67
-\pgfnodeparteighteenbox=\box68
-\pgfnodepartseventeenbox=\box69
-\pgfnodepartsixteenbox=\box70
-\pgfnodepartfifteenbox=\box71
-\pgfnodepartfourteenbox=\box72
-\pgfnodepartthirteenbox=\box73
-\pgfnodeparttwelvebox=\box74
-\pgfnodepartelevenbox=\box75
-\pgfnodeparttenbox=\box76
-\pgfnodepartninebox=\box77
-\pgfnodeparteightbox=\box78
-\pgfnodepartsevenbox=\box79
-\pgfnodepartsixbox=\box80
-\pgfnodepartfivebox=\box81
-)))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arypositioning.code.tex"
-File: tikzlibrarypositioning.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/tkz-euclide\tkz-euclide.sty
 2020/03/18 3.06c tkz-euclide.sty
 Package: tkz-euclide 2020/03/18 3.06c for euclidan geometry 
@@ -706,9 +652,9 @@ ations.shapes.code.tex"))
 arydecorations.text.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecor
 ations.text.code.tex"
-\pgf@lib@dec@text@box=\box82
+\pgf@lib@dec@text@box=\box62
 )
-\tikz@lib@dec@te@box=\box83
+\tikz@lib@dec@te@box=\box63
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arypatterns.code.tex"
@@ -718,6 +664,10 @@ File: tikzlibrarypatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 "
 File: pgflibrarypatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 ))
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 aryquotes.code.tex"
 File: tikzlibraryquotes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
@@ -751,24 +701,24 @@ Package: numprint 2012/08/20 v1.39 Print numbers (HH)
 ("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen300
-\ar@mcellbox=\box84
+\ar@mcellbox=\box64
 \extrarowheight=\dimen301
-\NC@list=\toks39
-\extratabsurround=\skip65
-\backup@length=\skip66
-\ar@cellbox=\box85
+\NC@list=\toks38
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box65
 )
 \c@nprt@mantissa@digitsbefore=\count301
 \c@nprt@mantissa@digitsafter=\count302
 \c@nprt@exponent@digitsbefore=\count303
 \c@nprt@exponent@digitsafter=\count304
-\nprt@digitwidth=\skip67
-\nprt@sepwidth=\skip68
-\nprt@decimalwidth=\skip69
-\nprt@blockwidth=\skip70
-\nprt@digittoks=\toks40
-\nprt@pretoks=\toks41
-\nprt@posttoks=\toks42
+\nprt@digitwidth=\skip58
+\nprt@sepwidth=\skip59
+\nprt@decimalwidth=\skip60
+\nprt@blockwidth=\skip61
+\nprt@digittoks=\toks39
+\nprt@pretoks=\toks40
+\nprt@posttoks=\toks41
 \nprt@thisdigit=\count305
 \nprt@curpos=\count306
 \nprt@rndpos=\count307
@@ -784,7 +734,7 @@ Package: expl3 2020-09-24 L3 programming layer (loader)
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count311
-\l__pdf_internal_box=\box86
+\l__pdf_internal_box=\box66
 ))
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
@@ -979,25 +929,13 @@ x
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/tkz-euclide\tkz-obj-eu-triangl
 es.tex
 2020/03/18 3.06c tkz-obj-eu-triangles.tex
-)) (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks43
-\thm@bodyfont=\toks44
-\thm@headfont=\toks45
-\thm@notefont=\toks46
-\thm@headpunct=\toks47
-\thm@preskip=\skip71
-\thm@postskip=\skip72
-\thm@headsep=\skip73
-\dth@everypar=\toks48
-)
-("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty"
+)) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty"
 Package: tcolorbox 2020/09/29 version 4.41 text color boxes
 
 ("C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty"
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks49
-\verbatim@line=\toks50
+\every@verbatim=\toks42
+\verbatim@line=\toks43
 \verbatim@in@stream=\read3
 )
 ("C:\Program Files\MiKTeX\tex/latex/environ\environ.sty"
@@ -1010,17 +948,17 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count324
 )
-\tcb@titlebox=\box87
-\tcb@upperbox=\box88
-\tcb@lowerbox=\box89
-\tcb@phantombox=\box90
+\tcb@titlebox=\box67
+\tcb@upperbox=\box68
+\tcb@lowerbox=\box69
+\tcb@phantombox=\box70
 \c@tcbbreakpart=\count325
 \c@tcblayer=\count326
 \c@tcolorbox@number=\count327
-\tcb@temp=\box91
-\tcb@temp=\box92
-\tcb@temp=\box93
-\tcb@temp=\box94
+\tcb@temp=\box71
+\tcb@temp=\box72
+\tcb@temp=\box73
+\tcb@temp=\box74
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
@@ -1031,7 +969,7 @@ Library (tcolorbox): 'tcbraster.code.tex' version '4.41'
 \c@tcbraster=\count330
 ) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex"
 Library (tcolorbox): 'tcbskins.code.tex' version '4.41'
-\tcb@waterbox=\box95
+\tcb@waterbox=\box75
 ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex"
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.41'
 )) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex"
@@ -1046,9 +984,9 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 ))
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box96
-\tcb@totalupperbox=\box97
-\tcb@totallowerbox=\box98
+\tcb@testbox=\box76
+\tcb@totalupperbox=\box77
+\tcb@totallowerbox=\box78
 )
 ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbhooks.code.tex"
 Library (tcolorbox): 'tcbhooks.code.tex' version '4.41'
@@ -1068,8 +1006,8 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.41'
 Library (tcolorbox): 'tcblistings.code.tex' version '4.41'
 ("C:\Program Files\MiKTeX\tex/latex/listings\listings.sty"
 \lst@mode=\count332
-\lst@gtempboxa=\box99
-\lst@token=\toks51
+\lst@gtempboxa=\box79
+\lst@token=\toks44
 \lst@length=\count333
 \lst@currlwidth=\dimen326
 \lst@column=\count334
@@ -1084,7 +1022,7 @@ Library (tcolorbox): 'tcblistings.code.tex' version '4.41'
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count338
 \lst@skipnumbers=\count339
-\lst@framebox=\box100
+\lst@framebox=\box80
 )
 ("C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg"
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1127,55 +1065,23 @@ Library (tcolorbox): 'tcbvignette.code.tex' version '4.41'
 ) ("C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbposter.code.tex"
 Library (tcolorbox): 'tcbposter.code.tex' version '4.41'
 ) (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box101
-\UL@hyphenbox=\box102
-\UL@skip=\skip74
-\UL@hook=\toks52
+\UL@box=\box81
+\UL@hyphenbox=\box82
+\UL@skip=\skip62
+\UL@hook=\toks45
 \UL@height=\dimen330
 \UL@pe=\count341
 \UL@pixel=\dimen331
-\ULC@box=\box103
+\ULC@box=\box83
 Package: ulem 2019/11/18
 \ULdepth=\dimen332
-))
+)
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-MATH134X_Notes.tex:9: Undefined control sequence.
-<argument> \parlength 
-                      
-l.9 \setlength{\parlength}{0pt}
-                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+(../../../mymacros.sty
 
-MATH134X_Notes.tex:10: Missing number, treated as zero.
-<to be read again> 
-                   \par 
-l.10 
-     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-MATH134X_Notes.tex:10: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \par 
-l.10 
-     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-(../../../../mymacros.sty
-
-../../../../mymacros.sty:7: LaTeX Error: Command \QED undefined.
+../../../mymacros.sty:7: LaTeX Error: Command \QED undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1186,30 +1092,36 @@ l.7 \renewcommand{\QED}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\tindent=\skip75
+\tindent=\skip63
 )
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.aux"
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Introduction_To_Proofs.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Limits_And_Continuity.aux"))
-\openout1 = `MATH134X_Notes.aux'.
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\PHYS1
+4X_Notes.aux"
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\1_Int
+roduction.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\2_Fou
+ndations.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\3_1DM
+otion_And_Velocity_Changes.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\4_Con
+stant_Acceleration.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5_Mom
+entum.aux"))
+\openout1 = `PHYS14X_Notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1245,14 +1157,14 @@ LaTeX Font Info:    ... okay on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 22.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 22.
+LaTeX Info: Redefining \celsius on input line 40.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 22.
-Package gensymb Info: Using \Omega for \ohm on input line 22.
+LaTeX Info: Redefining \ohm on input line 40.
+Package gensymb Info: Using \Omega for \ohm on input line 40.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1260,15 +1172,15 @@ Package gensymb Warning: Not defining \micro.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count342
 \scratchdimen=\dimen333
-\scratchbox=\box104
+\scratchbox=\box84
 \nofMPsegments=\count343
 \nofMParguments=\count344
-\everyMPshowfont=\toks53
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count345
 \MPscratchDim=\dimen334
 \MPnumerator=\count346
 \makeMPintoPDFobject=\count347
-\everyMPtoPDFconversion=\toks54
+\everyMPtoPDFconversion=\toks47
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1284,106 +1196,86 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 \c@lstlisting=\count348
 ("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks55
-\inpenc@posthook=\toks56
+\inpenc@prehook=\toks48
+\inpenc@posthook=\toks49
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.toc")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\PHYS1
+4X_Notes.toc")
 \tf@toc=\write6
-\openout6 = `MATH134X_Notes.toc'.
+\openout6 = `PHYS14X_Notes.toc'.
 
  [1
 
 {C:/Users/ericx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-\openout2 = `Introduction_To_Proofs.aux'.
+\openout2 = `1_Introduction.aux'.
 
- (Introduction_To_Proofs.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--46
+ (1_Introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+1_Introduction.tex:14: Misplaced alignment tab character &.
+l.14     $\bullet$ Notes &
+                           lecture recordings will be posted \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 17--25
 
  []
 
-[2
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+) [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+\openout2 = `2_Foundations.aux'.
+
+ (2_Foundations.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--180
-
- []
-
-[3]) [4]
-\openout2 = `Limits_And_Continuity.aux'.
-
- (Limits_And_Continuity.tex
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-Limits_And_Continuity.tex:82: Undefined control sequence.
-<argument> \texit 
-                  {Example 3:} Show that $lim_{x\to \pi }x=\pi $
-l.82 ...xample 3:} Show that $lim_{x\to\pi}x=\pi$}
-                                                   \\
+2_Foundations.tex:11: Undefined control sequence.
+\__hook env/quote/begin ->\singlespacing 
+                                         \small \__hook_next env/quote/begin 
+l.11         \begin{quote}
+                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1391,7 +1283,69 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+[3
+
+
+
+]
+2_Foundations.tex:157: Undefined control sequence.
+\pgfmathsetlength ...\pgfmath@onquick #2\pgfmath@ 
+                                                  {\begingroup \pgfmath@sele...
+l.157             \begin{tikzpicture}[scale= ]
+                                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+2_Foundations.tex:157: Argument of \pgfmath@@onquick has an extra }.
+<inserted text> 
+                \par 
+l.157             \begin{tikzpicture}[scale= ]
+                                              
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\begingroup \pgfmath@selectfont \pgf@x \unskip \expandafter \endgroup \ETC.
+2_Foundations.tex:157: Paragraph ended before \pgfmath@@onquick was complete.
+<to be read again> 
+                   \par 
+l.157             \begin{tikzpicture}[scale= ]
+                                              
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+) [4]
+\openout2 = `3_1DMotion_And_Velocity_Changes.aux'.
+
+ (3_1DMotion_And_Velocity_Changes.tex
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
@@ -1400,78 +1354,283 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+3_1DMotion_And_Velocity_Changes.tex:152: Undefined control sequence.
+l.152         \noinent
+                       An object's position can also be represented by a vec...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- []
+Runaway argument?
+ \Delta \overrightarrow {r} &= \overrightarrow {r_f} - \overrightarrow \ETC.
+3_1DMotion_And_Velocity_Changes.tex:183: Paragraph ended before \align* was com
+plete.
+<to be read again> 
+                   \par 
+l.183 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-
- []
-
-[6]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-54.
- ("C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
-
-Limits_And_Continuity.tex:254: Missing $ inserted.
+3_1DMotion_And_Velocity_Changes.tex:183: Missing $ inserted.
 <inserted text> 
                 $
-l.254             Let $\delta = $\text{ min} \{d_
-                                                 1, d_2 \}. If $|x-c| < \del...
+l.183 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-Limits_And_Continuity.tex:254: Missing $ inserted.
+3_1DMotion_And_Velocity_Changes.tex:183: Missing \endgroup inserted.
 <inserted text> 
-                $
-l.254 ...t{ min} \{d_1, d_2 \}. If $|x-c| < \delta
-                                                  $ then $|f(x) - L|\implies...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                \endgroup 
+l.183 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-) [7]
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.aux"
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Introduction_To_Proofs.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Limits_And_Continuity.aux")) ) 
+3_1DMotion_And_Velocity_Changes.tex:183: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.183 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+<Resources/Vector_Subtraction.png, id=72, 79.29625pt x 57.71562pt>
+File: Resources/Vector_Subtraction.png Graphic file (type png)
+<use Resources/Vector_Subtraction.png>
+Package pdftex.def Info: Resources/Vector_Subtraction.png  used on input line 1
+88.
+(pdftex.def)             Requested size: 59.47202pt x 43.28659pt.
+[6 <./Resources/Vector_Subtraction.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 262--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+ []
+
+<Resources/Position_Time_Graph_Acceleration.png, id=78, 241.40187pt x 103.38625
+pt>
+File: Resources/Position_Time_Graph_Acceleration.png Graphic file (type png)
+<use Resources/Position_Time_Graph_Acceleration.png>
+Package pdftex.def Info: Resources/Position_Time_Graph_Acceleration.png  used o
+n input line 274.
+(pdftex.def)             Requested size: 241.40128pt x 103.38599pt.
+
+Overfull \hbox (23.50832pt too wide) in paragraph at lines 274--275
+[][] 
+ []
+
+<Resources/Position_Time_Graph_Acceleration2.png, id=79, 243.40938pt x 97.36375
+pt>
+File: Resources/Position_Time_Graph_Acceleration2.png Graphic file (type png)
+<use Resources/Position_Time_Graph_Acceleration2.png>
+Package pdftex.def Info: Resources/Position_Time_Graph_Acceleration2.png  used 
+on input line 277.
+(pdftex.def)             Requested size: 243.40877pt x 97.3635pt.
+
+Overfull \hbox (25.51581pt too wide) in paragraph at lines 277--278
+[][] 
+ []
+
+[7 <./Resources/Position_Time_Graph_Acceleration.png> <./Resources/Position_Tim
+e_Graph_Acceleration2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 287--291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
+
+ []
+
+<Resources/Projectile_Motion.png, id=86, 433.11812pt x 119.44624pt>
+File: Resources/Projectile_Motion.png Graphic file (type png)
+<use Resources/Projectile_Motion.png>
+Package pdftex.def Info: Resources/Projectile_Motion.png  used on input line 30
+9.
+(pdftex.def)             Requested size: 346.49496pt x 95.55711pt.
+<Resources/Projectile_Motion2.png, id=87, 441.65pt x 81.30376pt>
+File: Resources/Projectile_Motion2.png Graphic file (type png)
+<use Resources/Projectile_Motion2.png>
+Package pdftex.def Info: Resources/Projectile_Motion2.png  used on input line 3
+15.
+(pdftex.def)             Requested size: 397.48132pt x 73.17268pt.
+<Resources/Nonzero_Acceleration_Trajectory.png, id=88, 321.2pt x 246.42062pt>
+File: Resources/Nonzero_Acceleration_Trajectory.png Graphic file (type png)
+<use Resources/Nonzero_Acceleration_Trajectory.png>
+Package pdftex.def Info: Resources/Nonzero_Acceleration_Trajectory.png  used on
+ input line 323.
+(pdftex.def)             Requested size: 192.72148pt x 147.8535pt.
+[8 <./Resources/Projectile_Motion.png> <./Resources/Projectile_Motion2.png> <./
+Resources/Nonzero_Acceleration_Trajectory.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--355
+
+ []
+
+<Resources/Motion_Diagram.png, id=95, 234.37563pt x 83.81313pt>
+File: Resources/Motion_Diagram.png Graphic file (type png)
+<use Resources/Motion_Diagram.png>
+Package pdftex.def Info: Resources/Motion_Diagram.png  used on input line 359.
+(pdftex.def)             Requested size: 234.37503pt x 83.8129pt.
+
+Overfull \hbox (64.16183pt too wide) in paragraph at lines 394--409
+ [] 
+ []
+
+) [9 <./Resources/Motion_Diagram.png>]
+\openout2 = `4_Constant_Acceleration.aux'.
+
+ (4_Constant_Acceleration.tex
+<Resources/Constant_Acceleration.png, id=102, 146.34676pt x 121.6545pt>
+File: Resources/Constant_Acceleration.png Graphic file (type png)
+<use Resources/Constant_Acceleration.png>
+Package pdftex.def Info: Resources/Constant_Acceleration.png  used on input lin
+e 15.
+(pdftex.def)             Requested size: 117.07755pt x 97.32372pt.
+<Resources/Motion_Diagram2.png, id=103, 498.06075pt x 367.97475pt>
+File: Resources/Motion_Diagram2.png Graphic file (type png)
+<use Resources/Motion_Diagram2.png>
+Package pdftex.def Info: Resources/Motion_Diagram2.png  used on input line 40.
+(pdftex.def)             Requested size: 498.05952pt x 367.97385pt.
+
+Overfull \hbox (13.84964pt too wide) in paragraph at lines 40--41
+ [][] 
+ []
+
+[10
+
+
+
+ <./Resources/Constant_Acceleration.png> <./Resources/Motion_Diagram2.png>]
+<Resources/Free_Fall_Diagram.png, id=109, 92.7465pt x 178.86826pt>
+File: Resources/Free_Fall_Diagram.png Graphic file (type png)
+<use Resources/Free_Fall_Diagram.png>
+Package pdftex.def Info: Resources/Free_Fall_Diagram.png  used on input line 63
+.
+(pdftex.def)             Requested size: 92.74628pt x 178.86781pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+
+ []
+
+[11 <./Resources/Free_Fall_Diagram.png>]) [12]
+\openout2 = `5_Momentum.aux'.
+
+ (5_Momentum.tex
+Underfull \hbox (badness 10000) in paragraph at lines 22--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--60
+
+ []
+
+5_Momentum.tex:64: Undefined control sequence.
+<argument> \DElta 
+                  v_{u,x}
+l.64 ...} = -\frac{\Delta v_{s,x}}{\DElta v_{u,x}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[13
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 119--123
+
+ []
+
+) [14]
+
+PHYS14X_Notes.tex:60: LaTeX Error: \begin{align*} on input line 179 ended by \e
+nd{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\PHYS1
+4X_Notes.aux"
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\1_Int
+roduction.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\2_Fou
+ndations.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\3_1DM
+otion_And_Velocity_Changes.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\4_Con
+stant_Acceleration.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5_Mom
+entum.aux")) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 179 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 38852 strings out of 480236
- 976426 string characters out of 2890395
- 1402817 words of memory out of 3000000
- 54581 multiletter control sequences out of 15000+200000
- 548314 words of font info for 78 fonts, out of 3000000 for 9000
+ 38569 strings out of 480236
+ 969354 string characters out of 2890395
+ 1406122 words of memory out of 3000000
+ 54290 multiletter control sequences out of 15000+200000
+ 548613 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,13n,138p,739b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+ 89i,20n,127p,737b,2188s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/latxfont/line10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-MATH13X\out\Notes\MATH134X_Notes.pdf" (7 pages, 217752 bytes).
+PHYS14X\out\PHYS14X_Notes.pdf" (14 pages, 634039 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 180 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

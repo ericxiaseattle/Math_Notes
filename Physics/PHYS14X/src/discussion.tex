@@ -1,0 +1,36 @@
+Something I found really interesting while reading this chapter was that, when a projectile is at the top of its trajectory, though its velocity is zero, its acceleration has a nonzero value.
+This is because acceleration does not depend on instantaneous velocity. I personally found the verbal explanation to be confusing, and only understood after visually representing it. Consider the graph below:
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            axis equal image,
+            ylabel = {$v_x$ (m/s)},
+            ylabel style = {above left},
+            xlabel = {$t$(s)},
+            xmin = 0,
+            xmax = 8,
+            ymin = -2,
+            ymax = 2,
+            ticks = none
+        ]
+        \draw[red] (4,0);
+        \node[fill=red, draw, circle, minimum width=4pt, inner sep=0pt, pin={[fill=white, outer sep=1pt]60:{\color{red}Peak of Trajectory}\color{black}}] at (4,0) {};
+        \addplot[
+            color = blue,
+            domain = 0:8
+        ]
+        {-0.5*x+2};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+We know acceleration to be defined as the gradient of the velocity curve:
+
+\[
+    a = \frac{dv}{dt}
+\]
+
+Since the $v_x (t)$ curve is linear for scenario of projectile motions, $\frac{dv}{dt}$ is constant for the entire domain of our $v_x (t)$ curve and it happens to be -9.81 m/$\text{s}^2$. This tells us that not only
+is the magnitude of acceleration nonzero throughout the entire trajectory, including the peak, but the acceleration is always in the direction of decreasing $x$.

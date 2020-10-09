@@ -1,0 +1,255 @@
+\section{Limits and Continuity}
+    \subsection{The $\epsilon-\delta$ Definition of the Limit}
+        \begin{tcolorbox}[colback=red!10]
+            $\bm{\epsilon-\delta}$ \textbf{Definiton of the Limit of a Function}: \\
+            Let $f(x)$ be a function defined on an open interval around $c$. Then the limit of $f(x)$ as $x$ approaches $c$ is $L$:
+
+            \[
+                \lim_{x\to c} f(x) = L,
+            \]
+
+            if for every $\epsilon > 0$ there exists $\delta > 0$ such that $\forall x$
+
+            \[
+                0 < |x-c| < \delta \implies |f(x)-L| < \epsilon
+            \]
+
+            or in logic notation:
+
+            \[
+                \forall \epsilon >0 \exists \delta > 0 \ni |x-c| < \delta \implies |f(x) - L | < \epsilon
+            \]
+
+            $\epsilon$ is any given epsilon arbitrarily close to $L$, where $\delta$ is a value we can choose.
+        \end{tcolorbox}
+
+        \color{blue} \textit{Example 1:} Show that $\lim_{x\to 2}5x-7=30.$ \color{black} \\
+
+        Let $\epsilon$ be given (arbitrary). Define $\delta = \frac{\epsilon}{5}$. Assume $|x-2| < \delta = \frac{\epsilon}{5}$. \\
+
+        Then
+
+        \[
+            |(5x-7)-3| = |5x-10| = 5|x-2| < 5 \cdot \frac{\epsilon}{5} = \epsilon
+        \]
+
+        In this problem, we had to set up the inequality at the bottom first to get the value of our $\delta$. Then, we plugged it back into the earlier part os the proof and worked downwards again. \\
+
+        \color{blue} \textit{Example 2: }Show that $\lim_{x\to 2}x^2+5 = 9$. \color{black} \\
+
+        Let $\epsilon > 0$ be given.
+
+        Then,
+
+        \[
+            |x^2 + 5 - 9| = |x^2 - 4| = |x+2||x-2|
+        \]
+
+        We want
+
+        \[
+            |x+2||x-2| < \epsilon
+        \]
+
+        We can easily control $|x-2|$, but not $|x+2|$. Then
+
+        \begin{align*}
+            2 - \delta < x < 2 + \delta \\
+            4 - \delta < x + 2 < 4 + \delta
+        \end{align*}
+
+        $x+2$ cannot get too large. For example, if $\delta = 1$ then
+
+        \begin{align*}
+            3 < x + 2 < 5 \\
+            \implies |x+2| < 5
+        \end{align*}
+
+        So we have to make sure that $\delta \leq 1$. So going back to the beginning, we want
+
+        \[
+            |x+ 2| |x-2| \leq 5|x-2| \text{ if } \delta = \frac{\epsilon}{5}
+        \]
+
+        We define $\delta = \text{min}\{1, \frac{\epsilon}{5}\}$ if $|x-2|<\delta$. Then $|x-2| < 1$ so $-1<x-2<1$ and $1<x<3$ then $3<x+2<5$. \\
+
+        Then,
+
+        \[
+            |x^2 + 5 - 9| = |x^2 - 4| = |x+2||x-2| < 5 |x-2| < 5 \cdot \frac{\epsilon}{5} = \epsilon
+        \]
+
+        \blue{\texit{Example 3:} Show that $lim_{x\to\pi}x=\pi$} \\
+
+        \begin{proof}
+            Let $f(x)=x$. First, we need to determine what value our $\delta$ will take. When $|x-\pi| < \delta$ we want $|f(x)-\pi|<\epsilon$. We know that $|f(x)-\pi|=|x-\pi| < \epsilon$, so taking $\delta = \epsilon$ will
+            have the desired property. There are other values of $\delta$ we could have chosen, such as $\delta = \frac{\epsilon}{7}$. Why would this value of $\delta$ have also been acceptable? If
+            $|x-\pi|<\delta=\frac{\epsilon}{7}$, then $|f(x)-\pi|<\frac{\epsilon}{7}<\epsilon$, as required.
+        \end{proof}
+
+        \pagebreak
+
+        \blue{\textit{Example 4:} Show that $\lim_{x\to1} (5x-3)=2$} \\
+
+        \begin{proof}
+            In this example, we have $c=1$, $f(x)=5x-3$, and $L=2$ from the definition of the limit. For any $\epsilon>0$, we would need to find $\delta>0$ such that if $x$ is within distance $\delta$ of $c=1$, \textbf{i.e}
+
+            \[
+                |x-1| < \delta
+            \]
+
+            then $f(x)$ is within distance $\epsilon$ of $L=2$, \textbf{i.e}
+
+            \[
+                |f(x)-2| < \epsilon
+            \]
+
+            To find $\delta$, we work backwards from the $\epsilon$ inequality:
+
+            \begin{align*}
+                |(5x-3) - 2|    &= |5x-5| < \epsilon \\
+                                &= 5|x-1| < \epsilon \\
+                                &= |x-1| < \frac{\epsilon}{5}
+            \end{align*}
+
+            So we choose $\delta = \frac{\epsilon}{5}$. Then we can verify that if $|x-1|<\delta=\frac{\epsilon}{5}$, then
+
+            \[
+                |(5x-3)-2| = |5x-5| 5|x-1| < 5\left(\frac{\epsilon}{5}\right) = \epsilon.
+            \]
+        \end{proof}
+
+        \blue{\textit{Example 5:} Prove that $\lim_{x\to 7}(x^2+1)=50$.}
+
+        \begin{proof}
+            Let $f(x)=x^2 +1$. We will first determine what our value of $\delta$ should be. When $|x-7|<\delta$ we have
+
+            \begin{align*}
+                |x^2 + 1-50|    &= |x^2 - 49| \\
+                                &= |x-7||x+7| \\
+                                &< \delta|x+7|.
+            \end{align*}
+
+            Assuming $|x-7|<1$, we have $|x|<8$, which implies $|x+7|<|x|+|7|=15$ by the triangle inequality. So, when we let $\delta=\text{min}\left(1, \frac{\epsilon}{15}\right)$, we will have
+
+            \begin{align*}
+                |x^2 + 1 -5|   &< \delta |x+7| \\
+                                &< 15\delta \\
+                                &< \epsilon.
+            \end{align*}
+        \end{proof}
+
+        \blue{\textit{Example 6:} Prove
+        \[
+            \lim_{x\to 0} \frac{1}{x^2}=\infty
+        \]} \\
+
+        \begin{proof}
+            We show that for any positive number $L$, set $\delta=\frac{1}{\sqrt{L}}$. Then, when $|x-0|<\delta$, we have
+
+            \[
+                f(x) = \frac{1}{x^2} > \frac{1}{\left(\frac{1}{\sqrt{L}}\right)^2} = L.
+            \]
+
+            This shows that the values of the function become and stays arbitrarily large as $x$ approaches zero, or
+
+            \[
+                \lim_{x\to 0} \frac{1}{x^2} = \infty.
+            \]
+        \end{proof}
+
+        blue{\textit{Example 7:} Consider the function given by
+        \[
+            f(x) =
+            \begin{cases}
+                1   & x > 0 \\
+                -1  & x < 0.
+            \end{cases}
+        \]
+        Show that the limit at 0 does not exist.} \\
+
+        \begin{proof}
+            Note that the right-hand limit is 1 and the left-hand limit is -1. As such, it makes senses that the limit does not exist. We can formally show this by supposing that the limit at 0 exists and is equal to $L$.
+            Let $\epsilon=\frac{1}{2}$, with a corresponding $\delta=\delta_{\epsilon}>0$. Since the limit exists, we know that $forall y\in (-\delta, \delta)$, we have $|f(y)-L|<\epsilon=\frac{1}{2}$. HOwever, we also have
+
+            \begin{align*}
+                2   &= \left|f\left(\frac{\epsilon}{2}\right)-f\left(-\frac{\epsilon}{2}\right)\right| \\
+                    &= \left|f\left(\frac{\epsilon}{2}\right)-L+L-f\left(-\frac{\delta}{2}\right)\right| \\
+                    &\leq \left|f\left(\frac{\delta}{2}\right)-L\right| + \left|L-f\left(-\frac{\delta}{2}\right)\right| \\
+                    &\leq \frac{1}{2} + \frac{1}{2}
+            \end{align*}
+
+            This is a contradiction, so our original assumption is not true.
+        \end{proof}
+
+    \subsection{Limit Theorems}
+
+        \blue{If $lim_{x\to c} f(x)=L$ and $lim_{x\to c} g(x) = M$, then prove that
+        \[
+            \lim_{x\to c} [f(x) + g(x)] = L + M
+        \]}
+
+        \begin{proof}
+            Assume that $|x-c| < \delta$, then
+
+            \begin{align*}
+                |f(x) + g(x) - (L+M)| &\leq |f(x) - L| + |g(x) - M|
+            \end{align*}
+
+            Since $lim_{x\to c} f(x)=L,$ for $\frac{\epsilon}{2}$ there exists $\delta$, such that $|x-c|< \delta$, implies $|f(x)-L|<\frac{\epsilon}{2}$. Since $lim_{x\to c} g(x)=M$, define
+            $\delta=\text{min}\{\delta_1,\delta_2\}$. Now we can go back to the beginning. Then,
+
+            \begin{align*}
+                |f(x)+g(x)-(L+M)|   &\leq |f(x)-L| + |g(x)-M| \\
+                                    &<    \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+            \end{align*}
+        \end{proof}
+
+        \blue{ If $lim_{x\to c} f(x)=L$ and $lim_{x\to c} g(x) = M$, then prove that
+        \[
+            \lim_{x\to c} f(x)g(x) = LM
+        \]
+        Hint:
+        \begin{align*}
+            |f(x)g(x)-LM|   &= |f(x)g(x)-f(x)M + f(x) M - LM| \\
+                            &\leq |f(x)||g(x)-M| + |f(x) - L||M|
+        \end{align*}}
+
+        \begin{proof}
+
+        \end{proof}
+
+        \begin{tbhtheorem}{Corollary}
+            If $p(x)=a_n x^n + \dots + a_1 x + a_0$ is a polynomial, then $lim_{x\to c} p(x) = p(c)$.
+        \end{tbhtheorem}
+
+
+    \subsection{The Squeeze Theorem}
+
+        \red{\textbf{An $\bm{\epsilon-\delta}$ Proof for the Squeeze Theorem:}}
+        \begin{proof}
+            Let $\epsilon > 0$. \\
+            Since
+            \[
+                h(x) \leq f(x) \leq g(x),
+            \]
+            we have
+            \[
+                h(x) - L \leq f(x) - L \leq g(x) - L.
+            \]
+            Since
+            \[
+                -g(x) \leq - f(x) \leq - h(x)
+            \]
+            we have
+            \[
+                L - g(x) \leq L - f(x) \leq L - g(x)
+            \]
+            so we get
+            \[
+                |f(x)-L| \leq \text{ max}\{|h(x)-L|, |g(x)-L|\}
+            \]
+            There is a $\delta_1 > 0$ such that $|x-c| < \delta\implies |h(x)-L| < \epsilon$. \\
+            There is a $delta_2 > 0$ such that $|x-c| < d_2 \implies |g(x) - L| < \epsilon$. \\
+            Let $\delta = $\text{ min} \{d_1, d_2 \}. If $|x-c| < \delta$ then $|f(x) - L|\implies \epsilon$.
+        \end{proof}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  9 OCT 2020 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  9 OCT 2020 11:45
 entering extended mode
-**./MATH134X_Notes.tex
-(MATH134X_Notes.tex
+**./Week2_Worksheet.tex
+(Week2_Worksheet.tex
 LaTeX2e <2020-10-01>
 L3 programming layer <2020-09-24> xparse <2020-03-03>
 ("C:\Program Files\MiKTeX\tex/latex/base\article.cls"
@@ -1141,38 +1141,6 @@ Package: ulem 2019/11/18
 (C:\Users\ericx\AppData\Roaming\MiKTeX\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-MATH134X_Notes.tex:9: Undefined control sequence.
-<argument> \parlength 
-                      
-l.9 \setlength{\parlength}{0pt}
-                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-MATH134X_Notes.tex:10: Missing number, treated as zero.
-<to be read again> 
-                   \par 
-l.10 
-     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-MATH134X_Notes.tex:10: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \par 
-l.10 
-     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
 (../../../../mymacros.sty
 
 ../../../../mymacros.sty:7: LaTeX Error: Command \QED undefined.
@@ -1188,28 +1156,24 @@ If that doesn't work, type  X <return>  to quit.
 
 \tindent=\skip75
 )
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.aux"
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Introduction_To_Proofs.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Limits_And_Continuity.aux"))
-\openout1 = `MATH134X_Notes.aux'.
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Works
+heet\Week2_Worksheet.aux")
+\openout1 = `Week2_Worksheet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1245,14 +1209,14 @@ LaTeX Font Info:    ... okay on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 22.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 22.
+LaTeX Info: Redefining \celsius on input line 44.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 44.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 22.
-Package gensymb Info: Using \Omega for \ohm on input line 22.
+LaTeX Info: Redefining \ohm on input line 44.
+Package gensymb Info: Using \Omega for \ohm on input line 44.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1287,191 +1251,377 @@ Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks55
 \inpenc@posthook=\toks56
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.toc")
-\tf@toc=\write6
-\openout6 = `MATH134X_Notes.toc'.
-
- [1
+) [1
 
 {C:/Users/ericx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-\openout2 = `Introduction_To_Proofs.aux'.
-
- (Introduction_To_Proofs.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
-
- []
-
-[2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--180
-
- []
-
-[3]) [4]
-\openout2 = `Limits_And_Continuity.aux'.
-
- (Limits_And_Continuity.tex
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-Limits_And_Continuity.tex:82: Undefined control sequence.
-<argument> \texit 
-                  {Example 3:} Show that $lim_{x\to \pi }x=\pi $
-l.82 ...xample 3:} Show that $lim_{x\to\pi}x=\pi$}
-                                                   \\
+Week2_Worksheet.tex:56: Undefined control sequence.
+\pgfmathsetlength ...\pgfmath@onquick #2\pgfmath@ 
+                                                  {\begingroup \pgfmath@sele...
+l.56         \begin{tikzpicture}[scale= ]
+                                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-[5
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-
- []
-
-[6]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-54.
- ("C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
-
-Limits_And_Continuity.tex:254: Missing $ inserted.
+Week2_Worksheet.tex:56: Argument of \pgfmath@@onquick has an extra }.
 <inserted text> 
-                $
-l.254             Let $\delta = $\text{ min} \{d_
-                                                 1, d_2 \}. If $|x-c| < \del...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                \par 
+l.56         \begin{tikzpicture}[scale= ]
+                                         
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-Limits_And_Continuity.tex:254: Missing $ inserted.
+Runaway argument?
+{\begingroup \pgfmath@selectfont \pgf@x \unskip \expandafter \endgroup \ETC.
+Week2_Worksheet.tex:56: Paragraph ended before \pgfmath@@onquick was complete.
+<to be read again> 
+                   \par 
+l.56         \begin{tikzpicture}[scale= ]
+                                         
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Week2_Worksheet.tex:79: Undefined control sequence.
+\pgfmathsetlength ...\pgfmath@onquick #2\pgfmath@ 
+                                                  {\begingroup \pgfmath@sele...
+l.79         \begin{tikzpicture}[scale= ]
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Week2_Worksheet.tex:79: Argument of \pgfmath@@onquick has an extra }.
 <inserted text> 
-                $
-l.254 ...t{ min} \{d_1, d_2 \}. If $|x-c| < \delta
-                                                  $ then $|f(x) - L|\implies...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                \par 
+l.79         \begin{tikzpicture}[scale= ]
+                                         
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-) [7]
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\MATH134X_Notes.aux"
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Introduction_To_Proofs.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Limits_And_Continuity.aux")) ) 
+Runaway argument?
+{\begingroup \pgfmath@selectfont \pgf@x \unskip \expandafter \endgroup \ETC.
+Week2_Worksheet.tex:79: Paragraph ended before \pgfmath@@onquick was complete.
+<to be read again> 
+                   \par 
+l.79         \begin{tikzpicture}[scale= ]
+                                         
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+Week2_Worksheet.tex:100: Dimension too large.
+<to be read again> 
+                   \relax 
+l.100             \end{axis}
+                            
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+Week2_Worksheet.tex:121: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.121         \]
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Week2_Worksheet.tex:127: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.127         \]
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2]
+Week2_Worksheet.tex:172: Missing \endcsname inserted.
+<to be read again> 
+                   \pgfcrdmth@x 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Week2_Worksheet.tex:172: Extra \endcsname.
+\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
+                                                  
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+I'm ignoring this, since I wasn't doing a \csname.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Missing \endcsname inserted.
+<to be read again> 
+                   \pgfcrdmth@y 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Week2_Worksheet.tex:172: Extra \endcsname.
+\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
+                                                  
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+I'm ignoring this, since I wasn't doing a \csname.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   Y
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   Y
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   Y
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   Y
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Week2_Worksheet.tex:172: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Week2_Worksheet.tex:172: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.172                 \draw (axis cs: 0,0)
+                                           circle [radius=1];
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[3]
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Works
+heet\Week2_Worksheet.aux") ) 
 Here is how much of TeX's memory you used:
- 38852 strings out of 480236
- 976426 string characters out of 2890395
- 1402817 words of memory out of 3000000
- 54581 multiletter control sequences out of 15000+200000
- 548314 words of font info for 78 fonts, out of 3000000 for 9000
+ 39265 strings out of 480236
+ 987372 string characters out of 2890395
+ 1420308 words of memory out of 3000000
+ 55012 multiletter control sequences out of 15000+200000
+ 548662 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,13n,138p,739b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+ 101i,17n,138p,740b,2338s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-MATH13X\out\Notes\MATH134X_Notes.pdf" (7 pages, 217752 bytes).
+MATH13X\out\Worksheet\Week2_Worksheet.pdf" (3 pages, 146416 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
