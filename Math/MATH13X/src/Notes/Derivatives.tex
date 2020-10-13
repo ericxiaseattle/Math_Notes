@@ -1,0 +1,25 @@
+\section{Derivatives}
+
+    \subsection{Definition of Derivative}
+
+        A function $f$ is differentiable at $x$ if the limit
+
+        \[
+            \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
+        \]
+
+        exists.
+
+    \subsection{Derivative Rules}
+
+        \begin{tcolorbox}[colback=red!10]
+            \textbf{Proof of Product Rule:}
+
+            \begin{proof}
+                \begin{align*}
+                    \lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h}   &= \lim_{h\to 0} \frac{f(x+h)g(x+h) - f(x+h) g(x) + f(x+h) g(x) - f(x)g(x)}{h} \\
+                    &= \lim_{h\to 0} f(x+h) \left[\frac{g(x+h)-g(x)}{h}\right] + g(x) \lim_{h\to 0} \frac{f(x+h) - f(x)}{h} \\
+                    &= f(x)g'(x) + g(x)f'(x)
+                \end{align*}
+            \end{proof}
+        \end{tcolorbox}

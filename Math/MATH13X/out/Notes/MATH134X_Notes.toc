@@ -3,3 +3,7 @@
 \contentsline {subsection}{\numberline {2.1}The $\epsilon -\delta $ Definition of the Limit}{5}{}%
 \contentsline {subsection}{\numberline {2.2}Limit Theorems}{7}{}%
 \contentsline {subsection}{\numberline {2.3}The Squeeze Theorem}{7}{}%
+\contentsline {subsection}{\numberline {2.4}More Limit Theorems}{8}{}%
+\contentsline {section}{\numberline {3}Derivatives}{9}{}%
+\contentsline {subsection}{\numberline {3.1}Definition of Derivative}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Derivative Rules}{9}{}%

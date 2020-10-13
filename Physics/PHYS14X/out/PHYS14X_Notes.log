@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  8 OCT 2020 08:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  13 OCT 2020 12:06
 entering extended mode
 **./PHYS14X_Notes.tex
 (PHYS14X_Notes.tex
@@ -1567,20 +1567,63 @@ and I'll forget about whatever was undefined.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 119--123
+5_Momentum.tex:137: Undefined control sequence.
+<argument> ...rightarrow {p}_2 &= \ovrerightarrow 
+                                                  {0} \text { (by definition)} 
+l.137             \end{align*}
+                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+5_Momentum.tex:137: Undefined control sequence.
+<argument> ...rightarrow {p}_2 &= \ovrerightarrow 
+                                                  {0} \text { (by definition)} 
+l.137             \end{align*}
+                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-) [14]
 
-PHYS14X_Notes.tex:60: LaTeX Error: \begin{align*} on input line 179 ended by \e
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+[14]) [15]
+
+PHYS14X_Notes.tex:59: LaTeX Error: \begin{align*} on input line 179 ended by \e
 nd{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \end{document}
+l.59 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1604,10 +1647,10 @@ entum.aux")) )
 ### semi simple group (level 1) entered at line 179 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38569 strings out of 480236
- 969354 string characters out of 2890395
- 1406122 words of memory out of 3000000
- 54290 multiletter control sequences out of 15000+200000
+ 38570 strings out of 480236
+ 969368 string characters out of 2890395
+ 1406123 words of memory out of 3000000
+ 54291 multiletter control sequences out of 15000+200000
  548613 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,20n,127p,737b,2188s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1628,9 +1671,9 @@ ts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb
 /fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/latxfont/line10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-PHYS14X\out\PHYS14X_Notes.pdf" (14 pages, 634039 bytes).
+PHYS14X\out\PHYS14X_Notes.pdf" (15 pages, 638360 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
+ 183 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
