@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  13 OCT 2020 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  18 OCT 2020 12:40
 entering extended mode
 **./PHYS14X_Notes.tex
 (PHYS14X_Notes.tex
@@ -1104,8 +1104,14 @@ ndations.aux")
 otion_And_Velocity_Changes.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\4_Con
 stant_Acceleration.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5_Mom
-entum.aux"))
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5&6_M
+omentum.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\7_Kin
+etic_And_Internal_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\8_Con
+servation_Of_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\9_Rel
+ativity.aux"))
 \openout1 = `PHYS14X_Notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -1534,9 +1540,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--125
  []
 
 [11 <./Resources/Free_Fall_Diagram.png>]) [12]
-\openout2 = `5_Momentum.aux'.
+\openout2 = `5&6_Momentum.aux'.
 
- (5_Momentum.tex
+ (5&6_Momentum.tex
 Underfull \hbox (badness 10000) in paragraph at lines 22--29
 
  []
@@ -1551,7 +1557,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--60
 
  []
 
-5_Momentum.tex:64: Undefined control sequence.
+5&6_Momentum.tex:64: Undefined control sequence.
 <argument> \DElta 
                   v_{u,x}
 l.64 ...} = -\frac{\Delta v_{s,x}}{\DElta v_{u,x}}
@@ -1567,7 +1573,7 @@ and I'll forget about whatever was undefined.
 
 
 ]
-5_Momentum.tex:137: Undefined control sequence.
+5&6_Momentum.tex:137: Undefined control sequence.
 <argument> ...rightarrow {p}_2 &= \ovrerightarrow 
                                                   {0} \text { (by definition)} 
 l.137             \end{align*}
@@ -1578,7 +1584,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-5_Momentum.tex:137: Undefined control sequence.
+5&6_Momentum.tex:137: Undefined control sequence.
 <argument> ...rightarrow {p}_2 &= \ovrerightarrow 
                                                   {0} \text { (by definition)} 
 l.137             \end{align*}
@@ -1590,40 +1596,154 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 158--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 [14]) [15]
+\openout2 = `7_Kinetic_And_Internal_Energy.aux'.
 
-PHYS14X_Notes.tex:59: LaTeX Error: \begin{align*} on input line 179 ended by \e
+ (7_Kinetic_And_Internal_Energy.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+<Resources/Kinetic_Energy.png, id=127, 470.9595pt x 154.176pt>
+File: Resources/Kinetic_Energy.png Graphic file (type png)
+<use Resources/Kinetic_Energy.png>
+Package pdftex.def Info: Resources/Kinetic_Energy.png  used on input line 36.
+(pdftex.def)             Requested size: 470.95834pt x 154.1756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+<Resources/Collisions.png, id=128, 390.86024pt x 173.448pt>
+File: Resources/Collisions.png Graphic file (type png)
+<use Resources/Collisions.png>
+Package pdftex.def Info: Resources/Collisions.png  used on input line 55.
+(pdftex.def)             Requested size: 195.42964pt x 86.72379pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+) [16
+
+
+
+ <./Resources/Kinetic_Energy.png> <./Resources/Collisions.png>]
+\openout2 = `8_Conservation_Of_Energy.aux'.
+
+
+(8_Conservation_Of_Energy.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+<Resources/Energy_Bar_Closed_System.png, id=134, 307.1475pt x 121.05225pt>
+File: Resources/Energy_Bar_Closed_System.png Graphic file (type png)
+<use Resources/Energy_Bar_Closed_System.png>
+Package pdftex.def Info: Resources/Energy_Bar_Closed_System.png  used on input 
+line 12.
+(pdftex.def)             Requested size: 307.14674pt x 121.05194pt.
+8_Conservation_Of_Energy.tex:31: Undefined control sequence.
+l.31         Recall that \texxtbf
+                                 {kinetic energy} is given by
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Resources/Coeff_Of_Restitution.png, id=135, 642.60075pt x 147.55125pt>
+File: Resources/Coeff_Of_Restitution.png Graphic file (type png)
+<use Resources/Coeff_Of_Restitution.png>
+Package pdftex.def Info: Resources/Coeff_Of_Restitution.png  used on input line
+ 67.
+(pdftex.def)             Requested size: 481.94939pt x 110.66315pt.
+[17
+
+
+
+ <./Resources/Energy_Bar_Closed_System.png> <./Resources/Coeff_Of_Restitution.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+8_Conservation_Of_Energy.tex:136: Extra }, or forgotten $.
+l.136 ...errightarrow{v}_2 - \overrightarrow{v}_1}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+) [18]
+\openout2 = `9_Relativity.aux'.
+
+ (9_Relativity.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+<Resources/Reference_Frames.png, id=146, 480.5955pt x 154.176pt>
+File: Resources/Reference_Frames.png Graphic file (type png)
+<use Resources/Reference_Frames.png>
+Package pdftex.def Info: Resources/Reference_Frames.png  used on input line 25.
+
+(pdftex.def)             Requested size: 480.59433pt x 154.1756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+) [19
+
+
+
+ <./Resources/Reference_Frames.png>]
+
+PHYS14X_Notes.tex:60: LaTeX Error: \begin{align*} on input line 179 ended by \e
 nd{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \end{document}
+l.60 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1640,40 +1760,48 @@ ndations.aux")
 otion_And_Velocity_Changes.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\4_Con
 stant_Acceleration.aux")
-("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5_Mom
-entum.aux")) )
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\5&6_M
+omentum.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\7_Kin
+etic_And_Internal_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\8_Con
+servation_Of_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\9_Rel
+ativity.aux")) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 179 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38570 strings out of 480236
- 969368 string characters out of 2890395
- 1406123 words of memory out of 3000000
- 54291 multiletter control sequences out of 15000+200000
+ 38643 strings out of 480236
+ 972529 string characters out of 2890395
+ 1408247 words of memory out of 3000000
+ 54338 multiletter control sequences out of 15000+200000
  548613 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,20n,127p,737b,2188s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
-ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/latxfont/line10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfon
+t/line10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-PHYS14X\out\PHYS14X_Notes.pdf" (15 pages, 638360 bytes).
+PHYS14X\out\PHYS14X_Notes.pdf" (19 pages, 949916 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 214 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 
