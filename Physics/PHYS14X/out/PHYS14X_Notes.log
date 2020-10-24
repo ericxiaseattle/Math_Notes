@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  18 OCT 2020 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  22 OCT 2020 16:33
 entering extended mode
 **./PHYS14X_Notes.tex
 (PHYS14X_Notes.tex
@@ -1111,7 +1111,11 @@ etic_And_Internal_Energy.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\8_Con
 servation_Of_Energy.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\9_Rel
-ativity.aux"))
+ativity.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\10_Ce
+ntre_Of_Mass.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\11_Tr
+ansfer_Of_Energy.aux"))
 \openout1 = `PHYS14X_Notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -1218,13 +1222,13 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\PHYS1
-4X_Notes.toc")
+4X_Notes.toc" [1
+
+{C:/Users/ericx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}])
 \tf@toc=\write6
 \openout6 = `PHYS14X_Notes.toc'.
 
- [1
-
-{C:/Users/ericx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+ [2]
 \openout2 = `1_Introduction.aux'.
 
  (1_Introduction.tex
@@ -1267,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--41
 
  []
 
-) [2
+) [3
 
 ]
 \openout2 = `2_Foundations.aux'.
@@ -1298,7 +1302,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
-[3
+[4
 
 
 
@@ -1337,7 +1341,7 @@ I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-) [4]
+) [5]
 \openout2 = `3_1DMotion_And_Velocity_Changes.aux'.
 
  (3_1DMotion_And_Velocity_Changes.tex
@@ -1355,7 +1359,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
-[5
+[6
 
 
 
@@ -1408,13 +1412,13 @@ l.183
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-<Resources/Vector_Subtraction.png, id=72, 79.29625pt x 57.71562pt>
+<Resources/Vector_Subtraction.png, id=75, 79.29625pt x 57.71562pt>
 File: Resources/Vector_Subtraction.png Graphic file (type png)
 <use Resources/Vector_Subtraction.png>
 Package pdftex.def Info: Resources/Vector_Subtraction.png  used on input line 1
 88.
 (pdftex.def)             Requested size: 59.47202pt x 43.28659pt.
-[6 <./Resources/Vector_Subtraction.png>]
+[7 <./Resources/Vector_Subtraction.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 262--265
 
  []
@@ -1424,7 +1428,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 266--269
 
  []
 
-<Resources/Position_Time_Graph_Acceleration.png, id=78, 241.40187pt x 103.38625
+<Resources/Position_Time_Graph_Acceleration.png, id=82, 241.40187pt x 103.38625
 pt>
 File: Resources/Position_Time_Graph_Acceleration.png Graphic file (type png)
 <use Resources/Position_Time_Graph_Acceleration.png>
@@ -1436,7 +1440,7 @@ Overfull \hbox (23.50832pt too wide) in paragraph at lines 274--275
 [][] 
  []
 
-<Resources/Position_Time_Graph_Acceleration2.png, id=79, 243.40938pt x 97.36375
+<Resources/Position_Time_Graph_Acceleration2.png, id=83, 243.40938pt x 97.36375
 pt>
 File: Resources/Position_Time_Graph_Acceleration2.png Graphic file (type png)
 <use Resources/Position_Time_Graph_Acceleration2.png>
@@ -1448,7 +1452,7 @@ Overfull \hbox (25.51581pt too wide) in paragraph at lines 277--278
 [][] 
  []
 
-[7 <./Resources/Position_Time_Graph_Acceleration.png> <./Resources/Position_Tim
+[8 <./Resources/Position_Time_Graph_Acceleration.png> <./Resources/Position_Tim
 e_Graph_Acceleration2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 287--291
 
@@ -1459,25 +1463,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
-<Resources/Projectile_Motion.png, id=86, 433.11812pt x 119.44624pt>
+<Resources/Projectile_Motion.png, id=89, 433.11812pt x 119.44624pt>
 File: Resources/Projectile_Motion.png Graphic file (type png)
 <use Resources/Projectile_Motion.png>
 Package pdftex.def Info: Resources/Projectile_Motion.png  used on input line 30
 9.
 (pdftex.def)             Requested size: 346.49496pt x 95.55711pt.
-<Resources/Projectile_Motion2.png, id=87, 441.65pt x 81.30376pt>
+<Resources/Projectile_Motion2.png, id=90, 441.65pt x 81.30376pt>
 File: Resources/Projectile_Motion2.png Graphic file (type png)
 <use Resources/Projectile_Motion2.png>
 Package pdftex.def Info: Resources/Projectile_Motion2.png  used on input line 3
 15.
 (pdftex.def)             Requested size: 397.48132pt x 73.17268pt.
-<Resources/Nonzero_Acceleration_Trajectory.png, id=88, 321.2pt x 246.42062pt>
+<Resources/Nonzero_Acceleration_Trajectory.png, id=91, 321.2pt x 246.42062pt>
 File: Resources/Nonzero_Acceleration_Trajectory.png Graphic file (type png)
 <use Resources/Nonzero_Acceleration_Trajectory.png>
 Package pdftex.def Info: Resources/Nonzero_Acceleration_Trajectory.png  used on
  input line 323.
 (pdftex.def)             Requested size: 192.72148pt x 147.8535pt.
-[8 <./Resources/Projectile_Motion.png> <./Resources/Projectile_Motion2.png> <./
+[9 <./Resources/Projectile_Motion.png> <./Resources/Projectile_Motion2.png> <./
 Resources/Nonzero_Acceleration_Trajectory.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
@@ -1493,7 +1497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--355
 
  []
 
-<Resources/Motion_Diagram.png, id=95, 234.37563pt x 83.81313pt>
+<Resources/Motion_Diagram.png, id=98, 234.37563pt x 83.81313pt>
 File: Resources/Motion_Diagram.png Graphic file (type png)
 <use Resources/Motion_Diagram.png>
 Package pdftex.def Info: Resources/Motion_Diagram.png  used on input line 359.
@@ -1503,17 +1507,17 @@ Overfull \hbox (64.16183pt too wide) in paragraph at lines 394--409
  [] 
  []
 
-) [9 <./Resources/Motion_Diagram.png>]
+) [10 <./Resources/Motion_Diagram.png>]
 \openout2 = `4_Constant_Acceleration.aux'.
 
  (4_Constant_Acceleration.tex
-<Resources/Constant_Acceleration.png, id=102, 146.34676pt x 121.6545pt>
+<Resources/Constant_Acceleration.png, id=105, 146.34676pt x 121.6545pt>
 File: Resources/Constant_Acceleration.png Graphic file (type png)
 <use Resources/Constant_Acceleration.png>
 Package pdftex.def Info: Resources/Constant_Acceleration.png  used on input lin
 e 15.
 (pdftex.def)             Requested size: 117.07755pt x 97.32372pt.
-<Resources/Motion_Diagram2.png, id=103, 498.06075pt x 367.97475pt>
+<Resources/Motion_Diagram2.png, id=106, 498.06075pt x 367.97475pt>
 File: Resources/Motion_Diagram2.png Graphic file (type png)
 <use Resources/Motion_Diagram2.png>
 Package pdftex.def Info: Resources/Motion_Diagram2.png  used on input line 40.
@@ -1523,12 +1527,12 @@ Overfull \hbox (13.84964pt too wide) in paragraph at lines 40--41
  [][] 
  []
 
-[10
+[11
 
 
 
  <./Resources/Constant_Acceleration.png> <./Resources/Motion_Diagram2.png>]
-<Resources/Free_Fall_Diagram.png, id=109, 92.7465pt x 178.86826pt>
+<Resources/Free_Fall_Diagram.png, id=112, 92.7465pt x 178.86826pt>
 File: Resources/Free_Fall_Diagram.png Graphic file (type png)
 <use Resources/Free_Fall_Diagram.png>
 Package pdftex.def Info: Resources/Free_Fall_Diagram.png  used on input line 63
@@ -1539,7 +1543,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--125
 
  []
 
-[11 <./Resources/Free_Fall_Diagram.png>]) [12]
+[12 <./Resources/Free_Fall_Diagram.png>]) [13]
 \openout2 = `5&6_Momentum.aux'.
 
  (5&6_Momentum.tex
@@ -1568,7 +1572,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[13
+[14
 
 
 
@@ -1620,7 +1624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
-[14]) [15]
+[15]) [16]
 \openout2 = `7_Kinetic_And_Internal_Energy.aux'.
 
  (7_Kinetic_And_Internal_Energy.tex
@@ -1638,7 +1642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<Resources/Kinetic_Energy.png, id=127, 470.9595pt x 154.176pt>
+<Resources/Kinetic_Energy.png, id=130, 470.9595pt x 154.176pt>
 File: Resources/Kinetic_Energy.png Graphic file (type png)
 <use Resources/Kinetic_Energy.png>
 Package pdftex.def Info: Resources/Kinetic_Energy.png  used on input line 36.
@@ -1648,7 +1652,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--46
 
  []
 
-<Resources/Collisions.png, id=128, 390.86024pt x 173.448pt>
+<Resources/Collisions.png, id=131, 390.86024pt x 173.448pt>
 File: Resources/Collisions.png Graphic file (type png)
 <use Resources/Collisions.png>
 Package pdftex.def Info: Resources/Collisions.png  used on input line 55.
@@ -1658,7 +1662,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-) [16
+) [17
 
 
 
@@ -1671,7 +1675,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<Resources/Energy_Bar_Closed_System.png, id=134, 307.1475pt x 121.05225pt>
+<Resources/Energy_Bar_Closed_System.png, id=137, 307.1475pt x 121.05225pt>
 File: Resources/Energy_Bar_Closed_System.png Graphic file (type png)
 <use Resources/Energy_Bar_Closed_System.png>
 Package pdftex.def Info: Resources/Energy_Bar_Closed_System.png  used on input 
@@ -1686,13 +1690,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Resources/Coeff_Of_Restitution.png, id=135, 642.60075pt x 147.55125pt>
+<Resources/Coeff_Of_Restitution.png, id=138, 642.60075pt x 147.55125pt>
 File: Resources/Coeff_Of_Restitution.png Graphic file (type png)
 <use Resources/Coeff_Of_Restitution.png>
 Package pdftex.def Info: Resources/Coeff_Of_Restitution.png  used on input line
  67.
 (pdftex.def)             Requested size: 481.94939pt x 110.66315pt.
-[17
+[18
 
 
 
@@ -1711,7 +1715,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-) [18]
+) [19]
 \openout2 = `9_Relativity.aux'.
 
  (9_Relativity.tex
@@ -1719,7 +1723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-<Resources/Reference_Frames.png, id=146, 480.5955pt x 154.176pt>
+<Resources/Reference_Frames.png, id=150, 480.5955pt x 154.176pt>
 File: Resources/Reference_Frames.png Graphic file (type png)
 <use Resources/Reference_Frames.png>
 Package pdftex.def Info: Resources/Reference_Frames.png  used on input line 25.
@@ -1730,20 +1734,179 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-) [19
+) [20
 
 
 
  <./Resources/Reference_Frames.png>]
+\openout2 = `10_Centre_Of_Mass.aux'.
 
-PHYS14X_Notes.tex:60: LaTeX Error: \begin{align*} on input line 179 ended by \e
+ (10_Centre_Of_Mass.tex
+10_Centre_Of_Mass.tex:41: Missing { inserted.
+<to be read again> 
+                   \hfil 
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+10_Centre_Of_Mass.tex:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+10_Centre_Of_Mass.tex:41: Missing { inserted.
+<to be read again> 
+                   \hfil 
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+10_Centre_Of_Mass.tex:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+10_Centre_Of_Mass.tex:41: Missing { inserted.
+<to be read again> 
+                   \hfil 
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+10_Centre_Of_Mass.tex:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+10_Centre_Of_Mass.tex:41: Missing { inserted.
+<to be read again> 
+                   \hfil 
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+10_Centre_Of_Mass.tex:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 ...m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+[21
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+) [22]
+\openout2 = `11_Transfer_Of_Energy.aux'.
+
+ (11_Transfer_Of_Energy.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+<Resources/Interactions.jpg, id=161, 441.44925pt x 373.99725pt>
+File: Resources/Interactions.jpg Graphic file (type jpg)
+<use Resources/Interactions.jpg>
+Package pdftex.def Info: Resources/Interactions.jpg  used on input line 14.
+(pdftex.def)             Requested size: 485.59566pt x 411.39822pt.
+
+Overfull \hbox (1.38577pt too wide) in paragraph at lines 14--15
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+
+ []
+
+[23
+
+
+
+ <./Resources/Interactions.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+) [24]
+
+PHYS14X_Notes.tex:62: LaTeX Error: \begin{align*} on input line 179 ended by \e
 nd{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \end{document}
+l.62 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1767,16 +1930,20 @@ etic_And_Internal_Energy.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\8_Con
 servation_Of_Energy.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\9_Rel
-ativity.aux")) )
+ativity.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\10_Ce
+ntre_Of_Mass.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\11_Tr
+ansfer_Of_Energy.aux")) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 179 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38643 strings out of 480236
- 972529 string characters out of 2890395
- 1408247 words of memory out of 3000000
- 54338 multiletter control sequences out of 15000+200000
+ 38673 strings out of 480236
+ 973942 string characters out of 2890395
+ 1414663 words of memory out of 3000000
+ 54352 multiletter control sequences out of 15000+200000
  548613 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,20n,127p,737b,2188s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1799,9 +1966,9 @@ X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
 onts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfon
 t/line10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-PHYS14X\out\PHYS14X_Notes.pdf" (19 pages, 949916 bytes).
+PHYS14X\out\PHYS14X_Notes.pdf" (24 pages, 1052431 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

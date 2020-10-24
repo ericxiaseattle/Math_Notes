@@ -1,0 +1,51 @@
+\section{Applications of Derivatives}
+
+    \subsection{First and Second Derivative Tests}
+
+        \begin{tbhtheorem}{First Derivative Test}
+            Suppose that $f$ is a function and $c$ is a critical point of $f$ and $f$ is continuous at $c$. \\
+            $\bullet$ If $f'(x)$ changes sign from positive to negative at $c$, then $f(c)$ is a local maximum. \\
+            $\bullet$ If $f'(x)$ changes sign from negative to positive at $c$, then $f(c)$ is a local minimum. \\
+            $\bullet$ If $f'(x)$ does not change sign at $c$, then $f(c)$ is not a local extrema.
+        \end{tbhtheorem}
+
+        \begin{tbhtheorem}{Second Derivative Test}
+            Suppose that $f$ is a function and $c$ is a critical point of $f$ and $f$ is differentiable at $c$. Assume also that $f''(c)$ exists \\
+            $\bullet$ If $f''(c)>0$ then $f$ has a local minimum at $c$. \\
+            $\bullet$ If $f''(c)<0$ then $f$ has a local maximum at $c$. \\
+            $\bullet$ If $f''(c)=0$ then the test is inconclusive.
+        \end{tbhtheorem}
+
+    \subsection{Limits at Infinity and Asymptotes}
+
+        A limit that approaches infinity is defined for any $K>0$, there exists $\delta > 0$ such that
+
+        \[
+            |x-c| < \delta \implies f(x) > K
+        \]
+
+        Definition for $\lim_{x\to \infty} f(x)=L$: \\
+
+        For any $\epsilon > 0$ there exists a $K>0$ such that $x>K$ implies $|f(x) - L| < \epsilon$.
+
+        \[
+            \lim_{x\to \infty} \frac{1}{x} = 0
+        \]
+
+        Given $\epsilon > 0$, let $k=\frac{1}{\epsilon}$, then $x> K = \frac{1}{\epsilon}\implies$
+
+        \begin{align*}
+            \Big|\frac{1}{x}-0\Big| &< \epsilon \\D
+            \frac{1}{\epsilon}      &< x
+        \end{align*}
+
+
+    \subsection{Differentials and Linear Approximations}
+
+    \subsection{Newton-Raphson Approximations}
+
+        \[
+            -\frac{f(x_n)}{f'(x_n)} + x_n = x_n + 1
+        \]
+
+        We can prove $|x_{n+1}-c| < |x_n- c|$ using them on concavity, proving $x_n \rightarrow c$

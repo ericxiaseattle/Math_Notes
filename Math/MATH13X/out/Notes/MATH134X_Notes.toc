@@ -7,3 +7,8 @@
 \contentsline {section}{\numberline {3}Derivatives}{9}{}%
 \contentsline {subsection}{\numberline {3.1}Definition of Derivative}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Derivative Rules}{9}{}%
+\contentsline {section}{\numberline {4}Applications of Derivatives}{10}{}%
+\contentsline {subsection}{\numberline {4.1}First and Second Derivative Tests}{10}{}%
+\contentsline {subsection}{\numberline {4.2}Limits at Infinity and Asymptotes}{10}{}%
+\contentsline {subsection}{\numberline {4.3}Differentials and Linear Approximations}{10}{}%
+\contentsline {subsection}{\numberline {4.4}Newton-Raphson Approximations}{10}{}%

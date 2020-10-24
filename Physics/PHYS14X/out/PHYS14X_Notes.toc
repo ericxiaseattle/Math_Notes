@@ -1,51 +1,60 @@
-\contentsline {section}{\numberline {1}Course Structure}{2}{}%
-\contentsline {section}{\numberline {2}Foundations}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Representations}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Physical quantities and units}{3}{}%
-\contentsline {subsection}{\numberline {2.3}From Reality to Model}{4}{}%
-\contentsline {section}{\numberline {3}Motion in One Dimension and Changes in Velocity}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Position and Displacement}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Representing Motion}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Average Speed and Average Velocity}{5}{}%
-\contentsline {subsection}{\numberline {3.4}Scalars and Vectors}{5}{}%
-\contentsline {subsection}{\numberline {3.5}Position and Displacement Vectors}{6}{}%
-\contentsline {subsection}{\numberline {3.6}Velocity as a Vector}{7}{}%
-\contentsline {subsection}{\numberline {3.7}Motion at Constant Velocity}{7}{}%
-\contentsline {subsection}{\numberline {3.8}Instantaneous Velocity}{7}{}%
-\contentsline {subsection}{\numberline {3.9}Changes in Velocity}{7}{}%
-\contentsline {subsection}{\numberline {3.10}Acceleration Due to Gravity}{8}{}%
-\contentsline {subsection}{\numberline {3.11}Projectile Motion}{8}{}%
-\contentsline {subsection}{\numberline {3.12}Motion Diagrams}{9}{}%
-\contentsline {subsection}{\numberline {3.13}Summary of Symbols and Meanings in This Topic}{9}{}%
-\contentsline {section}{\numberline {4}Constant Acceleration}{10}{}%
-\contentsline {subsection}{\numberline {4.1}Motion with Constant Acceleration}{10}{}%
-\contentsline {subsection}{\numberline {4.2}Free-fall Equations}{11}{}%
-\contentsline {subsection}{\numberline {4.3}Inclined Planes}{11}{}%
-\contentsline {subsection}{\numberline {4.4}Instantaneous Acceleration}{11}{}%
-\contentsline {subsection}{\numberline {4.5}Summary of Topic}{12}{}%
-\contentsline {section}{\numberline {5}Momentum}{13}{}%
-\contentsline {subsection}{\numberline {5.1}Friction}{13}{}%
-\contentsline {subsection}{\numberline {5.2}Inertia}{13}{}%
-\contentsline {subsection}{\numberline {5.3}What Determines Inertia?}{13}{}%
-\contentsline {subsection}{\numberline {5.4}Systems}{13}{}%
-\contentsline {subsection}{\numberline {5.5}Inertial Standard}{13}{}%
-\contentsline {subsection}{\numberline {5.6}Momentum}{14}{}%
-\contentsline {subsection}{\numberline {5.7}Isolated Systems}{14}{}%
-\contentsline {subsection}{\numberline {5.8}Conservation of Momentum}{14}{}%
-\contentsline {subsection}{\numberline {5.9}Lecture 6 Notes}{14}{}%
-\contentsline {subsection}{\numberline {5.10}Topic Summary and Equations}{15}{}%
-\contentsline {section}{\numberline {6}Kinetic and Internal Energy}{16}{}%
-\contentsline {subsection}{\numberline {6.1}Classification of Collisions}{16}{}%
-\contentsline {subsection}{\numberline {6.2}Kinetic Energy}{16}{}%
-\contentsline {subsection}{\numberline {6.3}Internal Energy}{16}{}%
-\contentsline {section}{\numberline {7}Conservation of Energy}{17}{}%
-\contentsline {subsection}{\numberline {7.1}Closed Systems}{17}{}%
-\contentsline {subsection}{\numberline {7.2}Elastic Collisions}{17}{}%
-\contentsline {subsection}{\numberline {7.3}Inelastic Collisions}{17}{}%
-\contentsline {subsection}{\numberline {7.4}Conservation of Energy}{17}{}%
-\contentsline {subsection}{\numberline {7.5}Explosive Separations}{18}{}%
-\contentsline {subsection}{\numberline {7.6}Topic Summary}{18}{}%
-\contentsline {section}{\numberline {8}Relativity}{19}{}%
-\contentsline {subsection}{\numberline {8.1}Relativity of Motion}{19}{}%
-\contentsline {subsection}{\numberline {8.2}Inertial Reference Frames}{19}{}%
-\contentsline {subsection}{\numberline {8.3}Principle of Relativity}{19}{}%
+\contentsline {section}{\numberline {1}Course Structure}{3}{}%
+\contentsline {section}{\numberline {2}Foundations}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Representations}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Physical quantities and units}{4}{}%
+\contentsline {subsection}{\numberline {2.3}From Reality to Model}{5}{}%
+\contentsline {section}{\numberline {3}Motion in One Dimension and Changes in Velocity}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Position and Displacement}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Representing Motion}{6}{}%
+\contentsline {subsection}{\numberline {3.3}Average Speed and Average Velocity}{6}{}%
+\contentsline {subsection}{\numberline {3.4}Scalars and Vectors}{6}{}%
+\contentsline {subsection}{\numberline {3.5}Position and Displacement Vectors}{7}{}%
+\contentsline {subsection}{\numberline {3.6}Velocity as a Vector}{8}{}%
+\contentsline {subsection}{\numberline {3.7}Motion at Constant Velocity}{8}{}%
+\contentsline {subsection}{\numberline {3.8}Instantaneous Velocity}{8}{}%
+\contentsline {subsection}{\numberline {3.9}Changes in Velocity}{8}{}%
+\contentsline {subsection}{\numberline {3.10}Acceleration Due to Gravity}{9}{}%
+\contentsline {subsection}{\numberline {3.11}Projectile Motion}{9}{}%
+\contentsline {subsection}{\numberline {3.12}Motion Diagrams}{10}{}%
+\contentsline {subsection}{\numberline {3.13}Summary of Symbols and Meanings in This Topic}{10}{}%
+\contentsline {section}{\numberline {4}Constant Acceleration}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Motion with Constant Acceleration}{11}{}%
+\contentsline {subsection}{\numberline {4.2}Free-fall Equations}{12}{}%
+\contentsline {subsection}{\numberline {4.3}Inclined Planes}{12}{}%
+\contentsline {subsection}{\numberline {4.4}Instantaneous Acceleration}{12}{}%
+\contentsline {subsection}{\numberline {4.5}Summary of Topic}{13}{}%
+\contentsline {section}{\numberline {5}Momentum}{14}{}%
+\contentsline {subsection}{\numberline {5.1}Friction}{14}{}%
+\contentsline {subsection}{\numberline {5.2}Inertia}{14}{}%
+\contentsline {subsection}{\numberline {5.3}What Determines Inertia?}{14}{}%
+\contentsline {subsection}{\numberline {5.4}Systems}{14}{}%
+\contentsline {subsection}{\numberline {5.5}Inertial Standard}{14}{}%
+\contentsline {subsection}{\numberline {5.6}Momentum}{15}{}%
+\contentsline {subsection}{\numberline {5.7}Isolated Systems}{15}{}%
+\contentsline {subsection}{\numberline {5.8}Conservation of Momentum}{15}{}%
+\contentsline {subsection}{\numberline {5.9}Lecture 6 Notes}{15}{}%
+\contentsline {subsection}{\numberline {5.10}Topic Summary and Equations}{16}{}%
+\contentsline {section}{\numberline {6}Kinetic and Internal Energy}{17}{}%
+\contentsline {subsection}{\numberline {6.1}Classification of Collisions}{17}{}%
+\contentsline {subsection}{\numberline {6.2}Kinetic Energy}{17}{}%
+\contentsline {subsection}{\numberline {6.3}Internal Energy}{17}{}%
+\contentsline {section}{\numberline {7}Conservation of Energy}{18}{}%
+\contentsline {subsection}{\numberline {7.1}Closed Systems}{18}{}%
+\contentsline {subsection}{\numberline {7.2}Elastic Collisions}{18}{}%
+\contentsline {subsection}{\numberline {7.3}Inelastic Collisions}{18}{}%
+\contentsline {subsection}{\numberline {7.4}Conservation of Energy}{18}{}%
+\contentsline {subsection}{\numberline {7.5}Explosive Separations}{19}{}%
+\contentsline {subsection}{\numberline {7.6}Topic Summary}{19}{}%
+\contentsline {section}{\numberline {8}Relativity}{20}{}%
+\contentsline {subsection}{\numberline {8.1}Relativity of Motion}{20}{}%
+\contentsline {subsection}{\numberline {8.2}Inertial Reference Frames}{20}{}%
+\contentsline {subsection}{\numberline {8.3}Principle of Relativity}{20}{}%
+\contentsline {section}{\numberline {9}Centre of Mass}{21}{}%
+\contentsline {subsection}{\numberline {9.1}Centre of Mass}{21}{}%
+\contentsline {subsection}{\numberline {9.2}Convertible Kinetic Energy}{21}{}%
+\contentsline {subsection}{\numberline {9.3}Conservation Laws and Relativity}{22}{}%
+\contentsline {section}{\numberline {10}Transfer of Energy}{23}{}%
+\contentsline {subsection}{\numberline {10.1}The Effects of Interactions}{23}{}%
+\contentsline {subsection}{\numberline {10.2}Potential Energy}{24}{}%
+\contentsline {subsection}{\numberline {10.3}Energy Dissipation}{24}{}%
+\contentsline {subsection}{\numberline {10.4}Source Energy}{24}{}%

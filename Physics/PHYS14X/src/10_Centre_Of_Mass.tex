@@ -1,0 +1,168 @@
+\section{Centre of Mass}
+
+    \subsection{Centre of Mass}
+
+        Because phenomena happening in related reference frames are equal such that
+
+        \[
+            m_{A0} = m_{B0} = m_{0},
+        \]
+
+        the \textbf{momenta of an object measured in two reference frames} $A$ and $B$ are related by:
+
+        \begin{align*}
+            \overrightarrow{p}_{A0} &= m_0 \overrightarrow{v}_{A0} \\
+                                    &= m_0 (\overrightarrow{v}_{AB} + \overrightarrow{v}_{B0}) \\
+                                    &= m_0 \overrightarrow{v}_{AB} + \overrightarrow{p}_{B0}
+        \end{align*}
+
+        Similarly,
+
+        \[
+            \overrightarrow{p}_{Asys} = m\overrightarrow{v}_{AB} + \overrightarrow{p}_{Bsys}
+        \]
+
+        and
+
+        \[
+            \vec{p}_{Bsys} = \overrightarrow{p}_{Asys} - m\frac{\overrightarrow{p}_{Asys}}{m}=\overrightarrow{0}
+        \]
+
+        In other words, reference frame $B$ is a zero-momentum reference frame. Together, these equations imply that relative to Earth, the velocity of the zero-momentum reference frame $Z$ for a system of objects is
+        equal to the system's momentum measured in the Earth reference frame divided by the inertia of the system:
+
+        \[
+            \vec{v}_{EZ} = \frac{\vec{p}_{Esys}}{m} \text{ (zero-momentum reference frame)}
+        \]
+
+        The velocity of the zero-momentum reference frame is related to the position of the \textbf{center of mass} of a system. This position is defined as
+
+        \[
+            \vec{r}_{\text{cm}} = \frac{m_1\vec{r}_1 + m_2 \vec_{r}_2 + \dots}{m_1 + m_2 + \dots},
+        \]
+
+        where $\vec{r}_1,\vec{r}_2$ represent the positions of the objects of inertia $m_1, m_2$ in any system. Differentiating both sides of the above equation, we have that:
+
+        \[
+            \vec{v}_{\text{cm}} = \frac{d\vec{r}_{\text{cm}}}{dt}=\frac{m_1 \vec{v}_1 + m_2 \vec{v}_2 + \dots}{m_1 + m_2 + \dots},
+        \]
+
+        where $\vec{v}_\text{cm}$ is the system's \textbf{centre-of-mass velocity}. Note that this velocity is preceisely the velocity of the zero-momentum reference frame in the equation for $\vec{v}_{EZ}$. \\
+
+
+        Because real objects are \textit{extended} rather than \textit{pointlike}, the term "position" of a system or of a real object is not a precise statement unless a fixed reference point in the system or object
+        is specified. The centre of mass allows us to specify this fixed position in a system according to the exact prescription given by earlier equation for $\vec{r}_{\text{cm}}$. The \textbf{centre of mass} is also
+        an important tool for simplifying situations, even for systems with complex motion.
+
+
+
+
+    \subsection{Convertible Kinetic Energy}
+
+        Recall that
+
+        \[
+            \vec{v}_{E0} = \vec{v}_{EZ}+\vec{v}_{Z0}
+        \]
+
+        and that for the zero-momentum reference frame,
+
+        \[
+            \vec{v}_{EZ} = \vec{v}_{\text{m}}.
+        \]
+
+        Then, we can derive an expression for a system of objects that gives the kinetic energy for the system measured in the Earth reference frame in terms of the corresponding kinetic energy $K_{Zsys}$ measured
+        in the zero-momentum reference frame:
+
+        \begin{align*}
+            K_{Esys}    &= \frac{1}{2}m_1 v^2_{E1x} + \frac{1}{2}m_2 v^2_{E2x} + \dots \\
+                        &= \frac{1}{2}m_1 (v_{\text{cm }x}+v_{Z1x})^2 + \frac{1}{2}m_2 (v_{\text{cm}}+v_{z2x})^2 + \dots
+        \end{align*}
+
+        This can be simplified to the \textbf{Kinetic Energy of a system relative to the Earth reference frame:}
+
+        \[
+            K_{Esys} = \frac{1}{2}mv^2_{\text{cm}} + K_{Zsys}
+        \]
+
+        The first term on the right in this equation is called the system's \textbf{translational kinetic energy}. It is the kinetic energy associated with the motino of the center of mass of the system:
+
+        \[
+            K_{\text{cm}} = \frac{1}{2}mv^2_{\text{cm}}
+        \]
+
+        \pagebreak
+
+        The other term on the right of the equation is the system's \textbf{convertible kinetic energy}, the amount that can be converted to internal energy without changing the momentum of the system. It is equal to the
+        system's kinetic energy minus the (nonconvertible) translational kinetic energy:
+
+        \[
+            K_{conv} = K_{Zsys} = K_{Esys} - \frac{1}{2}mv^2_{\text{cm}}
+        \]
+
+        \color{blue} \textbf{The kinetic energy of a system can be split into a convertible part and a nonconvertible part. The nonconvertible part is the system's translational kinetic energy
+        $K_{cm}=\frac{1}{2}mv^2_\text{cm}$. The remainder of the kinetic energy is convertible.} \color{black}
+
+        We can use mu to simplify our equation; if $\mu$ is given by
+
+        \[
+            \mu = \frac{m_1 m_2}{m_1 + m_2},
+        \]
+
+        then the convertible kinetic energy for a two object system is:
+
+        \[
+            K_{conv} = \frac{1}{2}\mu v^2_{12} \text{ (two-object system)},
+        \]
+
+        where
+
+        \[
+            \vec{v}_{12} = \vec{v}_2 - \vec{v}_1 is the relative velocity of the two objects.
+        \]
+
+        The letter mu ($\mu$) is called the \textbf{Reduced inertia} or "reduced mass" because it is less than the inertia of either of the two colliding objects. \\
+
+        For an inelastic collision, $v_{12}$ changes and $K$ does too. Since the change of kinetic energy relative to the centre of mass reference frame is 0 because the system is isolated, its translation kientic
+        energy cannot change. We can write this expression in terms of the coefficient of restitution $e$:
+
+        \begin{align*}
+            \Delta K    &= \frac{1}{2}\mu v^2_{12i} \left(\frac{v^2_{12f}}{v^2_{12i}}-1\right) \\
+                        &= \frac{1}{2} \mu v^2_{12i} (e^2 -1)
+        \end{align*}
+
+        \textit{The maximum change in the system's kinetic energy occurs in a totally inelastic collision ($e=0$)}:
+
+        \[
+            \Delta K = -\frac{1}{2}\mu v^2_{12i} \text{ (totally inelastic collision)}
+        \]
+
+
+
+
+    \subsection{Conservation Laws and Relativity}
+
+        \textit{Changes in the momentum of a system are the same in any two reference frames moving at constant velocity relative to each other:}
+
+        \[
+            \Delta \vec{p}_{Asys} = \Delta \vec{p}_{Bsys}
+        \]
+
+        By the principle of relativity, if a system is isolated in reference frame A, then it is also isolated in reference frame B. Because internal energy is a quantitative measure of a change in state and state
+        changes cannot depend on the motion of the observer, we can conclude that any change in internal energy is independent of the reference frame:
+
+        \[
+            \Delta E_{Aint} = \Delta E_{Bint}
+        \]
+
+        Similarly,
+
+        \[
+            \Delta K_B = \Delta K_A
+        \]
+
+        and thus,
+
+        \begin{align*}
+            \Delta E_{Asys} = \Delta E_{Bsys}
+        \end{align*}
