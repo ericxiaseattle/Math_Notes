@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  22 OCT 2020 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  3 NOV 2020 17:32
 entering extended mode
 **./PHYS14X_Notes.tex
 (PHYS14X_Notes.tex
@@ -1115,7 +1115,13 @@ ativity.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\10_Ce
 ntre_Of_Mass.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\11_Tr
-ansfer_Of_Energy.aux"))
+ansfer_Of_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\12_Gr
+avitational_Potential_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\13_Fo
+rces.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\16_Wo
+rk.aux"))
 \openout1 = `PHYS14X_Notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -1898,15 +1904,207 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
  []
 
 ) [24]
+\openout2 = `12_Gravitational_Potential_Energy.aux'.
 
-PHYS14X_Notes.tex:62: LaTeX Error: \begin{align*} on input line 179 ended by \e
+ (12_Gravitational_Potential_Energy.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+
+Overfull \hbox (51.30382pt too wide) in paragraph at lines 29--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+[25
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+) [26]
+\openout2 = `13_Forces.aux'.
+
+ (13_Forces.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+
+ []
+
+[27
+
+
+
+]
+<Resources/FBDs.jpg, id=178, 497.4585pt x 434.22224pt>
+File: Resources/FBDs.jpg Graphic file (type jpg)
+<use Resources/FBDs.jpg>
+Package pdftex.def Info: Resources/FBDs.jpg  used on input line 93.
+(pdftex.def)             Requested size: 497.45728pt x 434.22118pt.
+
+Overfull \hbox (13.24739pt too wide) in paragraph at lines 93--94
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
+
+ []
+
+[28 <./Resources/FBDs.jpg>]
+13_Forces.tex:144: Undefined control sequence.
+\__hook env/quote/begin ->\singlespacing 
+                                         \small \__hook_next env/quote/begin 
+l.144             \begin{quote}
+                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+13_Forces.tex:149: Undefined control sequence.
+\__hook env/quote/begin ->\singlespacing 
+                                         \small \__hook_next env/quote/begin 
+l.149             \begin{quote}
+                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+13_Forces.tex:154: Undefined control sequence.
+\__hook env/quote/begin ->\singlespacing 
+                                         \small \__hook_next env/quote/begin 
+l.154             \begin{quote}
+                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+13_Forces.tex:285: Extra \right.
+l.285 ...        \vec{J} = left(\sum\vec{F}\right)
+                                                   \Delta t \text{ (constant...
+I'm ignoring a \right that had no matching \left.
+
+[30]) [31]
+\openout2 = `16_Work.aux'.
+
+ (16_Work.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+<Resources/Work.jpg, id=192, 263.18324pt x 128.27925pt>
+File: Resources/Work.jpg Graphic file (type jpg)
+<use Resources/Work.jpg>
+Package pdftex.def Info: Resources/Work.jpg  used on input line 21.
+(pdftex.def)             Requested size: 263.1826pt x 128.27893pt.
+<Resources/System_work.jpg, id=193, 552.8655pt x 311.36325pt>
+File: Resources/System_work.jpg Graphic file (type jpg)
+<use Resources/System_work.jpg>
+Package pdftex.def Info: Resources/System_work.jpg  used on input line 31.
+(pdftex.def)             Requested size: 552.86414pt x 311.36249pt.
+
+Overfull \hbox (68.65425pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+16_Work.tex:37: Undefined control sequence.
+\__hook env/quote/begin ->\singlespacing 
+                                         \small \__hook_next env/quote/begin 
+l.37         \begin{quote}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [32
+
+
+
+ <./Resources/Work.jpg> <./Resources/System_work.jpg>]
+
+PHYS14X_Notes.tex:65: LaTeX Error: \begin{align*} on input line 179 ended by \e
 nd{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 \end{document}
+l.65 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1934,16 +2132,22 @@ ativity.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\10_Ce
 ntre_Of_Mass.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\11_Tr
-ansfer_Of_Energy.aux")) )
+ansfer_Of_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\12_Gr
+avitational_Potential_Energy.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\13_Fo
+rces.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\PHYS14X\out\16_Wo
+rk.aux")) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 179 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38673 strings out of 480236
- 973942 string characters out of 2890395
- 1414663 words of memory out of 3000000
- 54352 multiletter control sequences out of 15000+200000
+ 38731 strings out of 480236
+ 976196 string characters out of 2890395
+ 1416791 words of memory out of 3000000
+ 54386 multiletter control sequences out of 15000+200000
  548613 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,20n,127p,737b,2188s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1966,9 +2170,9 @@ X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
 onts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfon
 t/line10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-PHYS14X\out\PHYS14X_Notes.pdf" (24 pages, 1052431 bytes).
+PHYS14X\out\PHYS14X_Notes.pdf" (32 pages, 1460051 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
+ 259 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

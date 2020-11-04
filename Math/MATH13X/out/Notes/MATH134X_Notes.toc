@@ -12,3 +12,9 @@
 \contentsline {subsection}{\numberline {4.2}Limits at Infinity and Asymptotes}{10}{}%
 \contentsline {subsection}{\numberline {4.3}Differentials and Linear Approximations}{10}{}%
 \contentsline {subsection}{\numberline {4.4}Newton-Raphson Approximations}{10}{}%
+\contentsline {section}{\numberline {5}Integration}{11}{}%
+\contentsline {subsection}{\numberline {5.1}Riemann Sums}{11}{}%
+\contentsline {subsection}{\numberline {5.2}The Definition of the Integral}{11}{}%
+\contentsline {subsection}{\numberline {5.3}u-Substitution}{11}{}%
+\contentsline {section}{\numberline {6}Applications of Integration}{13}{}%
+\contentsline {subsection}{\numberline {6.1}Acceleration, Velocity, and Position}{13}{}%

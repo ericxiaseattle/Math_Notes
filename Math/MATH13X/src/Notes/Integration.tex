@@ -1,0 +1,38 @@
+\section{Integration}
+
+    \subsection{Riemann Sums}
+
+        In both problems, we are going to take the intervals $\Delta x$ or $\Delta t$ to 0 and hope that the sums have a \textit{limit}. To guarantee the \textit{existance} of that limit and hence of the \textit{integral},
+        we need some conditions: \\
+
+        \textbf{Definition}: A function $f$ is \textbf{uniformly continuous on an interval $I$} if: \\
+        For every $\epsilon > 0$ there is a $\delta > 0$ such that $|x-y|<\delta$ implies $|f(x)-f(y)|<\epsilon$ for any $x,y$ in the interval $I$. \\
+
+        \textbf{Example:} The function $f(x)=\frac{1}{x}$ is continuous on $I=(0,1)$ but not uniformly continuous there. \\
+
+    \subsection{The Definition of the Integral}
+
+        \textbf{The Integrability Theorem Definition of the Riemann Integral:} \\
+        If $f$ is continuous on $[a,b]$, then there is a unique number $I = \int^b_a f(x)dx$ such that $L_f (P) \leq I \leq U_f (P)$ for any partition $P$. $L$ is the lower bound and $U$ is the upper bound. \\
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Integral_Def}
+        \end{figure*}
+
+    \subsection{u-Substitution}
+
+        \textbf{u-Substitution} is the reverse of the chain rule. \\
+
+        \textit{Example 1:} $\int 2x (x^2 + 4)^{2020}dx$
+
+        \[
+            u = x^2 + 4, du = 2x dx
+        \]
+
+        Then
+
+        \[
+            \int u^{2020} du = \frac{u^{2021}}{2021} + C = \frac{(x^2 + 4)^{2021}}{2021} + C
+        \]
+

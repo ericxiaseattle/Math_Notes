@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  23 OCT 2020 18:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  3 NOV 2020 17:33
 entering extended mode
 **./MATH134X_Notes.tex
 (MATH134X_Notes.tex
@@ -1197,7 +1197,11 @@ If that doesn't work, type  X <return>  to quit.
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
 \Derivatives.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Applications_Of_Derivatives.aux"))
+\Applications_Of_Derivatives.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
+\Integration.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
+\Applications_Of_Integration.aux"))
 \openout1 = `MATH134X_Notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1473,6 +1477,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
 
 ]
+\openout2 = `Integration.aux'.
+
+ (Integration.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+<Integral_Def.png, id=88, 517.935pt x 549.252pt>
+File: Integral_Def.png Graphic file (type png)
+<use Integral_Def.png>
+Package pdftex.def Info: Integral_Def.png  used on input line 20.
+(pdftex.def)             Requested size: 517.93372pt x 549.25066pt.
+
+Overfull \hbox (33.72383pt too wide) in paragraph at lines 20--21
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+[11
+
+
+
+ <./Integral_Def.png>]) [12]
+\openout2 = `Applications_Of_Integration.aux'.
+
+ (Applications_Of_Integration.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+) [13
+
+
+
+]
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
 \MATH134X_Notes.aux"
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
@@ -1482,12 +1540,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
 \Derivatives.aux")
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
-\Applications_Of_Derivatives.aux")) ) 
+\Applications_Of_Derivatives.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
+\Integration.aux")
+("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
+\Applications_Of_Integration.aux")) ) 
 Here is how much of TeX's memory you used:
- 38877 strings out of 480236
- 977739 string characters out of 2890395
- 1404234 words of memory out of 3000000
- 54592 multiletter control sequences out of 15000+200000
+ 38908 strings out of 480236
+ 979158 string characters out of 2890395
+ 1405648 words of memory out of 3000000
+ 54608 multiletter control sequences out of 15000+200000
  548314 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,13n,138p,739b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1507,9 +1569,9 @@ amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-MATH13X\out\Notes\MATH134X_Notes.pdf" (10 pages, 230899 bytes).
+MATH13X\out\Notes\MATH134X_Notes.pdf" (13 pages, 470958 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
+ 149 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
