@@ -1,0 +1,143 @@
+\section{Projectile Motion}
+
+    \subsection{Projectile Motion in Two Dimensions}
+
+        The concept of decomposing vectors into components allows us to separate motion in a plane into two one-dimensional problems. Hence, for a projectile launched with initial velocity $\vec{v}_i$ from point
+        $\left(x_i, y_i\right)$, we have
+
+        \[
+            x_f = x_i + v_{x,i} \Delta t \text{ (constant velocity)}
+        \]
+
+        and
+
+        \[
+            y_f = y_i + v_{y,i} \Delta t - \frac{1}{2} g\left(\Delta t\right)^2
+        \]
+
+
+
+    \subsection{Collisions and Momentum in Two Dimensions}
+
+        The momentum equations for one dimension are the same for two dimensions. For a collision in an isolated system of two objects of inertia $m_1$ and $m_2$, we have
+
+        \[
+            \Delta p_x = \Delta p_{1x} + \Delta p_{2x} = m_1(v_{1x,f} - v_{1x,i}) + m_2(v_{2x,f} - v_{2x,i}) = 0
+        \]
+
+        and
+
+        \[
+            \Delta p_y = \Delta p_{1y} + \Delta p_{2y} = m_1 (v_{1y,f} - v_{1y,i}) + m_2 (v_{2y,f} - v_{2y,i}) = 0
+        \]
+
+
+
+
+
+    \subsection{Work as the Product of Two Vectors}
+
+        For an object on an inclined plane, the weight can be split into 2 components: \\
+        $\bullet$ $mg\sin{\theta}$, which acts parallel to the plane and downhill \\
+        $\bullet$ $mg\cos{\theta}$, which acts perpendicular and into the plane \\
+
+        It follows that the magnitude of the downward acceleration of an object on an inclined plane is given by
+
+        \[
+            a_x = \frac{\sum F_x}{m} = \frac{F^G_{Eb x}}{m} = \frac{+mg\sin{\theta}}{m} = +g\sin{\theta}
+        \]
+
+        In order for a block on an inclined plane to drop a vertical distance $h$, its displacement along the incline must be
+
+        \[
+            \Delta x = +\frac{h}{\sin{\theta}}
+        \]
+
+        The time the block takes to cover this distance is obtained from the following equation:
+
+        \[
+            \Delta x = v_{x,i} \Delta t + \frac{1}{2}a_x \left(\Delta t\right)^2 = 0 + \frac{1}{2}g\sin{\theta}\left(\Delta t\right)^2
+        \]
+
+        Simplifying and rearranging, it follows that
+
+        \[
+            \left(\Delta t\right)^2 = \frac{2h}{g\sin^2{\theta}}
+        \]
+
+        Using the formula for kinetic energy and the work-energy theorem, we have that
+
+        \[
+            W = \Delta K = K_f - K_i = \frac{1}{2}mv^2_{x,f} - 0 = mgh
+        \]
+
+        This can be stated more compactly by definining a \textbf{scalar product} of two vectors, where $\phi$ is the angle between them:
+
+        \[
+            \vec{A} \cdot \vec{B} = AB\cos{\phi}
+        \]
+
+        Using this definition of a scalar product, work can be written as a scalar product like so:
+
+        \[
+            W = \vec{F} \cdot \Delta \vec{r}_F \text{ (constant nondissipative force)}
+        \]
+
+        Since $\cos{90} = 0$, for a block sliding down an incline, the normal force does no work and the work done by the force of gravity on the block is
+
+        \[
+            W = \vec{F}^G_{Eb} \cdot \Delta \vec{r}_F = (mg)\left(\frac{h}{\sin{\theta}}\right)\cos{\phi},
+        \]
+
+        where $\theta$ is the angle of the incline and $\phi$ is the angle between $\vec{F}^G_{Eb}$ and $\Delta \vec{r}_F$.
+
+        Additionally,
+
+        \[
+            W = \int_{\vec{r}_i}^{\vec{r}_f} \vec{F}\left(\vec{r}\right)\cdot d\vec{r} \text{ (variable nondissipative force)}
+        \]
+
+        and
+
+        \[
+            \Delta E_{\text{th}} = -\int_{\vec{r}_i}^{\vec{r}_f} \vec{F} \left(\vec{r}_{\text{cm}}\right)\cdot d\vec{r}_{\text{cm}} \text{ (variable dissipative force)}
+        \]
+
+\pagebreak
+
+    \subsection{Coefficients of Friction}
+
+        \textit{The maximum force of static friction exerted by a surface on an object is proportional to the force with which the object presses on the surface and does not depend on the contact area.} For any two
+        surfaces 1 and 2, we can write
+
+        \[
+            \left(F^s_{12}\right)_{\text{max}} = \mu_s F^n_{12},
+        \]
+
+        where $\mu_s$ is the unitless proportionality constant called the \textbf{coefficient of static friction}. We have
+
+        \[
+            \mu_s = \frac{F^G_{Eb x}}{F^G_{Eb y}}
+        \]
+
+        and
+
+        \[
+            \mu_s = \tan{\theta_{\text{max}}}
+        \]
+
+        In any given situation in which the static force is present but has not reached its maximum value is that the magnitude of the force of static friction exerted by surface 1 on surface 2 must obey the condition
+
+        \[
+            F^s_{12} \lewq \mu_s F^n_{12}
+        \]
+
+        From experimental data, we have that
+
+        \[
+            F^k_{12} = \mu_k F^n_{12},
+        \]
+
+        where $\mu_k$ is called the \textbf{coefficient of kinetic friction}. The coefficient of kinetic friction is always smaller than the coefficient of static friction because otherwise an object would never slip
+        because it would stop slipping the instant it starts slipping.
+

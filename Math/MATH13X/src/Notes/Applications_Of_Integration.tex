@@ -1,9 +1,298 @@
 \section{Applications of Integration}
 
-    \subsection{Acceleration, Velocity, and Position}
+    \subsection{General Steps for Applications of Integration Problems}
 
-        \color{blue} \textit{Example 1: You are in a tall building, looking out the window 35 metres above ground. You toss a tomato vertically up at an initial speed of 10 meters per second. Ignoring air resistance,
-        when will the tomato reach its maximum height, what is the maximum height and when will it hit the ground? What is the distance the tomato travels until it hits the ground?} \color{black} \\
+    1. Chop up the quantity $Q = \sum \Delta Q$ \\
+    2. Estimate $\Delta Q$ \\
+    3. Sum $dQ$ by integrating
+
+    \color{blue} \textit{Example: A rod 6 metres long is placed on the $x$-axis from $x=0$ to $x=6$. The mass density function is $\lambda (x) = \frac{12}{\sqrt{x+1}}$. \\
+    $\bullet$ What is the total mass? \\
+    $\bullet$ Where is the centre of mass? \\
+    $\bullet$ What is the average density?}
+    \color{black} \\
+
+    fill in later
+
+    \subsection{Centre of Mass}
+
+    For a rod with varying density,
+
+    \[
+        \text{Centre of mass } = \frac{\text{moment}}{\text{total mass}},
+    \]
+
+    where
+
+    \[
+        \text{moment } = \int_a^b x\cdot \lambda (x)
+    \]
+
+    Additionally,
+
+    \[
+        \text{Average density } = \frac{\text{mass}}{\text{interval of integration}}
+    \]
+
+
+
+\subsection{Centroid of a Region and Pappus's Theorem on Volumes (6.4)}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.5]{pappus}
+        \end{figure*}
+
+        \color{blue} \textit{Example: Find the centroid of a quarter disk of radius $r$ (put it in the first quadrant for computations)} \color{black}
+
+    \subsection{Work (6.5)}
+
+        If force $F$ is constant, when you move an object a distance $x$, the work done is
+
+        \[
+            W = F \cdot x
+        \]
+
+        So if I am to use my three steps for integration applications, how do I "chop up" work to get $\Delta W$?
+
+        \[
+            \Delta Work = F(x) \Delta x
+        \]
+
+        It follows that
+
+        \[
+            W   = \int_a^b F(x)dx
+        \]
+
+        \color{blue} \textit{Example: It requires 6N to keep a spring stretched 0.2m beyond its natural length. Find the work done to stretch it from its original length of 0.7m to length of 1m.} \color{black}
+
+        We have
+
+        \[
+            6 = k(0.2) \implies k = 30
+        \]
+
+        Then the work needed is
+
+        \[
+            W = \int_0^{0.3=1-0.7} 30xdx
+        \]
+
+        \color{blue} \textit{Example 2: A sandbag is pulled from ground level to the top of a 32m building by a cable that is 0.2 kg/m. Initially the sandbag has a mass of 52kg but it leaks at a constant rate so when it
+        reaches the roof its mass is 36kg. Find the work done.} \color{black}
+
+        We have
+
+        \[
+            W = \int_0^{32} F(y) dy,
+        \]
+
+        where $F(y)$ is the cable's weight and $y$ is the sand. The cable's weight is
+
+        \[
+            (32-y)0.2g
+        \]
+
+        and the rate of change is
+
+        \[
+            \frac{36-52}{32}=-0.5
+        \]
+
+        So our work is
+
+        \[
+            W = \int_0^{32} \left[(32-y)0.2g+(-0.5y+52)g\right]dy
+        \]
+
+    \subsection{One-to-one Functions}
+
+        \textbf{Theorem:} if a function $f$ is one-to-one, then there is a unique function, dentoed $f^{-1}$, defined on the range of $f$, such that $f\left(f^{-1}(x)\right) = x$ for all $x$ in the range of $f$ and
+        $f^{-1}\left(f(x)\right)=x$ for all $x$ in the domain of $f$.
+
+
+    \subsection{The Natural Logarithm and Euler's Constant}
+
+        For $x>0$, the natural logarithm function is defined by
+
+        \[
+            \ln{x} = \int_1^x \frac{1}{t}dt
+        \]
+
+        Because $\ln{x}$ is increasing and differentiable on its domain, it follows that when $x>1$,
+
+        \[
+            \int_1^x \frac{1}{t}dt > 0
+        \]
+
+        and $\ln{x}>0$. Similarly, when $x<1$,
+
+        \[
+            \int_1^x \frac{1}{t}dt < 0
+        \]
+
+        and $\ln{x}>0$. \\
+
+        \blue{\textbf{Proofs of some Properties of the Natural Logarithm:}} \\
+        If $a,b>0$ and $r$ is a rational number, then \\
+        i. $\ln{1} = 0$ \\
+        ii. $\ln{(ab)} = \ln{a} + \ln{b}$ \\
+        iii. $\ln{\left(\frac{a}{b}\right)} = \ln{a} - \ln{b}$
+
+        \textbf{i.} By definition,
+
+        \[
+            \ln{1} = \int_1^1 \frac{1}{t}dt = 0.
+        \]
+
+        \textbf{ii.} We have
+
+        \[
+            \ln{\left(ab\right)} = \int_1^{ab} \frac{1}{t}dt = \int_1^a \frac{1}{t}dt + \int_a^{ab} \frac{1}{t}dt.
+        \]
+
+        Using $u$-substitution on the last integral in this expression, let $u=\frac{t}{a}\implies du = \frac{dt}{a}$. When $t=a,$ $u=1$, and when $t=ab$, $u=b$. It follows then that
+
+        \[
+            \ln{(ab)} = \int_1^a \frac{1}{t}dt + \int_a^{ab} \frac{1}{t}dt = \int_1^a \frac{1}{t}dt + \int_1^{ab} \frac{a}{t}\cdot\frac{1}{a}dt = \int_1^a \frac{1}{t}dt + \int_1^b \frac{1}{u}du = \ln{a} + \ln{b}
+        \]
+
+        \textbf{iii.} Note that
+
+        \[
+            \frac{d}{dx}\ln{\left(x^r\right)} = \frac{rx^{r-1}}{x^r} = \frac{r}{x}
+        \]
+
+        Furthermore,
+
+        \[
+            \frac{d}{dx}\left(r\ln{x}\right) = \frac{r}{x}
+        \]
+
+        Since the derivatives of these two functions are the same, then by the FTC, they must differ by a constant s.t.
+
+        \[
+            \ln{\left(x^r\right)} = r\ln{x} + C
+        \]
+
+        for some constant $C$. Setting $x=1$, it follows that
+
+        \begin{align*}
+            \ln{\left(1^r\right)}   &= r\ln{(1)} + C \\
+            0                       &= r(0) + C \\
+            C                       &= 0
+        \end{align*}
+
+        Hence, $\ln{\left(x^r\right)} = r\ln{x}$. \\
+
+        There is a function, $f(z)$ which is the inverse of $\ln{x}$ with domain $\mathbb{R}$ and range $\mathbb{R}^{-1}$. $\ln{x}$ is an increasing function on its domain, so it is injective and hence, there is an
+        unique function $f(x)$ on the domain $\left(-\infty, \infty\right)$ and range $\left(0,\infty\right)$. This function has the following values:
+
+        \[
+            f(1) = e \text{ because } \ln{e} = 1 \\
+            f(0) = 1 \text{ because } \ln{1} = 0
+        \]
+
+        when $b\in \alpha$, $f(b) = e^b$ because $\ln{e^b} = b\ln{e} = b$. \\
+
+        \color{\textbf{Properties of $f(x) = e^x$}}: \\
+        i. $e^x$ is increasing because it is the inverse of an increasing function \\
+        ii. $f^{-1}\left(f(x)\right) = x$, any invertible function
+
+    \subsection{Exponential and Logarithmic Functions}
+
+        Since
+
+        \[
+            x^{\frac{p}{q}} = \left(x^p\right)^{\frac{1}{q}},
+        \]
+
+        we have
+
+        \begin{align*}
+            f(x)    &= x^r, r\in \mathbb{R} \\
+                    &= e^{r\ln{x}},x > 0 \\
+                    &= e^{\frac{p}{q}\ln{x}} \\
+                    &= e^{\ln{\left(x^{\frac{p}{q}}\right)}}
+        \end{align*}
+
+        \textbf{Defining $a^x$ and $\log_a {x}$}:
+
+        \begin{align*}
+            a^x &= e^{x\ln{a}} \\
+            \frac{d}{dx}a^x &= \frac{d}{dx}e^{x\ln{a}} \\
+                            &= e^{x\ln{a}}\cdot\ln{a} \\
+                            &= (\ln{a})a^x
+        \end{align*}
+
+        Additionally,
+
+        \[
+            \log_a {x} = \frac{\ln{x}}{\ln{a}}
+        \]
+
+
+
+
+
+    \subsection{Error in Linear Approximations}
+
+        From HW question:
+
+        \[
+            f(x) = f(b) + f'(b)(x-b) + \int_b^x f''(t)(x-t)dt
+        \]
+
+        Note that $f(x)$ is the actual function value, whereas $f(b)+f'(b)(x-b)$ is the linear approximated value. Thus, the error is the actual value minus the approximated value s.t.
+
+        \[
+            f(x) - L(x) = \int_b^x f''(t)(x-t)dt
+        \]
+
+        We want to bound the error. If $b < x$,
+
+        \[
+            b < t < x \implies x - t > 0
+        \]
+
+        and
+
+        \[
+            \int_b^x f''(t)(x-t)dt \leq \int_b^x |f''(t)| (x-t)dt
+        \]
+
+        Let $M$ be a (positive) number such that
+
+        \[
+            |f''(t)| \leq M
+        \]
+
+        when $t$ is between $b$ and $x$. Then,
+
+        \begin{align*}
+            \int_b^x f''(t)(x-t)dt  &\leq \int_b^x M\cdot (x-t) dt \\
+                                    &= -\frac{M(x-t)^2}{2} \Big|_b^x \\
+            u = x-t, du = -dt       \\
+                                    &= \frac{M(x-b)^2}{2}
+        \end{align*}
+
+        It follows that
+
+        \[
+            \left|\int_b^x f''(t)(x-t)dt\right| \leq \frac{M|x-b|^2}{2}
+        \]
+
+        This is known as Taylor's Inequality, where $M$ is an upper bound for $|f''(t)|$ when $t$ is between $x$ and $b$.
+
+
+    \subsection{Numerical Integration}
+
+        
+
+
+
+
 
 
 

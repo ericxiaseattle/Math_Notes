@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  3 NOV 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.6)  30 NOV 2020 11:41
 entering extended mode
 **./MATH134X_Notes.tex
 (MATH134X_Notes.tex
@@ -1522,15 +1522,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 \openout2 = `Applications_Of_Integration.aux'.
 
  (Applications_Of_Integration.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-) [13
+<pappus.png, id=95, 858.8085pt x 336.0555pt>
+File: pappus.png Graphic file (type png)
+<use pappus.png>
+Package pdftex.def Info: pappus.png  used on input line 43.
+(pdftex.def)             Requested size: 429.4032pt x 168.02733pt.
+[13
 
 
 
-]
+ <./pappus.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+Applications_Of_Integration.tex:199: Use of \@undeclaredcolor doesn't match its
+ definition.
+\text@command #1->\def \reserved@a {
+                                    #1}\ifx \reserved@a \@empty \let \check@...
+l.199 ...olor{\textbf{Properties of $f(x) = e^x$}}
+                                                  : \\
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Applications_Of_Integration.tex:199: You can't use `\/' in vertical mode.
+\fix@penalty ...m \lastpenalty =\z@ \@@italiccorr 
+                                                  \else \count@ \lastpenalty...
+l.199 ...olor{\textbf{Properties of $f(x) = e^x$}}
+                                                  : \\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Applications_Of_Integration.tex:199: Extra }, or forgotten \endgroup.
+<recently read> \egroup 
+                        
+l.199 ...olor{\textbf{Properties of $f(x) = e^x$}}
+                                                  : \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Applications_Of_Integration.tex:199: Extra }, or forgotten \endgroup.
+\XC@edef ...=13 \edef >{\string >}\fi \edef #1{#2}
+                                                  \@onelevel@sanitize #1\aft...
+l.199 ...olor{\textbf{Properties of $f(x) = e^x$}}
+                                                  : \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Applications_Of_Integration.tex:199: Package xcolor Error: Undefined color `\pr
+otect \unhbox \voidb@x \bgroup \def Properties of $f(x) = e^x$'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.199 ...olor{\textbf{Properties of $f(x) = e^x$}}
+                                                  : \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[15]) [16]
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
 \MATH134X_Notes.aux"
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
@@ -1546,10 +1622,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 ("C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\MATH13X\out\Notes
 \Applications_Of_Integration.aux")) ) 
 Here is how much of TeX's memory you used:
- 38908 strings out of 480236
- 979158 string characters out of 2890395
- 1405648 words of memory out of 3000000
- 54608 multiletter control sequences out of 15000+200000
+ 38916 strings out of 480236
+ 979319 string characters out of 2890395
+ 1405649 words of memory out of 3000000
+ 54616 multiletter control sequences out of 15000+200000
  548314 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,13n,138p,739b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1557,21 +1633,23 @@ Here is how much of TeX's memory you used:
 c/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb>
+m Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "C:/Users\ericx\OneDrive - UW\CS_Stuff\LaTeX_Projects\School\
-MATH13X\out\Notes\MATH134X_Notes.pdf" (13 pages, 470958 bytes).
+MATH13X\out\Notes\MATH134X_Notes.pdf" (16 pages, 694708 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 171 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

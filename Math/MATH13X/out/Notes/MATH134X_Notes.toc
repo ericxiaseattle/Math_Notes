@@ -17,4 +17,12 @@
 \contentsline {subsection}{\numberline {5.2}The Definition of the Integral}{11}{}%
 \contentsline {subsection}{\numberline {5.3}u-Substitution}{11}{}%
 \contentsline {section}{\numberline {6}Applications of Integration}{13}{}%
-\contentsline {subsection}{\numberline {6.1}Acceleration, Velocity, and Position}{13}{}%
+\contentsline {subsection}{\numberline {6.1}General Steps for Applications of Integration Problems}{13}{}%
+\contentsline {subsection}{\numberline {6.2}Centre of Mass}{13}{}%
+\contentsline {subsection}{\numberline {6.3}Centroid of a Region and Pappus's Theorem on Volumes (6.4)}{13}{}%
+\contentsline {subsection}{\numberline {6.4}Work (6.5)}{13}{}%
+\contentsline {subsection}{\numberline {6.5}One-to-one Functions}{14}{}%
+\contentsline {subsection}{\numberline {6.6}The Natural Logarithm and Euler's Constant}{14}{}%
+\contentsline {subsection}{\numberline {6.7}Exponential and Logarithmic Functions}{15}{}%
+\contentsline {subsection}{\numberline {6.8}Error in Linear Approximations}{15}{}%
+\contentsline {subsection}{\numberline {6.9}Numerical Integration}{16}{}%
