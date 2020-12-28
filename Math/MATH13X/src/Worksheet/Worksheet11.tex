@@ -1,0 +1,237 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Worksheet 11}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Worksheet 11}}\\
+    \normalsize\vspace{0.1in}\small{Due on December 11, 2020}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{2}{\rhead{Problem 1A}}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+    \thispagestyle{2}
+
+
+    \begin{tbhtheorem}{Problem 1}
+        (a) Keeping in mind that the velocity is $v(t) = x'(t) = \frac{dx}{dt}$, acceleration is $a(t) = \frac{dv}{dt} = x''(t)$ and using the equation $x'' + {\omega}^2 x=0$ together with the chain rule show that
+
+        \[
+            \frac{dv}{dx} = -\frac{1}{v}\cdot {\omega}^2 x
+        \]
+
+        (b) Now use separation of variables together with the initial conditions $x(0) = x_0$ and $v(0) = 0$ to get an equation for $v$ in terms of $x$. (What is the sign of $v?$) \\
+        (c) From $\frac{dx}{dt} = v$, it follows that $dt = \frac{dx}{v}$. Compute the integral
+
+        \[
+            \int_{x=x_0}^{x=0} dt
+        \]
+
+        (with $x$ being your varialbe of integration) to show that the time it takes the object to reach the origin is
+
+        \[
+            \frac{\pi}{2\omega}
+        \]
+
+        which you can see is independent of the starting position $x_0$!
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    By definition,
+
+    \begin{align*}
+        x'              &= \frac{dx}{dt} \\
+        \frac{1}{x'}    &= \frac{dt}{dx} \\
+        \frac{1}{v}     &= \frac{dt}{dx}
+    \end{align*}
+
+    Since $x'' = \frac{dv}{dt}$ we can rewrite the given equation in Leibniz notation and plug in $\frac{dt}{dx} = \frac{1}{v}$:
+
+    \begin{align*}
+        \frac{dv}{dt}       + \omega^2 x        &= 0 \\
+        \frac{dv}{dt} \cdot \frac{dt}{dx}       &= -\omega^2 x \cdot \frac{dt}{dx} \\
+        \frac{dv}{dx}                           &= -\frac{1}{v} \omega^2 x
+    \end{align*}
+
+    \textbf{(b)}
+
+    \begin{align*}
+        \frac{dv}{dx}   &= -\frac{1}{v} \cdot \omega^2 x \\
+        \int vdv        &= -\omega^2 \int x dx \\
+        \frac{v^2}{2} + C_1     &= -\frac{\omega^2}{2}x^2 + C_2 \\
+        \text{$C_1$ and $C_2$ are arbitary, let } C &= C_2 - C_1 \\
+        \frac{v^2}{2}   &= -\frac{\omega^2}{2}x^2 + C \\
+        v^2             &= -\omega^{2}x^2 + 2C
+    \end{align*}
+
+    Since $C$ is arbitrary, redefine $C$ from $2C$, substituting in the initial-value $(x_0,0)$. This initial value is since $x(t)$ and $v(t)$ are functions of $t$ which we do not consider in the new function $v(x)$.
+
+    \begin{align*}
+        v^2 &= -\omega^2 x^2 + C \\
+        0   &= -\omega^2 x_0^2 + C \\
+        C   &= \omega^2 x_0^2
+    \end{align*}
+
+    Plugging this value in for $C$,
+
+    \begin{align*}
+        v^2 &= -\omega^2 x^2 + \omega^2 x_0^2
+    \end{align*}
+
+    Since $v$ should be negative,
+
+    \begin{align*}
+        v(x)    &= -\sqrt{\omega^2 x_0^2 - \omega^2 x^2} \\
+                &= -\omega\sqrt{x_0^2 - x^2}
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{3}
+
+    \textbf{(c)}
+
+    \begin{align*}
+        \int_{x=x_0}^{x=0}dt    &= \int_{x=x_0}^{x=0} \frac{dx}{v} \\
+                                &= \int_{x_0}^{0} \frac{dx}{-\omega\sqrt{x_0^2 - x^2}} \\
+                                &= -\frac{1}{\omega}\int_{x_0}^0 \frac{dx}{\sqrt{x_0^2-x^2}} \\
+                                &= -\frac{1}{\omega}\int_{x_0}^0 \frac{dx}{x_0\sqrt{1-\left(\frac{x}{x_0}\right)^2}} \\
+        u = \frac{x}{x_0}       &\implies du = \frac{dx}{x_0} \\
+                                &= -\frac{x_0}{\omega x_0} \int_{x_0}^0 \frac{du}{\sqrt{1-u^2}} \\
+                                &= -\frac{1}{\omega}\arcsin{u}\Big|_1^0 \\
+                                &= \frac{1}{\omega} \cdot \frac{\pi}{2} \\
+                                &= \frac{\pi}{2\omega}
+    \end{align*}
+
+
+
+
+    \begin{tbhtheorem}{Problem 2}
+        Now we solve the initial value problem $x'' + {\omega}^2 x = 0$, $x(0) = x_0$, $x'(0) = 0$. \\
+        (a) Start by thinking about, i.e. guess, two familiar functions $f(t)$ and $g(t)$ which are solutions of $x'' + {\omega}^2 x = 0$. You can think about the simpler case $\omega = 1$ first. Then,
+        $C_1 f(t) + C_2 g(t)$ will be the general solution to $x'' + {\omega}^2 x = 0$. \\
+        (b) Use your result above together with $x(0) = x_0$, $x'(0) = 0$ to show that the solution to the initial value problem is
+
+        \[
+            x(t) = x_0 \cos{\left(\omega t\right)}
+        \]
+    \end{tbhtheorem}
+
+    \textbf{(a)}
+
+
+
+
+
+
+
+
+
+    \pagebreak
+
+    \begin{tbhtheorem}{Problem 3}
+        Now we are moving onto two dimensions with a parametric curve $\left(x(\theta), y(\theta)\right)$. The object is sliding down, under (constant) gravitational force on this curve. The length of the curve from its
+        lowest point is the arclength $s(t)$. If the arclength satisfies the initial value problem
+
+        \[
+            s'' + {\omega}^2 s = 0, s(0) = s_0, s'(0) = 0
+        \]
+
+        then the time it takes for the object to reach the bottom will be independent of $s_0$, where it starts in the curve, as established above. We want to find the parametric equations of a curve whose arclength
+        satisfies this differential equation where the acceleration is the result of a constant gravitational force. \\
+
+        A component of the gravitational force is normal to the curve and cancels out with the reaction force $F_N$ from the surface of its path. The tangential component of the gravitational force $F_T$ causes the
+        acceleration $s''$. Let $\theta$ be the angle the tangent to the curve makes with the $x$-axis as shown (negative in the picture). \\
+
+        (a) Compute $F_T$ in terms of the gravitational force $mg$ and $\theta$. \\
+        (b) Use the fact that $s'' + {\omega}^{2}s = 0$ (and $F=ma$) to relate $\theta$ and $s$. \\
+        (c) Differentiate your result above to get
+
+        \[
+            ds = \frac{g}{{\omega}^2}\cos{\theta}
+        \]
+
+        (d) Relate the slope of the curve $\frac{dy}{dx}$ to the angle $\theta$. \\
+        (e) Use the definition of the arclength differential $ds$ to show
+
+        \[
+            ds = \frac{dx}{\cos{\theta}} \text{ and } ds = \frac{dy}{\sin{\theta}}
+        \]
+
+        (f) Now use your results in (c) and (e) above to express $dx$ and $dy$ in the form $F(\theta)d\theta$ ready to integrate with respect to $\theta$. \\
+        (g) Integrate to get $x$ and $y$ with $\theta$ as a parameter to get
+
+        \[
+            x = \frac{g}{4\omega^2}(2\theta - \sin{2\theta}) + C_x \text{ and } y = -\frac{g}{4\omega^2}\cos{2\theta} + C_y
+        \]
+
+        where $C_x$ and $C_y$ are the integration constants.
+    \end{tbhtheorem}
+
+    \textbf{(a)}
+
+    \[
+        F_T = mg\sin{\theta}
+    \]
+
+    \textbf{(b)} \\
+
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.75]{Worksheet11_Problem3}
+    \end{figure*}
+
+    \begin{tbhtheorem}{Problem 4}
+        Now, we want to see what the shape of this parametric curve is. You can graph it before you go on (choose random integration constants) and try to make a guess. \\
+        (a) A cycloid is the path of a point on the circumference of a circle as the circle rolls on a surface. To get the equations for $\left(x(\theta), y(\theta)\right)$, you can use the picture below. \\
+        Find equations of the coordinates of point $P$ which initially is at the bottom of the circle of radius $r$ when teh center of the circle is at $(0,r)$. The paremeter is $\theta$, which keeps track of how much
+        the circle has rolled, at its starts at $\theta = 0$. \\
+        (b) Now make the change of coordinates to your result in 3(g) including choices for the integration constants so the equations match. \\
+        (c) Express the time it takes the object to fall in terms of $r$ and $g$. It does not depend on the initial starting position of the object!
+    \end{tbhtheorem}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.75]{Worksheet11_Problem4}
+    \end{figure*}
+
+
+
+
+
+
+\end{document}

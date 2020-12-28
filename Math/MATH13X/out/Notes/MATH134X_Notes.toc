@@ -26,3 +26,4 @@
 \contentsline {subsection}{\numberline {6.7}Exponential and Logarithmic Functions}{15}{}%
 \contentsline {subsection}{\numberline {6.8}Error in Linear Approximations}{15}{}%
 \contentsline {subsection}{\numberline {6.9}Numerical Integration}{16}{}%
+\contentsline {section}{\numberline {7}Differential Equations}{17}{}%

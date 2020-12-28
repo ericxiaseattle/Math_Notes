@@ -1,0 +1,254 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Worksheet 10}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Worksheet 10}}\\
+    \normalsize\vspace{0.1in}\small{Due on December 4, 2020}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{2}{\rhead{Problem 1A}\fancyfoot[L]{Problem 1B continued on next page\ldots}}
+\fancypagestyle{3}{\rhead{Problem 1B}\fancyfoot[L]{Problem 2A continued on next page\ldots}}
+\fancypagestyle{4}{\rhead{Problem 2A}\fancyfoot[L]{Problem 2B continued on next page\ldots}}
+\fancypagestyle{5}{\rhead{Problem 2B}}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+    \thispagestyle{2}
+
+
+    \begin{tbhtheorem}{Problem 1}
+        Basic model of population growth is
+
+        \[
+            \frac{dy}{dt} = ky
+        \]
+
+        where $k$ is a positive constant. It says the rate of population growth is proportional to the size of the population. \\
+        (a) Solve this, first using separation of variables and then using the integration factor, and show that it gives rise to the exponential model from Section 7.6. However, it is not sustainable. After a while,
+        the resources (space, food) are not enough for the population to grow exponentially and the rate of growth $k$ changes. \\
+
+        (b) Problem 7 in Section 7.6 \\
+        A population of insects increases at a rate proportional to the current population. \\
+        (i) Suppose there are 10,000 insects at time $t=0$ and 20,000 insects a week later. (This information is used to get both $k$ and the constant arising from integration) Find an expression $y(t)$ for the number
+        of insects where $t$ is in days. \\
+        (ii) How many insects will there be in three months?
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    Separation of variables:
+
+    \begin{align*}
+        \frac{dy}{dt}       &= ky \\
+        \int \frac{dy}{y}   &= \int k dt \\
+        \ln{|y|}            &= kt + C \\
+        e^{\ln|y|}          &= e^{kt + C} \\
+        y                   &= e^C e^{kt} \\
+        y(t)                   &= Ce^{kt}
+    \end{align*}
+
+    Notice that $C$ is an arbitrary constant and so we can let $e^C$ become $C$. \\
+
+    Integration Factor: \\
+
+    We can rewrite the DE like so:
+
+    \[
+        \frac{dy}{dt} - ky = 0
+    \]
+
+    Let our integration factor be $f(x)$, where
+
+    \[
+        f(x) = e^{kt}
+    \]
+
+    Multiplying each term in the DE by $f(x)$, it follows that
+
+    \begin{align*}
+        e^{kt} \frac{dy}{dt} - ky e^{kt}    &= 0 \\
+        \frac{dy}{dt}\left(e^{-kt}y\right)  &= 0 \\
+        e^{-kt}y                            &= C \\
+        y(t)                                   &= Ce^{kt}
+    \end{align*}
+
+    The solution for the given DE matches the population growth model in Section 7.6. \\
+
+    \textbf{(b)} \\
+    \textbf{i. } In the solution to the given DE, the arbitrary constant $C$ represents the initial value of the function $y(t)$. Thus, $C=10,000$ and
+
+    \[
+        y = 10000e^{kt}
+    \]
+
+    One week is 7 days and it is given that $y(7)=20,000$, hence
+
+    \begin{align*}
+        20000   &= 10000 e^{7k} \\
+        7k      &= \ln{(2)} \\
+        k       &= \frac{\ln{(2)}}{7}
+    \end{align*}
+
+    and
+
+    \[
+        y(t)    = 10000e^{\frac{\ln{(2)}}{7}t}
+    \]
+
+    \pagebreak
+    \thispagestyle{3}
+
+    \textbf{ii. } Assuming one month is 30 days, three months would be 90 days. When $t=90$ days,
+
+    \[
+        y(90) = 10000e^{\frac{90\ln{(2)}}{7}} = 74196882.57649\dots
+    \]
+
+    Hence, there are 74196883 insects when three months have passed.
+
+    \begin{tbhtheorem}{Problem 2}
+        Verhulst's model for population growth is
+
+        \[
+            \frac{dy}{dt} = ky(M-y)
+        \]
+
+        where $k$ and $M$ are positive constants and $M$ denotes the carrying capacity (the maximum population which would exist in that environment, number of people who could be infected, the number of poeple who will
+        eventually hear of the news/rumor). Its solution is the \textit{logistic function}. This model is used in the spread of disease or information (or rumor), where $y(t)$ represents the number of infected people -
+        with the disease or the information/rumor. It assumes that the rate of growth is proportional to the product of the number of people who are infected and those who are not. Herd immunity is when enough people
+        are infected - and hopefully immune from future infections - such that they are not spreading the disease anymroe and the spread of the disease (almost) stops. \\
+
+        (a) Solve the differential equation by separating the variables and using partial fractions for the integration part. If you get confused, do the problem below with actual numbers first, and then replace the
+        numbers with the arbitrary constants $M$ and $k$. \\
+
+        (b) Problem 25 in Section 9.2: A flu virus is spreading rapidly through a small town with a population of 25,000. The virus is spreading at a rate proportional to the product of the number of people infected and
+        the number of people not infected. \\
+        (i) When first reported at $t=0$, 100 people had been infected and 10 days later, 400 people. (This information is used to get both $k$ and constant arising from integration.) How many people will be infected by
+        time $t$? \\
+        (ii) How long will it take for the infection to reach half of the population? \\
+        (iii) Use a graphing utility to graph the function you found in part (a).
+    \end{tbhtheorem}
+
+    \textbf{(a)}
+
+    \begin{align*}
+        \frac{dy}{dt}           &= ky(M-y) \\
+        \frac{dy}{dt}           &= k(My-y^2) \\
+        \int \frac{dy}{My-y^2}  &= \int k dt \\
+        \int \frac{dy}{y(M-y)}  &= kt + C_1
+    \end{align*}
+
+    Through partial fraction expansion,
+
+    \begin{align*}
+        \frac{1}{y(M-y)}    &= \frac{A}{y} + \frac{B}{M-y} \\
+        1                   &= A(M-y) + By \\
+        y=0                 &\implies A = \frac{1}{M} \\
+        y=M                 &\implies B = \frac{1}{M} \\
+        \frac{1}{y(M-y)}    &= \frac{\frac{1}{M}}{y} + \frac{\frac{1}{M}}{M-y} \\
+                            &= \frac{1}{My} + \frac{1}{M(M-y)}
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{4}
+
+    Hence,
+
+    \begin{align*}
+        \int \frac{dy}{y(M-y)}  &= kt + C_1 \\
+        \frac{1}{M} \int \frac{dy}{y} + \frac{1}{M}\int \frac{dy}{M-y}   &= kt + C_1 \\
+        \frac{1}{M}\ln{|y|} - \frac{1}{M} \ln{|M-y|} + C_2               &= kt + C_1 \\
+        \text{Let } C                                                    &= C_1 - C_2 \\
+        \frac{1}{M}\ln{|y|} - \frac{1}{M}\ln{|M-y|}                      &= kt + C \\
+        \ln{|y|} - ln{|M-y|}                                             &= Mkt + C \\
+        \text{Notice that $C$ is arbitrary and so we can let $MC$ become $C$} \\
+        \ln{\left|\frac{y}{M-y}\right|}                                 &= Mkt + C \\
+        \frac{y}{M-y}                                                   &= Ce^{Mkt} \\
+        y                                                               &= \frac{Ce^{Mkt}M}{1+Ce^{Mkt}} \\
+        y(t)                                                            &= M\left(1+\frac{1}{Ce^{Mkt}}\right)
+    \end{align*}
+
+    \textbf{(b)} \\
+    \textbf{i. } In this model, the arbitrary constant $C$ represents the initial value of the population s.t. $C=100$ and
+
+    \[
+        y(t) = M\left(1+\frac{1}{100e^{Mkt}}\right)
+    \]
+
+    When $t=10$ days, 400 people have been affected and thus
+
+    \begin{align*}
+        400 &= M\left(1+\frac{1}{100e^{10Mk}}\right) \\
+        -10Mk&= \ln{\left(\frac{40000}{M}-100\right)} \\
+        k   &= -\frac{1}{10M}\ln{\left(\frac{40000}{M}-100\right)}
+    \end{align*}
+
+    Substituting the computed expression for $k$ in the function $y(t)$,
+
+    \begin{align*}
+        y(t)    &= M\left(1+\frac{1}{100e^{-\frac{1}{10}\ln{\left(\frac{40000}{M}-100\right)}t}}\right)
+    \end{align*}
+
+    This function can be used to find the number of people infected by a time $t$, where $M$ is an arbitrary constant. \\
+
+    \textbf{ii. } The function value $y(t) = 12500$ represents the time at which half of the population is infected. When $y(t)=12500$,
+
+    \begin{align*}
+        12500   &= M\left(1+\frac{1}{100e^{-\frac{1}{10}\ln{\left(\frac{40000}{M}-100\right)}t}}\right) \\
+                &= M\left(1+\frac{1}{100e^{-\ln{\left(\frac{1250000}{M}-100\right)}t}}\right) \\
+            t   &= 10\ln{\left(\frac{12500-M}{400-M}\right)}
+    \end{align*}
+
+    Thus, half of the population of the town will be infected when $t$ is the above value, where $M$ is an arbitrary constant.
+
+    \pagebreak
+    \thispagestyle{5}
+
+    \textbf{iii. } \\
+    For this particular graph of the function $y(t)$, the arbitrary constant $M$ was assume to be equal to 1. The graphed function is below.
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics{logistic_model}
+    \end{figure*}
+
+
+
+
+
+
+
+\end{document}

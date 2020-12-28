@@ -1,0 +1,106 @@
+\section{2D Motion}
+
+    \subsection{\textit{Straight} is a Relative Term}
+
+        The motion of a falling ball in the Earth reference frame can be broken down into the free fall in the vertical direction (vertical component of motion) and motion at constant velocity in horizontal direction
+        (horizontal component of motion).
+
+
+    \subsection{Vectors in a Plane}
+
+        To describe the motion of a falling ball, we will need two reference axes- one for each component of the motion. The origins of both axes coincide with the point at which the ball is released. An $x$-coordinate
+        specifies position along the $x$-axis and a $y$-coordinate specifies position along the $y$-axis. The ball's displacement in the Earth reference frame is the vector sum of the horizontal displacement
+        $\Delta \vec{x}$ and the vertical displacement $\Delta \vec{y}$. \\
+
+        Any vector $\vec{A}$ can be decomposed into \textbf{component vectors} $\vec{A}_x$ and $\vec{A}_y$ along the axes of some conveniently chosen set of mutually perpendicular axes called a
+        \textbf{rectangular coordinate system}. \\
+
+        In 2D-Motion, the component of the acceleration parallel to the instantaneous velocity changes the speed; the component of the acceleration perpendicular to the instantaneous velocity changes the direction of the
+        instantaneous velocity but not its magnitude.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/vec}
+        \end{figure*}
+
+
+
+    \subsection{Decomposition of Forces}
+
+
+        \textbf{Normal components:} the force components perpendicular to a reference surface \\
+        \textbf{Tangential components:} the force components parallel to the surface are called \\
+
+        Because the brick's acceleration must be parallel to the plank, the normal component vectors $\vec{F}^c_{\text{pb }y}$ and $\vec{F}^G_{\text{Eb }y}$
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.5]{Resources/2D_FBD}
+        \end{figure*}
+
+        If possible, choose a coordinate system such that one of the axes lies along the direction of the acceleration of the object under consideration.
+
+
+
+    \subsection{Friction}
+
+        Even though the normal and tangential components of the contact force exerted by the floor on the cabinet belong to the same interaction, they behave differently and are generally treated as two separate forces:
+        the normal component being called the \textbf{normal force} and the tangential component being called the \textbf{force of friction}. \textbf{Static friction} is the friction exerted by surfaces that are not
+        moving relative to each other. \\
+
+        \textbf{Kinetic friction} is caused by the constant bumping, making, and breaking of bonds in an object. \\
+        $\bullet$ makes it possible to slow down the moving wheels of a car, to use an erase, and to warm up your hands by rubbing them
+
+
+
+
+    \subsection{Work and Friction}
+
+        The force of kinetic friction is not an elastic force and so causes energy dissipation. The force of static friction is an elastic force and so causes no energy dissipation.
+
+
+
+    \subsection{Vector Algebra}
+
+        A point can be specified using \textbf{polar coordinates} in the form $(r,\theta)$, where $r$ is the radial coordinate which is the distance from the origin to the point and $\theta$ is the angular coordinate
+        which specifies the angle between $r$ and the $x$-axis. By the Pythagorean Theorem, we can express $r$ as
+
+        \[
+            r = \sqrt{x^2+y^2}
+        \]
+
+        and because $\theta = \frac{y}{x}$, we have
+
+        \[
+            \theta = \arctan{\left(\frac{y}{x}\right)}
+        \]
+
+        It follows then that
+
+        \[
+            x = r\cos{\theta}
+        \]
+
+        and
+
+        \[
+            y = r\sin{\theta}
+        \]
+
+        In rectangular coordinates, the position vector of a point $P$ is
+
+        \[
+            \vec{r} = x \hat{i} + y \hat{j}
+        \]
+
+        Thus the decomposition of an arbitrary vector $\vec{A}$ can be written as
+
+        \[
+            \vec{A} = \vec{A}_x + \vec{A}_y = A_x \hat{i} + A_y \hat{j}
+        \]
+
+        Using the Pythagorean Theorem once again, we can find that the magnitude of $\vec{A}$ is
+
+        \[
+            A = |\vec{A}| = \sqrt{A^2_x + A^2_y}
+        \]

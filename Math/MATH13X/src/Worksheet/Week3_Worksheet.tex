@@ -1,0 +1,258 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Week 1 Assignment}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Week 3 Worksheet}}\\
+    \normalsize\vspace{0.1in}\small{Due on October 16, 2020 at 11:59 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{page2}{\rhead{Problem 1}\fancyfoot[L]{Problem 2 continued on next page \ldots}}
+\fancypagestyle{page3}{\rhead{Problem 2}}
+\fancypagestyle{page4}{\rhead{Problem 4}}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+    \thispagestyle{page2}
+
+    \begin{tbhtheorem}{Problem 1}
+        Find $\frac{dy}{dx}$ for \\
+        (a) $y = 3x^2 \sqrt{3 + 5x}$ \\
+        (b) $y = \frac{4 + x^2}{4 - x^2}$ \\
+        (c) $y = \sin{\left(\sin{\left(\sin{\left(x^2\right)}\right)}\right)}$
+    \end{tbhtheorem}
+
+    (a)
+    \begin{align*}
+        y                   &= 3x^2 \sqrt{3 + 5x} \\
+        \frac{dy}{dx}       &= 6x\sqrt{3+5x} + 3x^2 \cdot \frac{1}{2\sqrt{3+5x}}\cdot 5 \\
+                            &= 6x\sqrt{3+5x} + \frac{15x^2}{2\sqrt{3 + 5x}} \\
+                            &= \frac{12x(3+5x)}{2\sqrt{3+5x}} + \frac{15x^2}{2\sqrt{3+5x}} \\
+                            &= \frac{75x^2 + 36x}{2\sqrt{3 + 5x}} \\
+                            &= \frac{3x(25x+12)}{2\sqrt{3+5x}}
+    \end{align*}
+
+    (b)
+    \begin{align*}
+        y                   &= \frac{4+x^2}{4-x^2} \\
+                            &= \frac{2x(4-x^2) + 2x(4 + x^2)}{(4-x^2)^2} \\
+                            &= \frac{16x}{(4-x^2)^2}
+    \end{align*}
+
+    (c)
+    \begin{align*}
+        y                   &= \sin{\left(\sin{\left(\sin{\left(x^2\right)}\right)}\right)} \\
+                            &= 2x\cos{\left(\sin{\left(\sin{\left(x^2\right)}\right)}\right)}\cos{\left(\sin{\left(x^2\right)}\right)}\cos{\left(x^2\right)}
+    \end{align*}
+
+    \begin{tbhtheorem}{Problem 2}
+        Compute $\frac{dy}{dx}$ and $\frac{d^2 y}{dx^2}$ for the function given implicitly by
+        \[
+            x^2 - 2xy + 4y^2 = 3
+        \]
+        Did you use the quotient rule for the second derivative? Could you have avoided it?
+    \end{tbhtheorem}
+
+    \begin{align*}
+        x^2 - 2xy + 4y^2                            &= 3 \\
+        2x - 2\frac{dy}{dx}(xy) + 8y\frac{dy}{dx}   &= 0 \\
+        2x - 2\left[y + x\frac{dy}{dx}\right] + 8y \frac{dy}{dx}    &= 0 \\
+        2x - 2y - 2x \frac{dy}{dx} + 8y \frac{dy}{dx}               &= 0 \\
+        -2x\frac{dy}{dx} + 8y \frac{dy}{dx}                         &= 2y - 2x \\
+        -x\frac{dy}{dx} + 4y \frac{dy}{dx}                          &= y - x \\
+        \frac{dy}{dx}\left(4y-x\right)                              &= y - x \text{\color{white}...............\color{black}(1)} \\
+        \frac{dy}{dx}                                               &= \frac{y-x}{4y-x}
+    \end{align*}
+
+    Going back to (1), we can re-differentiate the equation to get:
+
+    \begin{align*}
+        y'(4y-x)                &= y - x \\
+        y"(4y-x)+y'(4y'-1)      &= y' - 1 \\
+        y"(4y-x)    &= y'-1-y'(4y'-1) \\
+                    &= 2y' - 4y'y' - 1 \\
+                    &= 2\left(\frac{y-x}{4y-x}\right) - 4\left(\frac{y-x}{4y-x}\right)^2 - 1
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{page3}
+
+    \begin{align*}
+        y"(4y-x)                                &= \frac{2(y-x)(4y-x)-4(y-x)^2-(4y-x)^2}{(4y-x)^2} \\
+                                                &= \frac{-3x^2 -12y^2 + 6xy}{(4y-x)^2} \\
+        \frac{d^2 y}{dx^2}                      &= -\frac{3(x^2+4y^2-2xy)}{(4y-x)^3}
+    \end{align*}
+
+    I did not use the quotient rule for the second derivative exactly to demonstrate that you can avoid it as asked in the question prompt. However, I would like to add that I greatly dislike the method I took of
+    avoiding the quotient rule, as it took me many more steps to compute the second derivative than I would have liked it to.
+
+    \begin{tbhtheorem}{Problem 3}
+        Find equations of all tangents to the curve $y=x^3 - x$ that pass through the point (-2,2).
+    \end{tbhtheorem}
+
+    The slope of the curve at any point is given by
+
+    \[
+        \frac{dy}{dx} = 3x^2 - 1
+    \]
+
+    We have a point $(c,f(c))=(c, c^3 - c)$ on the curve with slope
+
+    \[
+        \frac{dy}{dx}\Big|_{x=c} = 3c^2 - 1
+    \]
+
+    Any tangent to the curve at $(c,c^3 - c)$ has the form:
+
+    \begin{align*}
+        y - (c^3 - c) &= (3c^2 - 1)(x-c) \\
+        y             &= -2c^3 + 3xc^2 - x
+    \end{align*}
+
+    Since the tangents we are asked to find run through the point $(-2,2)$, we plug $(-2,2)$ into $(x,y)$ to get:
+
+    \begin{align*}
+        2   &= -2c^3 + 3(-2)c^2 + 2 \\
+        0   &= c^3 + 3c^2 \\
+        c^2(c+3)    &= 0 \\
+        c = -3,0
+    \end{align*}
+
+    When $c=-3$,
+
+    \begin{align*}
+        y &= -2(-3)^3 + 3x(-3)^2 - x \\
+        y &= 26x + 54
+    \end{align*}
+
+    When $c=0$,
+
+    \[
+        y = -x
+    \]
+
+    Thus, the tangents to the curve $y=x^3-x$ that pass through the point (-2,2) are:
+    \[
+        y = -x
+    \]
+    and
+    \[
+        y = 26x + 54
+    \]
+
+    For completion's sake, the curve, its tangents, and the point (-2,2) are graphed below:
+
+    \begin{center}
+        \begin{tikzpicture}[scale= 1.5]
+            \begin{axis}[
+                axis lines = center,
+                axis equal image,
+                xmin = -15,
+                xmax = 15,
+                ymin = -15,
+                ymax = 15,
+                ticks = none
+            ]
+            \addplot[
+                color = blue,
+                samples = 200
+            ]
+            {x^3-x};
+            \addlegendentry{$y=x^3-x$}
+            \addplot[
+                color = red
+            ]
+            {26*x+54};
+            \addlegendentry{$y=26x+54$}
+            \addplot[
+                color = green,
+                domain = -10:10
+            ]
+            {-1*x};
+            \addlegendentry{$y=-x$}
+            \filldraw (-2,2) circle[radius=1pt];
+            \node[above left=10pt of {(-2,2)} {(-2,2)}];
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+    \pagebreak
+    \thispagestyle{page4}
+
+
+
+    \begin{tbhtheorem}{Problem 4}
+        Evaluate the limit
+        \[
+            \lim_{x\to \pi} \frac{\sin{x}}{x-\pi}
+        \]
+        using the definition of the derivative.
+    \end{tbhtheorem}
+
+    Because
+
+    \[
+        \lim_{x\to \pi} \sin{x} = \sin{\pi} = 0,
+    \]
+
+    we can write the given limit as
+
+    \[
+        \lim_{x\to \pi} \frac{\sin{x} - \sin{\pi}}{x-\pi}
+    \]
+
+    A definition of derivative is:
+
+    \[
+        f'(a) = \lim_{x\to a} \frac{f(x) - f(a)}{x-a}
+    \]
+
+    Then we have
+
+    \begin{align*}
+        f'(\pi) &=  \lim_{x\to \pi} \frac{\sin{x} - \sin{\pi}}{x-\pi}
+    \end{align*}
+
+    The derivative of $f(x) = \sin{x}$ is $f'(x)=\cos{x}$ so we have that
+
+    \[
+        f'(\pi) = \cos{\pi} = -1
+    \]
+
+
+
+    C:\Users\<username>\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+\end{document}

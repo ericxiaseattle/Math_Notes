@@ -1,0 +1,484 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Week 1 Assignment}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Week 2 Assignment}}\\
+    \normalsize\vspace{0.1in}\small{Due on October 12, 2020 at 5:45 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{page2}{\rhead{Section 2.2 Problem 38}\fancyfoot[L]{Section 2.2 Problem 54 continued on next page \ldots}}
+\fancypagestyle{page3}{\rhead{Section 2.2 Problem 54}}
+\fancypagestyle{page4}{\rhead{Section 2.4 Problem 36}\fancyfoot[L]{Section 2.4 Problem 53 continued on next page \ldots}}
+\fancypagestyle{page5}{\rhead{Section 2.5 Problem 36}}
+\fancypagestyle{page6}{\rhead{Section 2.5 Problem 46}}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+
+    \thispagestyle{page2}
+
+    \begin{tbhtheorem}{Section 2.2 Problem 38}
+        Give an $\epsilon,\delta$ proof for the statement
+        \[
+            \lim_{x\to 0} (2-5x) = 2
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $\epsilon$ be arbitrary and $\delta=\frac{\epsilon}{5}$. Suppose that for every $\epsilon>0$ there exists $\delta >0$ such that $\forall x$,
+
+        \begin{align*}
+            0 < |x-0| < \delta           & \implies |(2-5x)-2|<\epsilon \\
+            0 < |x| < \frac{\epsilon}{5} & \implies |-5x| < \epsilon
+        \end{align*}
+
+        Because the inequality above is true, therefore
+
+        \[
+            \lim_{x\to 0} (2-5x) = 2
+        \]
+    \end{proof}
+
+
+    \begin{tbhtheorem}{Section 2.2 Problem 52}
+        Give an $\epsilon,\delta$ proof for the statement
+        \[
+            \lim_{x\to 3} \sqrt{x+1} = 2
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $\epsilon$ be arbitrary and let $\delta = 2\epsilon$. Suppose that for every $\epsilon > 0$ there exists $\delta > 0$ such that $\forall x$,
+
+        \begin{align*}
+            0 < |x-3| < \delta          & \implies |\sqrt{x+1} - 2| < \epsilon \\
+                                        & \implies \left|\frac{\sqrt{x+1}-2}{1}\cdot \frac{\sqrt{x+1}+2}{\sqrt{x+1}+2}\right| < \epsilon \\
+                                        & \implies \left|\frac{x+1-4}{\sqrt{x+1}+2}\right| < \epsilon
+        \end{align*}
+
+        Because $\sqrt{x+1}>0$, $\sqrt{x+1}+2$ must also be positive and we can remove the absolute value signs from the denominator above:
+
+        \begin{align*}
+            \frac{|x-3|}{\sqrt{x+1}+2} &< \epsilon \\
+            \frac{|x-3|}{\sqrt{x+1}+2} \leq \frac{|x-3|}{2} &< \epsilon \\
+            \frac{|x-3|}{\sqrt{x+1}+2} \leq \frac{\delta}{2} < \epsilon \\
+            \frac{|x-3|}{\sqrt{x+1}+2} \leq \frac{\cancel{2}\epsilon}{\cancel{2}} = \epsilon
+        \end{align*}
+
+        Then
+
+        \[
+            0 < |x-3| < \delta \implies |\sqrt{x+1}-2| < \epsilon
+        \]
+
+        holds and hence,
+
+        \[
+            \lim_{x\to 3} \sqrt{x+1} = 2
+        \]
+    \end{proof}
+
+    \begin{tbhtheorem}{Section 2.2 Problem 54}
+        Prove that, for the function
+        \begin{align*}
+            g(x) &=
+            \begin{cases}
+                x,  & x \text{ is rational} \\
+                0,  & x \text{ is irrational,}
+            \end{cases}
+            \\
+            \lim_{x\to 0} g(x) &= 0
+        \end{align*}
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $\epsilon$ be arbitrary and let $\delta = \epsilon$. Suppose that for every $\epsilon > 0$ there exists $\delta > 0$ such that $\forall x$,
+
+        \begin{align*}
+            0 < |x| < \delta & \implies |g(x)| < \epsilon
+        \end{align*}
+
+        When $x$ is irrational,
+
+        \[
+            |g(x)| = |0| < \epsilon.
+        \]
+
+        Because $\epsilon$ is defined for $\epsilon > 0$, this inequality holds.
+
+        \pagebreak
+        \thispagestyle{page3}
+
+        When $x$ is rational,
+
+        \begin{align*}
+            |g(x)| = |x| &< \epsilon \\
+                     \delta &= \epsilon \\
+                    \epsilon &= \epsilon
+        \end{align*}
+
+        and this inequality holds as well. Then
+
+        \[
+            0 < |x| < \delta \implies |g(x)| < \epsilon
+        \]
+
+        holds and hence,
+
+        \[
+            \lim_{x\to 0} g(x) = 0.
+        \]
+    \end{proof}
+
+    \begin{tbhtheorem}{Section 2.3 Problem 61E}
+        Calculate
+        \[
+            \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
+        \]
+        for the function
+        \[
+            f(x) = x^n,
+        \]
+        where $n$ is an arbitrary positive integer. Make a guess and confirm your guess by induction.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $S$ be the set of positive integers $n$ for which
+
+        \[
+            f(x)=x^n, \text{   } \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}=nx^{n-1}
+        \]
+
+        holds. Then $1\in S$ because
+
+        \begin{align*}
+            \lim_{h\to 0}\frac{(x+h)-x}{h} & \\
+            \lim_{h\to 0}\frac{h}{h} &= 1 = x^{1-1}
+        \end{align*}
+
+        Assume $k\in S$; that is, assume
+
+        \[
+            \lim_{h\to 0} \frac{(x+h)^k - x^k}{h} = kx^{k-1}
+        \]
+
+        Consider
+
+        \begin{align*}
+            \lim_{h\to 0} \frac{(x+h)^{k+1} - x^{k+1}}{h}   &= \lim_{h\to 0} \frac{(x+h)(x+h)^k - x(x^k)}{h} \\
+                                                            &= \lim_{h\to 0} \frac{x(x+h)^k + h(x+h)^k - x(x^k)}{h} \\
+                                                            &= \lim_{h\to 0} \frac{x\left[(x+h)^k - x^k\right] + h(x+h)^k}{h} \\
+                                                            &= \lim_{h\to 0} x \cdot \lim_{h\to 0} \frac{(x+h)^k - x^k}{h} + \lim_{h\to 0} (x+h)^{k} \\
+                                                            &= x(kx^{k-1}) + x^k \\
+                                                            &= kx^k + x^k \\
+                                                            &= x^k (k+1)
+        \end{align*}
+
+        Then $k+1\in S$. Hence, by the principle of mathematical induction, we can conclude that all positive integers are in $S$; that is, we can conclude that for the function
+
+        \[
+            f(x) = x^n, n\in \mathbb{Z}^+,
+        \]
+
+        \[
+            \lim_{h\to 0} \frac{f(x+h)-f(x)}{h} = nx^{n-1}
+        \]
+
+        holds.
+    \end{proof}
+
+    \pagebreak
+    \thispagestyle{page4}
+
+
+    \begin{tbhtheorem}{Section 2.4 Problem 36}
+        Let
+        \[
+            f(x) =
+            \begin{cases}
+                A^2 x^2,        & x \leq 2 \\
+                (1-A) x,        & x > 2.
+            \end{cases}
+        \]
+        For what values of $A$ is $f$ continuous at 2?
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Function $f$ is continuous at 2 iff $\lim_{x\to c^+} f(x)= \lim_{x\to c^-}f(x)$ and $f(2)$ is defined. Let
+
+        \begin{align*}
+            \lim_{x\to 2^+} f(x)        &= \lim_{x\to 2^-}  f(x) \\
+            \lim_{x\to 2} (1-A)x        &= \lim_{x\to 2} A^2 x^2 \\
+            2(1-A)                      &= 4A^2 \\
+            1-A                         &= 2A^2 \\
+            2A^2 + A - 1                &= 0 \\
+            A                           &= \frac{-1\pm \sqrt{1-4(2)(-1)}}{4} \\
+            A                           &= -1, \frac{1}{2}
+        \end{align*}
+
+        Hence, for $A=-1,\frac{1}{2}$, the left and right-hand limits of $f(x)$ are equal. When $A=-1$,
+
+        \[
+            f(2)    = (-1)^2 \cdot (2)^2 = 4,
+        \]
+        which is defined. When $A=\frac{1}{2}$,
+        \[
+            f(2) = \left(\frac{1}{2}\right)^2 \cdot (2)^2 = 1
+        \]
+        which is also defined. Thus, for $A=-1,\frac{1}{2}$, $f(x)$ is continuous at 2.
+    \end{proof}
+
+    \begin{tbhtheorem}{Section 2.4 Problem 49 (Important)}
+        Prove that $f$ is continuous at $c$ iff
+        \[
+            \lim_{h\to 0} f(c+h) = f(c).
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+        \[
+            \lim_{h\to 0} f(c+h) = f(c)
+        \]
+
+        This implies
+
+        \[
+            \lim_{h\to c} f(h) = f(c)
+        \]
+
+        which is the definition of continuity. Because
+
+        \[
+            \lim_{h\to 0} f(h) = f(c) \iff \lim_{h\to 0} f(c+h) = f(c),
+        \]
+
+        $f$ is continuous at $c$ iff
+
+        \[
+            \lim_{h\to 0} f(c+h) = f(c)
+        \]
+    \end{proof}
+
+
+
+    \begin{tbhtheorem}{Section 2.4 Problem 53}
+        Suppose the function $f$ has the property that there exists a number $B$ such that
+        \[
+            |f(x) - f(c) | \leq B|x-c|
+        \]
+       for all $x$ in the interval $(c-p, c+p)$. Prove that $f$ is continuous at $c$.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Function $f$ is continuous at $c$ iff
+
+        \[
+            \lim_{x\to c} f(x) = f(c).
+        \]
+
+        Let $\epsilon$ be arbitrary and $\delta = \frac{\epsilon}{B}$. Suppose that for every $\epsilon > 0$ there exists $\delta > 0$ such that $\forall x$,
+
+        \[
+            0 < |x - c| < \delta = \frac{\epsilon}{B} \implies |f(x) - f(c)| < \epsilon.
+        \]
+
+        It is given that $|f(x) - f(c)| \leq B|x-c|$. Then,
+
+        \begin{align*}
+            |f(x) - f(c)| \leq B|x-c|                    &< \epsilon \\
+            \cancel{B} \cdot \frac{\epsilon}{\cancel{B}} &= \epsilon
+        \end{align*}
+
+        \pagebreak
+
+        Hence,
+
+        \[
+            \lim_{x\to c} f(x) = f(c)
+        \]
+
+        and by extension, $f$ is continuous at $c$.
+    \end{proof}
+
+    \thispagestyle{page5}
+
+    \begin{tbhtheorem}{Section 2.5 Problem 36}
+        Evaluate the limit, taking $a$ and $b$ as nonzero constants:
+        \[
+            \lim_{x\to 0} \frac{\sin{(ax)}}{\sin{(bx)}}
+        \]
+    \end{tbhtheorem}
+
+    \begin{align*}
+        \lim_{x\to 0} \frac{\sin{(ax)}}{\sin{(bx)}} &= \lim_{x\to 0} \frac{\frac{\sin{(ax)}}{x}}{\frac{\sin{(bx)}}{x}}
+    \end{align*}
+
+    Let
+
+    \begin{align*}
+        c = ax  & \implies x = \frac{c}{a} \\
+        d = bx  & \implies x = \frac{d}{b}.
+    \end{align*}
+
+    Then
+
+    \begin{align*}
+        \lim_{x\to 0} \frac{\sin{(ax)}}{\sin{(bx)}} &= \lim_{x\to 0} \frac{\frac{\sin{(ax)}}{x}}{\frac{\sin{(bx)}}{x}} \\
+                                                    &= \lim_{x\to 0} \frac{\frac{\sin{c}}{\frac{c}{a}}}{\frac{\sin{(d)}}{\frac{d}{b}}} \\
+                                                    &= \lim_{x\to 0} \frac{a\cdot \frac{\sin{c}}{c}}{b\cdot \frac{\sin{d}}{d}}
+    \end{align*}
+
+    Because
+
+    \[
+        \lim_{x\to 0} \frac{\sin{x}}{x} = 1,
+    \]
+
+    \begin{align*}
+        \lim_{x\to 0} \frac{a\cdot \frac{\sin{c}}{c}}{b\cdot \frac{\sin{d}}{d}} &= \lim_{x\to 0} \frac{a}{b} \\
+                                                                                &= \frac{a}{b}
+    \end{align*}
+
+    \begin{tbhtheorem}{Section 2.5 Problem 43}
+        Show that $lim_{x\to 0} x \sin{\left(\frac{1}{x}\right)}=0$. \\
+        HINT: Use the pinching theorem.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        The range of $\sin{(\frac{1}{x})}$ is $[-1,1]$ such that
+
+        \[
+            -1 \leq \sin{\left(\frac{1}{x}\right)} \leq 1
+        \]
+
+        Then
+
+        \[
+            -x \leq x \sin{\left(\frac{1}{x}\right)} \leq x
+        \]
+
+        Because
+
+        \[
+            \lim_{x\to 0} (-x) = \lim_{x\to 0} (x) = 0,
+        \]
+
+        then by the Squeeze Theorem,
+
+        \[
+            \lim_{x\to 0} x\sin{\left(\frac{1}{x}\right)} = 0
+        \]
+    \end{proof}
+
+    \pagebreak
+    \thispagestyle{page6}
+
+    \begin{tbhtheorem}{Section 2.5 Problem 46}
+        Let $f$ be the Dirichlet function
+        \[
+            f(x) =
+            \begin{cases}
+                1,  & x \text{ is rational} \\
+                0,  & x \text{ is irrational.}
+            \end{cases}
+        \]
+        Show that $\lim_{x\to 0} x f(x) = 0$.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $\epsilon$ be arbitrary and let $\delta = \epsilon$. Suppose that for every $\epsilon > 0$ there exists $\delta > 0$ such that $\forall x$,
+
+        \[
+            0 < |x| < \delta \implies \left|xf(x)| < \epsilon
+        \]
+
+        When $x$ is irrational,
+
+        \[
+            \left|xf(x)\right| = 0 < \epsilon
+        \]
+
+        which is true by the definition of $\epsilon$. When $x$ is rational,
+
+        \begin{align*}
+            \left|xf(x)\right| = |x|      &< \epsilon \\
+                                 \epsilon &= \epsilon
+        \end{align*}
+
+        Hence,
+
+        \[
+            \lim_{x\to 0} xf(x) = 0.
+        \]
+    \end{proof}
+
+    \begin{tbhtheorem}{Extra Problem}
+        A hiker begins a backpacking trip at 6am on Saturday morning, arriving at camp at 6pm that evening. The next day, the hiker returns on the same trail leaving at 6am in the morning and finishing at 6pm.
+        Show that there is some place on the trail that the hiker visited at the same time of day both coming and going.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $d_1(t)$ be the hiker's distance from the trailhead on Saturday and $d_2(t)$ be the hiker's distance from the camp on Sunday, where $t$ is time. Let
+
+        \[
+            f(t) = d_1(t) - d_2(t)
+        \]
+
+        Position is by definition a continuous quantity, as the hiker must travel through every point between $a=6\text{am}$ and $b=6\text{pm}]$ if they wish to reach $b$ from $a$. Then $d_1(t)$ and $d_2(t)$ are both
+        continuous along their domains, and by the definition of a function, $f(t)$ is also continuous on the closed interval $[a,b]$. \\
+
+        Because
+
+        \[
+            f(6\text{am}) > 0 \text{ and } f(6\text{pm}) < 0,
+        \]
+
+        by the Intermediate Value Theorem, there is a time $c$ such that
+
+        \[
+            f(c) = 0 \implies d_1(t) = d_2(t).
+        \]
+
+        Hence, there exists some place on the trail that the hiker visited at the same time of day both coming and going.
+    \end{proof}
+
+
+\end{document}
+
+
+
+

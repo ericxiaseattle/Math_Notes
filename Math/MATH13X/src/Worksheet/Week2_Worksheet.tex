@@ -1,0 +1,207 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Week 1 Assignment}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+\vspace{2in}
+    \textmd{\textbf{MATH134: Week 2 Worksheet}}\\
+    \normalsize\vspace{0.1in}\small{Due on October 9, 2020 at 11:59 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{page2}{\rhead{Problem 1}}
+\fancypagestyle{page3}{\rhead{Problem 4}}
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+    \thispagestyle{page2}
+
+    \begin{tbhtheorem}{Problem 1}
+        Draw one picture of a continuous function and persuade your group members that this always works for any $K$ you choose.
+    \end{tbhtheorem}
+
+    \begin{center}
+        \begin{tikzpicture}[scale= ]
+            \begin{axis}[
+                axis lines = center,
+                axis equal image,
+                ticks = none
+            ]
+            \addplot[
+                color = blue
+            ]
+            {x};
+            \addlegendentry{$f(x)=x$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+    $f(x)=x$ is continuous on $[-\infty, \infty]$. Let $K$ be a number between $f(-\infty)$ and $f(\infty)$. Then by the Interemediate Value Theorem, there must be at least one number $c$ in the open interval
+    $(-\infty, \infty)$ such that $f(c)=K$.
+
+    \begin{tbhtheorem}{Problem 2}
+        Draw one picture showing why continuity is essential, i.e. draw a function which is not continuous and a value $K$ for which you will fail to find the $c$. Better, do the same with formulas.
+    \end{tbhtheorem}
+
+    \begin{center}
+        \begin{tikzpicture}[scale= ]
+            \begin{axis}[
+                axis lines = center,
+                axis equal image,
+                xmin = -5,
+                xmax = 5,
+                ymin = -5,
+                ymax = 5,
+                ticks = none
+            ]
+            \addplot[
+                domain = 0:5,
+                color = blue
+            ]
+            {1/x};
+            \addplot[
+                domain = -5:0,
+                color = blue
+            ]
+            {1/x};
+            \addlegendentry{$f(x)=\frac{1}{x}$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+    For the function $f(x)=\frac{1}{x}$, $f(x)$ is defined on $[-\infty, \infty]$, where $x\not = 0$. $f(x)$ is also continuous for $x>0$ and $x<0$, respectively. Let $K=0$. Because
+
+    \[
+        0 = \frac{1}{x}
+    \]
+
+    does not have a real-valued solution, then there is not a $c$ in the open interval $(-\infty, \infty)$ such that $f(c)=0$ even though $-\infty<K<\infty$.
+
+    \begin{tbhtheorem}{Problem 3}
+        Prove that the polynomial $f(x)=x^3 + 2x^2 + 7x + 11$ has a (real) root. (Make sure you have ALL the details, including the exact values of $a,b,K$, and $c$).
+    \end{tbhtheorem}
+
+    \begin{proof}
+        The function $f(x)=x^3+2x^2+7x+11$ is a polynomial and by definition, all polynomials including $f(x)$ are continuous everywhere. Thus, $f(x)$ is continuous on $[-\infty, \infty]$. Because
+
+        \[
+            \lim_{x\to -\infty} \left(x^3+2x^2+7x+11) = -\infty
+        \]
+
+        and
+
+        \[
+            \lim_{x\to \infty} \left(x^3+2x^2+7x+11) = \infty,
+        \]
+
+        and $f(x)$ is continuous, then by the Intermediate Value Theorem, $f(x)$ must, for every $x=c$, eventually take every value $K$ between $(-\infty, \infty)$, including 0.
+        Thus, the polynomial $f(x)=x^3+2x^2+7x+11$ must have at least one real-valued root.
+    \end{proof}
+
+
+    \pagebreak
+    \thispagestyle{page3}
+
+    \begin{tbhtheorem}{Problem 4}
+        A circular piece of metal wire is heated from a point so that the temperature is (possibly) varying. Prove that there are two points diagonally across from each other with the exact same temperature.
+        (What are your $a,b,f,K,$ and $c$?)
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let $x$ be any point on a heated circular piece of metal wire, represented by a two-dimensional circle centered at (0,0). Let $c$ and $d$ be any diagonally opposite points on the wire and let the function $T(x)$
+        represent the measured temperature at a point $x$ on the wire. Let $a$ be the point on the wire with the highest temperature and let $b$ be the point on the wire with the lowest temperature.
+        Because temperature is by definition a continuous quantity, we have that $T(x)$ is continuous on $[a,b]$. Let $c$ and $d$ be any two diagonally opposite points on the circle. and let
+        \[
+            f(x) = T(c) - T(d)
+        \]
+        Because $T(x)$ is a continuous function, then by the definition of a function, $f(x)$ is also continuous on its domain. Because any closed circle centered at (0,0) will have both negative and positive values
+        of $x$ in its domain, we know that $f(x)$ also will take both negative and positive values at some point. Then by the Intermediate Value Theorem, there must be a point, $p$, such that $f(p)=0$. When $f(p)=0$, we
+        have
+
+        \begin{align*}
+            f(x) = 0    &= T(c) - T(d) \\
+                   0    &= T(c) - T(d) \\
+                 T(c)   &= T(d)
+        \end{align*}
+
+        Thus, there are two diagonally opposite points on a circular piece of wire that is heated at a point that have the exact same temperature.
+    \end{proof}
+
+    \begin{tbhtheorem}{Problem 5}
+        At any given time, prove that there are two points on the surface of the earth diametrically opposite from each other that have the exact same temperature.
+    \end{tbhtheorem}
+
+    \begin{proof}
+        Let the equator of the earth be represented by a circle, where $a$ and $b$ are the endpoints of a diameter of the circle. Let $c$ and $d$ be any two diametrically opposite points on the circle and let the
+        function $T(x)$ represent the temperature at a point $x$ on the circle. By definition temperature is a continuous quantity and so $T(x)$ is continuous on its domain.
+
+        \begin{center}
+            \begin{tikzpicture}[scale= 3]
+                \draw (axis cs: 0,0) circle [radius=1];
+                \node[left] at (-1,0) {$a$};
+                \node[right] at (1,0) {$b$};
+                \draw[dashed] (-1,0) -- (1,0);
+                \draw[fill] (0,0) circle [radius = 0.01];
+                %%%
+                \draw[dashed] (-0.67,-0.742) -- (0,0) -- (0.67,0.742);
+                \node[below left] at (-0.67,-0.742) {$c$};
+                \node[above right] at (0.67,0.742) {$d$};
+            \end{tikzpicture}
+        \end{center}
+
+        Let $f(x) = T(c)-T(d)$. Because $T(x)$ is a continuous function, then by the definition of a function, $f(x)$ is also continuous on its domain. We know $f(x)$ takes both positive and negative values at some
+        point in its domain. Then by the Intermediate Value Theorem, there must be a point, $p$, such that $f(p)=0$. When $f(p)=0$, we have
+
+        \begin{align*}
+            f(x) = 0 &= T(c) - T(d) \\
+                   0 &= T(c) - T(d) \\
+               T(c)  &= T(d)
+        \end{align*}
+
+        Thus, there are two points on the surface of the earth diametrically opposite from each other that have the exact same temperature.
+    \end{proof}
+
+%    \begin{tbhtheorem}{Problem 6}
+%        A hiker begins a backpacking trip at 6am on Saturday morning, arriving at camp at 6pm that evening. The next day, the hiker returns on the same trail leaving at 6am in the morning and finishing at 6pm. Show
+%        that there is some place on the trail that the hiker visited at the same time of day both coming and going.
+%    \end{tbhtheorem}
+%
+%    \begin{proof}
+%        Let $x(t)$ be the position of the hiker on the trail at some hour of the day $t$. The function $x(t)$ is on the time interval $[0,x_f]$, where $x_f$ is the final position of the hiker on the first day;
+%        that is, $x_f$ is the destination of the trail. For both days, $6\leq t \leq 18$.
+%    \end{proof}
+
+
+\end{document}

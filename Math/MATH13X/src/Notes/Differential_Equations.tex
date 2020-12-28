@@ -1,0 +1,56 @@
+\section{Differential Equations}
+
+        \textit{Example:}
+
+        \begin{align*}
+                \frac{dy}{dx}                                   &= (y^2 + y)(4x+2) \\
+                \int \frac{dy}{y^2+y}                           &= \int 4x + 2 dx \\
+                \int \frac{1}{y}dy - \int \frac{1}{y+1}dy       &= 2x^2 + 2x + C_2 \\
+                \ln{|y|} - \ln{|y+1|}+C_1                       &= 2x^2 + 2x + C_2 \\
+                \text{Set } C                                   &= C_2 - C_1 \\
+                \ln{\left|\frac{y}{y+1}\right|}                 &= 2x^2 + 2x + C \\
+                \left|\frac{y}{y+1}\right|                      &= e^{2x^2+2x+C} \\
+                \left|\frac{y}{y+1}\right|                      &= e^C e^{2x^2+2x} \\
+                \frac{y}{y+1}                                   &= Ce^{2x^2+2x} \\
+                y                                               &= Ce^{2x^2+2x}\cdot y + Ce^{2x^2+2x} \\
+                \left(1-Ce^{2x^2+2x}\right)y                    &= Ce^{2x^2+2x} \\
+                y                                               &= \frac{Ce^{2x^2+2x}}{1-Ce^{2x^2+2x}} \\
+                y                                               &= \frac{1}{Ce^{-2x^2-x^2}-1}
+        \end{align*}
+
+        \textit{Example 2: Mixing Problem} \\
+        A tank initially contains 1000 litres of pure water. Brine that contains 0.07 kilograms of salt per liter of water enters the tank at a rate of 5 litres per minute. In addition, brine that contains 0.04 kilograms
+        of salt per liter of water enters the tank at a rate of 10 litres per minute. The solution is kept thoroughly mixed and drains from the tank at a rate of 15 litres per minute. Find the amount of salt in the tank
+        as a function of time. Also, find the concentration of salt in the tank "eventually". \\
+
+        Let $s(t)$ be the amount of salt in kg at a given time $t$ in minutes. We have $\frac{ds}{dt}=\text{in}-\text{out}$, thus
+
+        \begin{align*}
+                \frac{ds}{dt}   &= (0.07)5 + (0.04)10 - s\frac{15}{1000} \\
+                                &= 0.75 - 0.015s \\
+                                &= -0.015(s-50) \\
+                \frac{ds}{s-50} &= -0.015 dt \\
+                \int \frac{ds}{s-50}    &= \int -0.015 dt \\
+                \ln{|s-50|}             &= -0.015t + C \\
+                |s-50|                  &= e^{-0.015t+C} \\
+                |s-50|                  &= Ce^{-0.015t} \\
+                s-50                    &= Ce^{-0.015t} \\
+                s                       &= 50 + Ce^{-0.015t}
+        \end{align*}
+
+        \textit{Example 3: Newton's Law of Cooling} \\
+        Newton's Law of Cooling states that the rate of cooling of an object is proportional to the temperature difference between the object and its surroundings. The cooling constant, which is the
+        proportionality constant in the differential equation, remains constant throughout this question. Experimenting, you found that 12 ounces of $180^{\circ}$ F coffee in your favorite cup will take 20 minutes to
+        cool to a drinking temperature of $115^{\circ}$ F in a $70^{\circ}$ F room. Set up a differential equation for the temperature of the coffee, solve it, and find the cooling constant. \\
+
+        Let $P_s=70$ be the temperature of the surrounding environment which stays constant. Let $P$ be the temperature of the object at minute $t$. We know that $\frac{dP}{dt}$ is proportional to the difference in
+        temperature between the system and the environment, hence
+
+        \begin{align*}
+                \frac{dP}{dt}   &~ (P-P_s) \\
+                                &= -k(P-P_s) \\
+                \int \frac{dP}{P-P_s}   &= \int -k dt
+        \end{align*}
+
+        We will need to use information in the problem to figure out $k$ and $C$.
+

@@ -1,0 +1,624 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Homework 6}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Homework 6}}\\
+    \normalsize\vspace{0.1in}\small{Due on November 9, 2020 at 5:45 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{2}{\rhead{Section 5.5 Question}\fancyfoot[L]{Section 5.6 Problem 48 continued on next page\ldots}}
+\fancypagestyle{3}{\rhead{Section 5.6 Problem 48}\fancyfoot[L]{Section 5.7 Problem 82 continued on next page\ldots}}
+\fancypagestyle{4}{\rhead{Section 5.7 Problem 82}\fancyfoot[L]{Section 5.9 Problem 16 continued on next page\ldots}}
+\fancypagestyle{5}{\rhead{Section 5.9 Problem 16}}
+\fancypagestyle{6}{\rhead{Chapter 5 Review Problem 44}\fancyfoot[L]{Section 6.1 Problem 40 continued on next page\ldots}}
+\fancypagestyle{7}{\rhead{Section 6.1 Problem 40}\fancyfoot[L]{Section 6.2 Problems 10 continued on next page\ldots}}
+\fancypagestyle{8}{\rhead{Section 6.2 Problems 10}\fancyfoot[L]{Section 6.2 Problem 44 continued on next page\ldots}}
+\fancypagestyle{9}{\rhead{Section 6.2 Problem 44}}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+    \thispagestyle{2}
+
+    \begin{tbhtheorem}{Section 5.5 Question}
+        Find the slope of the line through the origin which divides the area under the parabola $y=4x-x^2$ and above the $x$-axis into two equal parts.
+    \end{tbhtheorem}
+
+    Differentiating both sides of the given equation, we have
+
+    \[
+        y = 4 - 2x
+    \]
+
+    The slope of the line through the origin and an arbitrary point $(c,f(c))\rightarrow (c,4c-c^2)$ on the curve $y=4x-x^2$ is given by
+
+    \[
+        \frac{y_2 - y_1}{x_2 - x_1} = \frac{4c-c^2}{c} = 4-c.
+    \]
+
+    Because the arbitrary line passes through the origin, an equation for it can be written like so:
+
+    \[
+        y = (4-c)x
+    \]
+
+    The roots of the parabola are $0$ and 4 such that the total area under the parabola is as follows.
+
+    \begin{align*}
+        A   &= \int_0^4 (4x-x^2)dx \\
+            &= \left[2x^2-\frac{x^3}{3}\right]\Big|_0^4 \\
+            &= 32 - \frac{64}{3}
+    \end{align*}
+
+    When the arbitrary line divides $A$ into two equal parts,
+
+    \begin{align*}
+        \frac{1}{2}A        &= \int_0^c \left[\left(4x-x^2\right)-\left((4-c)x\right)\right] \\
+        16 - \frac{32}{3}   &= \int_0^c \left(-x^2 + cx\right) \\
+        16 - \frac{32}{3}   &= \left[-\frac{x^3}{3} + \frac{cx^2}{2}\right]\Big|_0^c \\
+        16 - \frac{32}{3}   &= -\frac{c^3}{3} + \frac{c^3}{2} \\
+        96 - 64             &= -2c^3 + 3c^3 \\
+        32                  &= c^3 \\
+        c                   &= \sqrt[3]{32} \\
+        c                   &= 2\sqrt[3]{4}
+    \end{align*}
+
+    Hence, the slope of the line through the origin which divides the are under the parabola $y=4x-x^2$ and above the $x$-axis into two equal parts is
+
+    \[
+        4 - 2\sqrt[3]{4}
+    \]
+
+    \begin{tbhtheorem}{Section 5.6 Problem 48}
+        As a particle moves about the plane, its $x$-coordinate changes at the rate of $t-2$ units per second and its $y$-coordinate changes at the rate of $\sqrt{t}$ units per second. If the particle is at the point
+        $(3,1)$ when $t=4$ seconds, where is the particle 5 seconds later?
+    \end{tbhtheorem}
+
+    The rates of changes given are
+
+    \[
+        \frac{dx}{dt}=t-2, \frac{dy}{dt}=\sqrt{t}
+    \]
+
+    Integrating both sides of the rate of change of the $x$-coordinate with respect to $t$, the $x$-coordinate of the position function, $p_x(t)$, is given by
+
+    \begin{align*}
+        p_x(t)  &= \int (t-2)dt \\
+                &= \frac{t^2}{2} - 2t + C
+    \end{align*}
+
+    At $t=4$ seconds, $p_x(4)=3$ s.t.
+
+    \begin{align*}
+        3   &= \frac{4^2}{2} - 2(4) + C \\
+        C   &= 3 \\
+        p_x (t) &= \frac{t^2}{2} - 2t + 3
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{3}
+
+    When $t=9$,
+
+    \[
+        p_x(9) = \frac{9^2}{2} - 2(9) + 3 = \frac{51}{2}
+    \]
+
+    Similarly, integrating both sides of the rate of change of the $y$-coordinate with respect to $t$, the $y$-coordinate of the position function, $p_y(t)$, is given by
+
+    \begin{align*}
+        p_y (t) &= \int t^{\frac{1}{2}}dt \\
+                &= \frac{2}{3}t^{\frac{3}{2}} + C
+    \end{align*}
+
+    At $t=4$ seconds, $p_y (4) = 1$ s.t.
+
+    \begin{align*}
+        1   &= \frac{2}{3}(4)^{\frac{3}{2}} + C \\
+        C   &= -\frac{13}{3} \\
+        p_y(t)  &= \frac{2}{3}t^{\frac{3}{2}} -\frac{13}{3}
+    \end{align*}
+
+    When $t=9$,
+
+    \[
+        p_y (9) &= \frac{2}{3}(9)^{\frac{3}{2}} - \frac{13}{3} = \frac{41}{3}
+    \]
+
+    Thus, when $t=9$ seconds, the particle is at the point
+
+    \[
+        \left(\frac{51}{2}, \frac{41}{3}\right)
+    \]
+
+
+    \begin{tbhtheorem}{Section 5.7 Problem 82}
+        Calculate
+
+        \[
+            \int \sin{x}\cos{x}dx,
+        \]
+
+        (a) Setting $u=\sin{x}$ \\
+        (b) Setting $u=\cos{x}$ \\
+        (c) Reconcile your answers to parts (a) and (b) (Also use $\sin{(2\theta) = 2\sin{\theta}\cos{\theta}}$ to get a third answer).
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    Let $u=\sin{x}$ such that
+
+    \[
+        du = \cos{x}dx
+    \]
+
+    and the integral becomes
+
+    \begin{align*}
+        \int u du   &= \frac{u^2}{2} + C_1 \\
+                    &= \frac{\sin^2{x}}{2} + C_1
+    \end{align*}
+
+
+    \textbf{(b)} \\
+    Let $u=\cos{x}$ such that
+
+    \begin{align*}
+        du  &= -\sin{x}dx \\
+        -du &= \sin{x}dx
+    \end{align*}
+
+    and the integral becomes
+
+    \begin{align*}
+        -\int u du  &= -\frac{u^2}{2} + C_2 \\
+                    &= -\frac{\cos^2{x}}{2} + C_2
+    \end{align*}
+
+    \textbf{(c)} \\
+    The antiderivative from part B can be written in the form
+
+    \[
+        \frac{\sin^2{x}-1}{2} + C_2 = \frac{\sin^2{x}}{2} - \frac{1}{2} + C_2
+    \]
+
+    \pagebreak
+    \thispagestyle{4}
+
+    Since $C_1$ is an arbitrary constant, we can let $C_1 = \frac{1}{2}+C_2$. It follows then that the integral from part B,
+
+    \[
+        \frac{\sin^2{x}}{2} + \frac{1}{2} + C_2 = \frac{\sin^2{x}}{2} + C_1
+    \]
+
+    is the same as the integral found in part A. \\
+
+    Using the double angle sine identity, the original integral can be rewritten as
+
+    \[
+        \frac{1}{2}\int \sin{(2x)}dx
+    \]
+
+    Let $u=2x$ s.t.
+
+    \begin{align*}
+        du  &= 2dx \\
+        \frac{1}{4} &= \frac{1}{2}dx
+    \end{align*}
+
+    and the integral becomes
+
+    \begin{align*}
+        \frac{1}{4}\int \sin{u}du   &= -\frac{\cos{u}}{4} + C_3 \\
+                                    &= -\frac{\cos{(2x)}}{4} + C_3 \\
+                                    &= -\frac{1-2\sin^2{x}}{4} + C_3 \\
+                                    &= \frac{2\sin^2{x}-1}{4} + C_3 \\
+                                    &= \frac{2\sin^2{x}}{4} - \frac{1}{4} + C_3
+    \end{align*}
+
+    Once again, $C_3$ is arbitrary so we can set it to $C_3-\frac{1}{4}=\frac{1}{2}+C_2$ s.t. the integral becomes
+
+    \[
+        \frac{\sin^2{x}}{2} - \frac{1}{4} + C_3 = \frac{\sin^2{x}}{2} + \frac{1}{2}+C_2 = \frac{\sin^2{x}}{2} + C_{1}
+    \]
+
+    which is equal to the integrals found in parts $A$ and $B$.
+
+
+    \begin{tbhtheorem}{Section 5.9 Problem 16}
+        Determine whether the assertion is true or false on an arbitrary interval $[a,b]$ on which $f$ and $g$ are continuous. \\
+        (a) $(f+g)_{\text{avg}}=f_{\text{avg}}+g_{\text{avg}}$ \\
+        (b) $(\alpha f)_{\text{avg}}=\alpha f_{\text{avg}}$ \\
+        (c) $\left(fg\right)_{\text{avg}}=\left(f_{\text{avg}}\right)\left(g_{\text{avg}}\right)$ \\
+        (d) $\left(fg\right)_{\text{avg}}=\left(f_{\text{avg}}\right)/\left(g_{\text{avg}}\right)$
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    The arbitrary interval $[a,b]$ is closed. Let $f$ and $g$ be functions of $x$. Assume that $\left(f+g\right)_{\text{avg}}=f_{\text{avg}}+g_{\text{avg}}$ s.t.
+
+    \begin{align*}
+        \frac{1}{b-a}\int_a^b \left(f(x)+g(x)\right)dx  &= \frac{1}{b-a}\int_a^b f(x)dx + \frac{1}{b-a}\int_a^b g(x)dx
+    \end{align*}
+
+    The above equation is true because it is the definition of the integral sum rule, hence the assertion $\left(f+g\right)_{\text{avg}} = f_{\text{avg}} + g_{\text{avg}}$ holds true on the arbitrary interval $[a,b]$ on
+    which $f$ and $g$ are continuous. \\
+
+    \textbf{(b)} \\
+    Function $f$ is continuous on the closed interval $[a,b]$. Let $f$ be a function of $x$. The expansion of $\left(\alpha f\right)_{\text{avg}}$ is as follows:
+
+    \[
+        \frac{1}{b-a}\int_a^b (\alpha f(x))dx
+    \]
+
+    By the integral constant rule, $\alpha$ can be pulled outside the integral like so:
+
+    \[
+        \frac{\alpha}{b-a}\int_a^b f(x)dx
+    \]
+
+    This is exactly equal to the expansion of $\alpha f_{\text{avg}}$ and hence the assertion $\left(\alpha f\right)_{\text{avg}} = \alpha f_{\text{avg}}$ holds true on the arbitrary interval $[a,b]$ on which $f$ and $g$
+    are continuous.
+
+
+
+    \textbf{(c)} \\
+    Functions $f$ and $g$ are continuous on $[a,b]$. Let $f$ and $g$ both be functions of $x$. Consider when $f(x)=g(x)=x$ on the interval $[0,3]$. $\left(fg\right)_{\text{avg}}$ is given by
+
+    \pagebreak
+    \thispagestyle{5}
+
+    \begin{align*}
+        (fg)_{\text{avg}} &= \frac{1}{3}\int_0^3 x^2 dx \\
+                          &= \frac{27}{3} \\
+                          &= 9
+    \end{align*}
+
+    However, $(f_{\text{avg}})(g_{\text{avg}})$ is
+
+    \begin{align*}
+        (f_{\text{avg}})(g_{\text{avg}})    &= \frac{1}{3}\int_0^3 xdx \cdot \frac{1}{3}\int_0^3 xdx \\
+        &= \frac{1}{3}\left(\frac{9}{2}\right) \cdot \frac{1}{3}\left(\frac{9}{2}\right) \\
+        &= \frac{9}{4}
+    \end{align*}
+
+    Because $9 \not = \frac{9}{4}$, we can conclude that the asserition $\left(fg\right)_{\text{avg}}=\left(f_{\text{avg}}\right)\left(g_\text{avg}\right)$ on an arbitrary interval $[a,b]$ on which $f$ and $g$ are
+    continuous is false. \\
+
+    \textbf{(d)} \\
+    Functions $f$ and $g$ are continuous on $[a,b]$. Let $f$ and $g$ both be functions of $x$. Consider when $f(x)=g(x)=10$ on the interval $[0,1]$. $\left(fg\right)_{\text{avg}}$ is then 100 and
+
+    \[
+        \left(f_{\text{avg}}\right)/\left(g_{\text{avg}}\right) = 1
+    \]
+
+    Since $100\not = 1$, the assertion that $\left(fg\right)_{\text{avg}}=\left(f_{\text{avg}}\right)/\left(g_{\text{avg}}\right)$ on an arbitrary interval $[a,b]$ on which $f$ and $g$ are continuous is false.
+
+
+    \begin{tbhtheorem}{Section 5.9 Problem 17}
+        Let $P(x,y)$ be an arbitrary point on the curve $y=x^2$. Express as a function of $x$ the distance from $P$ to the origin and calculate the average of this distance as $x$ ranges from 0 to $\sqrt{3}$.
+    \end{tbhtheorem}
+
+    Substituting in $y=x^2$, point $P$ can be redefined as $P(x, x^2)$. The function $D(x)$ representing the distance from the origin to $P$ is as follows:
+
+    \begin{align*}
+        D(x)    &= \sqrt{x^2 + \left(x^2\right)^2} \\
+                &= \sqrt{x^2(1+x^2)} \\
+                &= x\sqrt{1+x^2}
+    \end{align*}
+
+    The average distance on the interval $[0, \sqrt{3}]$ is then
+
+    \begin{align*}
+        D_{\text{avg}}  &= \frac{\int_0^{\sqrt{3}} x\sqrt{1+x^2}dx}{\sqrt{3}}
+    \end{align*}
+
+    Let $u=1+x^2$ s.t.
+
+    \begin{align*}
+        du  &= 2xdx \\
+        \frac{1}{2}du   &= xdx
+    \end{align*}
+
+    The new bounds of the integral with respect to $u$ are then
+
+    \[
+        u = 1+0^2 = 1
+    \]
+
+    and
+
+    \[
+        u = 1 + \left(\sqrt{3}\right)^2 = 4
+    \]
+
+    It follows that $D_{\text{avg}}$ is
+
+    \begin{align*}
+        D_{\text{avg}}  &= \frac{\frac{1}{2}\int_1^4 u^{\frac{1}{2}}du}{\sqrt{3}} \\
+                        &= \frac{\frac{1}{2}\left[\frac{2}{3}u\sqrt{u}\right]\Big|_1^4}{\sqrt{3}} \\
+                        &= \frac{\frac{7}{3}}{\sqrt{3}} \\
+                        &= \frac{7}{3\sqrt{3}} \\
+                        &= \frac{7\sqrt{3}}{9}
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{6}
+
+
+    \begin{tbhtheorem}{Chapter 5 Review Problem 44}
+        Assume that $f$ is a continuous function and that
+
+        \[
+            \int_0^x tf(t)dt = x\sin{x} + \cos{x} - 1.
+        \]
+
+        (a) Find $f(\pi)$ \\
+        (b) Calculate $f'(x)$
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    Differentiating both sides of the equation, it follows that
+
+    \begin{align*}
+        xf(x)   &= \sin{x} + x\cos{x}-\sin{x} \\
+                &= x\cos{x} \\
+        f(x)    &= \cos{x} \\
+        f(\pi)  &= \cos{\pi} \\
+                &= -1
+    \end{align*}
+
+    \textbf{(b)} \\
+    Differentiating $f(x)=\cos{x}$, we have
+
+    \begin{align*}
+        f'(x)   &= -\sin{x}
+    \end{align*}
+
+
+
+    \begin{tbhtheorem}{Section 6.1 Problem 40}
+        (a) Calculate the area of the region in the first quadrant bounded by the coordinate axes and the parabola $y=1+a-ax^2, a> 0$ \\
+        (b) Determine the value of $a$ that minimizes this area.
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    When $y=0$,
+
+    \begin{align*}
+        -ax^2 + a + 1   &= 0 \\
+        ax^2 - a - 1    &= 0 \\
+        ax^2            &= a + 1 \\
+        x^2             &= \frac{a+1}{a} \\
+        x               &= \pm \sqrt{\frac{a+1}{a}}
+    \end{align*}
+
+    We only care about the positive $x$-intercept as we want the area of the region in the first quadrant. This area, $A$, is given by
+
+    \begin{align*}
+        A   &=  \int_0^{\sqrt{\frac{a+1}{a}}} \left(1+a-ax^2)dx \\
+            &=  \left[x+ax-\frac{ax^3}{3}\right]\Big|_0^{\sqrt{\frac{a+1}{a}}} \\
+            &= \sqrt{\frac{a+1}{a}} + a\sqrt{\frac{a+1}{a}} - \frac{a\left(\sqrt{\frac{a+1}{a}}\right)^3}{3} \\
+            &= (a+1)\sqrt{\frac{a+1}{a}} - \frac{a\left(\sqrt{\frac{a+1}{a}}\right)^3}{3} \\
+            &= (a+1)\sqrt{\frac{a+1}{a}} - \frac{a\left(\frac{a+1}{a}\right)\sqrt{\frac{a+1}{a}}}{3} \\
+            &= (a+1)\sqrt{\frac{a+1}{a}} - \frac{(a+1)\sqrt{\frac{a+1}{a}}}{3} \\
+            &= \frac{2}{3}(a+1)\left(\sqrt{\frac{a+1}{a}}\right) \\
+            &= \frac{2}{3}\sqrt{\frac{(a+1)^3}{a}}
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{7}
+
+    \textbf{(b)} \\
+    The area of a region is a continuous, non-discrete quantity by nature. By the Extreme Value Theorem, the minimum area, $A\in(0,\infty)$, of the region must be attained at a critical point. Differentiating $A$ with
+    respect to $a$,
+
+    \begin{align*}
+        A'  &= \frac{2}{3} \frac{1}{2\sqrt{\frac{(a+1)^3}{a}}} \cdot \frac{d}{da}\left(\frac{(a+1)^3}{a}\right) \\
+            &= \frac{1}{3\sqrt{\frac{(a+1)^3}{a}}}\cdot \frac{3a(a+1)^2 - (a+1)^3}{a^2}
+    \end{align*}
+
+    Thus the factors of $A'$ are
+
+    \[
+        \frac{1}{3\sqrt{\frac{(a+1)^3}{a}}} \text{ and } \frac{3a(a+1)^2-(a+1)^3}{a^2}
+    \]
+
+    Because $a>0$, the first factor will never have a value of zero or be undefined. The second factor
+
+    \[
+        \frac{3a(a+1)^2-(a+1)^3}{a^2}
+    \]
+
+    is undefined at $a=0$ however this value is not within the domain $a\in(0,\infty)$. When the factor equals zero,
+
+    \begin{align*}
+        \frac{3a(a+1)^2-(a+1)^3}{a^2}   &= 0 \\
+        3a(a+1)^2 - (a+1)^3             &= 0 \\
+        (a+1)^2(3a-(a+1))               &= 0 \\
+        (a+1)^2(2a-1)
+    \end{align*}
+
+    This factor equals zero when $a=-1,\frac{1}{2}$. $a$ must be positive so the only critical point of the area $A$ is at $\frac{1}{2}$. When $a=0.000001$, $A'<0$ and when $a=1$, $A'>1$ and thus $a=\frac{1}{2}$ is
+    the value of $a$ that gives both the relative and absolute minimum on $(0,\infty)$. Hence, the value of $a$ that minimizes this area is $\frac{1}{2}$.
+
+
+    \begin{tbhtheorem}{Section 6.2 Problems 10}
+        Sketch the region $\Omega$ bounded by the curves and find the volume of the solid generated by revolving this region about the $x$-axis.
+
+        \[
+            y = x^2, y = 2-x
+        \]
+
+        (Also rotate about $y=-1, y=4, y=\frac{1}{4}$. The last one is tricky. Do not evaluate the integrals.)
+    \end{tbhtheorem}
+    
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.05]{omega}
+    \end{figure*}
+
+    Solving the system
+
+    \[
+        \begin{cases}
+            y=x^2 \\
+            y=2-x
+        \end{cases}
+    \]
+
+    we see that the curves intersect each other at $(-2,4)$ and $(1,1)$. The volume of the solid of revolution generated by revolving the region about the $x$-axis is given by
+
+    \[
+        V = \pi \int_{-2}^1 \left((2-x)^2 - x^4\right)dx
+    \]
+
+    The volume of the solid of revolution generated by revolving the region about the line $y--1$ is given by
+
+    \begin{align*}
+        V   &= \pi \int_{-2}^1 \left((2-x+1)^2 - (x^2+1)^2\right)dx \\
+            &= \pi \int_{-2}^1 \left((-x+3)^2 - (x^2+1)^2\right)dx
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{8}
+
+    The volume of the solid of revolution generated by revolving the region about the line $y=4$ is given by
+
+    \begin{align*}
+        V   &= \pi \int_{-2}^1 \left((4-x^2)^2-(4-(2-x))^2\right)dx \\
+            &= \pi\int_{-2}^1 \left((4-x^2)^2) - (2+x))^2\right)dx
+    \end{align*}
+
+    Let $V_1$ be the volume of the region rotated about the line $y=\frac{1}{4}$ and let $V_2$ be the volume of the overlapping region rotated about the line $y=\frac{1}{4}$. \\
+
+    For the overlapping region, the curve $y=x^2$ intersects the axis of revolution, $y=\frac{1}{4}$ at the solutions to the system
+
+    \[
+        \begin{cases}
+            y = x^2 \\
+            y = \frac{1}{4}
+        \end{cases}
+    \]
+
+    Substituting $y=\frac{1}{4}$ into $y=x^2$,
+
+    \begin{align*}
+       x    &= \pm \frac{1}{2}
+    \end{align*}
+
+    Thus the bounds of the integral for finding $V_2$ are $x=\pm\frac{1}{2}$ and $V_2$ is as follows.
+
+    \begin{align*}
+        V_2 &= \pi\int_{-\frac{1}{2}}^{\frac{1}{2}}  \left(x^2-\frac{1}{4}\right)^2 dx \\
+    \end{align*}
+
+    Then $V$ is
+
+    \begin{align*}
+        V   &= V_1 - V_2 \\
+            &= \pi \left(\int_{-2}^1 \left(\left(2-x-\frac{1}{4}\right)^2-\left(x^2-\frac{1}{4}\right)^2\right)dx- \int_{-\frac{1}{2}}^{\frac{1}{2}}  \left(x^2-\frac{1}{4}\right)^2 dx \\
+            &= \pi \left(\int_{-2}^1 \left(\left(\frac{7}{4}-x\right)^2-\left(x^2-\frac{1}{4}\right)^2\right)dx - \int_{-\frac{1}{2}}^{\frac{1}{2}}  \left(x^2-\frac{1}{4}\right)^2 dx\right)
+    \end{align*}
+
+
+
+    \begin{tbhtheorem}{Section 6.2 Problem 44}
+        A hemispherical punch bowl 2 feet in diameter is filled to within 1 inch of the top. Thirty minutes after the party starts, there are only 2 inches of punch left at the bottom of the bowl. \\
+        (a) How much punch was there at the beginning? \\
+        (b) How much punch was consumed?
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    A 2D curve for the bowl can be described by placing the sideways bowl with its bottom on the origin and facing the positive $x$ direction, thus giving
+
+    \begin{align*}
+        (x-12)^2 + y^2 &= 12^2 \\
+        (x-12)^2 + y^2 &= 144 \\
+        y              &= \sqrt{144-(x-12)^2}
+    \end{align*}
+
+    The initial amount of punch in the bowl, $P_0$, is thus
+
+    \begin{align*}
+        P_0 &= \pi \int_0^{11} \left(\sqrt{144-(x-12)^2}\right)^2 dx \\
+            &= \pi \int_0^{11} \left(144-(x-12)^2\right)dx \\
+            &= \pi \int_0^{11} \left(144-(x^2-24x+144))dx \\
+            &= \pi \int_0^{11} \left(-x^2+24x)dx \\
+            &= \pi\left[-\frac{x^3}{3}+12x^2\right]\Big|_0^{11} \\
+            &= \pi\left(-\frac{1331}{3}+1452\right) \\
+            &= \frac{3025}{3}\pi \text{ in}^3
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{9}
+
+    \textbf{(b)} \\
+    The amount of punch left is given by
+
+    \begin{align*}
+        P_f &= \pi \int_0^2 (24-x^2)dx \\
+            &= \pi\left[-\frac{x^3}{3}+12x^2\right]\Big|_0^2 \\
+            &= \pi\left(-\frac{8}{3}+48\right) \\
+            &= \frac{136}{3}\pi \text{ in}^3
+    \end{align*}
+
+    Hence, the amount of punch consumed is
+
+    \begin{align*}
+        P_0 - P_f   &= \frac{3025}{3}\pi - \frac{136}{3}\pi \\
+                    &= 963\pi \text{ in}^3
+    \end{align*}
+
+
+    \begin{tbhtheorem}{Section 6.3 Problem 46}
+        A hole is drilled through the center of a ball of radius $r$, leaving a solid with a hollow cylindrical core of height $h$. Show that the volume of this solid is independent of the radius of the ball.
+    \end{tbhtheorem}
+
+    Let $R$ be the radius of the ball and $r$ be the radius of the drilled hole. Our ball can be represented by the circle $x^2+y^2=r^2$, which is centered at the origin.
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.08]{drill}
+    \end{figure*}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.08]{drill2}
+    \end{figure*}
+
+
+
+\end{document}

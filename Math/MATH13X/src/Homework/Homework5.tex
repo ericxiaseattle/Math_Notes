@@ -1,0 +1,539 @@
+% Preamble
+\documentclass{article}
+
+
+% Package Imports
+\usepackage{../../../../mypackages}
+
+
+
+% Macros
+\usepackage{../../../../mymacros}
+
+
+% Homework Details and Basic Document Settings
+\pagestyle{fancy}
+\lhead{\textbf{Eric Xia}}
+\chead{MATH134 (Professor Ebru Bekyel): Week 5 Assignment}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% Title Page
+\title{
+    \vspace{2in}
+    \textmd{\textbf{MATH134: Homework 5}}\\
+    \normalsize\vspace{0.1in}\small{Due on November 2, 2020 at 5:45 PM}\\
+    \vspace{0.1in}\large{\textit{Professor Ebru Bekyel}}
+    \vspace{3in}
+}
+
+\author{\textbf{Eric Xia}}
+\date{}
+
+
+% Problem Headers and Footers
+\fancypagestyle{2}{\rhead{Question 1}\fancyfoot[L]{Section 5.2 Problem 12 continued on next page\ldots}}
+\fancypagestyle{3}{\rhead{Section 5.2 Problem 12}}
+\fancypagestyle{4}{\rhead{Section 5.2 Problem 27}}
+\fancypagestyle{5}{\rhead{Section 5.3 Problem 32}\fancyfoot[L]{Section 5.3 Problem 21 continued on next page\ldots}}
+\fancypagestyle{6}{\rhead{Section 5.3 Problem 21}\fancyfoot[L]{Section 5.3 Problem 36 continued on next page\ldots}}
+\fancypagestyle{7}{\rhead{Section 5.3 Problem 36}}
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+    \pagebreak
+
+
+    \thispagestyle{2}
+
+    \begin{tbhtheorem}{Question 1}
+        Prove that a non-constant linear function is uniformly continuous on the real line. (This should be straightforward. Start with a continuity proof and make sure your delta does not depend on the point you
+        choose.)
+    \end{tbhtheorem}
+
+    \begin{proof}
+        A non-constant linear function can have the form
+
+        \[
+            f(x) = mx + b,
+        \]
+
+        where $m\not = 0$ and $b$ is a constant. For $f(x)$ to be uniformly continuous, for any given $\epsilon > 0$, the inequality
+
+        \[
+            |x-c| < \delta \implies |f(x) - f(c)| < \epsilon,
+        \]
+
+        where $c$ is a constant, must hold. Let $\delta = \frac{\epsilon}{|m|}$ and $\epsilon > 0$, such that
+
+        \[
+            \text{if } |x-c| < \delta = \frac{\epsilon}{|m|} \text{ then } |f(x) - f(c)| < \epsilon
+        \]
+
+        Substituting in $f(x)=mx+b$ and $f(c)=mc+b$, $|f(x) - f(c)| < \epsilon$ becomes
+
+        \begin{align*}
+            |mx + b - mc - b| &< \epsilon \\
+            |m(x-c)|          &< \epsilon \\
+            |m||x-c|          &< \epsilon
+        \end{align*}
+
+        As $|x-c| < \frac{\epsilon}{|m|}$, it follows that
+
+        \begin{align*}
+            |m|\cdot \frac{\epsilon}{|m|} &= \epsilon \\
+            \epsilon                      &= \epsilon
+        \end{align*}
+
+        Hence, the non-constant linear function $f(x)$ is uniformly continuous on the real line.
+    \end{proof}
+
+    \begin{tbhtheorem}{Section 5.2 Problem 12}
+        (a) Given that $P = \{x_0, x_1, \dots, x_n\}$ is an arbitrary partition of $[a,b]$, find $L_f (P)$ and $U_f(P)$ for $f(x)=x+3$. \\
+        (b) Use your answers to part (a) to evaluate
+        \[
+            \int^b_a f(x)dx.
+        \]
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    On each subinterval $[x_{i-1}, x_i]$, the function $f(x)=x+3$ has a maximum of $x_i$ and a minimum of $x_{i-1}$. $L_f (P)$ is defined as the lower sum for $f(x)$, i.e. the sum of the areas of the rectangles
+    in each interval using the lowest value of $f(x)$ as the height of the rectangle. $U_f (P)$ is defined as the upper sum for $f(x)$, i.e. the sum of the areas of the rectangles in each interval using the highest value
+    of $f(x)$ as the height of the rectangle. It follows that
+
+    \[
+        L_f (P) = \sum^n_{i=1} \Delta x f(x_{n-1}) = \sum^n_{i=1} (x_n - x_{n-1})f(x_{n-1})
+    \]
+
+    and
+
+    \[
+        U_f (P) = \sum^n_{i=1} \Delta x f(x_n) = \sum^n_{i=1} (x_n - x_{n-1}) f(x_n)
+    \]
+
+    \textbf{(b)} \\
+    As $x_{i-1} \leq x_i$ and the function $f(x)$ is strictly increasing, for every index $i$, the inequality
+
+    \[
+        2(x_{x-1}+3) \leq x_i + 3 + x_{x-1} + 3 \leq 2(x_i + 3)
+    \]
+
+    holds, and
+
+    \[
+        x_{i-1} + 3 \leq \frac{1}{2}(x_i + x_{i-1} + 6) \leq x_i + 3
+    \]
+
+    Multiplying by $\Delta x = x_i - x_{i-1}$, the middle term of the inequality becomes
+
+    \[
+        \frac{1}{2}(x_i - x_{i-1})(x_i + x_{i-1} + 6) = \frac{1}{2}(x^2_i + 6x_i - x^2_{i-1} - 6x_{i-1})
+    \]
+
+    It follows that
+
+    \[
+        \Delta x (x_{i-1}) \leq \frac{1}{2} (x^2_i + 6x_i - x^2_{i-1} - 6x_{i-1}) \leq \Delta x x_i
+    \]
+
+    \pagebreak
+    \thispagestyle{3}
+
+    The sum of the middle term collapses to:
+
+    \begin{align*}
+        \frac{1}{2} (x^2_1 + 6x_1 - x^2_0 - 6x_0 + x^2_2 + 6x_2 - x^2_1 - 6x_1 + \dots + x^2_n + 6x_n - x^2_{n-1} - 6x_{n-1})   &= \frac{1}{2}(-x^2_0 - 6x_0 + x^2_n + 6x_n) \\
+                                                                                                                                &= \frac{1}{2}(-a^2 - 6a + b^2 + 6b)
+    \end{align*}
+
+    The sum of the terms on the left side of the inequality is $L_f (P)$ and the sum of the terms on the right side of the inequality is $U_f (P)$. Thus,
+
+    \[
+        L_f (P) \leq \frac{b^2-a^2 + 6b-6a}{2} \leq U_f (P)
+    \]
+
+    Since $P$ was chosen arbitrarily, we can conclude that this inequality holds for all partitions $P$ of $[a,b]$. It follows that
+
+    \[
+        \int^b_a f(x)dx = \frac{b^2-a^2+6b-6a}{2}.
+    \]
+
+
+
+    \begin{tbhtheorem}{Section 5.2 Problems 25-30}
+        Assume that $f$ and $g$ are continuous, that $a<b$, and that $\int^b_a f(x)dx > \int^b_a g(x)dx$. Which of the statements necessarily holds for all partitions $P$ of $[a,b]$? Justify your answer. \\
+
+        25. $L_g (P) < U_f (P)$. \\
+        26. $L_g (P) < L_f (P)$. \\
+        27. $L_g (P) < \int^b_a f(x)dx$. \\
+        28. $U_g (P) < U_f (P)$. \\
+        29. $U_f (P) > \int^b_a g(x)dx$. \\
+        30. $U_g (P) < \int^b_a f(x)dx$.
+    \end{tbhtheorem}
+
+    \textbf{25.} \\
+    Since $L_g (P)$ is the lower sum of $g(x)$ on an arbitrary interval $P$ and $U_g (P)$ is the upper sum of $g(x)$ on $P$, it follows that
+
+    \[
+        L_g (P) < \int^b_a g(x)dx
+    \]
+
+    and
+
+    \[
+        U_f (P) > \int^b_a f(x)dx
+    \]
+
+    Since $\int^b_a f(x)dx > \int^b_a g(x)dx$,
+
+    \[
+        L_g (P) < \int^b_a g(x)dx < \int^b_a f(x)dx < U_f (P)
+    \]
+
+    and the statement $L_g (P) < U_f (P)$ must always hold true. \\
+
+    \textbf{26.} \\
+    Consider when $f(x)=x$ and $g(x)=1$, $\Delta x = x_i - x_{i-1}$, and the arbitrary partition $P$ is defined as $P=[0,1]$, such that
+
+    \[
+        L_f (P) = \Delta x \cdot f(x_{i-1})
+    \]
+
+    and
+
+    \[
+        L_g (P) = \Delta x \cdot g(x_{i-1})
+    \]
+
+    At the index $i=1$,
+
+    \[
+        L_f (P) = 0(1-0) = 0
+    \]
+
+    and
+
+    \[
+        L_g (P) = 1(1-0) = 1
+    \]
+
+    Thus,
+
+    \[
+        L_f (P) < L_g (P)
+    \]
+
+    and the statement $L_g (P) < L_f (P)$ is not necessarily true for all partitions $P$ of $[a,b]$.
+
+    \pagebreak
+    \thispagestyle{4}
+
+    \textbf{27.} \\
+    By the definition of $L_g (P)$,
+
+    \[
+        L_g (P) < \int^b_a g(x)dx
+    \]
+
+    Because
+
+    \[
+        \int^b_a g(x)dx < \int^b_a f(x)dx,
+    \]
+
+    it follows that the inequality
+
+    \[
+        L_g (P) < \int^b_a f(x)dx
+    \]
+
+    is always true. \\
+
+    \textbf{28.} \\
+    Consider when $f(x)=x$ and $g(x)=1$, $\Delta x = x_i - x_{i-1}$, and the arbitrary partition $P$ is defined as $P=[0,1]$, such that
+
+    \[
+        U_f (P) = \Delta x \cdot f(x_i)
+    \]
+
+    and
+
+    \[
+        U_g (P) = \Delta x \cdot g(x_i)
+    \]
+
+    At the index $i=1$,
+
+    \[
+        U_f (P) = 1(1) = 1
+    \]
+
+    and
+
+    \[
+        U_g (P) = 1(1) = 1
+    \]
+
+    Thus,
+
+    \[
+        U_f (P) = U_g (P)
+    \]
+
+    and the statement $U_g (P) < U_f (P)$ is not necessarily true for all partitions $P$ of $[a,b]$. \\
+
+    \textbf{29.} \\
+    By the definition of $U_f (P)$,
+
+    \[
+        U_f (P)> \int^b_a f(x)dx
+    \]
+
+    Because
+
+    \[
+        \int^b_a g(x)dx < \int^b_a f(x)dx,
+    \]
+
+    it follows that the inequality
+
+    \[
+        U_f (P) > \int^b_a g(x)dx
+    \]
+
+    always holds. \\
+
+    \textbf{30.} \\
+    Consider when $f(x)=x$ and $g(x)=1$, $\Delta x = x_i - x_{i-1}$, and the arbitrary partition $P$ is defined as $P=[0,1]$, such that
+
+    \[
+        U_g (P) = \Delta x\cdot g(x_i) = 1(1) = 1
+    \]
+
+    Because the integral of a function is the area under the curve,
+
+    \begin{align*}
+        \int^b_a f(x)dx = \int^1_{0} xdx = \frac{1}{2}
+    \end{align*}
+
+    It follows that
+
+    \[
+        U_g (P) > \int^b_a f(x)dx
+    \]
+
+    and hence the statement $U_g (P) < \int^b_a f(x)dx$ is not necessarily true for all partitions $P$ of $[a,b]$.
+
+    \pagebreak
+    \thispagestyle{5}
+
+
+
+    \begin{tbhtheorem}{Section 5.2 Problem 32}
+        Let $P=\{x_0, x_1, x_2, \dots, x_{n-1}, x_n\}$ be a regular partition of the interval $[a,b]$. Show that if $f$ is continuous and decreasing on $[a,b]$, then
+        \[
+            U_f (P) - L_f (P) = [f(a) - f(b)] \Delta x
+        \]
+    \end{tbhtheorem}
+
+    \begin{proof}
+        As $P$ is a regular partition and $f$ is decreasing on $[a,b]$, we have that the expansion of the upper sum $U_f (P)$ is given by
+
+        \[
+            U_f (P) = f(x_1)\Delta x + f(x_2)\Delta x + \dots + f(x_{n-1}) \Delta x
+        \]
+
+        and the expansion of the lower sum $L_f (P)$ is given by
+
+        \[
+            L_f (P) = f(x_0)\Delta x + f(x_1) \Delta x + \dots + f(x_n)
+        \]
+
+        It follows then that
+
+        \begin{align*}
+            U_f (P) - L_f (P)   &= [f(x_0)\Delta x + f(x_1) \Delta x + \dots + f(x_{n-1})] - [f(x_1)\Delta x + f(x_2)\Delta x + \dots + f(x_n) \Delta x] \\
+                                &= \Delta x([f(x_0) + f(x_1) + \dots + f(x_{n-1})] - [f(x_1) + f(x_2) + \dots + f(x_n)])
+        \end{align*}
+
+        This collapses to
+
+        \[
+            U_f (P) - L_f (P) = \Delta x [f(x_0) - f(x_n)]
+        \]
+
+        Substituting $a=x_0$ and $b=x_n$,
+
+        \[
+            U_f (P) - L_f (P) = [f(a)-f(b)]\Delta x
+        \]
+    \end{proof}
+
+
+
+
+    \begin{tbhtheorem}{Section 5.3 Problem 21}
+        Suppose that $f$ is differentiable with $f'(x)>0$ for all $x$, and suppose that $f(1)=0$. Set
+
+        \[
+            F(x) = \int^x_0 f(t)dt.
+        \]
+
+        Justify each statement. \\
+        (a) $F$ is continuous. \\
+        (b) $F$ is twice differentiable. \\
+        (c) $x=1$ is a critical point of $F$. \\
+        (d) $F$ takes on a local minimum at $x=1$. \\
+        (e) $F(1)<0$. \\
+
+        Make a rough sketch of the graph of $F$.
+    \end{tbhtheorem}
+
+    \textbf{(a)}
+    Because $f$ is differentiable,
+
+    \begin{align*}
+        f(x)    &= \lim_{h\to 0} \frac{F(x+h)-F(x)}{h} \\
+        f(x)    &= \frac{\lim_{h\to 0} (F(x+h)-F(x))}{\lim_{h\to 0} h} \\
+        0       &= \lim_{h\to 0} F(x+h) -\lim_{h\to 0} F(x) \\
+        F(x)    &= \lim_{h\to 0} F(x+h)
+    \end{align*}
+
+    Hence, by the definition of continuity, $F$ is continuous. \\
+
+
+    \textbf{(b)}
+    The first derivative of $F$ is given by
+
+    \[
+        F'(x) = \frac{d}{dx}\int^x_0 f(t)dt = f(x)
+    \]
+
+    Because $f$ is differentiable for all $x$, it follows that
+
+    \[
+        F''(x) = f'(x)
+    \]
+
+    must exist and hence, $F$ is twice differentiable. \\
+
+
+    \textbf{(c)}
+    When $x=1$,
+
+    \[
+        F'(1) = f(1) = 0
+    \]
+
+    The slope at a critical point is equal to zero, hence, $x=1$ is a critical point of $F$.
+
+    \pagebreak
+    \thispagestyle{6}
+
+    \textbf{(d)}
+    As $f'(x)>0 $ $\forall x$ and $f(1)=0$, it must be true that
+
+    \[
+        f(x)=
+        \begin{cases}
+            \text{negative},     & x<1 \\
+            \text{positive},     & x>1
+        \end{cases}
+    \]
+
+    Because
+
+    \[
+        F'(1) = f(1) = 0
+    \]
+
+    and $f$ is negative before $x=1$ and positive after $x=1$, it follows that $F$ takes a local minimum at $x=1$. \\
+
+    \textbf{(e)} \\
+    Because $f(x)<0$ when $x<1$ and an integral represents the area under a curve, thus
+
+    \[
+        \int^1_0 f(x)dx < 0
+    \]
+
+    \textbf{Rough Sketch of $\bm{F}$}: \\
+    Because $F(1)<0$ and $x=1$ is a minimum of $F$, then a rough sketch of $F$ can be as follows
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale=0.075]{sketch}
+    \end{figure*}
+
+
+
+
+    \begin{tbhtheorem}{Section 5.3 Problem 36}
+        Let $F$ be everywhere continuous and set
+
+        \[
+            F(x) = \int^x_0 \left[t\int^t_1 f(u) du \right]dt.
+        \]
+
+        Find \\
+        (a) $F'(x)$. \\
+        (b) $F'(1)$. \\
+        (c) $F''(x)$. \\
+        (d) $F''(1)$.
+    \end{tbhtheorem}
+
+    \textbf{(a)} \\
+    $F'(x)$ is given by
+
+    \[
+        F'(x) = \frac{d}{dx} \int^x_0 \left[t\int^t_1 f(u)du\right] dt
+    \]
+
+    By the Fundamental Theorem of Calculus,
+
+    \[
+        F'(x) = x\int^x_1 f(u)du
+    \]
+
+    \textbf{(b)} \\
+    When $x=1$,
+
+    \begin{align*}
+        F'(1)   &= 1 \int^1_1 f(u)du \\
+                &= 1(0) \\
+                &= 0
+    \end{align*}
+
+    \textbf{(c)} \\
+    Because
+
+    \[
+        F'(x) = x\int^x_1 f(u)du,
+    \]
+
+    it follows that
+
+    \begin{align*}
+        F''(x)  &= \frac{d}{dx} \left(x\int^x_1 f(u)du\right) \\
+                &= \int^x_1 f(u)du + xf(x)
+    \end{align*}
+
+    \pagebreak
+    \thispagestyle{7}
+
+    \textbf{(d)} \\
+    When $x=1$,
+
+    \begin{align*}
+        F''(1)  &= \int^1_1 f(u)du + (1)f(1) \\
+                &= 0 + f(1) \\
+                &= f(1)
+    \end{align*}
+
+\end{document}
