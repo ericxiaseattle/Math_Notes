@@ -14,3 +14,13 @@
 
 ## Physics Notes:
 * [PHYS141 and PHYS122-3](https://github.com/ericxiaseattle/Notes/raw/master/Physics/PHYS14X/out/Intro_Physics_Notes.pdf): Mechanics (Honors), Electromagnetism, and Waves, Light, and Heat
+
+## UW Courses:
+|Course|PDF|Description|
+|-|-|-|
+
+
+## Non UW Courses:
+|Course|PDF|Description|
+|-|-|-|
+|Algebra|[Algebra](https://github.com/ericxiaseattle/Math_Notes/raw/master/Math/Algebra/out/main.pdf)|Algebra 1 and 2|
