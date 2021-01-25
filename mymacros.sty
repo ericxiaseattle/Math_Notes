@@ -1,0 +1,65 @@
+% Math Operators
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+
+
+\renewcommand{\QED}{$\blacksquare$}
+\renewcommand{\vec}{\overrightarrow}
+
+\newcommand{\mag}[1]{\left\lVert #1 \right\rVert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+
+% Color Operators
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+
+
+
+% Environment Operators
+\newtcolorbox{tbhtheorem}[2][]{
+    colback = Aquamarine!10,    % 10% aquamarine, 90% white
+    colframe = Aquamarine,
+    fonttitle = \bfseries,
+    title=#2,#1
+}
+
+\newtcolorbox{problem}[2][]{
+    colback = Aquamarine!10,    % 10% aquamarine, 90% white
+    colframe = Aquamarine,
+    fonttitle = \bfseries,
+    title=#2,#1
+}
+
+\newtcolorbox{axiom}[2][]{
+    colback = Red!10,    % 10% red, 90% white
+    colframe = Red,
+    fonttitle = \bfseries,
+    title=#2,#1
+}
+
+\newtcolorbox{theorem}[2][]{
+    colback = Blue!10,    % 10% blue, 90% white
+    colframe = Blue,
+    fonttitle = \bfseries,
+    title=#2,#1
+}
+
+\newtcolorbox{corollemma}[2][]{ % Corollaries and lemmas
+    colback = Green!10,    % 10% blue, 90% white
+    colframe = Green,
+    fonttitle = \bfseries,
+    title=#2,#1
+}
+
