@@ -1,0 +1,902 @@
+\section{Sequences, Indetermine Forms, and Improper Integrals}  % MATH135
+
+
+    \subsection{The Least Upper Bound Axiom}    % SHE Chapter 11.1
+
+        Let $S$ be a nonempty set of real numbers. The number $M$ is an \textbf{upper bound} for $S$ if
+
+        \[
+            x \leq M \forall x \in S
+        \]
+
+        It follows then that if $M$ is an upper bound for $S$, then every number in $[M,\infty)$ is also an upper bound for $S$. Sets that have upper bounds are \textbf{bounded above}. Thus, every set that has a largest
+        element will have an upper bound; the converse of this is not always true. Consider the sets
+
+        \[
+            S_1 = (-\infty, 0) \text{ and } S_2 = \left\{\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \dots , \frac{n}{n+1},\dots\right\}
+        \]
+
+        For the set $S_1$, there is no largest element (note that $S_1$ is defined as an open set), the set of its upper bounds, $[0,\infty)$ does have a smallest element, zero. Thus the \textbf{least upper bound} of
+        $S_1$ is 0. The least upper bound of a set $S$ is indicated by the notation \red{"lub $S$"}. Hence, lub$(-\infty, 0]=0$. Examining $S_2$ which can be given by
+
+        \[
+            \frac{n}{n+1} = 1 - \frac{1}{n+1}, n = 1,2,3,\dots
+        \]
+
+        does not have a greatest element, the set of its upper bounds, $[1,\infty)$, does have a least element, 1. Thus lub $S_2=1$.
+
+        \begin{axiom}{The Least Upper Bound Axiom}
+            Every nonempty set of real numbers that has an upper bound has a \textit{least} upper bound. \\
+
+            \textbf{Note:} Set $\mathbb{Q}$ does not satisfy this axiom, i.e. it is not necessarily true that a nonempty set of rational numbers that have a rational upper bound will have a least rational upper bound.
+        \end{axiom}
+
+        \begin{proof}
+            Let $\epsilon > 0$. Since $M$ is an upper bound for $S$, the condition $s\leq M$ is satisfied by all numbers $s\in S$. All we have to show therefore is that there is some number $s\in S$ s.t.
+
+            \[
+                M - \epsilon < s.
+            \]
+
+            Suppose on the contrary that there is no such number in $S$. We then have
+
+            \[
+                x \leq M - \epsilon \forall x \in S
+            \]
+
+            This makes $M - \epsilon$ an upper bound for $S$, but this cannot be because then $M- \epsilon$ is an upper bound for $S$ that is less than $M$, which contradicts the assumption that $M$ is the least upper
+            bound.
+        \end{proof}
+
+        \begin{theorem}{Theorem}
+            If $M$ is the least upper bound of the set $S$ and $\epsilon$ is a positive number, then there is at least one number $s\in S$ such that
+
+            \[
+                M - \epsilon < s \leq M
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example:}} Let $S = \{0,1,2,3\}$ and take $\epsilon = 0.00001$. It is obvious that lub $S=3$, hence there must be a number $s\in S$ s.t.
+
+        \[
+            3 - 0.00001 < s \leq 3.
+        \]
+
+        Letting $s=3$ demonstrates this statement to be true. \\
+
+        Sets that have lower bounds are \textbf{bounded below}. Not all sets have lower bounds, but those that do have \textbf{greatest lower bounds}, indicated by the notation "glb".
+
+        \begin{proof}
+            Suppose that $S$ is nonempty and that it has a lower bound $k$. Then
+
+            \[
+                k \in s \forall s \in S
+            \]
+
+            It follows that $-s \leq -k\forall s \in S$; that is,
+
+            \[
+                \{-s : s \in S \} \text{ has an upper bound } - k
+            \]
+
+            From the least upper bound axiom we conclude that $\{-s:s\in S\}$ has a least upper bound; call it $m$. Since $-s\in m\forall s \in S$, we can see that
+
+            \[
+                -m \in s \forall s \in S,
+            \]
+
+            and thus $-m$ is a lower bound for $S$. We now assert that $-m$ is the greatest lower bound of the set $S$. To see this, note that, if there existed a number $m_1$ satisfying
+
+            \[
+                -m < m_1 \leq s \forall s \in S,
+            \]
+
+            then we would have
+
+            \[
+                -s \leq -m_1 < m \forall s \in S
+            \]
+
+            and thus $m$ would not be the least upper bound of $\{-s:s\in S\}$.
+        \end{proof}
+
+        \begin{theorem}{Theorem}
+            Every nonempty set of real numbers that has a lower bound has a greatest lower bound.
+        \end{theorem}
+
+        The greatest lower bound, although not necessarily in the set, can be approximated as closely as desired by members of the set, giving the theorem below which can be proved. \textbf{[INSERT PROOF]}
+
+        \begin{theorem}{Theorem}
+            If $m$ is the greatest lower bound of the set $S$ and $\epsilon$ is a positive number, then there is at least one number $s\in S$ such that
+
+            \[
+                m \leq s < m + \epsilon
+            \]
+        \end{theorem}
+
+    \subsection{Sequences of Real Numbers}      % SHE Chapter 11.2
+
+        A \textbf{sequence of real numbers} is a real-valued function defined on the set of positive integers. The \textbf{range} of a sequence is the set of values taken on by the sequence. The following terminology
+        is standard, where the sequence with terems $a_n$ is said to be
+
+        \begin{center}
+            \begin{tabular}{cccc}
+                \textit{increasing}     & if    & $a_n < a_{n+1}$   & for all $n$, \\
+                \textit{nondecreasing}  & if    & $a_n \leq a_{n+1}$& for all $n$, \\
+                \textit{decreasing}     & if    & $a_n > a_{n+1}$   & for all $n$, \\
+                \textit{nonincreasing}  & if    & $a_n \geq a_{n+1}$& for all $n$.
+            \end{tabular}
+        \end{center}
+
+        A sequence satisfying any of these conditions is \textbf{monotonic}. \\
+
+        \textit{\blue{Example:}} The sequence $a_n = \frac{n}{n+1}$ is increasing. It is bounded below by $\frac{1}{2}$ (glb) and above by 1 (lub).
+
+        \begin{proof}
+            Since
+
+            \[
+                \frac{a_{n+1}}{a_n} = \frac{\frac{n+1}{n+2}}{\frac{n}{n+1}} = \frac{n+1}{n+2}\cdot\frac{n+1}{n} = \frac{n^2 + 2n + 1}{n^2 + 2n} ? 1,
+            \]
+
+            we have $a_n < a_{n+1}$, hence the sequence is increasing.
+        \end{proof}
+
+        \textit{\blue{Example 2:}} For $c > 1$, the sequence $a_n = c^n$ increases without bound.
+
+        \begin{proof}
+            Choose a number $c > 1$. Then
+
+            \[
+                \frac{a_{n+1}}{n} = \frac{c^{n+1}}{c^n} = c > 1.
+            \]
+
+            This shows that the sequence increases. To show the unboundedness, we take an arbitrary positive number $M$ and show that there exists a positive integer $k$ for which
+
+            \[
+                c^k \geq M.
+            \]
+
+            A suitable $k$ is one for which
+
+            \[
+                k \geq \frac{\ln{M}}{\ln{c}}
+            \]
+
+            for then
+
+            \[
+                k\ln{c} \geq \ln{M}, \ln{c^k} \geq \ln{M},  c^k \geq M.
+            \]
+
+            Since sequences are defined on the set of positive integers and not on an interval, they are not directly susceptible to the methods of calculus. This can be circumvented by initially working with
+            a differentiable function of a real variable $x$ that agrees with the given sequence at the positive integers $n$.
+        \end{proof}
+
+        \textit{\blue{Example 3: The sequence $a_n = \frac{n}{e^n}$ is decreasing. It is bounded above by $\frac{1}{e}$ and below by 0.}}
+
+        \begin{proof}
+            We will work with the function
+
+            \[
+                f(x) = \frac{x}{e^x}.
+            \]
+
+            Note that $f(1) = \frac{1}{e} = a_1$, $f(2) = \frac{2}{e^2} = a_2$, $f(3) = \frac{3}{e^3}$, and so on. Differentiating $f$, we get
+
+            \[
+                f'(x) = \frac{e^x - xe^x}{e^{2x}} = \frac{1-x}{e^x}
+            \]
+
+            Since $f'(x) < 0$ for $x > 1$, $f$ decreases on $[1,\infty)$. Thus $f(1) > f(2) > f(3) > \dots$ and by extension, $a_1 > a_2 > a_3 > \dots$ and the sequence is decreasing. The first term $a_1 = \frac{1}{e}$
+            is the least upper bound of the sequence. Since all the terms of the sequence are positive, 0 is a lower bound for the sequence. By examination, $a_n$ decreases towards 0, hence 0 is the glb of the sequence.
+        \end{proof}
+
+        \textit{\blue{Example 3:}} The sequence $a_n = n^{\frac{1}{n}}$ decreases for $n \geq 3$.
+
+        \begin{proof}
+            We could compare $a_n$ with $a_{n+1}$ directly, but it is easier to consider the function
+
+            \[
+                f(x) = x^{\frac{1}{x}}
+            \]
+
+            instead. Since $f(x) = e^{\frac{\ln{x}}{x}}$, we have
+
+            \[
+                f'(x) = e^{\frac{\ln{x}}{x}} \frac{d}{dx}\left(\frac{\ln{x}}{x}\right) = x^{\frac{1}{x}} \left(\frac{1-\ln{x}}{x^2}\right)
+            \]
+
+            For $x > e$, $f'(x) < 0$. This shows that $f$ decreases on $[e, \infty)$. Since $3 > e$, the function $f$ decreases on $[3, \infty)$, and the sequence decreases for $n \geq 3$.
+        \end{proof}
+
+    \subsection{Limit of a Sequence}        % SHE Chapter 11.3
+
+        The limit $L$ of a sequence $a_n$ is given by
+
+        \[
+            \lim_{n \to \infty} a_n = L
+        \]
+
+        if for each $\epsilon > 0$, there exists a positive integer $K$ such that
+
+        \[
+            \text{if } n \geq K, \text{ then } |a_n - L| < \epsilon
+        \]
+
+        \textit{\blue{Example 1:}}
+
+        \begin{proof}
+            Since
+
+            \[
+                \frac{4n-1}{n} = 4 - \frac{1}{n}
+            \]
+
+            it is intuitively clear that
+
+            \[
+                \lim_{n\to \infty} \frac{4n-1}{n} = 4
+            \]
+
+            To verify that this statement conforms to the definition of limit of a sequence, we must show that for each $\epsilon > 0$ there exists a positive integer $K$ such that
+
+            \[
+                \text{if } n \geq K, \text{ then } \left|\frac{4n-1}{n} - 4\right| < \epsilon
+            \]
+
+            To do this, we fix $\epsilon > 0$ and note that
+
+            \[
+                \left|\frac{4n-1}{n} - 4\right| = \left|\left(4 - \frac{1}{n}\right) - 4\right| = \frac{1}{n}
+            \]
+
+            We now choose $K$ sufficiently large that $\frac{1}{K} < \epsilon$. If $n \geq K$, then $\frac{1}{n} \leq \frac{1}{K} \epsilon$ and consequently
+
+            \[
+                \left| \frac{4n-1}{n} - 4\right| = \frac{1}{n} \epsilon
+            \]
+        \end{proof}
+
+        \textit{\blue{Example 2:}}
+
+        \begin{proof}
+            Since
+
+            \[
+                \frac{2\sqrt{n}}{\sqrt{n} + 1} = \frac{2}{1+\frac{1}{\sqrt{n}}}
+            \]
+
+            it is intuitively clear that
+
+            \[
+                \lim_{n\to \infty} \frac{2\sqrt{n}}{\sqrt{n} + 1} = 2
+            \]
+
+            To verify that this statement conforms to the definition of limit of a sequence, we must show that for each $\epilson > 0$ there exists a positive integer $K$ such that
+
+            \[
+                \text{if } n \geq K, \text{ then } \left|\frac{2\sqrt{n}}{\sqrt{n}+1} - 2\right| < \epsilon
+            \]
+
+            To do this, we fix $\epsilon > 0$ and note that
+
+            \[
+                \left|\frac{2\sqrt{n}}{\sqrt{n} + 1}\right| - 2 = \left|\frac{2\sqrt{n} - 2(\sqrt{n} + 1)}{\sqrt{n} + 1}\right| = \left|\frac{-2}{\sqrt{n} + 1}\right| = \frac{2}{\sqrt{n}+1} < \frac{2}{\sqrt{n}}.
+            \]
+
+            We now choose $K$ sufficiently large that $\frac{2}{\sqrt{K}} < \epsilon$. If $n\geq K$, then $\frac{2}{\sqrt{n}} \leq \frac{2}{\sqrt{K}} < \epsilon$ and consequently
+
+            \[
+                \left|\frac{2\sqrt{n}}{\sqrt{n} + 1} - 2\right| < \frac{2}{\sqrt{n}} < \epsilon
+            \]
+        \end{proof}
+
+        \textit{\blue{Example 3:}}
+
+        \begin{proof}
+            You are familiar with the assertion
+
+            \[
+                \frac{1}{3} = 0.333 \dots
+            \]
+
+            Here we justify this assertion by showing that the sequence with terms $a_n = 0.333 \dots 3$, where $n = 333\dots 3$ satisfies the limit condition
+
+            \[
+                \lim_{n\to\infty} a_n = \frac{1}{3}
+            \]
+
+            To do this, we fix $\epsilon > 0$ and observe that
+
+            \[
+                \left|a_n - \frac{1}{3}\right| = \left|0.333\dots 3 - \frac{1}{3}\right| = \left|\frac{0.999\dots 9-1}{3}\right| = \frac{1}{3}\cdot\frac{1}{10^n} < \frac{1}{10^n}
+            \]
+
+            We now choose $K$ sufficiently large that $\frac{1}{10^K} < \epsilon$. If $n\geq K$, then $\frac{1}{10^n} \leq \frac{1}{10^K} < \epsilon$ and therefore
+
+            \[
+                \left|a_n - \frac{1}{3}\right| < \frac{1}{10^n} < \epsilon.
+            \]
+        \end{proof}
+
+        \begin{theorem}{Theorem: Uniqueness of Limit}
+            If $\lim_{n\to\infty} a_n = L$ and $\lim_{n\to\infty} a_n = M$, then $L=M$.
+        \end{theorem}
+
+        A sequence is \textbf{convergent} if it has a limit. A sequence that does not have a limit is \textbf{divergent}. \\
+
+        Instead of writing
+
+        \[
+            \lim_{n\to\infty} a_n = L,
+        \]
+
+        this is often written as $a_n \to L$, read "$a_n$ converges to $L$, or more fully, $a_n \to L$ as $n\to\infty$
+
+        \begin{theorem}{Theorem}
+            Every convergent sequence is bounded.
+        \end{theorem}
+
+        \begin{proof}
+            Assume that $a_n \to L$ and choose any positive number: 1, for instance. Using 1 as $\epsilon$, you can see that there must be a positive integer $K$ such that
+
+            \[
+                |a_n - L| < 1 \forall n \geq K.
+            \]
+
+            Since $|a_n| - |L| \leq \left| |a_n| - |L|\right| \leq |a_n - L|$, we have
+
+            \[
+                |a_n| < 1 + |L| \forall n \geq K.
+            \]
+
+            It follows that
+
+            \[
+                |a_n| \leq \text{ max}\{|a_1|, |a_2|,\dots,|a_{K-1}|, 1 + |L|\} \forall n
+            \]
+
+            This proves that the sequence is bounded.
+        \end{proof}
+
+        Since every convergent sequence is bounded, a sequence that is bounded cannot be convergent, hence, \textit{every unbounded sequence is divergent}. \\
+
+        \textit{Boundedness together with monotonicity implies convergence}.
+
+        \begin{theorem}{Theorems}
+            A nondecreasing sequence which is bounded above converges to the least upper bound of its range. \\
+            A nonincreasing sequence which is bounded below converges to the greatest lower bound of its range.
+        \end{theorem}
+
+        \textit{\blue{Example 4:}} We shall show that the sequence $a_n = \left(3^n + 4^n\right)^{\frac{1}{n}}$ is convergent. Since
+
+        \[
+            3 = (3^n)^{\frac{1}{n}} < (3^n + 4^n)^{\frac{1}{n}} < (4^n + 4^n)^{\frac{1}{n}} = (2\cdot 4^n)^{\frac{1}{n}} = 2^{\frac{1}{n}}\cdot 4 \leq 8,
+        \]
+
+        the sequence is bounded. Note that
+
+        \begin{align*}
+            (3^n + 4^n)^{\frac{n+1}{n}} &= (3^n + 4^n)^{\frac{1}{n}}(3^n + 4^n) \\
+                                        &= (3^n + 4^n)^{\frac{1}{n}} 3^n + (3^n + 4^n)^{\frac{1}{n}}4^n.
+        \end{align*}
+
+        Since
+
+        \[
+            (3^n + 4^n)^{\frac{1}{n}} > (3^n)^{\frac{1}{n}} = 3
+        \]
+
+        and
+
+        \[
+            (3^n + 4^n)^{\frac{1}{n}} > (4^n)^{\frac{1}{n}} = 4,
+        \]
+
+        we have
+
+        \[
+            (3^n + 4^n)^{\frac{n+1}{n}} > 3\cdot (3^n) + 4\cdot (4^n) = 3^{n+1} + 4^{n+1}.
+        \]
+
+        Taking the $(n+1)$st root of the left and right sides of this inequality, we obtain
+
+        \[
+            (3^n + 4^n)^{\frac{1}{n}} > (3^{n+1} + 4^{n+1})^{\frac{1}{n+1}}
+        \]
+
+        The sequence is decreasing. Being also bounded, it must be convergent.
+
+        \begin{theorem}{Theorem}
+            Let $\alpha$ be a real number. If $a_n \to L$ and $b_n \to M$, then \\
+            (i) $a_n + b_n \to L + M$, \\
+            (ii) $\alpha a_n \to\alpha L$,
+            (iii) $a_n b_n \to LM$. \\
+
+            If, in addition, $M\not = 0$ and each $b_n \not = 0$, then \\
+            (iv) $\frac{1}{b_n} \to \frac{1}{M}$,
+            (v) $\frac{a_n}{b_n} \to \frac{L}{M}$.
+        \end{theorem}
+
+        \begin{theorem}{Theorem}
+            $a_n \to L$ iff $a_n - L \to 0$ iff $|a_n - L| \to 0$.
+        \end{theorem}
+
+        \begin{theorem}{The Pinching Theorem for Sequences}
+            Suppose that for all $n$ sufficiently large
+
+            \[
+                a_n \leq b_n \leq c_n,
+            \]
+
+            If $a_n \to L$ and $c_n \to L$, then $b_n \to L$.
+        \end{theorem}
+
+        \begin{corollemma}{Corollary}
+            Suppose that for all $n$ sufficiently large,
+
+            \[
+                |b_n| \leq c_n.
+            \]
+
+            If $c_n \to 0$, then $b_n \to 0$.
+        \end{corollemma}
+
+        \textit{\blue{Example 5:}} \\
+
+        $\frac{\cos{n}}{n} \to 0$ since $\left|\frac{\cos{n}}{n}\right| \leq \frac{1}{n}$ and $\frac{1}{n}\to 0.$ \\
+
+        \textit{\blue{Example 6:}}
+
+        \[
+            \sqrt{4 + \left(\frac{1}{n}\right)^2} \to 2
+        \]
+
+        since
+
+        \[
+            2 \leq \sqrt{4 + \left(\frac{1}{n}\right)^2} \leq \sqrt{4 + 4\left(\frac{1}{n}\right)} + \left(\frac{1}{n}\right)^2 = 2 + \frac{1}{n} \text{ and } 2 + \frac{1}{n} \to 2.
+        \]
+
+        \textbf{\red{Limit Definition of Euler's constant:}}
+
+        \[
+            \lim_{n\to\infty} \left(1+ \frac{1}{n}\right)^n = e.
+        \]
+
+        \textit{The continuous image of a convergent sequence is a convergent sequence}. More precisely, see the following theorem.
+
+        \begin{theorem}{Theorem}
+            Suppose that
+
+            \[
+                c_n \to c.
+            \]
+
+            If a function $f$, defined at all the $c_n$, is continuous at $c$, then
+
+            \[
+                f(c_n) \to f(c).
+            \]
+        \end{theorem}
+
+    \pagebreak
+    \subsection{Some Important Limits}      % SHE Chapter 11.4
+
+        Each limit is taken as $n\to\infty$.
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{(1)}    & $x^{\frac{1}{n}}\to 1$                    & $\forall x > 0$ \\
+                \hline
+                \textbf{(2)}    & $x^n \to 0$                               & if $|x| < 1$ \\
+                \hline
+                \textbf{(3)}    & $\frac{1}{n^{\alpha}}\to 0$               & $\forall \alpha > 0$ \\
+                \hline
+                \textbf{(4)}    & $\frac{x^n}{n!}\to 0$                     & $\forall x\in \mathbb{R}$ \\
+                \hline
+                \textbf{(5)}    & $\frac{\ln{n}}{n}\to 0$.                  & \\
+                \hline
+                \textbf{(6)}    & $n^{\frac{1}{n}} \to 1$.                  & \\
+                \hline
+                \textbf{(7)}    & $\left(1+\frac{x}{n}\right)^n \to e^x$    & $\forall x\in\mathbb{R}$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \begin{proof}
+            \textbf{1.} Fix any $x > 0$. Since
+
+            \[
+                \ln{\left(x^{\frac{1}{n}}\right)} = \frac{1}{n}\ln{x}
+            \]
+
+            we see that
+
+            \[
+                \ln{\left(x^{\frac{1}{n}}\right)}\to 0.
+            \]
+
+            We reduce $\ln{\left(x^{\frac{1}{n}}\right)}$ to $x^{\frac{1}{n}}$ by applying the exponential function. Since the exponential function is defined at the terms $\ln{\left(x^{\frac{1}{n}}\right)}$ and is
+            continuous at 0, it follows from theorem regarding continuous images of convergent sequences that
+
+            \[
+                x^{\frac{1}{n}} = e^{\ln{\left(x^{\frac{1}{n}}\right)}} \to e^0 = 1
+            \]
+        \end{proof}
+
+        \begin{proof}
+            \textbf{2.} The result clearly holds for $x = 0$. Now fix any $x\not = 0$ with $|x| < 1$ and observe that the sequence $a_n = |x|^n$ is a decreasing sequence:
+
+            \[
+                |x|^{n+1} = |x| |x|^n < |x|^n
+            \]
+
+            Let $\epsilon > 0$. By Theorem 1, $\epsilon^{\frac{1}{n}}\to 1$. Thus there exists an integer $K>0$ for which
+
+            \[
+                |x| < \epsilon^{\frac{1}{K}}
+            \]
+
+            This implies that $|x|^K < \epsilon$. Since the $|x|^n$ form a decreasing sequence, we have
+
+            \[
+                |x^n| = |x|^n \epsilon \forall n \geq K.
+            \]
+        \end{proof}
+
+        \begin{proof}
+            \textbf{3.} Take $\alpha > 0$. There exists an odd positive integer $p$ for which $\frac{1}{p} < \alpha$. Then
+
+            \[
+                0 < \frac{1}{n^{\alpha}} = \left(\frac{1}{n}\right)^{\alpha} \leq \left(\frac{1}{n}\right)^{\frac{1}{p}}.
+            \]
+
+            Since $\frac{1}{n}\to 0$ and the function $f(x) = x^{\frac{a}{p}}$ is defined at the terms $\frac{1}{n}$ and is continuous at 0, we have
+
+            \[
+                \left(\frac{1}{n}\right)^{\frac{1}{p}} \to 0
+            \]
+
+            Thus by the pinching theorem, $\frac{1}{n^{\alpha}}\to 0$.
+        \end{proof}
+
+        \begin{proof}
+            \textbf{4.} Fix any real number $x$ and choose an integer $k > |x|$. For $n > k+1$,
+
+            \[
+                \frac{k^n}{n!} = \left(\frac{k^k}{k!}\right)\left[\frac{k}{k+1}\frac{k}{k+1}\dots\frac{k}{n-1}\right]\left(\frac{k}{n}\right) < \left(\frac{k^{k+1}}{k!}\right) \left(\frac{1}{n}\right)
+.           \]
+
+            Since $k > |x|$, we have
+
+            \[
+                0 < \frac{|x|^n}{n!} < \frac{k^n}{n!} < \left(\frac{k^{k+1}}{k!}\right) \left(\frac{1}{n}\right)
+            \]
+
+            Since $k$ is fixed and $\frac{1}{n}\to 0$, it follows from the pinching theorem that
+
+            \[
+                \frac{|x|^n}{n!}\to 0
+            \]
+
+            Thus, $\frac{x^n}{n!}\to 0$.
+        \end{proof}
+
+        \begin{proof}
+            \textbf{5.} A routine proof can be based on L'H$\hat{o}$pital's rule, but that is not available to us yet. We will appeal to the pinching theorem and base our argument on the integral representation of the
+            logarithm:
+
+            \[
+                0 \leq \frac{\ln{n}}{n} = \frac{1}{n}\int_1^n \frac{1}{t}dt\leq \frac{1}{n} \int_1^n \frac{1}{\sqrt{t}}dt = \frac{2}{n}(\sqrt{n} - 1) = 2 \left(\frac{1}{\sqrt{n}} - \frac{1}{n}\right) \int 0.
+            \]
+        \end{proof}
+
+        \begin{proof}
+            \textbf{6.} We know that
+
+            \[
+                \ln{n^{\frac{1}{n}}} = \frac{\ln{n}}{n} \to 0.
+            \]
+
+            Applying the exponential function, we have
+
+            \[
+                n^{\frac{1}{n}} \to e^0 = 1.
+            \]
+        \end{proof}
+
+        \begin{proof}
+            \textbf{7.} For $x=0$, the result is obvious. For $x\not = 0$,
+
+            \[
+                \ln{\left(1+\frac{x}{n}\right)^n}   = n\ln{\left(1+\frac{x}{n}\right)} = x\left[\frac{\ln{\left(1+\frac{x}{n}\right) - \ln{1}}}{\frac{x}{n}}\right].
+            \]
+
+            The main theme here is to recognize that the bracketed expression is a difference quotient for the logarithm function. Once we see this, we let $h = \frac{x}{n}$ and write
+
+            \[
+                \lim_{n\to \infty} \left[\frac{\ln{\left(1+\frac{x}{n}\right) - \ln{1}}}{\frac{x}{n}}\right] = \lim_{h\to 0} \left[\frac{\ln{\left(1+h\right)}-\ln{1}}{h}\right] = 1.
+            \]
+
+            It follows that
+
+            \[
+                \ln{\left(1+\frac{x}{n}\right)}^n \to x.
+            \]
+
+            Applying the exponential function, we have
+
+            \[
+                \left(1+\frac{x}{n}\right)^n \to e^x.
+            \]
+        \end{proof}
+
+
+    \subsection{The Indeterminate Form (0/0)}       % SHE Chapter 11.5
+
+        \begin{theorem}{The Cauchy Mean-Value Theorem}
+            Suppose that $f$ and $g$ are differentiable on $(a,b)$ and continuous on $[a,b]$. If $g'$ is never 0 in $(a,b)$, then there is a number $r$ in $(a,b)$ for which
+
+            \[
+                \frac{f'(r)}{g'(r)} = \frac{f(b) - f(a)}{g(b) - g(a)}
+            \]
+        \end{theorem}
+
+        \begin{proof}
+            Applying Rolle's theorem to the function
+
+            \[
+                G(x) = [g(b) - g(a)][f(x) - f(a)] - [g(x) - g(a)][f(b) - f(a)],
+            \]
+
+            since
+
+            \[
+                G(a) = 0 \text{ and } G(b) = 0,
+            \]
+
+            there exists (by Rolle's theorem) a number $r$ in $(a,b)$ for which $G'(r) = 0$. Differentiation gives
+
+            \[
+                G'(x) = [g(b) - g(a)] f'(x) - g'(x) [f(b) - f(a)]
+            \]
+
+            Setting $x = r$, we have
+
+            \[
+                [g(b) - g(a)] f'(r) - g'(r) [f(b) - f(a)] = 0
+            \]
+
+            and thus
+
+            \[
+                [g(b) - g(a)] f'(r) = g'(r) [f(b) - f(a)]
+            \]
+
+            Since $g'$ is never 0 in $(a,b)$,
+
+            \[
+                g'(r) \not = 0 \text{ and } g(b) - g(a) \not = 0.
+            \]
+
+            We can therefore divide by these numbers and obtain
+
+            \[
+                \frac{f'(r)}{g'(r)} = \frac{f(b) - f(a)}{g(b) - g(a)}
+            \]
+        \end{proof}
+
+        This theorem can be used to prove L'H$\hat{o}$pital's rule:
+
+        \begin{proof}
+            By defining $f(c) = 0$ and $g(c) = 0$, we make $f$ and $g$ continuous on an interval $[c, c+h]$. For each $x\in (c, c+h)$,
+
+            \[
+                \frac{f(x)}{g(x)} = \frac{f(x) - f(c)}{g(x) - g(c)} = \frac{f'(r)}{g'(r)}
+            \]
+
+            with $r$ between $c$ and $x$. If, as $x\to c^+$,
+
+            \[
+                \frac{f'(x)}{g'(x)}\to \gamma, \text{ then } \frac{f(x)}{g(x)} = \frac{f'(r)}{g'(r)} \to \gamma.
+            \]
+
+            The case $x\to c^-$ can be handled in a similar manner. The two cases together prove L'H$\hat{o}$pital's rule for the case $x\to c$. \\
+
+            For the case $x\to \infty$, set $x = \frac{1}{t}$. Then
+
+            \begin{align*}
+                \lim_{x\to \infty} \frac{f'(x)}{g'(x)}  &= \lim_{t\to 0^+} \frac{\left[f\left(\frac{1}{t}\right)\right]^t}{\left[g\left(\frac{1}{t}\right)\right]^t} \\
+                                                        &= \lim_{t\to 0^+} \frac{-t^{-2}f'\left(\frac{1}{t}\right)}{-t^{-2}g'\left(\frac{1}{t}\right)} \\
+                                                        &= \lim_{t\to 0^+} \frac{f'\left(\frac{1}{t}\right)}{g'\left(\frac{1}{t}\right)}
+            \end{align*}
+
+            By L'H$\hat{o}$pital's rule for the case $t\to 0^+$, it follows that
+
+            \begin{align*}
+                \lim_{t\to 0^+} \frac{f'\left(\frac{1}{t}\right)}{g'\left(\frac{1}{t}\right)}   &= \lim_{t\to 0^+} \frac{f\left(\frac{1}{t}\right)}{g\left(\frac{1}{t}\right)} \\
+                                                                                                &= \lim_{x\to\infty} \frac{f(x)}{g(x)}
+            \end{align*}
+        \end{proof}
+
+    \subsection{The Indeterminate Form $\left(\frac{\infty}{\infty}\right)$ and Other Indeterminate Forms}      % SHE Chapter 11.6
+
+        Some other indeterminate forms:
+
+        \[
+            \frac{\infty}{\infty}. 0\cdot\infty, \infty - \infty, 0^0, 1^{\infty}, \infty^0
+        \]
+
+        The calculation of limits by differentiation of numerator and denominator is so compellingly easy that there is a tendency to abuse the method. Note however that only quotients that are indeterminates
+        $\frac{0}{0}$ or $\frac{\infty}{\infty}$ satisfy L'H$\hat{o}$pital's rule. \\
+
+        Consider the following attempt to find
+
+        \[
+            \lim_{x\to 0^+} x^{\frac{1}{x}}
+        \]
+
+        Taking the logarithm of $x^{\frac{1}{x}}$ and misapplying L'H$\hat{o}$pital's rules, we have
+
+        \[
+            \lim_{x\to 0^+} \ln{x^{\frac{1}{x}}} = \lim_{x\to 0^+} \frac{\ln{x}}{x} = \lim_{x\to 0^+} \frac{1}{x} = \infty
+        \]
+
+        This seems to indicate that as $x\to 0^+$, $\ln{x^{\frac{1}{x}}}\to \infty$ and therefore $x^{\frac{1}{x}} = e^{\ln{x^{\frac{1}{x}}}}\to\infty$. This may look fine, but it's wrong:
+
+        \[
+            \left(\frac{1}{2}\right)^2 = \frac{1}{4}, \left(\frac{1}{3}\right)^2 = \frac{1}{27}, \left(\frac{1}{4}\right)^4 = \frac{1}{256},\dots
+        \]
+
+        The limit of $x^{\frac{1}{x}}$ as $x\to 0^+$ is clearly 0, not $\infty$. This method went wrong in applying L'H$\hat{o}$pital's method to calculate
+
+        \[
+            \lim_{x\to 0^+} \frac{\ln{x}}{x}
+        \]
+
+        As $x\to 0^+$, $\ln{x}\to -\infty$ and $x\to 0$. L'H$\hat{o}$pital's rules do not apply.
+    \subsection{Improper Integrals}     % SHE Chapter 11.7
+
+        Let $f$ be a function continuous on an unbounded interval $[a,\infty)$. For each number $b > a$ we can form the definite integral
+
+        \[
+            \int_a^b f(x)dx
+        \]
+
+        If, as $b$ tends to $\infty$, this integral tends to a finite limit $L$,
+
+        \[
+            \lim_{b\to\infty} \int_a^b f(x)dx = L
+        \]
+
+        then we write
+
+        \[
+            \int_a^{\infty} f(x)dx = L
+        \]
+
+        and say that
+
+        \[
+            \text{the improper integral } \int_a^{\infty} f(x)dx \text{ converges to } L.
+        \]
+
+        Otherwise, we say that
+
+        \[
+            \text{the improper integral } \int_a^{\infty} f(x)dx \text{ diverges}
+        \]
+
+        In a similar manner,
+
+        \[
+            \text{improper integrals } \int_{-\infty}^b f(x)dx \text{ arise as limits of the form } \lim_{a\to -\infty}\int_a^b f(x)dx
+        \]
+
+        Improper integrals can be applied to make a generalization for $p$-series:
+
+        \begin{proof}
+            Fix $p > 0$ and let $\Omega$ be the region below the graph of
+
+            \[
+                f(x) = \frac{1}{x^p}, x \geq 1
+            \]
+
+            As we show below,
+
+            \[
+                \text{area of }\Omega =
+                \begin{cases}
+                    \frac{1}{p-1},  & \text{ if } p > 1 \\
+                    \infty,         & \text{ if } p \leq 1
+                \end{cases}
+            \]
+
+            This comes about from setting
+
+            \[
+                \text{area of }\Omega = \lim_{b\to\infty} \int_1^b \frac{dx}{x^p} = \int_1^{\infty} \frac{dx}{x^p}.
+            \]
+
+            For $p\not = 1$,
+
+            \[
+                \int_1^{\infty} \frac{dx}{x^p} = \lim_{b\to\infty} \int_1^b \frac{dx}{x^p} = \lim_{b\to\infty} \frac{1}{1-p} (b^{1-p} - 1) =
+                \begin{cases}
+                    \frac{1}{p-1},  & \text{ if } p > 1 \\
+                    \infty,         & \text{ if } p < 1.
+                \end{cases}
+            \]
+
+            For $p = 1$,
+
+            \[
+                \int_1^{\infty} \frac{dx}{x^p} = \int_1^{\infty} \frac{dx}{x} = \infty,
+            \]
+        \end{proof}
+
+        \begin{corollemma}{}
+            $\int_1^{\infty} \frac{dx}{x^p}$ converges if $p > 1$ and diverges if $0 < p \leq 1$.
+        \end{corollemma}
+
+        \begin{corollemma}{A Comparison Test}
+            Suppose that $f$ and $g$ are continuous and $0 \leq f(x) \leq g(x)$ for all $x\in [a,\infty)$. \\
+
+            (i) If $\int_a^{\infty} g(x)dx$ converges, then $\int_a^{\infty} f(x)dx$ converges, \\
+
+            (ii) If $\int_a^{\infty}f(x)dx$ diverges, then $\int_a^{\infty}g(x)dx$ diverges.
+        \end{corollemma}
+
+        \textit{\blue{Example:}} The improper integral
+
+        \[
+            \int_1^{\infty} \frac{dx}{\sqrt{1+x^3}}
+        \]
+
+        converges since
+
+        \[
+            \frac{1}{\sqrt{1+x^3}} < \frac{1}{x^{\frac{3}{2}}} \text{ for } x\in [1,\infty) \text{ and } \int_1^{\infty} \frac{dx}{x^{\frac{3}{2}}} \text{ converges}.
+        \]
+
+        To evaluate
+
+        \[
+            \lim_{b\to\infty} \int_1^b \frac{dx}{\sqrt{1+x^3}}
+        \]
+
+        directly, we would first have to evaluate
+
+        \[
+            \int_1^b \frac{dx}{\sqrt{1+x^3}} \text{ for each } b > 1,
+        \]
+
+        and this we can't do because we have no way of calculating
+
+        \[
+            \int \frac{dx}{\sqrt{1+x^3}}
+        \]
+
+    \subsection{Cauchy Sequences}       % Supplementary Material
+
+        \textbf{Cauchy Sequence:} a sequence $\{a_n\}$ that, for every real number $\epsilon > 0$, there is an integer $N$ (possibly depending on $\epsilon$) for which
+
+        \[
+            |a_n - a_m| < \epsilon \forall n, m \geq N.
+        \]
+
+        \begin{theorem}{Theorem}
+            A sequence is convergent iff it is Cauchy.
+        \end{theorem}
+
+    \subsection{Fixed Points}           % Supplementary Material
+
+        Sometimes sequences are defined recursively. More precisely, suppose that $f:\mathbb{R}\to\mathbb{R}$ is a function and $x_0$ is a real number. Then we may define a sequence $\{x_n\}$ iteratively by the formula
+
+        \[
+            x_{n+1} = f(x_n) \text{ for } n = 0,1,2,\dots
+        \]
+

@@ -1,0 +1,232 @@
+\section{Gauss's Law}
+
+    \subsection{Electric Field Lines}   % 24.1
+
+        \textit{Gauss's Law} is a relationship between an electric field an its source that can be used to determine the electric fields due to charge distributions that exhibit certain simple symmetries. \\
+        \textbf{Electric field lines:} a way to visualize electric fields in which lines are drawn so that at any location the electric field $\vec{E}$ is tangent to them. \\
+        $bullet$ are labeled with $E$ to remind us that they represent an electrical field \\
+        $bullet$ \textit{the number of field lines that emanate from a positively charged object or terminate on a negatively charged object is proportional to the charge carried by the object}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{\textbf{Electric field lines:}}
+            \includegraphics[scale = 0.75]{Resources/24.1_Electric_Field_Lines}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{A reminder of vector field diagrams:}
+            \includegraphics[scale = 0.75]{Resources/24.1_Vector_Diagram}
+        \end{figure*}
+
+    \subsection{Field Line Density}     % 24.2
+
+        The electric field and the number of field line crossings per unit area both decrease as $\frac{1}{r^2}$. This is expressed by the \textbf{field line density}, which is the number of field lines per unit area
+        that cross a surface perpendicular to the field lines at a given position. \\
+
+        The below figure illustrates why the surface through which the field lines pass must be perpendicular to the field lines. The field represented by the field lines in the figure is uniform (magnitude and direction
+        are same everywhere) and so the number of field lines that cross the surface depends on the orientation of the surface. We can then conclude that at every position in a field line diagram, the magnitude of the
+        electric field is proportional to the field line density at that position.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/24.2_Field_Lines_Crossing_Surface}
+        \end{figure*}
+
+        \textbf{Properties of Electric Field Lines:} \\
+        1. Field lines emanate from positively charged objects and terminate on negatively charged objects \\
+        2. At every position, the direction of the electric field is given by the direction of the tangent to the electric field line through that position \\
+        3. Field lines never intersect or touch
+        4. The number of field lines emanating from or terminating on a charged object is proportional to the magnitude of the charge on the object \\
+        5. At every position, the magnitude of the electric field is proportional to the field line density
+
+    \subsection{Closed Surfaces}        % 24.3
+
+        Whenever a charged particle is placed inside a hollow spherical surface, the number of filed lines that pierce the surface is the same \textit{regardless of where inside the surface the particle is placed}.
+        This is because so long as the charged particle is inside the surface, all the field lines emanating from the particle must go through the spherical surface. In fact, a sphere is not required and any other surface
+        enclosing the charged particle will do, such as a cube. \\
+
+        \textbf{Closed surface:} a surface that completely encloses a volume \\
+        \textbf{Enclosed charge:} the sum of all charge enclosed by a closed surface \\
+        \textbf{Field line flux:} the number of outward field lines crossing a closed surface minus the number of inward field lines crossing the surface \\
+        $\bullet$ equal to the charge enclosed by the surface multiplied by the number of field lines per unit charge. \\
+        $\bullet$ is always zero when through a closed surface due to charged objects outside the volume enclosed by that surface. \\
+
+        \textit{\blue{Example:} Consider the 3D dipole filed line diagram shown below. Six field lines emanate from the positively charged end, and six terminate on the negatively charged end.} \\
+        (a) Six field lines emanate from the positively charged particle. Each line crosses the surface of the cube in the outward direction and thus contributes a value of +1 to the field line flux. The field line flux
+        is +6. \\
+        (b) Six field lines terminate on the negatively charged particle, so there are again six field line crossings. However, these field lines are directed inwards and so the field line flux is -5.
+
+    \subsection{Symmetry and Gaussian Surfaces} % 24.4
+
+        The relationship between field line flux and enclosed charge implies several important conclusions about charged objects and their electric fields without having to perform any calculations. To apply this
+        relationship to a given situation, select a closed surface called a \textbf{Gaussian surface} that does not necessarily correspond to a real object, i.e. it can be any surface, real or imagined. The choice
+        of surface is determined by the symmetry of the context. As a rule of thumb, choose a surface such that the electric field is the same (and possibly zero) everywhere along as many regions of the surface as
+        possible, because such a choice makes it easy to determine the field line flux through the surface. \\
+
+        Consider the charged particle shown below. The field is symmetrical in all three dimensions - it has the same magnitude at the same distance from the center in any direction. Thus, if we draw a spherical
+        Gaussian surface concentric with the particle, the magnitude of the electric field is the same at all locations on the sphere.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/24.4_Gaussian_Surface}
+        \end{figure*}
+
+        The electric field outside a uniformly charged spherical shell is the same as the electric field due to a particle that carries an equal charge located at the center of the shell. Because the electric field
+        can only be radially outward by symmetry, the electric field must be zero everywhere on the Gaussian surface. Because the Gaussian surface's radius is arbitrary and can be changed from zero to the inner radius
+        of the shell, it can be concluded that in the absence of other charged objects, the electric field in the space enclosed by a uniformly charged spherical shell is zero everywhere in the enclosed space. \\
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{\textbf{Three Types of Symmetries Important for Applications of Gauss's Law:}}
+            \includegraphics[scale = 0.75]{Resources/24.4_Symmetries}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{Example of Concentric Cylindrical Gaussian Surface}
+            \includegraphics[scale = 0.75]{Resources/24.4_Cylindrical_Gaussian_Surface}
+        \end{figure*}
+
+    \subsection{Charged Conducting Objects} % 24.5
+
+        Recall that conducting objects contain many charge carriers that are free to move, such as electrons (in a metal) or ions (in a liquid conductor). The material as a whole can still be electrically neutral. Due
+        to this free motion of charged particles within a conducting object, the particles always arrange themselves in such a way as to make the electric field inside the bulk of the object zero. \\
+
+        \textbf{Electrostatic equilibrium:} the condition in which the distribution of charge in a system does not change \\
+        $\bullet$ time for a metal to reach electrostatic equilibrium is very short (about $10^{-16}$ s) \\
+        $\bullet$ \textit{the electric field inside a conducting object that is in electrostatic equilibrium is zero} \\
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{Why electric field inside bulk of conducting object in electrostatic equilibrium is zero}
+            \includegraphics[scale = 0.6]{Resources/24.5_Electrostatic_Equilbrium}
+        \end{figure*}
+
+        Because the electric field inside a conducting object in electrostatic equilibrium is zero, we conclude that there cannot be any surplus charge inside the object. Hence, any surplus charge placed on an
+        isolating conducting object arranges itself at the surface of the object. No surplus charge remains in the body of the conducting object once it has reached electrostatic equilibrium. In electrostatic equilibrium,
+        the electric field at the surface of a conducting object is perpendicular to that surface.
+
+    \subsection{Electric Flux}  % 24.6
+
+        \textbf{Electric flux:} the arbitrary number of electric field lines that intersect a given area, represented by the symbol $\phi_E$ \\
+        $\bullet$ magnitude of electric flux through a surface with area A in a uniform electric field of magnitude E is defined as \\
+
+        \[
+            \phi_E = EA \cos{\theta}, \text{ (uniform electric field),}
+        \]
+
+        where $\theta$ is the angle between the electric field and the normal to the surface. If we define an area vector $\vec{A}$ for a flat surface area as a vector whose magnitude is equal to the surface area $A$ and
+        whose direction is normal to the plane of the area. On closed surfaces $\vec{A}$ is chosen to point outward. Using this definition, we can rewrite the equation for $\phi_E$ as
+
+        \begin{theorem}{Electric flux for uniform electric fields and flat surfaces}
+            \[
+                \phi_E EA\cos{\theta} = \vec{E}\cdot \vec{A}, \text{ (uniform electric field}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Electric flux general form}
+            \[
+                \phi_E = \int \vec{E}\cdot d \vec{A}
+            \]
+
+            The integral above is a \textbf{surface integral} as $d\vec{A}$ is the area vector of an infinitesimally small surface segment. If the surface is closed, this surface integral is written like so:
+
+            \[
+                \phi_E = \oint \vec{E}\cdot d\vec{A}
+            \]
+
+            where the circle indicates that integration is taken over the entire closed surface and $d\vec{A}$ is chosen to point outward.
+        \end{theorem}
+
+        For a cylindrical Gaussian surface, we have
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/24.6_Flux}
+        \end{figure*}
+
+        \begin{align*}
+            \phi_E &= \oint \vec{E}\cdot d\vec{A} \\
+                   &= \text{ (back flat surface) + (curved surface) + (front flat surface)} \\
+                   &= \int \vec{E}\cdot d\vec{A} + \int \vec{E} \cdot d\vec{A} + \int \vec{E}\cdot d\vec{A}
+        \end{align*}
+
+        From the sketch above, the angle between $\vec{E}$ and $d\vec{A}$ is $180^{\circ}$, so $\vec{E}\cdot d\vec{A} = E(\cos{180^{\circ}})d\vec{A} = -EdA$. Because the magnitude of the electric field is the same
+        everywhere, $E$ can be pulled out of the integral s.t.
+
+        \begin{align*}
+            \text{back flat surface }   &= \int \vec{E}\cdot d\vec{A} \\
+                                        &= \int (-E)dA \\
+                                        &= -E \int dA \\
+                                        &= -E(\pi r^2)
+        \end{align*}
+
+        The integral over the curved region yields a value of zero because the angle between $\vec{E}$ and $d\vec{A}$ is $90^{\circ}$ everywhere on the curved region. For the front flat surface,
+        $\vec{E}\cdot d\vec{A} = E(\cos{0^{\circ}})dA = EdA$, so
+
+        \[
+            \int \vec{E}\cdot d\vec{A} = \int EdA = E\int dA = E(\pi r^2)
+        \]
+
+        Summing the corresponding integrals for each of the three surfaces, it follows that
+
+        \[
+            \phi_E = -E(\pi r^2) + 0 + E(\pi r^2) = 0
+        \]
+
+        This result tells us that because there is no charge enclosed by the Gaussian surface, the field line flux through the surface must be zero.
+
+    \subsection{Deriving Gauss's Law}   % 24.7
+
+        The electric flux through a spherical Gaussian surface is equal to the charge $q$ enclosed by the sphere times $4\pi k$, where $k = 9.0\times 10^9 \text{N}\cdot\text{m}^2 / \text{C}^2$ is the proportionality
+        constant that appears in Coulomb's law. This relationship is written in the form
+
+        \[
+            \Phi_E = 4\pi kq = \frac{q}{\epsilon_0},
+        \]
+
+        where $\mathbf{\epsilon_0}$ is known as the \textbf{electric constant:}
+
+        \[
+            \epsilon_0 = \frac{1}{4\pi k} = 8.85418782 \times 10^_{-12} \text{C}^2/(\text{N}\cdot\text{m}^2)
+        \]
+
+        The first equation in this subsection is a special case of \textbf{Gauss's Law}, which states that the electric flux through the closed surface of any arbitrary volume is
+
+        \[
+            \Phi_E = \oint \vec{E}\cdot d\vec{A} = \frac{q_{\text{enc}}}{\epsilon_0},
+        \]
+
+        where $q_{\text{enc}}$ is an enclosed charge. \\
+
+        Because Gauss's Law depends on $\frac{1}{r^2}$ and the superposition of electric fields, it can be derived from Coulomb's Law. It is used to greatly simplify calculations containing significant amounts of
+        symmetry.
+
+    \subsection{Applying Gauss's Law}   % 24.8
+
+        To see the benefit of Gauss's Law, consider a charged spherical shell with radius $r$, carrying a uniformly distributed positive charge $q$. The electric field due to this charged shell can be calculated using
+        a surface integral, but exploiting symmetry, the answer can be calculated in a much simpler manner. Draw a concentric Gaussian surface of radius $R > r$ around the shell. By Gauss's Law,
+
+        \[
+            \Phi_E = \frac{q_{\text{enc}}}{\epsilon_0} = \frac{q}{\epsilon_0}
+        \]
+
+        Because the Gaussian surface we drew has spherical symmetry, the electric field $E$ will be constant at every point and perpendicular to the surface, and so we can pull it out of the integral:
+
+        \[
+            \Phi_E = \oint \vec{E}\cdot d\vec{A} = \oint EdA = E\oint dA = EA
+        \]
+
+        where $A$ is the area of the Gaussian surface:
+
+        \[
+            A = 4\pi r^2
+        \]
+
+        It follows then that
+
+        \begin{align*}
+            \frac{q}{\epsilon_0} &= 4\pi r^2 E \\
+            E                    &= \frac{1}{4\pi \epsilon_0} \frac{q}{r^2} = k \frac{q}{r^2}
+        \end{align*}

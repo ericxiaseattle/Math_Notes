@@ -1,0 +1,992 @@
+\section{Vectors and the Geometry of Space}
+
+    \subsection{3D Coordinate Systems}      % 12.1
+
+        The orientations of the $x$, $y$, and $z$ axes can be remembered by the \textbf{right-hand rule:} \\
+        
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.1_Right_Hand_Rule}
+        \end{figure*}
+
+        The three coordinate planes divide space into eight parts, called \textbf{octants}. The \textbf{first octant} is the set of points whose coordinates are all positive.
+
+        Let $P$ be a point $(a,b,c)$. Dropping a perpendicular from $P$ to the $xy$-plane, we get a point $Q$ with coordinates $(a,b,0)$, called the \textbf{projection} of $P$ onto the $xy$-plane. Similarly,
+        $R(0,b,c)$ and $S(a,0,c)$ are the projections of $P$ onto the $yz$-plane and $xz$-plane, respectively.
+
+        This system is called the \textbf{three-dimensional rectangular coordinate system}, where points are ordered triples $(a,b,c)$ in $\mathbb{R}^3$. In 2D analytic geometry, the graph of an equation
+        involving $x$ and $y$ is a curve in $\mathbb{R}^2$. In 3D analytic geometry, an equation in $x$, $y$, and $z$ represents a \textit{surface} in $\mathbb{R}^3$. \\
+
+        In general, if $k$ is a constant, then \\
+        $\bullet$ $x=k$ represents a plane parallel to the $yz$-plane \\
+        $\bullet$ $y=k$ is a plane parallel to the $xz$-plane \\
+        $\bullet$ $z=k$ is a plane parallel to the $xy$-plane \\
+
+        \textit{\blue{Example:}} 
+        The points $(x,y,z)$ satisfying the equations
+
+        \[
+            x^2 + y^2 = 1
+        \]
+
+        and
+
+        \[
+            z = 3
+        \]
+
+        include those on the horizontal plane $z=3$, lying on the circle with radius 1 and center on the $z$-axis. The equation
+
+        \[
+            x^2 + y^2 = 1
+        \]
+
+        represents a cylinder like so:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/12.1_Cylinder}
+        \end{figure*}
+
+        \begin{theorem}{Distance Formula in 3D}
+            The distance $|P_1 P_2|$ between the points $P_1 (x_1, y_1, z_1)$ and $P_2 (x_2, y_2, z_2)$ is
+
+            \[
+                |P_1 P_2| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z^2 - z^1)^2}
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example 2:}} Find an equation of a sphere with radius $r$ and center $C(h,k,l)$. \\
+
+        By definition, a sphere is the set of all points $P(x,y,z)$ whose distance from $C$ is $r$. Thus $P$ is on the sphere iff $|PC|=r$. Squaring both sides, we have $|PC|^2 = r^2$ or
+
+        \[
+            (x-h)^2 + (y-k)^2 + (z-l)^2 = r^2
+        \]
+
+        \textit{\blue{Example 3:}} What region in $\mathbb{R}^3$ is represented by the following inequalities?
+
+        \[
+            1 \leq x^2 + y^2 + z^2 \leq 4, z\leq 0
+        \]
+
+        The inequalities
+
+        \[
+            1 \leq x^2 + y^2 + z^2 \leq 4
+        \]
+
+        can be rewritten as
+
+        \[
+            1 \leq \sqrt{x^2 + y^2 + z^2} \leq 2
+        \]
+
+        s.t. they represent the points whose distance from the origin is between 1 and 2. Since $z\leq 0$, the points lie on or below the $xy$-plane, thus the given inequalities represent the region that lies between
+        (or on) the spheres $x^2 + y^2 + z^2 = 1$ and $x^2 + y^2 + z^2 = 4$ and beneath (or on) the $xy$-plane. Below is a sketch of this region.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/12.1_Inequalities}
+        \end{figure*}
+
+    \subsection{Vectors}        % 12.2
+
+        \textbf{Vector:} a quantity that has both magnitude and direction, represented by an arrow. Suppose a particle moves along a line segment from point A to point B. The corresponding \textbf{displacement vector v}
+        has \textbf{initial point} A (the tail) and \textbf{terminal point} B (the tip), indicated by the notation $v = \vec{AB}$. \textbf{Equivalent vectors} have the same length and direction but may be in different
+        positions. The \textbf{zero vector}, denoted by 0, has length 0 and is the only vector with no specific direction. \\
+
+        If a particle moves from A to B to C, then
+
+        \[
+            \vec{AC} = \vec{AB} + \vec{BC}
+        \]
+
+        Vector addition is sometimes illustrated by the \textbf{Triangle Law:}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/12.2_Triangle_Law}
+        \end{figure*}
+
+        From the \textbf{Parallelogram Law} below, we see that two vectors $u$ and $v$ satisfy the associative property $u + v = v + u$.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/12.2_Parallelogram_Law}
+        \end{figure*}
+
+        \textbf{Scalar Multiplication:} If $c$ is a scalar and $v$ is a vector, then their scalar product is a vector whose length is $|c|$ times the length of $v$ and whose direction is the same as $v$ if $c > 0$ and
+        opposite to $v$ if $c < 0$. \\
+
+        \textit{\red{Angle brackets are for vectors, whereas parentheses are for points.}} $a_1$, $a_2$, $a_3$ are called the \textbf{components} of a, written
+
+        \[
+            \mathbf{a} = \langle a_1, a_2, a_3 \rangle
+        \]
+
+        Any vector where the terminal point is reached from the initial point by a displacement of three units to the right and two upward is a \textbf{representation} of the vector $a = \langle 3,2\rangle$. The
+        representation $\vec{OP}$ from the origin to the point $P(3,2)$ is called the \textbf{position vector} of the point P. \\
+        
+        Representations of $a = \langle 3,2\rangle$:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/12.2_Representations}
+        \end{figure*}
+
+        The magnitude of the vector $v$ is the length of any of its representations, denoted by $|v|$ or $\lvert|v|\rvert$. Thus,
+
+        \[
+            \lvert|a|\rvert = \sqrt{a_2^1 + a_2^2 + a^2_3}
+        \]
+
+        \textbf{Properties of Vectors:} If \textbf{a, b,} and \textbf{c} are vectors in $V_n$ and $c$ and $d$ are scalars, then \\
+        $\bullet$ 1. $a + b = b + a$ \\
+        $\bullet$ 2. $a + (b + c) = (a + b) + c$ \\
+        $\bullet$ 3. $a + 0 = a$ \\
+        $\bullet$ 4. $a + (-a) = 0$ \\
+        $\bullet$ 5. $c(a+b) = ca + cb$ \\
+        $\bullet$ 6. $(c+d)a = ca + da$ \\
+        $\bullet$ 7. $(cd)a = c(da)$ \\
+        $\bullet$ 8. $1a = a$ \\
+
+        The vectors $i, j$, and $k$ are called \textbf{standard basis vectors}:
+
+        \[
+            \mathbf{i} = \langle 1, 0, 0 \rangle, \mathbf{j} = \langle 0, 1, 0 \rangle, \mathbf{k} = \langle 0, 0, 1\rangle
+        \]
+
+        Thus,
+
+        \[
+            \mathbf{a} = a_1 \mathbf{i} + a_2 \mathbf{j} + a_3 \mathbf{k}
+        \]
+
+        \textbf{Unit vectors}: vectors whose lengths are 1. \\
+        $\bullet$ \textbf{i, j,} and \textbf{k} are all unit vectors \\
+        $\bullet$ In general, if $a\not = 0$, then the unit vector that has the same direction as \textbf{a} is
+
+        \[
+            \mathbf{u} = \frac{1}{|\mathbf{a}|}\mathbf{a} = \frac{\mathbf{a}}{|\mathbf{a}|}
+        \]
+
+        \textit{\blue{Example:}} The unit vector in the direction of the vector $\mathbf{2i - j - 2k}$ can be found first by finding the magnitude:
+
+        \[
+            |\mathbf{2i - j - 2k}| = \sqrt{2^2 + (-1)^2 + (-2)^2} = \sqrt{9} = 3
+        \]
+
+        Thus, the unit vector with the same direction is
+
+        \[
+            \frac{\mathbf{2i-j-2k}}{3} = \frac{2}{3}\mathbf{i} - \frac{1}{3}\mathbf{j} - \frac{2}{3}\mathbf{k}
+        \]
+
+        \textit{\blue{Example 2:}} A 100-lb weight hangs from two wires as shown below. Find the tensions (forces) $T_1$ and $T_2$ in both wires and the magnitudes of the tensions.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/12.2_Tension}
+        \end{figure*}
+
+        From the figure below, it follows that $T_1$ and $T_2$ can be expressed in terms of their horizontal and vertical components s.t.
+
+        \[
+            \mathbf{T_1} = -|\mathbf{T_1}|\cos{50^{\circ}}\mathbf{i} + |\mathbf{T_1}|\sin{50^{\circ}} \mathbf{j}
+        \]
+
+        and
+
+        \[
+            \mathbf{T_2} = -|\mathbf{T_2}|\cos{32^{\circ}}\mathbf{i} + |\mathbf{T_2}|\sin{32^{\circ}}\mathbf{j}
+        \]
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/12.2_Tension2}
+        \end{figure*}
+
+        The resultant $\mathbf{T_1 + T_2}$ of the tensions counterbalances the weight $\mathbf{w = -100j}$ and so we must have
+
+        \[
+            \mathbf{T_1 + T_2 = -w = 100j}
+        \]
+
+        Thus,
+
+        \[
+            \left(-|\mathbf{T_1}|\cos{50^{\circ}}+|\mathbf{T_2}|\cos{32^{\circ}}\right)\mathbf{i} + \left(|\mathbf{T_1}|\sin{50^{\circ}} + |\mathbf{T_2}|\sin{32^{\circ}}\right)\mathbf{j} = 100\mathbf{j}
+        \]
+
+        Equating components, we get
+
+        \begin{align*}
+            -|\mathbf{T_1}|\cos{50^{\circ}} + |\mathbf{T_2}|\cos{32^{\circ}}  &= 0 \\
+            |\mathbf{T_1}|\sin{50^{\circ}} + |\mathbf{T_2}|\sin{32^{\circ}}   &= 100
+        \end{align*}
+
+        Solving the first of these equations for $|\mathbf{T_2}|$ and substituting into the second, we get
+
+        \begin{align*}
+            |\mathbf{T_1}|\sin{50^{\circ}} + \frac{|\mathbf{T_1}|\cos{50^{\circ}}}{\cos{32^{\circ}}}\sin{32^{\circ}}    &= 100 \\
+            |\mathbf{T_1}|   &= \frac{100}{\sin{50^{\circ}}+\tan{32^{\circ}}\cos{50^{\circ}}}    \approx 85.64 \text{ lb}
+        \end{align*}
+
+        and
+
+        \[
+            |\mathbf{T_2}| = \frac{|\mathbf{T_1}|\cos{50^{\circ}}}{\cos{32^{\circ}}}    \approx 64.91 \text{ lb}
+        \]
+
+        Substituting these values into the original vector equations for $T_1$ and $T_2$, it follows that
+
+        \begin{align*}
+            \mathbf{T_1}    &\approx -55.05 \mathbf{i} + 65.60 \mathbf{j} \\
+            \mathbf{T_2}    &\approx 55.05 \mathbf{i} + 34.40 \mathbf{j}
+        \end{align*}
+
+    \subsection{The Dot Product}        % 12.3
+
+        \begin{theorem}{The Dot (Scalar) Product}
+            If $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$ and $\mathbf{b} = \langle b_1, b_2, b_3 \rangle$, then the \textbf{dot product} of \textbf{a} and \textbf{b} is the number $\mathbf{a\cdot b}$ given by
+
+            \[
+                \mathbf{a\cdot b}   &= a_1 b_1 + a_2 b_2 + a_{3}b_3
+            \]
+        \end{theorem}
+
+        \textbf{Properties of the Dot Product:} \\
+        1. $a\cdot a = |a|^2$ \\
+        2. $a\cdot b = b\cdot a$ \\
+        3. $a \cdot (b+c) = a\cdot b + a\cdot c$ \\
+        4. $(ca)\cdot b = c(a\cdot b) = a\cdot (cb)$ \\
+        5. $0\cdot a = 0$
+
+        \begin{theorem}{Angle between vectors}
+            If $\theta$ is the angle between the vectors \textbf{a} and \textbf{b}, then
+
+            \[
+                \mathbf{a\cdot b = |a||b|}\cos{\theta}
+            \]
+        \end{theorem}
+
+        \textbf{Orthogonal (perpendicular) vectors:} vectors whose shared angle is $\theta = \frac{\pi}{2}$. \\
+        $\bullet$ For orthogonal vectors, $\mathbf{a\cdot b} = 0$.
+
+        \begin{theorem}{Dot Product and Orthogonality}
+            Two vectors \textbf{a} and \textbf{b} are orthogonal iff $\mathbf{a\cdot b} = 0$.
+        \end{theorem}
+
+        \textit{\blue{Example 2:}} Since
+
+        \[
+            (2i + 2j - k) \cdot (5i - 4j + 2k) = 2(5) + 2(-4) + (-1)(2) = 0
+        \]
+
+        these vectors are perpendicular. \\
+
+        The dot product $\mathbf{a\cdot b}$ is positive if \textbf{a} and \textbf{b} point in the same general direction, 0 if they are perpendicular, and negative if they point in generally opposite directions. For
+        the case in which \textbf{a} and \textbf{b} point in exactly the same direction, we have $\theta = 0\implies \cos{\theta} = 1$ and
+
+        \[
+            \mathbf{a \cdot b = |a||b|}
+        \]
+
+        If \textbf{a} and \textbf{b} point in exactly opposite directions, then we have $\theta = \pi$ and so $\cos{\theta} = -1$ and $\mathbf{a\cdot b = -|a||b|}$.
+
+        \begin{theorem}{Pythaogrean Theorem in 3D}
+            \[
+                \cos^2{\alpha} + \cos^2{\beta} + \cos^2{\gamma} = 1
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Theorem}
+            \[
+                \frac{\mathbf{a}}{|\mathbf{a}|} = \langle \cos{\alpha}, \cos{\beta}, \cos{\gamma}\rangle
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example:}} Find the direction angles of the vector $\mathbf{a} = \langle 1,2,3\rangle$. \\
+        Since $|\mathbf{a}| = \sqrt{1^2 + 2^2 + 3^2} \sqrt{14}$, it follows that
+
+        \begin{align*}
+            \cos{\alpha} = \frac{1}{\sqrt{14}}      & \implies \alpha = \arccos{\left(\frac{1}{\sqrt{14}}\right)}\approx 74^{\circ} \\
+            \cos{\beta} = \frac{2}{\sqrt{14}}       & \implies \beta = \arccos{\left(\frac{2}{\sqrt{14}}\right)}\approx 58^{\circ} \\
+            \cos{\gamma} = \frac{3}{\sqrt{14}}      & \implies \gamma = \arccos{\left(\frac{3}{\sqrt{14}}\right)}\approx 37^{\circ}
+        \end{align*}
+
+        The figure below shows representations $\vec{PQ}$ and $\vec{PR}$ of two vectors \textbf{a} and \textbf{b} with the same initial point P. If S is the foot of the perpendicular from R to the line containing
+        $\vec{PQ}$, then the vector with representation $\vec{PS}$ is called the \textbf{vector projection} of \textbf{b} onto \textbf{a} and is denoted by $\text{proj}_a$\textbf{b}.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/12.3_Projections}
+        \end{figure*}
+
+        The \textbf{scalar projection (component of b along a)} is shown in the figure below.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.3_Scalar_Projection}
+        \end{figure*}
+
+        \begin{theorem}{Scalar projection of \textbf{b} onto \textbf{a}}
+            \[
+                \text{comp}_{\mathbf{a}} \mathbf{b = \frac{a\cdot b}{|a|}}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Vector projection of \textbf{b} onto \textbf{a}}
+            \[
+                \text{proj}_{\mathbf{a}} \mathbf{b = \left(\frac{a\cdot b}{|a|}\right)\frac{a}{|a|} = \frac{a\cdot b}{|a|^2}a}
+            \]
+
+            Notice that the vector projection is the scalar projection times the unit vector in the direction of \textbf{a}.
+        \end{theorem}
+
+        \textit{\blue{Example 3:}} Find the scalar and vector projections of $\vec{b} = \langle 1, 1, 2 \rangle$ onto $\vec{a} = \langle -2, 3, 1\rangle$. \\
+
+        Since
+
+        \[
+            |a| = \sqrt{(-2)^2 + 3^2 + 1^2} = \sqrt{14},
+        \]
+
+        the scalar projection of \textbf{b} onto \textbf{a} is
+
+        \[
+            \text{comp}_{\mathbf{a}} \mathbf{b = \frac{a\cdot b}{|a|}} = \frac{(-2)(1) + 3(1) + 1(2)}{\sqrt{14}} = \frac{3}{\sqrt{14}}
+        \]
+
+        The vector projection is this scalar projection times the unit vector in the direction of \textbf{a}:
+
+        \[
+            \text{proj}_{\mathbf{a}} \mathbf{b} = \frac{3}{\sqrt{14}}\mathbf{\frac{a}{|a|}} = \frac{3}{14}\mathbf{a} = \left\langle -\frac{3}{7}, \frac{9}{14}, \frac{3}{14}\right\rangle
+        \]
+
+        \begin{axiom}{Work and the Dot Product}
+            The work done by a constant force \textbf{F} is the dot product $\mathbf{F\cdot D}$, where \textbf{D} is the displacement vector:
+
+            \[
+                W = \mathbf{F \cdot D}
+            \]
+        \end{axiom}
+
+    \subsection{The Cross Product}      % 12.4
+
+        Given two nonzero vectors $\vec{a} = \langle a_1, a_2, a_3\rangle$ and $\vec{b} = \langle b_1, b_2, b_3\rangle$, it is very useful to be able to find a nonzero vector $c$ that is perpendicular to both $\vec{a}$
+        and $\vec{b}$. If $\vec{c} = \langle c_1, c_2, c_3\rangle$ is such a vector, then $\mathbf{a\cdot c} = 0$ and $\mathbf{b\cdot c} = 0$ and so
+
+        \[
+            a_1 c_1 + a_2 c_2 + a_3 c_3 = 0
+        \]
+
+        and
+
+        \[
+            b_1 c_1 + b_2 c_2 + b_3 c_3 = 0
+        \]
+
+        Eliminating $c_3$, we can multiply the first equation by $b_3$ and the second equation by $a_3$. Subtracting, it follows that
+
+        \[
+            (a_1 b_3 - a_3 b_1 )c_1 + (a_2 b_3 - a_3 b_2) c_2 = 0
+        \]
+
+        The above equation has the form $pc_1 + qc_2 = 0$, for which an obvious solution is $c_1 = q$ and $c_2 = -p$, s.t. a solution of the equation is
+
+        \[
+            c_1 = a_2 b_3 - a_3 b_2, c_2 = a_3 b_1 - a_1 b_3
+        \]
+
+        Substituting these values into the first two equations,
+
+        \[
+            c_3 = a_1 b_2 - a_2 b_1
+        \]
+
+        Hence, a vector perpendicular to both \textbf{a} and \textbf{b} has the form
+
+        \[
+            \langle c_1, c_2, c_3\rangle = \langle a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1\rangle
+        \]
+
+        This vector is known as the cross product of \textbf{a} and \textbf{b} and is denoted by $\mathbf{a \times b}$.
+
+        \begin{axiom}{Cross Product (Vector Product)}
+            If $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$ and $\mathbf{b} = \langle b_1, b_2, b_3 \rangle$, then the \textbf{cross product} or \textbf{a} and \textbf{b} is the vector
+
+            \[
+                \mathbf{a \times b} = \langle a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1
+            \]
+
+            \textbf{NOTE: $\mathbf{a\times b}$ is only defined when a and b are 3D vectors.}
+        \end{axiom}
+
+        \textit{The cross product is a vector whereas the dot product is a scalar.} \\
+
+        In order to make the cross product easier to remember, determinant notation is used. A \textbf{determinant of order 2} is defined as follows.
+
+        \[
+            \begin{vmatrix}
+                a   & b \\
+                c   & d
+            \end{vmatrix}
+            = ad - bc
+        \]
+
+        A \textbf{determinant of order 3} can be defined in terms of second-order determinants like so:
+
+        \[
+            \begin{vmatrix}
+                a_1 & a_2 & a_3 \\
+                b_1 & b_2 & b_3 \\
+                c_1 & c_2 & c_3
+            \end{vmatrix}
+            = a_1
+            \begin{vmatrix}
+                b_2 & b_3 \\
+                c_2 & c_3
+            \end{vmatrix}
+            - a_2
+            \begin{vmatrix}
+                b_1 & b_3 \\
+                c_1 & c_3
+            \end{vmatrix}
+            + a_3
+            \begin{vmatrix}
+                b_1 & b_2 \\
+                c_1 & c_2
+            \end{vmatrix}
+        \]
+
+        Thus, the definition of the cross product can be rewritten using second-order determinants and the standard basis vectors \textbf{i, j,} \textbf{k}.
+
+        \begin{corollemma}{Definition of Cross Product In Determinant Notation}
+            Let vectors \textbf{a} and \textbf{b} be given by $a = a_1 i + a_2 j + a_3 k$ and $b = b_1 i + b_2 j + b_3 k$ s.t.
+
+            \[
+                \mathbf{a\times b} =
+                \begin{vmatrix}
+                    a_2 & a_3 \\
+                    b_2 & b_3
+                \end{vmatrix}
+                \mathbf{i} -
+                \begin{vmatrix}
+                    a_1 & a_3 \\
+                    b_1 & b_3
+                \end{vmatrix}
+                \mathbf{j} +
+                \begin{vmatrix}
+                    a_1 & a_2 \\
+                    b_1 & b_2
+                \end{vmatrix}
+                \mathbf{k}
+            \]
+
+            Alternatively,
+
+            \[
+                \mathbf{a\times b} =
+                \begin{vmatrix}
+                    \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+                    a_1         & a_2       & a_3 \\
+                    b_1         & b_2       & b_3
+                \end{vmatrix}
+            \]
+        \end{corollemma}
+
+        \textit{\blue{Example:}} Let $\mathbf{a} = \langle 1,3,4\rangle$ and $\mathbf{b} = \langle 2,7,-5\rangle$ s.t.
+
+        \begin{align*}
+            \mathbf{a\times b}  &= \begin{vmatrix}
+                                       \mathbf{i}   & \mathbf{j}    & \mathbf{k} \\
+                                       1            & 3             & 4 \\
+                                       2            & 7             & -5
+                                   \end{vmatrix} \\
+                                &= \begin{vmatrix}
+                                       3 & 4 \\
+                                       7 & -5
+                                   \end{vmatrix} \mathbf{i} -
+                                   \begin{vmatrix}
+                                       1 & 4 \\
+                                       2 & -5
+                                   \end{vmatrix} \mathbf{j} +
+                                   \begin{vmatrix}
+                                       1 & 3 \\
+                                       2 & 7
+                                   \end{vmatrix} \mathbf{k} \\
+                                &= (-15 -28)\mathbf{i} - (-5 - 8) \mathbf{j} + (7-6) \mathbf{k} \\
+                                &= -43 \mathbf{i} + 13\mathbf{j} + \mathbf{k}
+        \end{align*}
+
+        \textit{\blue{Example 3:}} Show that $\mathbf{a}\times \mathbf{a} = 0$ for any vector \textbf{a} in $V_3$. \\
+        If $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$, then
+
+        \begin{align*}
+            \mathbf{a\times a}  &= \begin{vmatrix}
+                                       \mathbf{i}   & \mathbf{j}    & \mathbf{k} \\
+                                       a_1          & a_2           & a_3 \\
+                                       a_1          & a_2           & a_3
+                                   \end{vmatrix} \\
+                                &= (a_2 a_3 - a_3 a_2)\mathbf{i} - (a_1 a_3 - a_3 a_1) \mathbf{j} + (a_1 a_2 - a_2 a_1) \mathbf{k} \\
+                                &= 0\mathbf{i} - 0\mathbf{j} + 0\mathbf{k} \\
+                                &= 0
+        \end{align*}
+
+        and thus our assertion.
+
+        \begin{theorem}{Theorem}
+            The vector $\mathbf{a\times b}$ is orthogonal to both \textbf{a} and \textbf{b}.
+        \end{theorem}
+
+        \begin{proof}
+            \begin{align*}
+                \mathbf{(a\times b) \cdot a}    &=  \begin{vmatrix}
+                                                        a_2 & a_3 \\
+                                                        b_2 & b_3
+                                                    \end{vmatrix} a_1 -
+                                                    \begin{vmatrix}
+                                                        a_1 & a_3 \\
+                                                        b_1 & b_3
+                                                    \end{vmatrix} a_2 +
+                                                    \begin{vmatrix}
+                                                        a_1 & a_2 \\
+                                                        b_1 & b_2
+                                                    \end{vmatrix} a_3 \\
+                                                &= a_1 (a_2 b_3 - a_3 b_2) - a_2 (a_1 b_3 - a_3 b_1) + a_3 (a_1 b_2 - a_2 b_1) \\
+                                                &= a_1 a_2 b_3 - a_1 b_2 a_3 - a_1 a_2 b_3 + b_1 a_2 a_3 + a_1 b_2 a_3 - b_1 a_2 a_3 \\
+                                                &= 0
+            \end{align*}
+
+            A similar computation yields $\mathbf{(a\times b)\cdot b} = 0$. Hence, $\mathbf{a\times b}$ is orthogonal to both \textbf{a} and \textbf{b}.
+        \end{proof}
+
+        \begin{theorem}{Theorem}
+            If $\theta$ is the angle between \textbf{a} and \textbf{b} (so $0 \leq \theta \leq \pi$), then
+
+            \[
+                |\mathbf{a\times b}| = |\mathbf{a}||\mathbf{b}|\sin{\theta}
+            \]
+        \end{theorem}
+
+        \begin{proof}
+            From the definitions of the cross product and length of a vector, we have
+
+            \begin{align*}
+                |\mathbf{a\times b}|^2  &= (a_2 b_3 - a_3 b_2)^2 + (a_3 b_1 - a_1 b_3)^2 + (a_1 b_2 - a_2 b_1)^2 \\
+                                        &= a^2_2 b^2_3 - 2a_2 a_3 b_2 b_3 + a^2_3 b^2_2 + a^2_3 b^2_1 - 2a_1 a_3 b_1 b_3 + a^2_1 b^2_3 + a^2_1 b^2_2 - 2a_1 a_2 b_1 b_2 + a^2_2 b^2_1 \\
+                                        &= \left(a^2_1 + a^2_2 + a^2_3\right)\left(b^2_1 + b^2_2 + b^2_3\right) - \left(a_1 b_1 + a_2 b_2 + a_3 b_3\right)^2 \\
+                                        &= |\mathbf{a}|^2 |\mathbf{b}|^2 - \left(\mathbf{a\cdot b}\right)^2 \\
+                                        &= |\mathbf{a}|^2 |\mathbf{b}|^2 - |\mathbf{a}|^2 |\mathbf{b}|^2 \cos^2{\theta} \\
+                                        &= |\mathbf{a}|^2 |\mathbf{b}|^2 (1-\cos^2{\theta}) \\
+                                        &= |\mathbf{a}|^2 |\mathbf{b}|^2 \sin^2{\theta}
+            \end{align*}
+
+            Taking square roots and observing that $\sqrt{\sin^2{\theta}} = \sin{\theta}$ because $\sin{\theta} \geq 0$ when $0 \leq \theta \leq \pi$, it follows that
+
+            \[
+                |\mathbf{a\times b}| = |\mathbf{a}||\mathbf{b}|\sin{\theta}
+            \]
+        \end{proof}
+
+            \textbf{Scalar Triple Product:} the product $\mathbf{a}\cdot (b\times c)$, \textbf{a,b,} and \textbf{c} are vectors. \\
+            $\bullet$ is written as a determinant:
+
+            \[
+                \mathbf{a\cdot (b\times c)} =
+                \begin{vmatrix}
+                    a_1 & a_2 & a_3 \\
+                    b_1 & b_2 & b_3 \\
+                    c_1 & c_2 & c_3
+                \end{vmatrix}
+            \]
+
+        The geometric significance of the scalar triple product can be seen when considering the parallelepiped (prism with 6 parallelograms as bases) determined by the vectors \textbf{a,b,} and \textbf{c}. The area of
+        the base parallelogram is $A = |\mathbf{b\times c}|$. If $\theta$ is the angle between \textbf{a} and $\mathbf{b\times c}$, then the height $h$ of the parallelepiped is $h = |\mathbf{a}||\cos{\theta}|$. Hence,
+        the volume of the parallelepiped is
+
+        \[
+            V = Ah = |\mathbf{b\times c}||\mathbf{a}||\cos{\theta}| = |\mathbf{a\cdot (b\times c)}
+        \]
+
+        which proves the following formula.
+
+        \begin{axiom}{Volume of Parallelepiped}
+            The volume of the parallelepiped determined by the vectors \textbf{a,b,} and \textbf{c} is the magnitude of their scalar triple product:
+
+            \[
+                V = |\mathbf{a\cdot (b\times c)}|
+            \]
+        \end{axiom}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.4_Parallelepiped}
+        \end{figure*}
+
+        \textbf{Coplanar:} lying in the same plane \\
+        $\bullet$ if the volume of the parallelepiped determined by \textbf{a, b,} and \textbf{c} is 0, then the vectors must be coplanar \\
+
+        \textit{\blue{Example 4:}} Use the scalar triple product to show that the vectors $\mathbf{a} = \langle 1,4,-7\rangle$, $\mathbf{b} = \langle 2, -1, 4\rangle$, and $\mathbf{c} = \langle 0, -9, 18\rangle$ are
+        coplanar.
+
+        \begin{align*}
+            \mathbf{a\cdot (b\times c)} &= \begin{vmatrix}
+                                               1 & 4 & -7 \\
+                                               2 & -1 & 4 \\
+                                               0 & 9 & 18
+                                           \end{vmatrix} \\
+                                        &= 1\begin{vmatrix}
+                                                -1 & 4 \\
+                                                -9 & 18
+                                            \end{vmatrix} - 4
+                                            \begin{vmatrix}
+                                                2 & 4 \\
+                                                0 & 18
+                                            \end{vmatrix} - 7
+                                            \begin{vmatrix}
+                                                2 & -1 \\
+                                                0 & -9
+                                            \end{vmatrix} \\
+                                        &= 1(18) - 4(36) - 7(-18) \\
+                                        &= 0
+        \end{align*}
+
+        Hence, the volume of the parallelepiped determined by \textbf{a, b,} and \textbf{c} is 0 and so \textbf{a, b,} and \textbf{c} are coplanar. \\
+
+        \textbf{Vector Triple Product:} the product $\mathbf{a\times (b\times c)}$ \\
+
+        The \textbf{torque ($\mathbf{\tau}$)} is defined to be the cross product of the position and force vectors and measures the tendency of the body to rotate about the origin s.t.
+
+        \[
+            \tau = r \times F
+        \]
+
+        The direction of the torque vector indicates the axis of rotation. The magnitude of the torque vector is given as follows.
+
+        \[
+            |\tau| = |r \times F| = |r||F|\sin{\theta}
+        \]
+
+        \textit{\blue{Example 5:}} A bolt is tightened by applying a 40 N force to a 0.25 m wrench as shown below. Find the magnitude of the torque about the center of the bolt.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.4_Torque}
+        \end{figure*}
+
+        The magnitude of the torque vector is
+
+        \begin{align*}
+            |\tau|  &= |r \times F| \\
+                    &= |r||F|\sin{75^{\circ}} \\
+                    &= (0.25)(40)\sin{75^{\circ}} \\
+                    &= 10\sin{75^{\circ}} \\
+                    &\approx 9.66 \text{N}\cdot\text{m}
+        \end{align*}
+
+        If the bolt is right-threaded, then the torque vector itself is
+
+        \[
+            \tau = |\tau| \text{ n } \approx 9.66\text{ n},
+        \]
+
+        where \textbf{n} is a unit vector directed down into the page (by the right-hand rule).
+
+    \subsection{Equations of Lines and Planes}      % 12.5
+
+        Let $P(x,y,z)$ and $P(x_0, y_0, z_0)$ be arbitrary points on a line $L$ in 3D space, and let $r_0$ and $r$ be the position vectors of $P_0$ and $P$. If \textbf{a} is the vector with representation $\vec{P_0 P}$,
+        then the Triangle Law for vector addition gives $\vec{r} = \vec{r_0} + a$. But since \textbf{a} and \textbf{v} are parallel vectors, there is a scalar $t$ s.t. \textbf{a = $t$v}. Thus we get a \textbf{vector equation}
+        of $L$:
+
+        \begin{axiom}{Vector Equation}
+            \[
+                \vec{r} = \vec{r_0} + t\vec{v}
+            \]
+
+            Each value of the parameter $t$ gives the position vector $r$ of a point on $L$, i.e. as $t$ varies, the line is traced out by the tip of the vector $\vec{r}$ as in the figure below. Note how positive values
+            of $t$ correspond to points on $L$ that lie on one side of $P_0$, whereas negative values of $t$ correspond to points that lie on the other side of $P_0$.
+        \end{axiom}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.5_Vector_Equation}
+        \end{figure*}
+
+        If the vector \textbf{v} that gives the direction of line $L$ is written in component form, then $t\vec{v} = \langle ta, tb, tc\rangle$, $r = \langle x, y, z\rangle$, and $r_0 = \langle x_0, y_0, z_0 \rangle$
+        and
+
+        \[
+            \langle x, y, z\rangle = \langle x_0 + ta, y_0 + tb, z_0 + tc\rangle
+        \]
+
+        It follows then that
+
+        \begin{axiom}{Parametric Equations}
+            \[
+                x = x_0 + at, y = y_0 + bt, z = z_0 + ct, t\in \mathbb{R}
+            \]
+
+            These equations are called \textbf{parametric equations} of the line $L$ through the point $P_0$ and parallel to the vector $\vec{v} = \langle a, b, c\rangle$.
+        \end{axiom}
+
+        If a vector $\vec{v} = \langle a, b, c\rangle$ is used to describe the direction of a line $L$, then the numbers $a,b,$ and $c$ are called \textbf{direction numbers} of $L$. \\
+
+        We can also describe the line $L$ by eliminating the parameter $t$. If $a,b,c\not = 0$, then
+
+        \[
+            t = \frac{x-x_0}{a}, t = \frac{y-y_0}{b}, t = \frac{z-z_0}{c}
+        \]
+
+        Equating the results, we obtain the symmetric equations of $L$.
+
+        \begin{axiom}{Symmetric Equations}
+            \[
+                \frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}, a,b,c\not = 0
+            \]
+
+            If one of the direction numbers, e.g. $a$ was zero, then
+
+            \[
+                x = x_0, \frac{y-y_0}{b}, \frac{z-z_0}{c}
+            \]
+
+            and $L$ lies in the vertical plane $x=x_0$.
+        \end{axiom}
+
+        \begin{axiom}{Line Segment}
+            The line segment from $r_0$ to $r_1$ is given by the vector equation
+
+            \[
+                r(t) = (1-t) r_0 + tr_1, 0 \leq t \leq 1
+            \]
+        \end{axiom}
+
+        \textbf{Skew lines:} lines that do not intersect and are not parallel \\
+
+        \textit{\blue{Example:}} Show that the lines $L_1$ and $L_2$ with parametric equations
+
+        \begin{align*}
+            L_1 & x = 1 + t, & y = -2+3t, & z = 4-t \\
+            L_2 & x = 2s,    & y = 3 + s  & z = -3 + 4s
+        \end{align*}
+
+        are skew lines. \\
+
+        The lines are not parallel because the corresponding direction vectors $\langle 1, 3, -1\rangle$ and $\langle 2, 1, 4\rangle$ are not parallel. If $L_1$ and $L_2$ had a point of intersection, there would be
+        values of $t$ and $s$ s.t.
+
+        \begin{align*}
+            1 + t   &= 2s \\
+            -2 + 3t &= 3 + s \\
+            4 - t   &= -3 + 4s
+        \end{align*}
+
+        However, if we solve the first two equations, we get $t = \frac{11}{5}$ and $s = \frac{8}{5}$, and these values don't satisfy the third equation. Hence, there are no values of $t$ and $s$ that satisfy the three
+        equations, so $L_1$ and $L_2$ don't intersect and $L_1$ and $L_2$ are skew lines. \\
+
+        Planes are determined by a point $P_0(x_0, y_0, z_0)$ in the plane and a vector $\vec{n}$ that is orthogonal to the plane, called a \textbf{normal vector}. Let $P(x,y,z)$ be a point in the plane, and let
+        $\vec{r_0}$ and $\vec{r}$ be the position vectors of $P_0$ and $P$. Then the vector $\vec{r-r_0}=\vec{P_0 P}$. Since the normal vector $\vec{n}$ is orthogonal to every vector in the given plane, $\vec{n}$ is
+        orthogonal to $\vec{r - r_0}$ and so we get the vector equations of the plane.
+
+        \begin{axiom}{Vector Equations of a Plane}
+
+            \[
+                \vec{n}(\vec{r}-\vec{r_0}) = 0
+            \]
+
+            Alternatively,
+
+            \[
+                \vec{n}\cdot\vec{r} = \vec{n}\cdot \vec{r_0}
+            \]
+        \end{axiom}
+
+        \begin{axiom}{Scalar Equation of a Plane}
+            A \textbf{scalar equation of the plane} through point $P_0(x_0, y_0,z_0)$ with normal vector $\vec{n} = \langle a,b,c\rangle$ is
+
+            \[
+                a(x-x_0) + b(y-y_0) + c(z-z_0) = 0
+            \]
+        \end{axiom}
+
+        \begin{axiom}{Linear Equation}
+            By rewriting the scalar equation of a plane, it follows that we get a linear equation in $x,y,z$:
+
+            \[
+                ax + by + cz + d = 0,
+            \]
+
+            where
+
+            \[
+                d = -(ax_0 + by_0 + cz_0)
+            \]
+        \end{axiom}
+
+        \textit{\blue{Example 2:}} Find an equation of the plane that passes through the points $P(1,3,2)$,$Q(3,-1,6)$, and $R(5,2,0)$. \\
+        The vectors $\vec{a}$ and $\vec{b}$ corresponding to $\vec{PQ}$ and $\vec{PR}$ are
+
+        \[
+            \vec{a} = \langle 2,-4,4\rangle, \vec{b} = \langle 4, -1, -2\rangl
+        \]
+
+        Since both $\vec{a}$ and $\vec{b}$ lie in the plane, their cross product $\mathbf{a\times b}$ is orthogonal to the plane and can be taken as a normal vector. Thus
+
+        \[
+            \vec{n} = \mathbf{a\times b} =
+            \begin{vmatrix}
+                \mathbf{i}  & \mathbf{j}    & \mathbf{k} \\
+                2           & -4            & 4 \\
+                4           & -1            & -2
+            \end{vmatrix}
+            = 12\mathbf{i} + 20\mathbf{j} + 14\mathbf{k}
+        \]
+
+        With the point $P(1,3,2)$ and the normal vector $\vec{n}$, an equation of the plane is
+
+        \[
+            12(x-1) + 20(y-3) + 14(z-2) = 0 \iff 6x + 10y + 7z = 50
+        \]
+
+        Two planes are parallel if their normal vectors are parallel. If two planes are not parallel, then they intersect in a straight line and the angle between the two planes is defined as the acute angle between
+        their normal vectors. \\
+
+        \color{blue} \textit{Example 3:} \\
+        (a) Find the angle between the planes $x + y + z = 1$ and $x - 2y + 3z = 1$. \\
+        (b) Find symmetric equations for the line of intersection $L$ of these two planes. \color{black} \\
+
+        (a) The normal vectors of these planes are
+
+        \[
+            \vec{n_1} = \langle 1,1,1\rangle, \vec{n_2} = \langle 1,-2,3\rangle
+        \]
+
+        and so, if $\theta$ is the angle between the planes, it follows that
+
+        \begin{align*}
+            \cos{\theta}    &= \mathbf{\frac{n_1\cdot n_2}{|n_1||n_2|}} \\
+                            &= \frac{1(1)+1(-2) + 1(3)}{\sqrt{1+1+1}\sqrt{1+4+9}} \\
+                            &= \frac{2}{\sqrt{42}} \\
+            \theta          &= \arccos{\left(\frac{2}{\sqrt{42}}\right)} \\
+                            &\approx 72^{\circ}
+        \end{align*}
+
+        (b) We need to find a point on $L$. We can find the point where the line itnersects the $xy$-plane by setting $z=0$ in the equations of both planes. This gives the equations $x+y=1$ and $x-2y=1$, whose solution
+        is $x=1,y=0$. So the point $(1,0,0)$ lies on $L$. Note that since $L$ lies in both planes, it is perpendicular to both of the normal vectors. Thus a vector $\vec{v}$ parallel to $L$ is given by the cross product
+
+        \[
+            \mathbf{v = n_1 \times n_2} =
+            \begin{vmatrix}
+                \mathbf{i}  & \mathbf{j}    & \mathbf{k} \\
+                1           & 1             & 1 \\
+                1           & -2            & 3
+            \end{vmatrix}
+            = 5\mathbf{i} - 2\mathbf{j} - 3\mathbf{k}
+        \]
+
+        and so the symmetric equations of $L$ can be written as
+
+        \[
+            \frac{x-1}{5} = \frac{y}{-2} = \frac{z}{-3}
+        \]
+
+        \begin{theorem}{Distance between a Point and Plane}
+            The distance $D$ from a point $P_1(x_1,y_1,z_1)$ to the plane $ax + by + cz + d = 0$ is given by
+
+            \[
+                D = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}
+            \]
+        \end{theorem}
+
+        \begin{proof}
+            Let $P_0(x_0, y_0, z_0)$ be any point in the given plane and let \textbf{b} be the vector corresponding to $\vec{P_0 P_1}$. Then
+
+            \[
+                \vec{b} = \langle x_1 - x_0, y_1 - y_0, z_1 - z_0\rangle
+            \]
+
+            The distance $D$ from $P_1$ to the plane is equal to the absolute value of the scalar projection of \textbf{b} onto the normal vector $\vec{n} = \langle a, b, c\rangle$, hence
+
+            \begin{align*}
+                D   &= |\text{comp}_n b| \\
+                &= \frac{|n\cdot b|}{|n|} \\
+                &= \frac{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}{\sqrt{a^2 + b^2 + c^2}} \\
+                &= \frac{|(ax_1 - by_1 + cz_1) - (ax_0 - by_0 + cz_0)|}{\sqrt{a^2 + b^2 + c^2}}
+            \end{align*}
+
+        \end{proof}
+
+    \subsection{Cylinders and Quadric Surfaces}     % 12.6
+
+        \textbf{Cross-sections (traces):} curves of intersection of a surface with planes parallel to the coordinate planes \\
+        \textbf{Cylinder:} a surface that consists of all lines (called \textbf{rulings}) that are parallel to a given line and pass through a given plane curve \\
+        \textbf{Parabolic cylinder:} a surface made up of infinite many shifted copies of the same parabola \\
+        \textbf{Quadric surface:} the graph of a second-degree equation in three variables $x$, $y$, and $z$. The most general such equation is
+
+        \[
+            Ax^2 + By^2 + Cz^2 + Dxy + Eyz + Fxz + Gx + Hy + Iz + J = 0
+        \]
+
+        Through translation and rotation the equation can be written in one of the two following standard forms.
+
+        \[
+            Ax^2 + By^2 + Cz^2 + J = 0
+        \]
+
+        or
+
+        \[
+            Ax^2 + By^2 + Iz = 0
+        \]
+
+        \textit{\blue{Example:}} Use traces to sketch the quadric surface with equation
+
+        \[
+            x^2 + \frac{y^2}{9} + \frac{z^2}{4} = 1
+        \]
+
+        By substituting $z=0$, we find that the trace in the $xy$-plane is $x^2 + \frac{y^2}{9} = 1$, which we recognize as an equation of an ellipse. In general, the horizontal trace in the plane $z=k$ is
+
+        \[
+            x^2 + \frac{y^2}{9} = 1 - \frac{k^2}{4}, z = k
+        \]
+
+        which is an ellipse, provided that $k^2 < 4$, that is, $-2 < k < 2$. Similarly, vertical traces parallel to the $yz$ and $xz$-planes are also ellipses:
+
+        \begin{align*}
+            \frac{y^2}{9} + \frac{z^2}{4}   &= 1 - k^2  & x = k     & (\text{if } -1 < k < 1) \\
+            x^2 + \frac{z^2}{4}             &= 1 - \frac{k^2}{9}    & y = k & (\text{if } - 3 < k < 3)
+        \end{align*}
+
+        This surface is called an \textbf{ellipsoid} because all of its traces are ellipses. It is sketched below.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.6_Ellipsoid}
+        \end{figure*}
+
+        \textit{\blue{Example 2:}} Use traces to sketch the surface $z = 4x^2 + y^2$ \\
+
+        When $x = 0$, $z = y^2$, so the $yz$-plane intersects the surface in a parabola. If we let $x=k$ (a constant), we get $z = y^2 + 4k^2$. This means that if we slice the graph with any plane parallel to the
+        $yz$-plane, we obtain a parabola that opens upward. Similarly, if $y=k$, the trace is $z = 4x^2 + k^2$, which is again a parabola that opens upward. If we let $z=k$, we get the horizontal traces
+        $4x^2 + y^2 = k$, which we recognize as a fmaily of ellipses. Knowing the shapes of the traces, we can sketch the graph like so:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.6_Elliptic_Paraboloid}
+        \end{figure*}
+
+        Because of the elliptical and parabolic traces, this surface is called an \textbf{elliptic paraboloid}. \\
+
+        \textbf{Graphs of Quadric Surfaces:}
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/12.6_Graphs_Of_Quadric_Surfaces}
+        \end{figure*}
+
+        Circular paraboloids are used for satellite dishes. Cooling towers for nuclear reactors are designed in the shape of hyperboloids of one sheet for structural stability.
+
+

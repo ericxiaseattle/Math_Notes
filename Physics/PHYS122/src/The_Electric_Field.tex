@@ -1,0 +1,295 @@
+\section{The Electric Field}
+
+    \subsection{The Field Model}    % 23.1
+
+        In the field model, an interacting object fills the space around itself with a field. \\
+
+        \textbf{Interaction field:} a physical quantity represented by a number or tensor that has a value for each point in space and time. \\
+        $\bullet$ the field of an object always exist even when the object is not interacting with anything else \\
+        \textbf{Gravitational field:} the space around any object that has mass \\
+        $\bullet$ exert forces on objects that have mass \\
+        $\bullet$ for any object A located in a gravitational field created by an object S, the magnitude of the field felt by A depends only on the properties of S and on the position of A relative to S; the field
+        magnitude does not depend in any way on the properties of A \\
+        $\bullet$ at any given location in the space surrounding a source object S, the magnitude of the gravitational field created by S is the magnitude of the gravitational force exerted on an object B placed at that
+        location divided by the mass of B. \\
+        $\bullet$ is a \textbf{vector field}, where each position has both magnitude and direction \\
+        \textbf{Electric field:} the space around any electrically charged object \\
+        $\bullet$ exert forces on objects that either carry a charge or can be polarized \\
+        \textbf{Temperature field:} temperature across the surface of a region has a specific value at each location \\
+        $\bullet$ is a \textbf{scalar field}, where each position has a magnitude but not a direction \\
+
+        \textbf{Test particle:} an idealized particle whose mass is small enough that its presence does not perturb the object whose gravitational field we are measuring \\
+        $\bullet$ can be used to determine the magnitude and direction of a gravitational field in the space surrounding Earth \\
+        $\bullet$ Earth's gravitational field always points towards the center of Earth and its magnitude decreases with increasing distance away from Earth.
+
+    \subsection{Electric Field Diagrams}    % 23.2
+
+        At any given location in the space surrounding a source object S, the electric field created by S is the electric force exerted on a charged test particle placed at that location divided by the charge of the test
+        particle:
+
+        \[
+            \vec{E}_S  \equiv \frac{\vec{F}^E_{St}}{q_t}
+        \]
+
+        The direction of the electric field at a given location is the same as the direction of the electric force exerted on a positively charged object at that location:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/23.2_Fields}
+        \end{figure*}
+
+    \subsection{Superposition of Electric Fields}   % 23.3
+
+        \textbf{Superposition:} the combined electric field created by a collection of charged objects is equal to the vector sum of the electric fields created by the individual objects
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale=0.75]{Resources/23.3_Superposition}
+        \end{figure*}
+
+    \subsection{Electric Fields and Forces}     % 23.4
+
+        \textbf{Uniform Electric Field:} an electric field for which the direction and magnitude are the same everywhere \\
+        $\bullet$ no electric field is ever uniform throughout all space but it is possible to create regions of space with uniform electric fields \\
+        \textbf{Nonuniform electric field:} an electric field for which the direction and magnitude vary between positions \\
+
+        \begin{axiom}{Constant Acceleration in a Uniform Electric Field}
+            In a uniform electric field, the force $\vec{F}^E_p$ exerted by an electric field $\vec{E}$ on a particle carrying a charge $q$ is $\vec{F}^E_p = q\vec{E}$. Because $\vec{E}$ is the same everywhere, the force
+            $\vec{F}^E_p$ exerted on the particle is constant and so it undergoes a constant acceleration
+
+            \[
+                \vec{a} = \frac{\vec{F}^E_p}{m} = \frac{q\vec{E}}{m} = \frac{q}{m} \vec{E},
+            \]
+
+            where $m$ is the particle's mass. Thus, \textbf{a charged particle placed in a uniform electric field undergoes constant acceleration}.
+        \end{axiom}
+
+        If the particle carries a positive charge, then $q > 0$, $\vec{F}^E_p$ and $\vec{a}$ point in the same direction as $\vec{E}$. If $q < 0$, $\vec{F}^E_p$ and $\vec{a}$ point in the direction opposite the direction
+        of the electric field:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/22.4_Acceleration}
+        \end{figure*}
+
+        Note from $\vec{a} = \frac{q}{m}\vec{E}$ that the magnitude of the acceleration depends on the magnitude of the electric field and on the charge-to-mass ratio $\frac{q}{m}$ of the particle. A large charge $q$
+        causes a greater force to be exerted on the particle and therefore a greater acceleration; a larger mass $m$ means that the particle has greater inertia and therefore the acceleration is smaller. \\
+
+        In general, the trajectory of charged particles in uniform electric fields is parabolic. In the special case where the initial velocity of a charged particle is parallel to the direction of the electric field,
+        the trajectory is a straight line. \\
+
+        A positively charged particle placed in a nonuniform electric field has an acceleration in the same direction as the electric field; a negatively charged particle placed in such a field has an acceleration in the
+        opposite direction. \\
+
+        \textbf{Electric dipole:} equal amounts of positive and negative charge separated by a small distance \\
+        $\bullet$ many molecules such as water are \textit{permanent dipole}, in which the centers of positive and negative charge are kept separated by some internal mechanism \\
+        $\bullet$ for a dipole in a uniform field, the magnitude of the charge on the positive end of the dipole is equal to the magnitude of the charge on the negative end and so they cancel each other and their vector
+        sum is zero. However, these forces cause a torque:
+
+        \pagebreak
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/24.4_Dipole}
+        \end{figure*}
+
+        The orientation of a dipole can be characterized by the \textbf{dipole moment}, a vector that by definition points from the center of negative charge to the center of positive charge. A permanent electric 
+        dipole placed in an electric field is subject to a torque that tends to align the dipole moment with the direction of the electric field. If the field is uniform, the dipole has zero acceleration; if the electric
+        field is nonuniform, the dipole has a nonzero acceleration.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.9]{Resources/12.4_Dipole_Moment}
+        \end{figure*}
+
+    \subsection{Electric Field of a Charged Particle}   % 23.5
+
+        \begin{axiom}{Relating Force, Fields, and Charges With Specified Position}
+            The force exerted on any particle carrying charge $q$ placed at a position with a known electric field is given by:
+
+            \[
+                \vec{F}^E_p = q\vec{E}
+            \]
+        \end{axiom}
+
+
+    \subsection{Dipole Field}   % 23.6
+
+        For a dipole consisting of a particle carrying a charge $+q_p$ at $x = 0, y = + \frac{1}{2}d$, and another particle carrying a charge $-q_p$ at $x=0, y = -\frac{1}{2}d$, where $d$ is the distance between the two
+        particles. The charge $q_p$ of the positively charged pole is called the \textbf{dipole charge}, and the distance $d$ is called the \textbf{dipole separation}. Each particle creates an electric field and so the
+        two fields overlap everywhere. The combined electric field at any position can be found by adding the two fields vectorially.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/24.4_Dipole_Field}
+        \end{figure*}
+
+        Along the $x$ axis, which bisects, the dipole, the magnitudes of the eelctric fields due to the two ends of the dipole are equal s.t.
+
+        \[
+            E_+ = E_- = k \frac{q_p}{x^2 + \left(\frac{d}{2}\right)^2}
+        \]
+
+        The $x$ components of the two electric fields point in opposite directions and so add to zero. The magnitude of the combined electric field is thus equal to the sum of the $y$ components:
+
+        \begin{align*}
+            E_y &= E_{+y} + E_{-y} \\
+                &= - (E_+ + E_-) \cos{\theta} \\
+                &= -\left(2k \frac{q_p}{x^2 + \left(\frac{d}{2}\right)^2}\right) \left(\frac{\frac{d}{2}}{\left[x^2 + \left(\frac{d}{2}\right)^2}\right]\right) \\
+                &= -k \frac{q_p d}{\left[x^2 + \left(\frac{d}{2}\right)^2\right]^{\frac{3}{2}}}
+        \end{align*}
+
+        The electric field far from the dipole is given by \\
+        $\bullet$ $E_y \approx -k \frac{p}{|x|^3}$ (along the $x$-axis) \\
+        $\bullet$ notice the dipole moment vector is toward the $y$-direction \\
+        $\bullet$ (along the $x$-axis) means your interest point is along the $x$-axis \\
+        $\bullet$ $E_y \approx 2k \frac{p}{|y|^3}$ (along the $y$-axis) \\
+        $\bullet$ Notice the dipole moment vector is toward the $y$-direction \\
+        $\bullet$ (along the $y$-axis) means your interest point is along the $y$-axis
+
+        This can be rewritten and simplified to
+
+        \begin{align*}
+            E_y = 2k \frac{p}{y^3}, \text{ where } y > \frac{d}{2}
+        \end{align*}
+
+    \subsection{Electric Fields of Continuous Charge Distributions}     % 23.7
+
+        For the charged macroscopic object shown below, we can use Coulomb's law to obtain the infinitesimal portion of the electrical field at point P contributed by a segment:
+
+        \[
+            d\vec{E}_s (P) = k \frac{dq_s}{r^2_{sP}} \vec{r}_{sP}
+        \]
+
+        Using the principle of superposition, we can sum the contributions of all the segments making up the object:
+
+        \[
+            \vec{E} = \int d\vec{E_s} = k\int \frac{dq_s}{r^2_{sP}} \vec{r_{sP}}
+        \]
+
+        To evaluate this integral, $dq_s$, $\frac{1}{r^2_{sP}}$, and $\vec{r_{sP}}$ must be expressed in terms of the same coordinate(s). To do, we express the charge on the object in terms of a \textbf{charge density},
+        the amount of charge per unit of length, per unit of surface area, or per unit of volume. For a 1D object, e.g. a thin, charged wire of length $l$ carrying a charge $q$ uniformly distributed, the
+        \textbf{linear charge density} is given by
+
+        \[
+            \lambda = \frac{q}{l}, \frac{\text{C}}{\text{m}}
+        \]
+
+        For uniformly charged 2D objects, the \textbf{surface charge density} of an object with area $A$ carrying a uniformly distributed charge $q$ is
+
+        \[
+            \sigma = \frac{q}{A}, \frac{\text{C}}{\text{m}^2}
+        \]
+
+        For a uniformly charged 3D object, the \textbf{volume charge density} is given by
+
+        \[
+            \rho = \frac{q}{V}, \frac{\text{C}}{\text{m}^3}
+        \]
+
+    \subsection{Dipoles in Electric Fields}     % 23.8
+
+        An electric field will exert forces on the charged ends of the dipole equal in magnitude but opposite in direction, such that the torque is given by the cross product of the dipole moment and the electric field
+        force:
+
+        \[
+            \sum \vec{\tau} = \vec{p} \times \vec{E}
+        \]
+
+        Along a dipole axis, the magnitude of the electric field created by the dipole is $2k\frac{p}{y^3}$, and so the magnitude of the force exerted by the dipole on the particle is
+
+        \begin{axiom}{Magnitude of Force Exerted by Dipole and Particle}
+            Magnitude of force exerted by dipole on particle:
+
+            \[
+                F^E_{dp} = qE_d = 2k\frac{pq}{y^3}
+            \]
+
+            Magnitude of force exerted by particle on dipole:
+
+            \[
+                F^E_{pd} = F^E_{p^-} - F^E_{p^+} = 2k \frac{pq}{y^3}
+            \]
+        \end{axiom}
+
+        The torque on the dipole is maximized when the dipole moment is perpendicular to the electric field and zero when it is parallel or anti-parallel to the electric field
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/23.8_Interaction_Between_Dipole_And_Charged_Particle}
+        \end{figure*}
+
+        \textbf{Induced dipole:} a weak attraction that results when a polar molecule induces a dipole in an atom or in a nonpolar molecule by disturbing the arrangement of electrons in the nonpolar species \\
+        $\bullet$ when a neutral atom is placed in an electric field $\vec{E}$, as long as the electric forces exerted by that field on the charged particles in the atom are not too large, the induced dipole separation
+        $d_{ind}$ in the atom obeys Hooke's law. \\
+        $\bullet$ this means that the induced dipole separation is proportional to the magnitude of the applied electric force, $F^E_d = cd_{ind}$, where $c$ is the "spring constant" of the atom. \\
+
+        Because $d_{int}$ is proportional to the magnitude $E$ of the electric field at the position of the dipole, the \textbf{induced dipole moment} is proportional to the field at the position of the dipole:
+
+        \[
+            \vec{p_{ind}} = \alpha \vec{E}, (\vec{E}\text{ not too large}),
+        \]
+
+        where $\alpha$, the \textbf{polarizability} of the atom, is a constant that expresses how easily the charge distribution in the atom are displaced from each other. \\
+        $\bullet$ SI unit of polarizability: $\text{C}^2 \cdot \text{ m/N}$. \\
+
+        A charged particle induces a dipole in an electrically neutral atom:
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.5]{Resources/12.8_Induction_Dipole_Particle}
+        \end{figure*}
+
+        Substituting the induced-dipole result of the equation for $p_{ind}$ into an earlier equation, we find that
+
+        \begin{axiom}{Force exerted by charged particle on induced dipole}
+            \[
+                F^E_{pd} = 2k \frac{p_{ind}q}{y^3} = \alpha \frac{2k^2 q^2}{y^5}
+            \]
+        \end{axiom}
+
+        From the equation above, we find that the interaction between a charged particle and a polarized object depend much more strongly on the distance between them $\left(\frac{1}{y^5}\right)$ than does the
+        interaction between two charged objects $\left(\frac{1}{y^2}\right)$.
+
+    \subsection{Chapter Glossary}
+
+        \textbf{Charge density} a scalar that is a measure of thea mount of charge per unit of length, area, or volume on a one-, two-, or three-dimensional object, respectively. \\
+        $\bullet$ Linear $\lambda$ (C/m) \\
+        $\bullet$ Surface $\sigma$ (C/$\text{m}^2$) \\
+        $\bullet$ Volume $\rho$ (C/$\text{m}^3$) \\
+        \textbf{Dipole:} A neutral charge configuration in which the center of positive charge is separated from the center of negative charge by a small distance. \\
+        $\bullet$ can be \textit{permanent}, or \textit{induced} by an external electric field \\
+        \textbf{Dipole moment} (electric) $\vec{p}$ (C $\cdot$ m): a vector defined as the product of the \textit{dipole charge} $q_p$ (the positive charge of the dipole) and the vector $\vec{r_p}$ that points from the
+        center of negative charge to the center of positive charge:
+
+        \[
+            \vec{p} = q_p \vec{r_p}
+        \]
+
+        \textbf{Electric field} $\vec{E}$ (N/C): a vector equal to the electric field exerted on a charged test particle divided by the charge on the test particle:
+
+        \[
+            \vec{E} = \frac{\vec{F}^E_t}{q_t}
+        \]
+
+        \textbf{Induced dipole}: a separation of the positive and negative charge centers in an electrically neutral object caused by an external electric field \\
+        \textbf{Induced dipole moment} $\vec{p}_{ind}$ (C $\cdot$ m): a dipole moment induced by an external electric field in an electrically neutral object. \\
+        $\bullet$ for small electric fields, the induced dipole moment in an atom is proportional to the applied electric field:
+
+        \[
+            \vec{p}_{ind} = \alpha \vec{E}
+        \]
+
+        where $\alpha$ is the \textit{polarizability} of the atom. \\
+        \textbf{Interaction field / field:} a physical quantity surrounding objects that mediates an interaction \\
+        $\bullet$ objects that have mass are surrounded by a \textbf{gravitational field} \\
+        $\bullet$ objects that carry an electrical charge are surrounded by an \textbf{electric field} \\
+        $\bullet$ both are \textbf{vector fields} specified by a direction and a magnitude at each position in space \\
+        \textbf{Polarizability} $\alpha$ ($\text{C}^2 \cdot $ m/N): a scalar measure of the amount of charge separation that occurs in an atom or molecule in the presence of an externally applied electric field \\
+        \textbf{Superposition of electric fields:} the electric field of a collection of charged particles is equal to the vector sum of the electric fields created by the individual charged particles:
+
+        \[
+            \vec{E} = \vec{E}_1 + \vec{E}_2 + \dots
+        \]
+
+        \textbf{Test particle:} an idealized particle whose physical properties (mass or charge) are so small that the particle does not perturb the particles or objects generating the field we are measuring \\
+        \textbf{Vector field diagram:} a diagram that represents a vector field, obtained by plotting field vectors at a series of locations.
