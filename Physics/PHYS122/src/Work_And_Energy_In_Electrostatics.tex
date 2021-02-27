@@ -2,11 +2,369 @@
 
     \subsection{Electrical Potential Energy}    % 25.1
 
-        \textbf{Electric potential energy:} the potential energy associated with the relative positions of charged objects
+        \textbf{Electric potential energy:} the potential energy associated with the relative positions of charged objects \\
+        $\bullet$ changes in electric potential energy may be associated with changes in the orientation of charged objects
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.1_Energy_Diagrams}
+        \end{figure*}
+
+        In uniform \textit{gravitational fields}, particles with different masses have the \textit{same acceleration}, whereas in uniform \textit{electric fields}, particles with different masses but the same charge have
+        \textit{different accelerations}.
 
     \subsection{Electrostatic Work}     % 25.2
+
+        \textbf{Electrostatic field}: a constant electric field created by other stationary charged objects \\
+        \textbf{Electrostatic work:} work done by an electrostatic field \\
+        $\bullet$ the electrostatic work done on a charged particle as it moves from one point to another is independent of the path taken by the particle and depends on only the positions of the endpoints of the path. \\
+        $\bullet$ the electrostatic work done on a charged particle that moves around any closed path is zero \\
+        $\bullet$ the electrostatic work done on a charged particle is proportional to the charge done on that particle
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.2_Electrostatic_Work}
+        \end{figure*}
+
+        \textbf{Electrostatic potential difference:} the potential difference between point A and point B in an electrostatic field is equal to the negative of the electrostatic work per unit charge done on a charged
+        particle as it moves from A to B \\
+        $\bullet$ is scalar \\
+        $\bullet$ can be both positive and negative \\
+        $bullet$ is not a form of energy, is electrostatic work done per unit charge and has SI units of J/C.
+
     \subsection{Equipotentials}     % 25.3
+
+        \textbf{Equipotential lines:} lines along which the value of the electrostatic potential does not change \\
+        $\bullet$ the electrostatic work done on a charged particle as it moves along an equipotential line is zero \\
+        \textbf{Equipotential surfaces:} the 2D equivalent of equipotential lines \\
+        $\bullet$ the equipotential surfaces of a stationary charge distribution are everywhere perpendicular to the corresponding electric field lines
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.3_Equipotentials}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.3_Equipotentials2}
+        \end{figure*}
+
+        As no electrostatic work is done on a charged particle inside a charged or uncharged conducting object, the entire volume of the conducting object is an \textbf{equipotential volume}.
+
+        \textbf{Electrostatic fields} \\
+        $\bullet$ are directed from points of higher potential to points of lower potential \\
+        $\bullet$ in an electrostatic field, positively charged particles tend to move toward regions of lower potential, whereas negatively charged particles tend to move toward regions of higher potential
+
     \subsection{Calculating Work and Energy in Electrostatics}      % 25.4
+
+        Recall that work is independent of the path taken and only depends on the distance between the endpoints of travel.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.4_Work}
+        \end{figure*}
+
+        \begin{theorem}{Electrostatic work}
+            The electrostatic work done by particle 1 on particle 2 as particle 2 is moved between two positions is given by
+
+            \[
+                W_{12} = \frac{q_1 q_2}{4\pi \epsilon_0}\left[\frac{1}{r_{12,i}}-\frac{1}{r_{12,f}}\right],
+            \]
+
+            where $r_{12,i}$ and $r_{12,f}$ are the initial and final values of the distance separating particles 1 and 2.
+        \end{theorem}
+
+        \begin{theorem}{Change in Electric Potential Energy}
+            For the same context as the one above, the electric potential energy is the negative of the electrostatic work s.t.
+
+            \[
+                \Delta U^E = \frac{q_1 q_2}{4\pi \epsilon_0} \left[\frac{1}{r_{12,f}} - \frac{1}{r_{12,i}}\right]
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Electric Potential Energy}
+            As $U^E = 0$ when $r_{12} = \infty$, we find that the \textbf{electric potential energy} for two particles carrying charges $q_1$ and $q_2$ and separated by distance $r_{12}$ is
+
+            \[
+                U^E = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{r_{12}}
+            \]
+        \end{theorem}
+
+        To generalize this, consider a siutation consisting of three particles. We can determine the potential energy of the system by calculating the work it takes to push the three particles together. If we put
+        particle 1 in its final position and move particle 2 there, the work will be
+
+        \[
+            -\frac{q_1 q_2}{4\pi\epsilon_0}\frac{1}{r_{12}}
+        \]
+
+        The work done by particle 3 as it is moved to particle 1's final position is subject to two forces, one exerted by particle 1 and the other by particle 2:
+
+        \[
+            W_3 = \int_i^f \vec{F}^E_3 \cdot d\vec{l} = \int_i^f \left(\vec{F}^E_{13} + \vec{F}^E_{23}\right)\cdot d\vec{l} = W_{13} + W_{23}
+        \]
+
+        Thus, the total work done by moving all three particles is
+
+        \[
+            \sum W = -\frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{r_{12}} - \frac{q_1 q_3}{4\pi\epsilon_0} \frac{1}{r_{13}} - \frac{q_2 q_3}{4\pi\epsilon_0} \frac{1}{r_{23}}
+        \]
+
+        Considering our choice of zero at infinity, we find that the electric potential energy of the system is
+
+        \[
+            U^E = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{r_{12}} + \frac{q_1 q_3}{4\pi\epsilon_0} \frac{1}{r_{13}} + \frac{q_2 q_3}{4\pi\epsilon_0} \frac{1}{r_{23}}
+        \]
+
+        \begin{figure}[hbt!]
+            \centering
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale = 0.75]{Resources/25.4_Multiple_Particles_1}
+            \end{subfigure}
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale = 0.70]{Resources/25.4_Multiple_Particles_2}
+            \end{subfigure}
+        \end{figure}
+
     \subsection{Potential Difference}       % 25.5
+
+        \begin{theorem}{Potential Difference}
+            \textbf{Potential difference:} the negative of the electrostatic work per unit charge done on a particle that carries a positive charge $q$ from one point to another:
+            $\bullet$ is a scalar
+
+            \[
+                V_{AB} = V_B - V_A = \frac{-W_q (A\to B)}{q}
+            \]
+        \end{theorem}
+
+        The SI units of potential difference are joules per coulomb (J/C); derived units are \textbf{volts} (V):
+
+        \[
+            1 V = 1 \frac{J}{C}
+        \]
+
+        \textit{\blue{Example:}} If the electric field does -12 J of electrostatic work on a particle $q_2$ with 2 coulombs of charge (meaning it takes 12 J of work by an external agent for the particle not to gain
+        kinetic energy), then the potential difference is given by
+
+        \[
+            V_{AB} = \frac{-(-12)}{2} = 6
+        \]
+
+        and so the potential at B is 6 volts higher than at A. \\
+
+        The electrostatic work done on any particle with charge $q$ traveling from $A$ to $B$ can be computed from multiplying the negative of the charge by the potential difference:
+
+        \[
+            W_q (A\to B) = -q V_{AB}
+        \]
+
+        The potential difference between A and B refers to the potential at B minus the potential at A. \\
+
+        \textbf{Voltmeter:} a device that can readily measure the potential difference between two points \\
+        \textbf{Battery:} a device that allows one to maintain a constant potential difference between two points \\
+        $\bullet$ A 9-V battery for example, maintains a +9-V potential difference between its negative and positive terminals. The positive terminal is at the higher potential, and thus the potential difference is
+        \textit{positive} when going from $-$ to $+$. \\
+        $\bullet$ When a particle carrying charge +1 C is moved from the negative terminal of a 9-V battery to the positive terminal, the particle undergoes a potential difference $V_{-+}=V_{+}-V_{-} = +9$ V. Then
+
+        \[
+            W_q (-\to +) = -q V_{-+} = -(+1C)(+9V) = -9 J
+        \]
+
+        The fact that this quantity is negative indicates that the agent moving the particle must do a positive amount of work on the particle. Hence,
+
+        \[
+            V_{\text{batt}} = V_{+} - V_{-}
+        \]
+
+        \begin{theorem}{Potential at a Distance $r=B$ from a Charged Particle}
+            \[
+                V(r) = \frac{1}{4\pi\epsilon_0}\frac{q_1}{r}, \text{ Potential zero at infinity}
+            \]
+        \end{theorem}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{\textbf{Equipotentials, Field Lines, and Graph of Potential for a Charged Particle}}
+            \includegraphics[scale = 0.75]{Resources/25.5_Electric_Diagram}
+        \end{figure*}
+
+        To obtain a more general result for potential difference between one point and anotehr in an arbitrary electric field $\vec{E}$, consider the electrostatic work done to move a particle with charge $q$ from point
+        A to point B:
+
+        \[
+            W_q (A\to B) = \int_A^B \vec{F}^E_q d\vec{\ell}
+        \]
+
+        The vector sum of the forces exerted on the particle is equal to the product of the electric field and the charge $q$, so we have
+
+        \[
+            W_q (A\to B) = q\int_A^B \vec{E}_q d\vec{\ell}
+        \]
+
+        Thus, the potential difference between point A and point B is
+
+        \[
+            V_{AB} = \frac{-W_q (A\to B)}{q} = -\int_A^B \vec{E}_q d\vec{\ell}
+        \]
+
+        When evaluating this integral, keep in mind that only the endpoints $A$ and $B$ matter, so it pays to choose a path that makes evaluating the integral easier. \\
+
+        Similar to electrostatic work, we can figure out the potential between multiple particles by summing up their individual contributions:
+
+        \[
+            V_p = \frac{1}{4\pi\epsilon_0} \sum_n \frac{q_n}{r_{nP}}
+        \]
+
+        where $q_n$ is the charge carried by particle $n$ and $r_{nP}$ is the distance of particle $n$ from the point P at which we are evaluating the potential.  \\
+
+        Recall that the for a closed path,
+
+        \[
+            W_q = q\oint \vec{E}\cdot d\vec{\ell} = 0
+        \]
+
+        Because the above equation holds for any value of $q$, it follows that
+
+        \[
+            \oint \vec{E}\cdot d\vec{\ell} = 0, \text{ (electrostatic field)}
+        \]
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.5_Electrostatic_Work_Movement}
+        \end{figure*}
+
     \subsection{Electric Potentials of Continuous Charge Distributions}   % 25.6
+
+        For extended objects with continuous charge distributions, we cannot use the equation
+
+        \[
+            V_p = \frac{1}{4\pi\epsilon_0} \sum_n \frac{q_n}{r_{nP}}, \text{ (potential zero at infinity)}
+        \]
+
+        and must instead divide the object into infinitesimally small segments, each carrying charge $dq_s$ and then integrate over the entire object. \\
+
+        Consider the object shown in the figure below.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.6_Figure}
+        \end{figure*}
+
+        Let the zero potential again be at infinity. Treating each segment as a charged particle, we calculate its contribution to the potential at $P$:
+
+        \[
+            dV_s = \frac{1}{4\pi\epsilon_0} \frac{dq_s}{r_{sP}}
+        \]
+
+        where $r_{sP}$ is the distance between $P$ and $dq_s$. The potential due to the entire object is then given by the sum over all the segments that make up the object. For infinitesimally small segments, this
+        yields the integral
+
+        \[
+            V_P = \int dV_s = \frac{1}{4\pi\epsilon_0} \int \frac{dq_s}{r_{sP}}, \text{ (potential zero at infinity)},
+        \]
+
+        where the integral is taken over the entire object.
+
     \subsection{Obtaining the Electric Field from the Potential}    % 25.7
+
+        To determine the component of electric field along an axis, we calculate the electrostatic work done on a charged particle as the particle is moved over a short segment along that axis:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/25.6_Equipotential_Surfaces}
+        \end{figure*}
+
+        We know that the electric field is perpendicular to the equipotentials, and so the electric field at P must be along the direction indicated in the figure. To determine the magnitude of the electric field, imagine
+        moving a particle carrying a charge $q$ over an infinitesimally small displacement $d\vec{s}$ along some arbitrary axis $s$. Let the particle be displaced from P, where the potential is $V$, to a point $P'$ where
+        the potential is $V+dV$. The electrostatic work done on the particle is then
+
+        \[
+            W_q (P\to P') = -q V_{PP'} = -q(V_{P'}-V_P) = -q dV
+        \]
+
+        because the potential difference between $P$ and $P'$ is $(V + dV) - V = dV$. On the other hand, we know that the electrostatic work done on the particle is equal to the scalar product of the electric force
+        exerted on the particle and the force displacement $d\vec{r}_F = d\vec{s}$:
+
+        \begin{align*}
+            W_q (P\to P')   &= \vec{F}^E_q \cdot d\vec{s} = (q\vec{E})\cdot d\vec{s} \\
+                            &= q(\vec{E}\cdot d\vec{s}) = qE\cos{\theta}ds
+        \end{align*}
+
+        where we have assumed that the force displacement is small enough that $\vec{E}$ can be considered constant between P and P'. Note that $\theta$ is the angle between $\vec{E}$ and the $s$ axis, so $E\cos{\theta}$
+        is the component of the electric field along the $s$ axis. We can write $E\cos{\theta} = E_s$, and equating the two expressions for the electrostatic work done on the particle, we get
+
+        \[
+            -q dV = qE_s ds
+        \]
+
+        or
+
+        \[
+            E_s = -\frac{dV}{ds}
+        \]
+
+        This relation tells us that the faster $V$ varies (the more closely spaced the equipotentials), the greater the magnitude of the electric field. Note that the equations above only give the component of $E$ along
+        the $s$ axis. To determine the field along the Cartesian planes, take the partial derivatives like so:
+
+        \[
+            E_x = -\frac{\partial V}{\partial x}, E_y = -\frac{\partial V}{\partial y}, E_z = -\frac{\partial V}{\partial z}
+        \]
+
+        Thus $E$ can be written in the vectorial form
+
+        \[
+            E = -\frac{\partial V}{\partial x}\hat{i} - \frac{\partial V}{\partial y}\hat{j} - \frac{\partial V}{\partial y} \hat{k}
+        \]
+
+    \subsection{Chapter Glossary}
+
+        \textbf{Electric potential energy $U^E$ (J):} The form of potential energy associated with the configuration of stationary objects that carry electrical charge. When the reference point for the electric potential
+        energy is set at infinity, the potential energy for two particles carrying charges $q_1$ and $q_2$ and separated by a distance $r_{12}$ is
+
+        \[
+            U^E = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{r_{12}} \text{ ($U^E$ zero at infinite separation)}
+        \]
+
+        \textbf{Electrostatic work $W_q$ (J):} Work done by an electrostatic field on an electrostatic field on a charged particle or object moving through that field. The electrostatic work depends on only the endpoints
+        of that path. For a particle of charge $q$ that is moved from point A to point B in an electric field, the electrostatic work is
+
+        \[
+            W_q (A\to B) = q\int_A^B \vec{E}\cdot d\vec{\ell}
+        \]
+
+        \textbf{Equipotentials:} Lines or surfaces along which the value of the potential is constant. The equipotential surfaces of a charge distribution are always perpendicular to the corresponding electric field
+        lines. The electrostatic work done on a charged particle or object is zero as it is moved along an equipotential. \\
+        \textbf{Potential $V_P$ (V):} Potential differences can be turned into values of the potential at every point in space by choosing a reference point where the potential is taken to be zero. Common choices of
+        reference point are Earth (or \textit{ground}) and infinity. The potential of a collection of charged particles (measured with respect to zero at infinity) at some point P can be found by taking the algebraic sum
+        of the potentials due to the individual particles at P:
+
+        \[
+            V_P = \frac{1}{4\pi\epsilon_0} \sum \frac{q_n}{r_{nP}} \text{ (potential zero at infinity)}
+        \]
+
+        where $q_n$ is the charge carried by particle $n$ and $r_{nP}$ is the distance from $P$ to that particle. For continuous charge distributions, the sum can be replaced by an integral:
+
+        \[
+            V_P = \frac{1}{4\pi\epsilon_0} \int \frac{dq_s}{r_{sP}} \text{ (potential zero at infinity)}
+        \]
+
+        The electric field can be obtained from the potential by taking the partial derivatives:
+
+        \[
+            \vec{E} = -\frac{\partial V}{\partial x}\hat{i} - \frac{|partial V}{\partial y}\hat{j} - \frac{\partial V}{\partial z} \hat{k}
+        \]
+
+        \textbf{Potential difference $V_{AB}$ (V):} The potential difference between points A and B is equal to the negative of the electrostatic work per unit charge done on a charged particle as it is moved along a
+        path from A to B:
+
+        \[
+            W_{AB} = \frac{-W_q (A\to B)}{q} = -\int_A^B \vec{E}\cdot d\vec{\ell}
+        \]
+
+        For electrostatic fields, the potential difference around a closed path is zero:
+
+        \[
+            \oint \vec{E}\cdot d\vec{\ell} = - \text{ (electrostatic field)}
+        \]
+
+        \textbf{Volt (V):} The derived SI unit of potential defined as $1V = 1 \frac{J}{C}$

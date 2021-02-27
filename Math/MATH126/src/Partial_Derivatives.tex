@@ -1,15 +1,1039 @@
-%! Author = ericx
-%! Date = 1/7/2021
+\section{Partial Derivatives}
 
-% Preamble
-\documentclass[11pt]{article}
+    \subsection{Functions of Several Variables}     % 14.1
 
-% Packages
-\usepackage{amsmath}
+        A \textbf{function $\mathbf{f}$ of two variables} is a rule that assigns to each ordered pair of real numbers $(x,y)$ in a set $D$ a unique real number denoted by $f(x,y)$. The set $D$ is the \textbf{domain} of
+        $f$ and its \textbf{range} is hte set of values that $f$ takes on, that is, $\{f(x,y)|(x,y) \in D\}$. \\
 
-% Document
-\begin{document}
+        We often write $z=f(x,y)$ to make the explicit value taken on by $f$ at the general point $(x,y)$. The variables $x$ and $y$ are \textbf{independent variables} and $z$ is the dependent variable. A function of
+        two variables is just a function whose domain is a subset of $\mathbb{R^2}$ and whose range is a subset of $\mathbb{R}$. \\
+
+        \textit{\blue{Example 1:}} Consider the following function.
+
+        \[
+            f(x,y) = \frac{\sqrt{x+y+1}}{x-1}
+        \]
+
+        The expression for $f$ makes sense if the denominator is not 0 and the quantity under the square root sign is nonnegative. So the domain of $f$ is 
+
+        \[
+            D = \{(x,y)|x+y+1\geq 0, x\not = 1\}
+        \]
+
+        The inequality $x+y+1\geq 0$, or $y\geq -x-1$, describes the points that lie on or above the line $y=-x-1$, while $x\not = 1$ means that the points on the line $x=1$ must be excluded from the domain. Using this
+        information, we can sketch the domain of $f(x,y)$:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Domain_Sketch}
+        \end{figure*}
+
+        \textit{\blue{Example 2:}} Now consider the function $f(x,y) = x\ln{(y^2 - x)}$. \\
+
+        The expression $\ln{y^2 - x}$ is only defined when $y^2 - x > 0$, that is, $x < y^2$. Hence, the domain of $f$ is
+
+        \[
+            D = \{(x,y)|x < y^2\}
+        \]
+
+        That is the set of points to the left of the parabola $x=y^2$:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Domain_Sketch2}
+        \end{figure*}
+
+        The \textbf{Cobb-Douglas Production Function:} \\
+
+        Let $P$ be the total production (the monetary value of all goods produced in a year), let $L$ be the amount of labor (the total number of person-hours worked in a year), and let $K$ be the amount of capital
+        invested (the monetary value of all machinery equipment and buildings). Then the production can be modeled with the function
+
+        \[
+            P(L,K) = b L^{\alpha} K^{1-\alpha}
+        \]
+
+        Using federal economic data and the method of least squares, they found that
+
+        \[
+            P(L,K) = 1.01 L^{0.75} K^{0.25}
+        \]
+
+        The domain of this function is $\{(L,K)|L\geq 0, K\geq 0\}$ because $L$ and $K$ represent labor and capital and are therefore never negative. \\
+
+        \textit{\blue{Example 3:}} Consider the function $g(x,y)=\sqrt{9-x^2-y^2}$. The domain of $g$ is
+
+        \[
+            D = \{(x,y) | 9-x^2 - y^2 \geq 0\} = \{(x,y) | x^2 + y^2 \leq 9 \}
+        \]
+
+        which is the disk with center $(0,0)$ and radius 3. The range of $g$ is
+
+        \[
+            \{z| z = \sqrt{9-x^2 - y^2}, (x,y) \in D\}
+        \]
+
+        Since $z$ is a positive square root, $z\geq 0$. Also, because $9-x^2 - y^2 \leq 9$, we have
+
+        \[
+            \sqrt{9-x^2 - y^2 } \leq 3
+        \]
+
+        So the range isa
+
+        \[
+            \{z| 0 \leq z \leq 3\} = [0,3]
+        \]
+
+        If $f$ is a function of two variables with domain $D$, then the \textbf{graph} of $f$ is the set of all points $(x,y,z)$ in $\mathbb{R^3}$ such that $z=f(x,y)$ and $(x,y)$ is in $D$. Just as the graph of a
+        function $f$ of one variable is a curve $C$ with equation $y=f(x)$, so the graph of a function $f$ of two variables is a surface $S$ with equation $z=f(x,y)$. We can visualize the graph $S$ of $f$ as
+        lying directly above or below its domain $D$ in the $xy$-plane.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Surface}
+        \end{figure*}
+
+        \textit{\blue{Example 4:}} Sketch the graph of the function $f(x,y)=6-3x-2y$ \\
+
+        The graph of $f$ has the equation $z=6-3x-2y$, or $3x+2y+z=6$, which represents a plane. To graph the plane we first find the intercepts, which are $(2,0,0)$, $(0,3,0)$, and $(0,0,6)$. This helps us sketch
+        the portion of the graph that lies in the first octant:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Linear_Function}
+        \end{figure*}
+
+        The function is a special case of the function
+
+        \[
+            f(x,y) = ax + by + c
+        \]
+
+        which is called a \textbf{linear function}. The graph of such a function has the equation
+
+        \[
+            z = ax + by + c
+        \]
+
+        or
+
+        \[
+            ax + by - z + c =0
+        \]
+
+        so it is plane.
+
+        \textit{\blue{Example 5:}} Sketch the graph of $g(x,y)=\sqrt{9-x^2 - y^2}$. \\
+
+        The graph has equation $z=\sqrt{9-x^2-y^2}$. We square both sides of this equation to obtain $z^2 = 9-x^2 - y^2$, or $x^2 + y^2 + z^2 = 9$, which recognize as an equation of the sphere with center the origin 
+        and radius 3. But, since $z\geq 0$, the graph of $g$ is just the top half of this sphere.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Graph}
+        \end{figure*}
+
+        \textit{\blue{Example 6:}} Find the domain and range and sketch the graph of $h(x,y) = 4x^2 + y^2$. \\
+
+        Notice that $h(x,y)$ is defined for all possible ordered pairs of real numbers $(x,y)$, so the domain is $\mathbb{R^2}$, the entire $xy$-plane. The range of $h$ is the set $[0,\infty)$ of all nonnegative real
+        numbers. [Notice that $x^2 \geq 0$ and $y^2 \geq 0$, so $h(x,y) \geq 0$ for all $x$ and $y$.] The graph of $h$ has the equation $z=4x^2 + y^2$, which is the elliptic paraboloid sketched below. Horizontal traces
+        are ellipses and vertical traces are parabolas.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Graph2}
+        \end{figure*}
+
+        The \textbf{level curves (contour curves)} of a function $f$ of two variables are the curves with equations $f(x,y)=k$, where $k$ is a constant (in the range of $f$) \\
+        $\bullet$ is the set of all points in the domain of $f$ at which $f$ takes on a given value $k$ \\
+        $\bullet$ shows where the graph of $f$ has height $k$ \\
+
+        Notice in the figure below that the level curves $f(x,y) = k$ are just the traces of the graph of $f$ in the horizontal plane $z=k$ projected down to the $xy$-plane.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Contour_Traces}
+        \end{figure*}
+
+        \textit{\blue{Example 7:}} \\
+
+        Sketch some level curves of the function $h(x,y) = 4x^2 + y^2 + 1$. \\
+
+        The level curves are
+
+        \[
+            4x^2 + y^2 + 1 = k
+        \]
+
+        or
+
+        \[
+            \frac{x^2}{\frac{1}{4}(k-1)} + \frac{y^2}{k-1} = 1
+        \]
+
+        which for $k > 1$, describes a family of ellipses with semiaxes $\frac{1}{2}\sqrt{k-1}$ and $\sqrt{k-1}$. The figure below on the left shows a contour map of $h$ drawn by a computer. The figure below on the right
+        shows these level curves lifted up to the graph of $h$ (an elliptic paraboloid) where they become horizontal traces.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Lifting_Level_Curves}
+        \end{figure*}
+
+        A \textbf{function of three variables}, $f$, is a rule that assigns to each ordered triple $(x,y,z)$ in a domain $D\subset \mathb{R}^3$ a unique real number denoted by $f(x,y,z)$. For instance, the temperature
+        $T$ at a point on the surface of the earth depends on the longitude $x$ and latitude $y$ of the point and on the time $t$, so we could write $T=f(x,y,t)$. \\
+
+        \textit{\blue{Example 8:}} Find the domain of $f$ if
+
+        \[
+            f(x,y,z) = \ln{(z-y)} + xy\sin{z}
+        \]
+
+        The expression for $f(x,y,z)$ is defined as long as $z-y>0$, so the domain of $f$ is
+
+        \[
+            D = \{(x,y,z) \in \mathbb{R}^3 | z > y\}
+        \]
+
+        This is a \textbf{half-space} consisting of all points that lie above the plane $z=y$.
+
+        \textit{\blue{Example 9:}} Find the level surfaces of the function
+
+        \[
+            f(x,y,z) = x^{2} + y^2 + z^2
+        \]
+
+        The level surfaces are $x^2 + y^2 + z^2 = k$, where $k\geq 0$. These form a family of concentric spheres with radius $\sqrt{k}$. Thus, as $(x,y,z)$ varies over any sphere with center $O$, the value of
+        $f(x,y,z)$ remains fixed.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.1_Surfaces}
+        \end{figure*}
+
+        A \textbf{function of $\mathbf{n}$ variables} is a rule that assigns a number $z=f(x_1, x_2, \dots, x_n)$ to an $n$-tuple $(x_1, x_2, \dots, x_n)$ of real numbers. We denote by $\mathbb{R}^n$ the set of all such
+        $n$-tuples.
+
+        \[
+            C = f(x_1, x_2, \dots, x_n) = c_1 x_1 + c_2 x_2 + \dots + c_n x_n
+        \]
+
+        The function $f$ is a real-valued function whose domain is a subset of $\mathbb{R}^n$. Sometimes we use vector notation to write such functions more compactly. If $\mathbf{x} = \langle x_1, x_2, \dots, x_n\rangle$,
+        we often write $\mathbf{f(x)}$ in place of $\mathbf{f(x_1, x_2, \dots, x_n)}$. With this notation we can rewrite $f$ as
+
+        \[
+            \mathbf{f(x) = c\dot x}
+        \]
+
+        where $\mathbf{c} = \langle c_1, c_2, \dots, c_n\rangle$ and $\mathbf{c\cdot x}$ denotes the dot product of the vectors \textbf{c} and \textbf{x} in $V_n$. \\
+
+        Thus there are three ways of looking at a function $f$ defined on a subset of $\mathbb{R}^n$:
+
+        1. As a function of $n$ real variables $x_1, x_2, \dots, x_n$. \\
+        2. As a function of a single point variable $(x_1, x_2, \dots, x_n)$ \\
+        3. As a function of a single vector variable $\mathbf{x} = \langle x_1, x_2, \dots, x_n\rangle$.
+
+    \subsection{Limits and Continuity}  % 14.2
+
+        Let $f$ be a function of two variables whose domain $D$ includes points arbitrarily close to $(a,b)$. Then we say that the \textbf{limit of} $f(x,y)$ as $(x,y)$ approaches $(a,b)$ is $L$ and we write
+
+        \[
+            \lim_{(x,y)\to (a,b)} f(x,y) = L
+        \]
+
+        if for every number $\epsilon > 0$ there is a corresponding number $\delta > 0$ such that if
+
+        \[
+            (x,y) \in D
+        \]
+
+        and
+
+        \[
+            0 < \sqrt{(x-a)^2 + (y-b)^2} < \delta
+        \]
+
+        then
+
+        \[
+            |f(x,y) - L| < \epsilon
+        \]
+
+        \begin{theorem}{Theorem}
+            If $f(x,y)\to L_1$ as $(x,y)\to (a,b)$ along a path $C_1$ and $f(x,y) \to L_2$ as $(x,y)\to (a,b)$ along a path $C_2$, where $L_1 \not = L_2$, then $\lim_{(x,y)\to (a,b)}f(x,y)$ does not exist.
+        \end{theorem}
+
+        \textit{\blue{Example:}} Show that the limit below does not exist.
+
+        \[
+            \lim_{(x,y)\to (0,)} \frac{x^2 - y^2}{x^2 + y^2}
+        \]
+
+        Let $f(x,y) = \frac{x^2 - y^2}{x^2 + y^2}$. First approach $(0,0)$ along the $x$-axis. Then $y=0$ gives $f(x,0) = \frac{x^2}{x^2} = 1$ for all $x\not = 0$, so
+
+        \[
+            f(x,y)\to 1 \text{ as } (x,y)\to (0,0) \text{ along the } x\text{-axis}
+        \]
+
+        We now approach along the $y$-axis by putting $x=0$. Then $f(0,y)=\frac{-y^2}{y^2}=-1$ for all $y\not = 0$, so
+
+        \[
+            f(x,y)\to -1\text{ as } (x,y)\to (0,0) \text{ along the }y\text{-axis}
+        \]
+
+        \textit{\blue{Example 2:}} Find the limit below if it exists.
+
+        \[
+            \lim_{(x,y)\to (0,0)} \frac{3x^2 y}{x^2 + y^2}
+        \]
+
+        We can show that the limit along any line through the origin is 0. This doesn't prove that the given limit is 0, but the limits along the parabolas $y=x^2$ and $x=y^2$ also turn out to be 0, so we begin to suspect
+        that the limit does exist and is equal to 0. \\
+
+        Let $\epsilon > 0$. We want to find $\delta > 0$ s.t.
+
+        \[
+            \text{if } 0 < \sqrt{x^2 + y^2} < \delta \text{ then } \left|\frac{3x^2 y}{x^2 + y^2} - 0\right| < \epsilon
+        \]
+
+        that is, if $0 < \sqrt{x^2 + y^2} < \delta$, then $\frac{3x^2 |y|}{x^2 + y^2} < \epsilon$. But $x^2 \leq x^2 + y^2$ since $y^2 \geq 0$, so $\frac{x^2}{x^2 + y^2} \leq 1$ and therefore
+
+        \[
+            \frac{3x^2 |y|}{x^2 + y^2}\leq 3|y| = 3\sqrt{y^2} \leq 3 \sqrt{x^2 + y^2}
+        \]
+
+        Thus if we choose $\delta = \frac{\epsilon}{3}$ and let $0 < \sqrt{x^2 + y^2} < \delta$, then
+
+        \[
+            \left|\frac{3x^2 y}{x^2 + y^2} - 0\right| \leq 3 \sqrt{x^2 + y^2}  < 3\delta = 3\left(\frac{\epsilon}{3}\right) = \epsilon
+        \]
+
+        Hence,
+
+        \[
+            \lim_{(x,y) \to (0,0)} \frac{3x^2 y}{x^2 + y^2} = 0
+        \]
+
+        A function $f$ of two variables is \textbf{continuous} at $(a,b)$ if
+
+        \[
+            \lim_{(x,y) \to (a,b)} f(x,y) = f(a,b)
+        \]
+
+        $f$ is \textbf{continuous on} $D$ if $f$ is continuous at every point $(a,b)$ in $D$. \\
+
+        A \textbf{polynomial function of two variables} is a sum of terms of the form $cx^m y^n$ where $c$ is a constant and $m$ and $n$ are nonnegative integers. A \textbf{rational function} is a ratio of polynomials.
+        By examination the functions $f(x,y) = x,g(x,y) = y,$ and $h(x,y)=c$ are continuous. Since any polynomial can be built up out of the simple functions $f,g,$ and $h$ by multiplication and addition, it follows that
+        \textit{all polynomials are continuous on} $\mathbb{R}^2$.
+
+        \begin{theorem}{Theorem}
+            If $f$ is defined on a subset $D$ of $\mathbb{R}^n$, then $\lim_{x\to a} f(x) = L$ means that for every number $\epsilon > 0$ there is a corresponding number $\delta > 0$ s.t.
+
+            \[
+                \text{if } x\in D \text{ and } 0 < |x-a| < \delta \text{ then } |f(x) - L| < \epsilon
+            \]
+        \end{theorem}
+
+    \subsection{Partial Derivatives}    % 14.3
+
+        The \textbf{partial derivative} of $f$ with respect to $x$ at $(a,b)$ and denote it by $f_x (a,b)$. Thus
+
+        \[
+            f_x (a,b) = g'(a)
+        \]
+
+        where
+
+        \[
+            g(x) = f(x,b)
+        \]
+
+        By the definition of the derivative
+
+        \[
+            g'(a) = \lim_{h\to 0} \frac{g(a+h) - g(a)}{h}
+        \]
+
+        and so
+
+        \[
+            f_x (a,b) = \lim_{h\to 0} \frac{f(a+h,b) - f(a,b)}{h}
+        \]
+
+        By this, if $f$ is a function of two variables, its \textbf{partial derivatives} are the functions $f_x$ and $f_y$ defined by
+
+        \begin{align*}
+            f_x (x,y)   &= \lim_{h\to 0} \frac{f(x+h, y) - f(x,y)}{h} \\
+            f_y (x,y)   &= \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}{h}
+        \end{align*}
+
+        To find partial derivatives of $z=f(x,y)$, \\
+        1. To find $f_x$, regard $y$ as a constant and differentiate $f(x,y)$ with respect to $x$. \\
+        2. To find $f_y$, regard $x$ as a constant and differentiate $f(x,y)$ with respect to $y$. \\
+
+        The partial derivatives of $f$ at $(a,b)$ are the slopes of the tangents to $C_1$ and $C_2$:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.3_Slopes}
+        \end{figure*}
+
+        \textit{\blue{Example:}} If $f(x,y) = 4 - x^2 - 2y^2$, find $f_x (1,1)$ and $f_y (1,1)$ and interpret these numbers as slopes. \\
+
+        We have
+
+        \begin{align*}
+            f_x (x,y) &= -2x \\
+            f_y (x,y) &= -4y \\
+            f_x (1,1) &= -2 \\
+            f_y (1,1) &= -4
+        \end{align*}
+
+        The graph of $f$ is the paraboloid $z=4-x^2 - 2y^2$ and the vertical plane $y=1$ intersects it in hte parabola $z=2-x^2, y=1$. The slope of the tangent line to this parabola at the point $(1,1,1)$ is the parabola
+        $z=3-2y^2,x=1$, and the slope of the tangent line at $(1,1,1)$ is $f_y (1,1) = -4$.
+
+        \begin{figure}[hbt!]
+            \centering
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale = 0.75]{Resources/14.3_Paraboloid}
+            \end{subfigure}
+            \begin{subfigure}[b]{.45\textwidth}
+                \includegraphics[scale = 0.75]{Resources/14.3_Paraboloid2}
+            \end{subfigure}
+        \end{figure}
+
+        \textit{\blue{Example 2:}} Find $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$ if $z$ is defined implicitly as a function of $x$ and $y$ by the equation
+
+        \[
+            x^3 + y^3 + z^3 + 6xyz = 1
+        \]
+
+        To find $\frac{\partial z}{\partial x}$, we differentiate implicitly with respect to $x$, being careful to treat $y$ as a constant:
+
+        \[
+            3x^2 + 3z^2 \frac{\partial z}{\partial x} + 6yz + 6xy \frac{\partial z}{\partial x} = 0
+        \]
+
+        Solving this equation for $\frac{\partial z}{\partial x}$, we have
+
+        \[
+            \frac{\partial z}{\partial x} = -\frac{x^2 + 2yz}{z^2 + 2xy}
+        \]
+
+        Similarly, implicit differentiation with respect to $y$ gives
+
+        \[
+            \frac{\partial z}{\partial x} = -\frac{y^2 + 2xz}{z^2 + 2xy}
+        \]
+
+        If $f$ is a function of two variables, then its partial derivatives $f_x$ and $f_y$ are also functions of two variables, so we can consider their partial derivatives $(f_x)_x, (f_x)y,$ and $(f_y)_y$, which are
+        called the \textbf{second partial derivatives} of $f$. If $z=f(x,y)$, we use the following notaiton:
+
+        \begin{align*}
+            (f_x)_x &= f_{xx} = f_{11} = \frac{\partial}{\partial x} \left(\frac{\partial f}{\partial x}\right) = \frac{\partial^2 f}{\partial x^2} = \frac{\partial^2 z}{\partial x^2} \\
+            (f_x)_y &= f_{xy} = f_{12} = \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial^2 z}{\partial y \partial x} \\
+            (f_y)_z &= f_{yx} = f_{21} = \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) = \frac{partial^2 f}{\partial x \partial y} = \frac{\partial^2 z}{\partial x \partial y} \\
+            (f_y)_y &= f_{yy} = f_{22} = \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right) = \frac{|partial^2 f}{\partial y^2} = \frac{\partial^2 z}{\partial y^2}
+        \end{align*}
+
+        Thus the notation $f_{xy}$ or $\frac{\partial^2 f}{\partial y \partial x}$ means that we first differentiate with respect to $x$ and then with respect to $y$, whereas in computing $f_{yx}$ the order is reversed.
+
+        \begin{theorem}{Clairaut's Theorem}
+            Suppose $f$ is defined on a disk $D$ that contains the point $(a,b)$. If the functions $f_{xy}$ and $f_{yz}$ are both continuous on $D$, then
+
+            \[
+                f_{xy} (z,b) = f_{yx} (a,b)
+            \]
+        \end{theorem}
+
+        Partial derivatives of order 3 or higher can be defined. For instance,
+
+        \[
+            f_{xyy} = (f_{xy})_y = \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial y \partial x}\right) = \frac{\partial^3 f}{\partial y^2 \partial x}
+        \]
+
+        Using Clairaut's Theorem, it can be shown that $f_{xyy} = f_{yxy} = f_{yyx}$ if these functions are continuous. \\
+
+        \textit{\blue{Example 3:}} Calculate $f_{xxyz}$ if $f(x,y,z) = \sin{3x+yz}$.
+
+        \begin{align*}
+            f_x &= 3\cos{(3x+yz)} \\
+            f_{xx}  &= -9\sin{(3x+yz)} \\
+            f_{xxy} &= -9z\cos{(3x+yz)} \\
+            f_{xxyz}&= -9\cos{(3x+yz)} + 9yz\sin{(3x+yz)}
+        \end{align*}
+
+        \begin{axiom}{Laplace's Equation}
+            \[
+                \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0
+            \]
+
+            Solutions of this equation are called \textbf{harmonic functions} and play a role in problems of heat conduction, fluid flow, and electric potential.
+        \end{axiom}
+
+        \textit{\blue{Example 4:}} Show that the function $u(x,y) = e^x \sin{y}$ is a solution of Laplace's equation. \\
+
+        We first compute the needed second-order partial derivatives:
+
+        \begin{align*}
+            u_x &= e^x \sin{y}, & u_y = e^x \cos{y} \\
+            u_{xx} &= e^x \sin{y}, & u_{yy} = -e^x \sin{y}
+        \end{align*}
+
+        So
+
+        \[
+            u_{xx} + u_{yy} = e^x \sin{y} - e^x \sin{y} = 0
+        \]
+
+        Therefore $u$ satisfies Laplace's equation. \\
+
+        \begin{axiom}{Wave Equation}
+            The \textbf{wave equation}
+
+            \[
+                \frac{\partial^2 u}{\partial t^2} = a^2 \frac{\partial^2 u}{\partial x^2}
+            \]
+
+            describes the motion of a waveform, which could be an ocean wave, a sound wave, a light wave, or a wave traveling along a vibrating string.
+        \end{axiom}
+
+        \textit{\blue{Example 5:}} Verify that the function $u(x,t) = \sin{(x-at)}$ satisfies the wave equation.
+
+        \begin{align*}
+            u_x &= \cos{(x-at)} & u_t &= -a\cos{(x-at)} \\
+            u_{xx}  &= -\sin{(x-at)} & u_{tt} = -a^2 \sin{(x-at)} = a^2 u_{xx}
+        \end{align*}
+
+        So $u$ satisfies the wave equation. \\
+
+        If the production function is denoted by $P=P(L,K)$, then the partial derivative $\frac{\partial P}{\partial L}$ is the rate at which produces changes with respect to the amount of labor. The marginal production
+        with respect to labor or the \textbf{marginal productivity of labor}. Likewise, the partial derivative $\frac{\partial P}{\partial K}$ is the rate of change of production with respect to capital and is called the
+        \textbf{marginal productivity of capital}. In these terms, the assumptions made by Cobb and Douglas can be stated as follows: \\
+
+        1. If either labor or capital vanishes then so will production \\
+        2. The marginal productivity of labor is proportional to the amount of production per unit of labor \\
+        3. The marginal productivity of capital is proportional to the amount of production per unit of capital \\
+
+        Because the production per unit of labor is $\frac{P}{L}$, assumption 2 says that
+
+        \[
+            \frac{\partial P}{\partial L} = \alpha \frac{P}{L}
+        \]
+
+        for some constant $\alpha$. If we keep $K$ constant ($K = K_0$), then this partial differential equation becomes an ODE:
+
+        \[
+            \frac{dP}{dL} = \alpha \frac{P}{L}
+        \]
+
+        If we solve this separable DE then
+
+        \[
+            P(L,K_0) = C_1 (K_0) L^{\alpha}
+        \]
+)
+        Similarly,
+
+        \[
+            P(L_0,K) = C_2 (L_0) K^{\beta}
+        \]
+
+        Comparing the latter two equations, we have
+
+        \[
+            P(L,K) = b L^{\alpha} K^{\beta}
+        \]
+
+        where $b$ is a constant that is independent of both $L$ and $K$.
 
 
+    \subsection{Tangent Planes and Linear Approximations}   % 14.4
 
-\end{document}
+        Suppose a surface $S$ has equation $z=f(x,y)$ where $f$ has continuous first partial derivatives, and let $P(x_0, y_0, z_0)$ be a point on $S$. As in the preceding section, let $C_1$ and $C_2$ be the curves
+        obtained by intersecting the vertical planes $y=y_0$ and $x=x_0$ with the surface $S$. Then the point $P$ lies on both $C_1$ and $C_2$. Let $T_1$ and $T_2$ be the tangent lines to the curves $C_1$ and $C_2$ at
+        the point $P$. Then the \textbf{tangent plane} to the surface $S$ at the point $P$ is defined to be the plane that contains both tangent lines $T_1$ and $T_2$.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.4_Tangent_Plane}
+        \end{figure*}
+
+        Suppose $f$ has continuous partial derivatives. An equation of the tangent plane to the surface $z=f(x,y)$ at the point $P(x_0, y_0, z_0)$ is
+
+        \[
+            z - z_0 = f_x (x_0, y_0) (x-x_0) + f_y (x_0, y_0) (y-y_0)
+        \]
+
+        Note the similarity between the equation of a tangent plane and the equation of a tangent line:
+
+        \[
+            y - y_0 = f'(x_0) (x-x_0)
+        \]
+
+        \textit{\blue{Example:}} Find the tangent plane to the elliptic paraboloid $z=2x^2 + y^2$ at the point $(1,1,3)$. \\
+
+        Let $f(x,y) = 2x^2 + y^2$. Then
+
+        \begin{align*}
+            f_x (x,y)   &= 4x & f_y (x,y) &= 2y \\
+            f_x (1,1)   &= 4  & f_y (1,1) &= 2
+        \end{align*}
+
+        Then the tangent plane at $(1,1,3)$ is given by
+
+        \[
+            z - 3 = 4(x-1) + 2(y-1)
+        \]
+
+        or
+
+        \[
+            z = 4x + 2y - 3
+        \]
+
+        The linear function whose graph is this tangent plane, namely
+
+        \[
+            L(x,y) = f(a,b) + f_x (a,b)(x-a) + f_y (a,b) (y-b)
+        \]
+
+        is called the \textbf{linearization} of $f$ at $(a,b)$ and the approximation
+
+        \[
+            f(x,y) \approx f(a,b) + f_x (a,b) (x-a) + f_y (a,b) (y-b)
+        \]
+
+        is called the \textbf{linear approximation} or the \textbf{tangent plane approximation} of $f$ at $(a,b)$. \\
+
+        \begin{axiom}{Differentiable}
+            If $z=f(x,y)$, then $f$ is \textbf{differentiable} at $(a,b)$ if $\Delta z$ can be expressed in the form
+
+            \[
+                \Delta z = f_x (a,b) \Delta x + f_y (a,b) \Delta y + \epsilon_1 \Delta x + \epsilon_2 \Delta y
+            \]
+
+            where $\epsilon_1$ and $\epsilon_2 \to 0$ as $(\Delta x, \Delta y)\to (0,0)$.
+        \end{axiom}
+
+        \begin{theorem}{Theorem}
+            If the partial derivatives $f_x$ and $f_y$ exist near $(a,b)$ and are continuous at $(a,b)$, then $f$ is differentiable at $(a,b)$.
+        \end{theorem}
+
+        \textit{\blue{Example 2:}} Show that $f(x,y) = xe^{xy}$ is differentiable at $(1,0)$ and find its linearization there. Then use it to approximate $f(1.1, -0.1)$.
+
+        \begin{align*}
+            f_x(x,y)    &= e^{xy} + xye^{xy}    & f_y (x,y) &= x^2 e^{xy} \\
+            f_x(1,0)    &= 1                    & f_y (1,0) &= 1
+        \end{align*}
+
+        Both $f_x$ and $f_y$ are continuous functions, so $f$ is differentiable. The linearization is then
+
+        \begin{align*}
+            L(x,y)  &= f(1,0) + f_x (1,0)(x-1) + f_y (1,0)(y-0) \\
+                    &= 1 + 1(x-1) + 1\cdot y \\
+                    &= x + y
+        \end{align*}
+
+        The corresponding linear approximation is
+
+        \[
+            xe^{xy} \approx x + y
+        \]
+
+        so
+
+        \[
+            f(1.1, -0.1) \approx 1.1 - 0.1 = 1
+        \]
+
+        \textit{\blue{Example 3:}} Let the heat index (perceived temperature) $I$ as a function of the actual temperature $T$ and the relative humidity $H$ and gave the following table of values from the National Weather
+        Service. Find a linear approximation for the heat index $I = f(T,H)$ when $T$ is near $96^{\circ}$ F and $H$ is near 70\%. Use it to estimate the heat index when the temperature is $97^{\circ}$ F and the relative
+        humidity is 72\%. 
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.4_Heat_Index}
+        \end{figure*}
+
+        We read from the table that $f(96, 70) = 125$. In section 14.3 we used the tabular values to estimate that $f_T (96, 70) \approx 3.75$ and $f_H (96, 70) \approx 0.9$. So the linear approximation is
+
+        \begin{align*}
+            f(T,H)  &\approx f(96,70) + f_T (96,70)(T-96) + f_H (96,70) (H-70) \\
+                    &\approx 125 + 3.75(T-96) + 0.9(H-70)
+        \end{align*}
+
+        In particular,
+
+        \[
+            f(97,72) \approx 125 + 3.75(1) + 0.9(2) = 130.55
+        \]
+
+        Therefore, when $T=97^{\circ}$F and $H=72\%$, the heat index is
+
+        \[
+            I   \approx 131^{\circ}\text{F}
+        \]
+
+        Recall that for a one variable function $y=f(x)$, the differential $dx$ is an independent variable and the differential of $y$ is given by
+
+        \[
+            dy = f'(x) dx
+        \]
+
+        For a differentiable function of two variables $z=f(x,y)$, the \textbf{differentials} $dx$ and $dy$ are independent variables and the differential $dz$, also called the \textbf{total differential}, is defined by
+
+        \[
+            dz = f_x (x,y) dx + f_y (x,y) dy = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy
+        \]
+
+        If we take $dx=\Delta x = x-a$ and $dy = \Delta y = y-b$ then the differential of $z$ is
+
+        \[
+            dz = f_x (a,b) (x-a) + f_y (a,b) (y-b)
+        \]
+
+        So in differential notation, the linear approximation is given by
+
+        \[
+            f(x,y) \approx f(a,b) + dz
+        \]
+
+        \textit{\blue{Example 4:}} If $z=f(x,y) = x^2 + 3xy - y^2$, find the differential $dz$. If $x$ changes from 2 to 2.05 and $y$ changes from 3 to 2.96, compare the values of $\Delta z$ and $dz$. \\
+
+        We have
+
+        \begin{align*}
+            dz  &= \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y} dy \\
+                &= (2x + 3y) dx \\
+                &= (3x - 2y) dy
+        \end{align*}
+
+        Putting $x=2, dx = \Delta x = 0.05, y = 3$, and $dy = \Delta y = -0.04$, we get
+
+        \[
+            dz = [2(2) + 3(3)] 0.05 + [3(2) - 2(3)](-0.04) = 0.65
+        \]
+
+        The increment of $z$ is
+
+        \begin{align*}
+            \Delta z    &= f(2.05, 2.96) - f(2,3) \\
+                        &= \left[(2.05)^2 + 3(2.05)(2.96) - (2.96)^2\right] - \left[2^2 + 3(2)(3) - 3^2 \right]
+        \end{align*}
+
+        Note that $\Delta z \approx dz$ but $dz$ is easier to compute.
+
+        \textit{\blue{Example 5:}} The base radius and height of a right circular cone are measured as 10 cm and 25 cm, respectively, with a possible error in measurement of as much as 0.1 cm in each. Use differentials
+        to estimate the maximum error in the calculated volume of the cone. \\
+
+        The volume $V$ of a cone with base radius $r$ and height $h$ is $V = \frac{\pi r^2 h}{3}$. So the differential of $V$ is
+
+        \[
+            dV = \frac{\partial V}{\partial r}dr + \frac{\partial V}{\partial h} dh = \frac{2\pi rh}{3}dr + \frac{\pi r^2}{3}dh
+        \]
+
+        Since each error is at most 0.1 cm, we have $|\Delta r|\leq 0.1, |\Delta h| \leq 0.1$. To estimate the largest error in the volume we take the largest error in the measurement of $r$ and of $h$. Therefore we take
+        $dr=0.1$ and $dh = 0.1$ along with $r=10,h=25$. This gives
+
+        \[
+            dV = \frac{500\pi}{3}(0.1) + \frac{100\pi}{3}(0.1) = 20\pi
+        \]
+
+        Thus the maximum error in the calculated volume is about $20\pi \text{ cm}^3\approx 63 \text{ cm}^3$. \\
+
+        For a function of three variables, the \textbf{linear approximation} is
+
+        \[
+            f(x,y,z) \approx f(a,b,c) + f_x(a,b,c)(x-a) + f_y(a,b,c)(y-b) + f_z)a,b,c)(z-c)
+        \]
+
+        and the linearization $L(x,y,z)$ is the right side of this expression. If $w=f(x,y,z)$ then the \textbf{increment} of $w$ is
+
+        \[
+            \Delta w = f(x + \Delta x, y + \Delta y, z + \Delta z) - f(x,y,z)
+        \]
+
+        The differential $dw$ is defined like so:
+
+        \[
+            dw = \frac{\partial w}{\partial x}dx + \frac{\partial w}{\partial y}dy + \frac{\partial w}{\partial z}dz
+        \]
+
+        \textit{\blue{Example 6:}} The dimensions of a rectangular box are measured to be 75 cm, 60 cm, and 40 cm, and each measurement is correct to within 0.2 cm. Use differentials to estimate the largest possible
+        error when the volume of the box is calculated from these measurements. \\
+
+        If the dimensions of the box are $x,y,$ and $z$, its volume is $V=xyz$ and so
+
+        \begin{align*}
+            dV = \frac{\partial V}{\partial x}dx + \frac{\partial V}{\partial y}dy + \frac{\partial V}{\partial z}dz = yz dx + xz dy + xy dz
+        \end{align*}
+
+        We are given that $|\Delta x| \leq 0.2, |\Delta y| \leq 0.2,$ and $|\Delta z| \leq 0.2$. To estimate the largest error in the volume, we therefore use $dx = 0.2$, $dy = 0.2$, and $dz = 0.2$ together with
+        $x=75, y = 60,$ and $z=40$:
+
+        \[
+            \Delta V \approx dV = (60)(40)(0.2) + (75)(40)(0.2) + (75)(60)(0.2) = 1980
+        \]
+
+        Thus an error of only 0.2 cm in measuring each dimension could lead to an error of approximately 1980 $\text{cm}^3$ in the calculated volume! This may seem like a large error, but it's only about 1\% of the
+        volume of the box.
+
+    \subsection{The Chain Rule}     % 14.5
+
+
+    \subsection{Directional Derivatives and the Gradient Vector}    % 14.6
+    \subsection{Maximum and Minimum Values}     % 14.7
+
+        A function of two variables has a \textbf{local maximum} at $(a,b)$ if $f(x,y) \leq f(a,b)$ when $(x,y)$ is near $(a,b)$. [This means that $f(x,y) \leq f(a,b)$ for all points $(x,y)$ in some disk with center
+        $(a,b)$.] The number $f(a,b)$ is called a \textbf{local maximum value}. If $f(x,y) \geq f(a,b)$ when $(x,y)$ is near $(a,b)$, then $f$ has a \textbf{local minimum} at $(a,b)$ and $f(a,b)$ is a
+        \textbf{local minimum value}. If the inequalities hold for \textit{all} points $(x,y)$ in the domain of $f$, then $f$ has an \textbf{absolute maximum} (or \textbf{absolute minimum}) at $(a,b)$.
+
+        \begin{theorem}{Theorem}
+            If $f$ has a local maximum or minimum at $(a,b)$ and the first-order partial derivatives of $f$ exist there, then $f_x (a,b) = 0$ and $f_y (a,b) = 0$.
+        \end{theorem}
+
+        A point $(a,b)$ is called a \textbf{critical point} of $f$ if $f_x (a,b) = 0$ and $f_y (a,b) = 0$, or if one of these partial derivatives does not exist. \\
+
+        \textit{\blue{Example 1:}} Find the extreme values of $f(x,y) = y^2 - x^2$. \\
+
+        Since $f_x = -2x$ and $f_y = 2y$, the only critical point is $(0,0)$. Notice that for points on the $x$-axis we have $y=0$, so $f(x,y) = -x^2 < 0$ if $x\not = 0$. However, for points on the $y$-axis we have
+        $y=0$, so $f(x,y) = y^2 > 0$ if $y\not = 0$. Thus every disk with center $(0,0)$ contains points where $f$ takes positive values as well as points where $f$ takes negative values. Therefore $f(0,0) = 0$ can't
+        be an extreme value for $f$, so $f$ has no extreme value.
+
+        \textit{\blue{Example 2:}} Let $f(x,y) = x^2 + y^2 - 2x - 6y + 14$. Then
+
+        \begin{align*}
+            f_x (x,y)   &= 2x -2 \\
+            f_y (x,y)   &= 2y - 6
+        \end{align*}
+
+        These partial derivatives are equal to 0 when $x=1$ and $y=3$, so the only critical point is $(1,3)$. By completing the square, we find that
+
+        \[
+            f(x,y) = 4 + (x-1)^2 + (y-3)^2
+        \]
+
+        Since $(x-1)^2 \geq 0$ and $(y-3)^2 \geq 0$, we have $f(x,y) \geq 4$ for all values of $x$ and $y$. Therefore $f(1,3) = 4$ is a local minimum, and in fact it is the absolute minimum of $f$. This can be confirmed
+        geometrically from the graph of $f$, which is the elliptic paraboloid with vertex $(1,3,4)$.
+
+        \begin{axiom}{Second Derivative Test}
+            Suppose the second partial derivatives of $f$ are continuous on a disk with center $(a,b)$, and suppose that $f_x (a,b) = 0$ and $f_y (a,b) = 0$ [that is, $(a,b)$ is a critical point of $f$]. Let
+
+            \[
+                D = D(a,b) = f_{xx} (a,b) f_{yy} (a,b) - [f_{xy} (a,b)]^2
+            \]
+
+            (a) If $D > 0$ and $f_{xx} (a,b) > 0$, then $f(a,b)$ is a local minimum. \\
+            (b) If $D > 0$ and $f_{xx} (a,b) < 0$, then $f(a,b)$ is a local maximum. \\
+            (c) If $D < 0$, then $f(a,b)$ is not a local maximum or minimum.
+        \end{axiom}
+
+        In case (c) the point $(a,b)$ is called a \textbf{saddle point} of $f$ and the graph of $f$ crosses its tangent plane at $(a,b)$. \\
+
+        If $D = 0$ the test gives no information and $f$ could have a local maximum or local minimum at $(a,b)$, or $(a,b)$ could be a saddle point of $f$. \\
+
+        To remember the formula for $D$, it's helpful to write it as a determinant:
+
+        \[
+            D =
+            \begin{vmatrix}
+                f_{xx}  & f_{xy} \\
+                f{yx}   & f_{yy}
+            \end{vmatrix}
+            = f_{xx} f_{yy} - \left(f_{xy}\right)^2
+        \]
+
+        \textit{\blue{Example 3:}} Find the local maximum and minimum values and saddle points of $f(x,y) = x^4 + y^4 - 4xy + 1$. \\
+
+        We first locate the critical points:
+
+        \[
+            f_x = 4x^3 - 4y, f_y = 4y^3 - 4x
+        \]
+
+        Setting these partial derivatives equal to 0, we obtain the equations
+
+        \[
+            x^3 - y = 0, y^3 - x = 0
+        \]
+
+        Solving these equations by substitution, we get
+
+        \begin{align*}
+            0   &= x^9 - x \\
+                &= x(x^8 - 1) \\
+                &= x(x^4 - 1)(x^4 + 1) \\
+                &= x(x^2 - 1)(x^2 + 1)(x^4 + 1)
+        \end{align*}
+
+        so there are three real roots: $x = 0, 1, -1$. The three critical points are $(0,0), (1,1), (-1,-1)$. Next we calculate the second partial derivatives and $D(x,y):$
+
+        \[
+            f_{xx} = 12x^2, f_{xy} = -4, f_{yy} = 12y^2
+        \]
+
+        and
+
+        \[
+            D(x,y) = f_{xx} f_{yy} - \left(f_{xy}\right)^2 = 144x^2 y^2 - 16
+        \]
+
+        Since $D(0,0) = -16 < 0$, it follows that the origin is a saddle point; that is, $f$ has no local maximum or minimum at $(0,0)$. \\
+        Since $D(1,1) = 128 > 0$ and $f_{xx} (1,1) = 12 > 0$, we see from case (a) of the test that $f(1,1) = -1$ is a local minimum. \\
+        Similarly, $(-1, -1) = 128 > 0$ and $f_{xx} (-1, -1) = 12 > 0$, so $f(-1, -1) = -1$ is also a local minimum. \\
+
+        The graph of $f$ is shown below:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.7_Example_Graph}
+        \end{figure*}
+
+        A contour map of the function $f$ is shown below. Note how the level curves near $(1,1)$ and $(-1,-1)$ are oval in shape, thus indicating that was we move away from $(1,1)$ or $(-1,-1)$ in any direction the 
+        values of $f$ are increasing. The level curves near $(0,0)$ resemble hyperbolas. They reveal that as we move away from the origin (where the value of $f$ is 1, the values of $f$ decrease in some directions but
+        increase in other directions. Thus the contour map suggests the presence of the minima and saddle point that we found above.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.7_Example_Contour}
+        \end{figure*}
+
+        \textit{\blue{Example 4:}} Find the shortest distance from the point $(1,0,-2)$ to the plane $x+2y + z = 4$. \\
+
+        The distance from any point $(x,y,z)$ to the point $(1,0,-2)$ is
+
+        \[
+            d = \sqrt{(x-1)^2 + y^2 + (z+2)^2}
+        \]
+
+        but if $(x,y,z)$ lies on the plane $x+2y + z = 4$, then $z=4 - x - 2y$ and so we have
+
+        \[
+            d = \sqrt{(x-1)^2 + y^2 + (6-x-2y)^2}
+        \]
+
+        We can minimize $d$ by minimizing the simpler expression
+
+        \[
+            d^2 = f(x,y) = (x-1)^2 + y^2 + (6-x-2y)^2
+        \]
+
+        By solving the equations
+
+        \begin{align*}
+            f_x &= 2(x-1) - 2(6 - x - 2y) = 4x + 4y - 14 = 0 \\
+            f_y &= 2y - 4(6 - x - 2y) = 4x + 10y - 24 = 0
+        \end{align*}
+
+        we find that the only critical point is $\left(\frac{11}{6}, \frac{5}{3}\right)$. Since $f_{xx} = 4, f_{xy} = 4,$ and $f_{yy} = 10$, we have
+
+        \[
+            D(x,y) = f_{xx} f_{yy} - \left(f_{xy}\right)^2 = 24 > 0
+        \]
+
+        and $f_{xx} > 0$, so by the Second Derivatives Test $f$ has a local minimum at $\left(\frac{11}{6}, \frac{5}{3}\right)$. Intuitively we can see that this local minimum is actually an absolute minimum because
+        there must be a point on the given plane that is closest to $(1,0,-2)$. If $x = \frac{11}{6}$ and $y=\frac{5}{3}$, then
+
+        \begin{align*}
+            d   &= \sqrt{(x-1)^2 + y^2 + (6 - x - 2y)^2} \\
+                &= \sqrt{\left(\frac{5}{6}\right)^2 + \left(\frac{5}{3}\right)^2 + \left(\frac{5}{6}\right)^2} \\
+                &= \frac{5}{6}\sqrt{6}
+        \end{align*}
+
+        The shortest distance from $(1,0,-2)$ to the plane $x + 2y + z = 4$ is $\frac{5}{6}\sqrt{6}$. \\
+
+        \textit{\blue{Example 6:}} A rectangular box without a lid is to be made from 12 $\text{m}^2$ of cardboard. Find the maximum volume of such a box. \\
+
+        Let the length, width, and height of the box (in meters) be $x,y,z$. Then the volume of the box is
+
+        \[
+            V = xyz
+        \]
+
+        We can express $V$ as a function of just two variables $x$ and $y$ by using the fact that the area of the four sides and the bottom of the box is
+
+        \[
+            2xz + 2yz + xy = 12
+        \]
+
+        Solving this equation for $z$, we get $z = \frac{12 - xy}{2(x+y)}$, so the expression for $V$ becomes
+
+        \[
+            V = xy \frac{12-xy}{2(x+ y)} = \frac{12xy - x^2 y^2}{2(x+y)}
+        \]
+
+        We compute the partial derivatives:
+
+        \[
+            \frac{\partial V}{\partial x} = \frac{y^2 (12 - 2xy - x^2)}{2(x+y)^2}, \frac{\partial V}{\partial y} = \frac{x^2 (12 - 2xy - y^2)}{2(x+y)^2}
+        \]
+
+        If $V$ is a maximum, then $\frac{\partial V}{\partial x} = \frac{\partial V}{\partial y} = 0,$ but $x= 0$ or $y= 0$ gives $V= 0$, so we must solve the equations
+
+        \begin{align*}
+            12 - 2xy - x^2 &= 0 \\
+            12 - 2xy - y^2 &= 0
+        \end{align*}
+
+        These eimply that $x^2 = y^2$ and so $x = y$. (Note that $x$ and $y$ must both be positive in this problem.) If we put $x=y$ in either equation we get $12 - 3x^2 = 0$, which gives $x=2, y=2, $ and
+        $z = \frac{12 - 2\cdot 2}{2(2+2)} = 1$. \\
+
+        We could use the Second Derivatives Test to show that this gives a local maximum of $V$, or we could simply argue from the physical nature of htis problem that there must be an absolute maximum volume, which has
+        to occur at a critical point of $V$, so it must occur when $x=2, y=2, z=1$. Then $v=2\cdot 2 \cdot 1 = 4$, so the maximum volume of the box is 4 $\text{m^3}$. \\
+
+        \textbf{Closed set} in $\mathbb{R}^2$: one that contains all its boundary point \\
+        \textbf{Bounded set} in $\mathbb{R}^2$: one that is contained within some boundary
+
+        \begin{theorem}{Extreme Value Theorem}
+            If $f$ is continuous on a closed, bounded set $D$ in $\mathbb{R}^2$, then $f$ attains an absolute maximum value $f(x_1, y_1)$ and an absolute minimum value $f(x_2, y_2)$ at some points $(x_1, y_1)$ and
+            $(x_2, y_2)$ in $D$.
+        \end{theorem}
+
+        \textbf{Steps for finding the absolute maximum and minimum values of a continuous function $f$ on a closed, bounded set $D$:} \\
+        1. Find the values of $f$ at the critical points of $f$ in $D$. \\
+        2. Find the extreme values of $f$ on the boundary of $D$. \\
+        3. The largest of the values from steps 1 and 2 is the absolute maximum value; the smallest of these values is the absolute minimum value. \\
+
+        \textit{\blue{Example 7:}} Find the absolute maximum and minimum values of the function $f(x,y) = x^2 - 2xy + 2y$ on the rectangle $D = \{(x,y) | 0\leq x \leq 3, 0 \leq y \leq 2\}$. \\
+
+        Since $f$ is a polynomial it is continuous on the closed, bounded rectangle $D$, so there must be both an absolute maximum and an absolute minimum. We first find the critical points which occur when
+
+        \[
+            f_x = 2x - 2y = 0, f_y = -2x + 2 = 0
+        \]
+
+        so the only critical point is $(1,1)$ and the value of $f$ there is $f(1,1) = 1$. Looking at the values of $f$ on the boundary of $D$ consists of the four line segments $L_1$, $L_2$, $L_3$, $L_4$, shown on the
+        figure below. On $L_1$ we have $y=0$ and
+
+        \[
+            f(x,0) = x^2, 0 \leq x \leq 3
+        \]
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/14.7_Example_Graph}
+        \end{figure*}
+
+        This is an increasing function of $x$ so its minimum value is $f(0,0) = 0$ and its maximum value is $f(3,0) = 9$. On $L_2$ we have $x=3$ and
+
+        \[
+            f(3, y) = 9 - 4y, 0 \leq y \leq 2
+        \]
+
+        This is a decreasing function of $y$ so its maximum value is $(3,0) = 9$ and its minimum value is $f(3,2) = 1$. On $L_3$ we have $y=2$ and
+
+        \[
+            f(x,2) = x^2 - 4x + 4, 0 \leq x \leq 3
+        \]
+
+        Notice that the minimum value of this function is $f(2,2) = 0$ and the maximum value is $f(0,2) = 4$. Finally on $L_4$ we have $x=0$ and
+
+        \[
+            f(0,y) = 2y, 0 \leq y \leq 2
+        \]
+
+        with maximum value $f(0,2) = 4$ and minimum value $f(0,0) = 0$. Thus on the boundary, the minimum value of $f$ is 0 and the maximum is 9. \\
+
+        Comparing these values with the value $f(1,1) = 1$ at the critical point, we can conclude that the absolute maximum value of $f$ on $D$ is $f(3,0) = 9$ and the absolute minimum value is $f(0,0) = f(2,2) = 0$.
+
+    \subsection{Lagrange Multipliers}   % 14.8

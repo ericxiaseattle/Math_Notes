@@ -1,0 +1,35 @@
+\contentsline {section}{\numberline {1}Electric Interactions}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Static Electricity}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Electrical Charge}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Mobility of Charge Carriers}{2}{}%
+\contentsline {subsection}{\numberline {1.4}Charge Polarization}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Coulomb's Law}{3}{}%
+\contentsline {subsection}{\numberline {1.6}Force Exerted By Distributions of Charge Carriers}{4}{}%
+\contentsline {subsection}{\numberline {1.7}Chapter Glossary}{4}{}%
+\contentsline {section}{\numberline {2}The Electric Field}{5}{}%
+\contentsline {subsection}{\numberline {2.1}The Field Model}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Electric Field Diagrams}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Superposition of Electric Fields}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Electric Fields and Forces}{6}{}%
+\contentsline {subsection}{\numberline {2.5}Electric Field of a Charged Particle}{7}{}%
+\contentsline {subsection}{\numberline {2.6}Dipole Field}{7}{}%
+\contentsline {subsection}{\numberline {2.7}Electric Fields of Continuous Charge Distributions}{8}{}%
+\contentsline {subsection}{\numberline {2.8}Dipoles in Electric Fields}{9}{}%
+\contentsline {subsection}{\numberline {2.9}Chapter Glossary}{10}{}%
+\contentsline {section}{\numberline {3}Gauss's Law}{11}{}%
+\contentsline {subsection}{\numberline {3.1}Electric Field Lines}{11}{}%
+\contentsline {subsection}{\numberline {3.2}Field Line Density}{11}{}%
+\contentsline {subsection}{\numberline {3.3}Closed Surfaces}{12}{}%
+\contentsline {subsection}{\numberline {3.4}Symmetry and Gaussian Surfaces}{12}{}%
+\contentsline {subsection}{\numberline {3.5}Charged Conducting Objects}{13}{}%
+\contentsline {subsection}{\numberline {3.6}Electric Flux}{13}{}%
+\contentsline {subsection}{\numberline {3.7}Deriving Gauss's Law}{15}{}%
+\contentsline {subsection}{\numberline {3.8}Applying Gauss's Law}{15}{}%
+\contentsline {section}{\numberline {4}Work and Energy in Electrostatics}{16}{}%
+\contentsline {subsection}{\numberline {4.1}Electrical Potential Energy}{16}{}%
+\contentsline {subsection}{\numberline {4.2}Electrostatic Work}{16}{}%
+\contentsline {subsection}{\numberline {4.3}Equipotentials}{16}{}%
+\contentsline {subsection}{\numberline {4.4}Calculating Work and Energy in Electrostatics}{16}{}%
+\contentsline {subsection}{\numberline {4.5}Potential Difference}{16}{}%
+\contentsline {subsection}{\numberline {4.6}Electric Potentials of Continuous Charge Distributions}{16}{}%
+\contentsline {subsection}{\numberline {4.7}Obtaining the Electric Field from the Potential}{16}{}%

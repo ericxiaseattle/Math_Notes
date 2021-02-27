@@ -1,15 +1,819 @@
-%! Author = ericx
-%! Date = 1/7/2021
-
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
-
-% Document
-\begin{document}
+\section{Vector Functions}
 
 
+    \subsection{Vector Functions and Space Curves}      % 13.1
 
-\end{document}
+        \textbf{Vector function:} a function whose domain is a set of real numbers and whose range is a set of vectors \\
+
+        Let $r(t)$ be a vector function whose values are three-dimensional vectors. If $f(t)$, $g(t)$, and $h(t)$ are the components of the vector $r(t)$, then $f$, $g$, and $h$ are real-valued functions called the
+        \textbf{component functions} of \textbf{r} and we can write
+
+        \[
+            \mathbf{r}(t) = \langle f(t), g(t), h(t)\rangle = f(t)\mathbf{i} + g(t)\mathbf{j} + h(t) \mathbf{k}
+        \]
+
+        The limit of a vector function $r(t) = \langle f(t), g(t), h(t) \rangle$ is defined by taking the limits of its component functions like so:
+
+        \[
+            \lim_{t\to a} r(t) = \langle \lim_{t\to a} f(t), \lim_{t\to a}g(t), \lim_{t\to a}h(t)\rangle
+        \]
+
+        iff the limits of the component functions exist. \\
+
+        Alternatively, $\lim_{t\to a} r(t) = L$ iff for every $\epsilon > 0$ there is a number $\delta > 0$ s.t. if
+
+        \[
+            0 < |t - a| < \delta
+        \]
+
+        then
+
+        \[
+            |r(t) - b| < \epsilon
+        \]
+
+        A vector function \mathbf{r} is \textbf{continuous at $\mathbf{a}$} if
+
+        \[
+            \lim_{t\to a} r(t) = r(a)
+        \]
+
+        Suppose that $f$, $g$, and $h$ are continuous real-valued functions on an interval $I$. Then the set $C$ of all points $(x,y,z)$ in space, where
+
+        \[
+            x = f(t), y = g(t), z = h(t)
+        \]
+
+        and $t$ varies throughout the interval $I$, is called a \textbf{space curve}. Considering the vector function $r(t)$, $r(t)$ is the position vector of the point $P(f(t), g(t), h(t))$ on $C$. \\
+
+        Plane curves can also be described by vectors. Consider the curve given by the parametric equations $x = t^2 -2t$ and $y = t+1$ which could be described by
+
+        \[
+            r(t) = \langle t^2 - 2t, t + 1\rangle = (t^2 - 2t)\mathbf{i} + (t+1) \mathbf{j}
+        \]
+
+        where $\mathbf{i} = \langle 1, 0\rangle$ and $\mathbf{j}= \langle 0, 1\rangle$. \\
+
+        \textit{\blue{Example:}} Sketch the curve whose vector equation is
+
+        \[
+            r(t) = \cos{t}\mathbf{i} + \sin{t}\mathbf{j} + t\mathbf{k}
+        \]
+
+        The parametric equations for this curve are
+
+        \[
+            x = \cos{t}, y = \sin{t}, z =t
+        \]
+
+        Because $x^2 + y^2 = \cos^2{t} + \sin^2{t} = 1$ for all values of $t$, the curve must lie on the circular cylinder $x^2 + y^2 = 1$. The point $(x,y,z)$ lies directly above the point $(x,y,0)$, which moves
+        counterclockwise around the circle $x^2 + y^2 = 1$ in the $xy$-plane. The projection of the curve onto the $xy$-plane has vector equation $r(t) = \langle \cos{t}, \sin{t}, 0\rangle$. Since $z=t$, the curve
+        spirals upwards around the cylinder as $t$ increases. The curve shown below is called a \textbf{helix}.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[]{Resources/13.1_Helix}
+        \end{figure*}
+
+        \textit{\blue{Example 2:}} Find a vector equation and parametric equations for the line segment that joins the point $P(1,3,-2)$ to the point $Q(2,-1,3)$. \\
+
+        Recall that a vector equation for the line segment that joins the tip of the vector $r_0$ to the tip of the vector $r_1$ is:
+
+        \[
+            r(t) = (1-t) r_0 + tr_1, 0 \leq t \leq 1
+        \]
+
+        Taking $r_0 = \langle 1,3,-2\rangle$ and $r_1 = \langle 2, -1, 3\rangle$ to obtain a vector equation of the line segment from $P$ to $Q$, it follows that
+
+        \[
+            r(t) = (1-t)\langle 1,3,-2\rangle + t\langle 2, -1, 3\rangle, 0 \leq t\leq 1
+        \]
+
+        or
+
+        \[
+            r(t) = \langle 1 + t, 3-4t, -2 + 5t\rangle, 0 \leq t\leq 1
+        \]
+
+        and the corresponding parametric equations are
+
+        \[
+            x = 1+t, y = 3-4t, z = -2 + 5t, 0 \leq t \leq 1
+        \]
+
+        \textit{\blue{Example 3:}} Find a vector function that represents the curve of intersection of the cylinder $x^2 + y^2 = 1$ and the plane $y + z = 2$. \\
+
+        The below figures show the intersection of the plane and the cylinder, and the curve of intersection $C$, an ellipse, respectively.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{Intersection of Plane and Cylinder}
+            \includegraphics[scale = 0.6]{Resources/13.1_Intersection_Plane_Cylinder}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{Intersection $C$, an Ellipse}
+            \includegraphics[scale = 0.6]{Resources/13.1_Intersection_C}
+        \end{figure*}
+
+        The projection of $C$ onto the $xy$-plane is the circle $x^2 + y^2 = 1, z = 0$. Thus we can write
+
+        \[
+            x = \cos{t}, y = \sin{t}, 0 \leq t\leq 2\pi
+        \]
+
+        From the equation of the plane, we have
+
+        \[
+            z = 2- y = 2-\sin{t}
+        \]
+
+        and we can write parametric equations for $C$ as
+
+        \[
+            x = \cos{t}, y = \sin{t},  z = 2-\sin{t}, 0 \leq t \leq 2\pi
+        \]
+
+        The corresponding vector equation is
+
+        \[
+            r(t) = \cos{t}\mathbf{i} + \sin{t}\mathbf{j} + (2-\sin{t})\mathbf{k}, 0 \leq t\leq 2\pi
+        \]
+
+        This equation is known as a \textit{parameterization} of the curve $C$. \\
+
+        Space curves are much more difficult to draw by hand than plane curves and for an accurate representation we must use technology. Below are some examples of computer-generated space curves.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{A \textbf{Toroidal Spiral}}
+            \includegraphics[scale = 0.6]{Resources/13.1_Toroidal_Spiral}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{A \textbf{Trefoil Knot}}
+            \includegraphics[scale = 0.6]{Resources/13.1_Trefoil_Knot}
+        \end{figure*}
+
+    \subsection{Derivatives and Integrals of Vector Functions}      % 13.2
+
+        \begin{theorem}{Definition of Derivative of Vector Function}
+            The derivative $\mathbf{r'}$ of a vector function $\mathbf{r}$ is given by
+
+            \[
+                \frac{d\mathbf{r}}{dt} = \mathbf{r}'(t) = \lim_{h\to 0} \frac{\mathbf{r}(t+h) - \mathbf{r}(t)}{h}
+            \]
+
+            if the limit exists.
+        \end{theorem}
+
+        If the points $P$ and $Q$ have position vectors $r(t)$ and $r(t+h)$, then $\vec{PQ}$ represents the vector $r(t+h) - r(t)$, which can be regarded as a secant vector. If $h > 0$, then the scalar multiple
+        $\left(\frac{1}{h}\right)\left(r(t+h)-r(t)\right)$ has the same direction as $r(t+h)-r(t)$. As $h$ converges to 0, the scalar multiple $\left(\frac{1}{h}\right)\left(r(t+h)-r(t)\right)$ has the same direction
+        as $r(t+h)-r(t)$. As $h\to 0$, this vector approaches a vector that lies on the tangent line. For this reason, the vector $r'(t)$ is called the \textbf{tangent vector} to the curve defined by \textbf{r} at the
+        point $P$, provided that $\mathbf{r}'(t)$ exists and $\mathbf{r}'(t)\not = 0$. The \textbf{tangent line} to $C$ at $P$ is defined to be the line through $P$ parallel to the tangent vector $\mathbf{r}'(t)$. \\
+
+        \textbf{Unit tangent vector:}
+
+        \[
+            \mathbf{T}(t) = \frac{\mathbf{r}'(t)}{|\mathbf{r}'(t)|}
+        \]
+
+        When $0 < h < 1$, multiplying the secant vector by $\frac{1}{h}$ "stretches" the vector, as shown below.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.2_Stretching}
+        \end{figure*}
+
+        Geometrically, the derivative tells us that as $h \to 0$, the quotient of the secant vector $r(t+h) - r(t)$ and $h$ approaches the tangent vector $r(t)$. \\
+
+        \textbf{Differentiation Rules for Vector Functions:}
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                $\frac{d}{dt}\left[u(t)+v(t)\right]=u'(t) + v'(t)$  & Sum/Difference \\
+                \hline
+                $\frac{d}{dt}[cu(t)] = cu'(t)$  & Constant Multiple \\
+                \hline
+                $\frac{d}{dt}[f(t)u(t)]=f'(t)u(t)+f(t)u'(t)$    & Product \\
+                \hline
+                $\frac{d}{dt}[u(t)\cdot v(t)] = u'(t)\cdot v(t) + u(t) \cdot v'(t)$ & Product, Dot \\
+                \hline
+                $\frac{d}{dt}[u(t)\times v(t)] = u'(t) \times v(t) + u(t) \times v'(t)$ & Product, Cross \\
+                \hline
+                $\frac{d}{dt}[u(f(t))] = f'(t) u'(f(t))$    & Chain Rule \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \textit{\blue{Example:}} Show that if $|r(t)| = c$ where $c$ is a constant, then $r'(t)$ is orthogonal to $r(t)$ for all $t$. \\
+
+        Since
+
+        \[
+            r(t)\cdot r(t) = |r(t)|^2 = c^2
+        \]
+
+        and $c^2$ is a constant, it follows that
+
+        \[
+            0 = \frac{d}{dt}[r(t) \cdot r(t)] = r'(t) \cdot r(t) + r(t) \cdot r'(t) = 2r'(t) \cdot r(t)
+        \]
+
+        Hence, $r'(t) \cdot r(t) = 0$ which means that $r'(t)$ is orthogonal to $r(t)$. Geometrically, this result tells us that if a curve lies on a sphere with center the origin, then the tangent vector $r'(t)$
+        is always perpendicular to the position vector $r(t)$.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.2_Orthogonal}
+        \end{figure*}
+
+        Let $r(t)= \langle f(t), g(t),h(t)\rangle $ be a continuous vector function. Then
+
+        \begin{align*}
+            \int_a^b r(t)dt &= \lim_{n\to \infty} \sum^n_{i=1}r(t_i)\Delta t \\
+                            &= \lim_{n\to\infty} \left[\left(\sum^n_{i=1} f(t_i)\Delta t\right)\mathbf{i} + \left(\sum^n_{i=1}g(t_i)\Delta_t\right)\mathbf{j} + \left(\sum^n_{i=1}h(t_i)\Delta t\right)\mathbf{k}\right] \\
+                            &= \left(\int_a^b f(t)dt\right)\mathbf{i} + \left(\int_a^b g(t)dt\right)\mathbf{j} + \left(\int_a^b h(t)dt\right) \mathbf{k}
+        \end{align*
+
+        \begin{theorem}{FTC for Continuous Vector Functions}
+            Let $R$ be an antiderivative of $r$, that is, $R'(t) = r(t)$. Then
+
+            \[
+                \int_a^b r(t)dt = R(t)\Big|_a^b = R(b) - R(a)
+            \]
+        \end{theorem}
+
+    \subsection{Arc Length and Curvature}       % 13.3
+
+        \begin{theorem}{Arc Length}
+            For a space curve with vector equation $r(t) = \langle f(t), g(t), h(t) \rangle, a \leq t \leq b$, or equivalently, the parametric equations $x=f(t), y=g(t), z=h(t)$, where $f', g', h'$ are continuous.
+            If the curve is traversed exactly once as $t$ increases from $a$ to $b$, then it can be shown that its length is
+
+            \[
+                L   = \int_a^b \sqrt{[f'(t)]^2 + [g'(t)]^2 + [h'(t)]^2}dt
+            \]
+
+            or
+
+            \[
+                L   = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2}dt
+            \]
+
+            or
+
+            \[
+                L = \int_a^b |r'(t)| dt
+            \]
+        \end{theorem}
+
+        Geometrically, the length of a space curve is the limit of lengths of inscribed polygons:
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.3_Space_Curve}
+        \end{figure*}
+
+        \textit{\blue{Example:}} Find the length of the arc of the circular helix with vector equation $r(t) = \cos{t}\mathbf{i} + \sin{t}\mathbf{j} + t\mathbf{k}$ from the point $(1,0,0)$ to the point $(1,0,2\pi)$. \\
+
+        Since $r'(t) = -\sin{t}\mathbf{i} + \cos{t}\mathbf{j} + \mathbf{k}$, we have
+
+        \[
+            |r'(t)| = \sqrt{(-\sin{t})^2 + \cos^2{t} + 1} = \sqrt{2}
+        \]
+
+        The arc from $(1,0,0)$ to $(1,0,2\pi)$ is described by the parameter interval $0\leq t \leq 2\pi$, and so it follows that
+
+        \[
+            L = \int_0^{2\pi} |r'(t)| dt = \int_0^{2\pi} \sqrt{2}dt = 2\sqrt{2}\pi
+        \]
+
+        \begin{theorem}{Arc Length Function}
+            Suppose that $C$ is a curve given by a vector function
+
+            \[
+                r(t) = f(t) \mathbf{i} + g(t) \mathbf{j} + h(t) \mathbf{k}, a\leq t\leq b
+            \]
+
+            where $r'$ is continuous and $C$ is traversed exactly once as $t$ increases from $a$ to $b$. The \textbf{arc length function} $s$ is given by
+
+            \[
+                s(t) = \int_a^t |r'(u)| du = \int_a^t \sqrt{\left(\frac{dx}{du}\right)^2 + \left(\frac{dy}{du}\right)^2 + \left(\frac{dz}{du}\right)^2}du
+            \]
+        \end{theorem}
+
+        \begin{corollemma}{Arc Length Function: Corollary}
+            Differentiating both sides of the above equation, it follows that
+
+            \[
+                \frac{ds}{dt} = |r'(t)|
+            \]
+        \end{corollemma}
+
+        This corollary is useful when \textit{parameterizing a curve with respect to arc length}. If a curve $r(t)$ is already given in terms of a paramter and $s(t)$ is the arc length function foun, then we may be able
+        to solve for $t$ as a function of $s:t = t(s)$. Thus, the curve can be reparamterized in terms of $s$ by substituting for $t:r = r(t(s))$. If $s=3$ for instance, $r(t(3))$ is the position vector of the point
+        3 units of length along the curve from its starting point. \\
+
+        \textit{\blue{Example 2:}} Reparametrize the helix $r(t) = \cos{t}\mathbf{i} + \sin{t}\mathbf{j} + \mathbf{k}$ with respect to arc length measured from $(1,0,0)$ in the direction of increasing $t$. \\
+
+        The initial point $(1,0,0)$ corresponds to the parameter value $t=0$. From the first example we have that
+
+        \[
+            \frac{ds}{dt} = |r'(t)|
+        \]
+
+        and so
+
+        \[
+            s = s(t) = \int_0^t |r'(u)|du = \int_0^t \sqrt{2}du = \sqrt{2}t
+        \]
+
+        Therefore $t= \frac{s}{\sqrt{2}}$ and the required reparametrization is obtained by substituting for $t$:
+
+        \[
+            r(t(s)) = \cos{\left(\frac{s}{\sqrt{2}}\right)}\mathbf{i} + \sin{\left(\frac{s}{\sqrt{2}}\right)\mathbf{j} + \left(\frac{s}{\sqrt{2}}\right)\mathbf{k}}
+        \]
+
+        A parameterization $\mathbf{r}(t)$ is called \textbf{smooth} on an interval $I$ if $\mathbf{r}'$ is continuous and $\mathbf{r}'(t)\not = 0$ on $I$. A curve is called \textbf{smooth} if it has a smooth
+        parametrization. A smooth curve hass no sharp corners or cusps; when the tangent vector turns, it does so continuously.
+
+        \begin{theorem}{Unit Tangent Vector}
+            For a smooth curve $C$ defined by the vector function $r$, the unit tangent vector is
+
+            \[
+                \mathbf{T}(t) = \frac{\mathbf{r}'(t)}{|\mathbf{r}'(t)|}
+            \]
+
+            This vector indicates the direction of the curve. $\mathbf{T}(t)$ changes direction slowly when the curve is relatively straight, but it changes direction more quickly when $C$ twists or turns more sharply.
+        \end{theorem}
+
+        The curvature of $C$ at a given point is a measure of how quickly the curve changes direction at that point. Because the unit tangent vector has constant length, only changes in direction contribute to the rate
+        of change of \textbf{T}.
+
+        \begin{theorem}{Curvature}
+            The \textbf{curvature} of a curve is
+
+            \[
+                \kappa = \left|\frac{d\mathbf{T}}{ds}\right|
+            \]
+
+            where \textbf{T} is the unit tangent vector.
+        \end{theorem}
+
+        The curvature is easier to compute if it is expressed in terms of the paramter $t$ instead of $s$, so we use the Chain Rule to write
+
+        \[
+            \frac{d\mathbf{T}}{dt} = \frac{d\mathbf{T}}{ds}\frac{ds}{dt}
+        \]
+
+        and
+
+        \[
+            \kappa = \left|\frac{d\mathbf{T}}{ds}\right| = \left|\frac{\frac{d\mathbf{T}}{dt}}{\frac{ds}{dt}}\right|
+        \]
+
+        But $\frac{ds}{dt}=|r'(t)|$, so
+
+        \begin{corollemma}{Curvature: Corollary}
+            \[
+                \kappa (t) = \left|\frac{\mathbf{T}'(t)}{\mathbf{r}'(t)}\right|
+            \]
+        \end{corollemma}
+
+        \textit{\blue{Example 3:}} Show that the curvature of a circle of radius $a$ is $\frac{1}{a}$. \\
+
+        Taking the circle to have center the origin, a parametrization is
+
+        \[
+            \mathbf{r}(t) = a\cos{t}\mathbf{i} + a\sin{t}\mathbf{j}
+        \]
+
+        Therefore
+
+        \[
+            \mathbf{r}'(t) = -a\sin{t}\mathbf{i} + a\cos{t}\mathbf{j}
+        \]
+
+        and
+
+        \[
+            |r'(t)| = a
+        \]
+
+        so
+
+        \[
+            T(t) = \frac{r'(t)}{|r'(t)|} = -\sin{t}\mathbf{i} + \cos{t}\mathbf{j}
+        \]
+
+        and
+
+        \[
+            T'(t) = -\cos{t}\mathbf{i} - \sin{t}\mathbf{j}
+        \]
+
+        This gives $|T'(t)| = 1$ and it follows that
+
+        \[
+            \kappa (t) = \frac{|T'(t)|}{|r'(t)|} = \frac{1}{a}
+        \]
+
+        \begin{theorem}{Curvature, Alternative}
+            Although the other curvature formula can be used in all cases to compute the curvature, the formula below is often more convenient to apply. For the vector function \textbf{r}, the curvature is given by
+
+            \[
+                \kappa (t) = \frac{|r'(t) \times r''(t)|}{|r'(t)|^3}
+            \]
+        \end{theorem}
+
+        \begin{proof}
+            Since $\mathbf{T = \frac{r'}{|r'|}}$ and $\mathbf{|r'|} = \frac{ds}{dt}$, we have
+
+            \[
+                r' = |r'|T = \frac{ds}{dt}T
+            \]
+
+            so the Product Rule gives
+
+            \[
+                r'' = \frac{d^2 s}{dt^2}T + \frac{ds}{dt}T'
+            \]
+
+            Using the fact that $T \times T = 0$, we have
+
+            \[
+                r' \times r'' = \left(\frac{ds}{dt}\right)^2 (T \times T')
+            \]
+
+            Now $|T(t)|=1$ for all $t$, so \textbf{T} and \textbf{T'} are orthogonal. Hence,
+
+            \[
+                |r' \times r''| = \left(\frac{ds}{dt}\right)^2 |T \times T'| = \left(\frac{ds}{dt}\right)^2 |T||T'| = \left(\frac{ds}{dt}\right)^2|T'|
+            \]
+
+            Thus
+
+            \[
+                |T'| = \frac{|r' \times r''|}{\left(\frac{ds}{dt}\right)^2} = \frac{|r' \times r''|}{|r'|^2}
+            \]
+
+            and
+
+            \[
+                \kappa = \frac{|T'|}{|r'|} = \frac{|r' \times r''|}{|r'|^3}
+            \]
+        \end{proof}
+
+        \textit{\blue{Example 4:}} Find the curvature of the twisted cubic $r(t) = \langle t, t^2, t^3\rangle$ at a general point and at $(0,0,0)$. \\
+
+        We first compute the required ingredients:
+
+        \begin{align*}
+            r'(t)   &= \langle 1, 2t, 3t^2\rangle \\
+            r''(t)  &= \langle 0, 2, 6t\rangle \\
+            r'(t) \times r''(t) &=
+            \begin{vmatrix}
+                \mathbf{i}  & \mathbf{j}    & \mathbf{k} \\
+                1           & 2t            & 3t^2 \\
+                0           & 2             & 6t
+            \end{vmatrix}
+            = 6t^2 \mathbf{i} - 6t\mathbf{j} + 2\mathbf{k} \\
+            |r'(t) \times r''(t)|   &= \sqrt{36t^4 + 36t^2 + 4} = 2\sqrt{9t^4 + 9t^2 + 1}
+        \end{align*}
+
+        Thus
+
+        \[
+            \kappa (t) = \frac{|r'(t) \times r''(t)|}{|r'(t)|^3} = \frac{2\sqrt{1+9t^2 + 9t^4}}{\left(1+4t^2+9t^4\right)^{\frac{3}{2}}}
+        \]
+
+        At the origin, where $t=0$, the curvature is $\kappa(0) = 2$.
+
+        \begin{corollemma}{Curvature, Special Case}
+            For the special case of a plane curve with equation $y=f(x)$, we choose $x$ as the parameter and write $r(x) = x\mathbf{i} + f(x)\mathbf{j}$. Then $r'(x) = \mathbf{i} + f'(x)|mathbf{j}$ and
+            $\mathbf{r}''(x)=f''(x)\mathbf{j}$. Since $\mathbf{i\times j = k}$ and $\mathbf{j\times j} = 0$, it follows that $r'(x) \times r''(x) = f''(x)k$. We also have $|r'(x)| = \sqrt{1+[f'(x)]^2}$ and thus
+
+            \[
+                \kappa (x) = \frac{|f''(x)|}{\left[1+(f'(x))^2\right]^{|frac{3}{2}}}
+            \]
+        \end{corollemma}
+
+        \textit{\blue{Example 5:}} Find the curvature of the parabola $y=x^2$ at the points (0,0), (1,1), and (2,4). \\
+
+        Since $y' = 2x$ and $y'' = 2$, we have
+
+        \[
+            \kappa (x) = \frac{|y''|}{\left[1+(y')^2\right]^{\frac{3}{2}}} = \frac{2}{\left(1+4x^2\right)^{\frac{3}{2}}}
+        \]
+
+        The curvature at (0,0) is $\kappa (0) = 2$. At (1,1) it is $\kappa (1) = \frac{2}{5^{\frac{3}{2}}}\approx 0.18$. At (2,4) it is $\kappa (2) = \frac{2}{17^{\frac{3}{2}}}\approx 0.03$. \\
+
+        At a given point on a smooth space curve $r(t)$, there are many vectors that are orthogonal to the unit tangent vector $\mathbf{T}(t)$. We single out one by observing that, becasue $|\mathbf{T}(t)| = 1\forall t$,
+        we have $\mathbf{T}(t)\cdot \mathbf{T}'(t) = 0$, so $\mathbf{T}'(t)$ is orthogonal to $\mathbf{T}(t)$. Noe that in general $\mathbf{T}'(t)$ is itself not a unit vector. But at any point where $\kappa \not = 0$
+        we can define the \textbf{principle unit normal vector} $\mathbf{N}(t)$ (\textbf{unit normal}) as
+
+        \[
+            \mathbf{N}(t) = \frac{\mathbf{T}'(t)}{|\mathbf{T}'(t)|}
+        \]
+
+        Geometrically, the unit normal vector indicates the direction in which the curve is turing at each point. The vector $\mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t)$ is called the \textbf{binormal vector} and
+        it is perpendicular to both $\mathbf{T}$ and $\mathbf{N}$ and is also a unit vector.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.3_TNB}
+        \end{figure*}
+
+        \textit{\blue{Example 6:}} Find the unit normal and binormal vectors for the circular helix
+
+        \[
+            \mathbf{r}(t) = \cos{t}\mathbf{i} + \sin{t}\mathbf{j} + t\mathbf{k}
+        \]
+
+        We first compute the ingredients needed for the unit normal vector:
+
+        \begin{align*}
+            r'(t)   &= -\sin{t}i + \cos{t}j + k \\
+            |r'(t)| &= \sqrt{2} \\
+            T(t)    &= \frac{r'(t)}{|r'(t)|} = \frac{1}{\sqrt{2}} (-\sin{t}i + \cos{t}j + k) \\
+            T'(t)   &= \frac{1}{\sqrt{2}}\left(-\cos{t}i - \sin{t}j) \\
+            |T'(t)| &= \frac{1}{\sqrt{2}} \\
+            N(t)    &= \frac{T'(t)}{|T'(t)|} = -\cos{t}i - \sin{t}j = \langle -\cos{t}, -\sin{t}, 0\rangle
+        \end{align*}
+
+        This shows that the normal vector at any point on the helix is horizontal and points toward the $z$-axis. The binormal vector is
+
+        \begin{align*}
+            B(t)    &= T(t) \times N(t) \\
+                    &= \frac{1}{\sqrt{2}}
+                        \begin{bmatrix}
+                            \mathbf{i}  & \mathbf{j}    & \mathbf{k} \\
+                            -\sin{t}    & \cos{t}       & 1 \\
+                            -\cos{t}    & -\sin{t}      & 0
+                        \end{bmatrix} \\
+                    &= \frac{1}{\sqrt{2}}\langle \sin{t}, -\cos{t}, 1\rangle
+        \end{align*}
+
+        \textbf{TNB frame:} refers to the set of orthogonal vectors $T, N, B$, which are the tangent, normal, and binormal vectors.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.3_TNB_Frame}
+        \end{figure*}
+
+        \textbf{Normal plane:} determined by normal and binormal vectors N and B at a point $P$ on a curve $C$ \\
+        $\bullet$ consists of all lines orthogonal to the tangent vector $\mathbf{T}$ \\
+
+        \textbf{Osculating plane:} determined by vectors T and N at a point $P$ on a curve $C$ \\
+        $\bullet$ comes from Latin \textit{osculum} "to kiss" because it is the plane that comes closest to containing the part of the curve near $P$. \\
+
+        \textbf{Oscalating circle (circle of curvature)}: the circle that lies in the osculating plane of $C$ at $P$, has the same tangnet as $C$ as $P$, lies on the concave side of $C$ (toward which N points), and has
+        radius $\rho = \frac{1}{\kappa}$ (the reciprocal of the curvature) \\
+        $\bullet$ the circle that best describes how $C$ behaves near $P$ \\
+        $\bullet$ share the same tangnet, normal, and curvature at $P$.
+
+    \subsection{Motion in Space: Velocity and Acceleration}     % 13.4
+
+        \begin{theorem}{Velocity vector}
+            The average velocity over a time interval of length $h$ and its limit is the velocity vector $v(t)$ at time $t$:
+
+            \[
+                v(t) = \lim_{h\to 0} \frac{r(t+h) - r(t)}{h} = r'(t)
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Speed}
+            The speed of a particle at time $t$ is the magnitude of the velocity vector:
+
+            \[
+                |v(t)| = |r'(t)| = \frac{ds}{dt}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Acceleration}
+            \[
+                a(t) = v'(t) = r''(t)
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example:}} A moving particle starts at an intiial position $r(0) = \langle 1, 0, 0 \rangle$ with initial velocity $v(0) = i - j + k$. Its acceleration is $a(t) = 4ti + 6tj + k$. Find its velocity
+        and position at time $t$. \\
+
+        Since $a(t) = v'(t)$, we have
+
+        \begin{align*}
+            v(t)    &= \int a(t)dt \\
+                    &= \int (4t\mathbf{i} + 6t\mathbf{j} + \mathbf{k}) dt \\
+                    &= 2t^2 \mathbf{i} + 3t^2 \mathbf{j} + t\mathbf{k} + C
+        \end{align*}
+
+        Because $v(0) = i-j+k$, $C=i-j+k$ and
+
+        \begin{align*}
+            v(t)    &= 2t^2 \mathbf{i} + 3t^2 \mathbf{j} + t\mathbf{k} + \mathbf{i-j+k} \\
+                    &= (2t^2 + 1)\mathbf{i} + (3t^2 -1)\mathbf{j} + (t+1)\mathbf{k}
+        \end{align*}
+
+        Since $v(t) = r'(t)$, we have
+
+        \begin{align*}
+            r(t)    &= \int v(t) dt \\
+                    &= \int \left[(2t^2 + 1)\mathbf{i} + (3t^2 -1)\mathbf{j} + (t+1)\mathbf{k}\right] dt \\
+                    &= \left(\frac{2}{3}t^3 +t\right)\mathbf{i} + (t^3 -t)\mathbf{j} + \left(\frac{1}{2}t^2 + t\right) \mathbf{k} + \mathbf{D}
+        \end{align*}
+
+        Putting $t=0$, we find that $\mathbf{D=r}(0)=\mathbf{i}$, so the position at time $t$ is given by
+
+        \begin{align*}
+            \mathbf{r}(t) = \left(\frac{2}{3}t^3 + t + 1\right) \mathbf{i} + (t^3 - t)\mathbf{j} + \left(\frac{1}{2}t^2 + t\right) \mathbf{k}
+        \end{align*}
+
+        In general,
+
+        \[
+            v(t) = v(t_0) + \int_{t_0}^t a(u) du
+        \]
+
+        and
+
+        \[
+            r(t) = r(t_0) + \int_{t_0}^t v(u) du
+        \]
+
+        \textit{\blue{Example 2:}} An object with mass $m$ that moves in a circular path with constant angular speed $\omega$ has position vector $r(t) = a\cos{\omega t}\mathbf{i}+a\sin{\omega t}\mathbf{j}$. Find the
+        force acting on the object and show that it is directed toward the origin. \\
+
+        We have
+
+        \begin{align*}
+            v(t)    &= r'(t) = -a\omega \sin{\omega t}\mathbf{i} + a\omega \cos{\omega t} \mathbf{j} \\
+            a(t)    &= v'(t) = -a\omega^2 \cos{\omega t}\mathbf{i} - a\omega^2 \sin{\omega t}\mathbf{j}
+        \end{align*}
+
+        Thus Newton's Second Law gives the force as
+
+        \[
+            F(t) = ma(t) = -m\omega^2 (a\cos{\omega t}\mathbf{i} + a\sin{\omega t}\mathbf{j}) = -m\omega^2 \mathbf{r}(t)
+        \]
+
+        The object moving with position $P$ has angular speed $\omega = \frac{d\theta}{dt}$. \\
+
+        \textit{\blue{Example 3:}} A projectile is fired with angle of elevation $\alpha$ and initial velocity $v_0$. Assuming that air resistance is negligible and the only external force is due to gravity, find the
+        position function $r(t)$ of the projectile. What value of $\alpha$ maximizes the range (the horizontal distance traveled)?
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/13.4_Projectile}
+        \end{figure*}
+
+        We set up the axes so that the projectile starts at the origin. Since the force due to gravity acts downward, we have
+
+        \[
+            F = m\mathbf{a} = -mg\mathbf{j}
+        \]
+
+        where $g=|a|\approx 9.8 \text{ m/s}^2$. Thus
+
+        \[
+            \mathbf{a} = -g\mathbf{j}
+        \]
+
+        Since $\mathbf{v}'(t) = \mathbf{a}$, we have
+
+        \[
+            v(t) = -gt\mathbf{j} + C
+        \]
+
+        where $C= v(0) = v_0$. Therefore
+
+        \[
+            r'(t) = v(t) = -gt\mathbf{j} + v_0
+        \]
+
+        Integrating again, we obtain
+
+        \[
+            r(t) = -\frac{1}{2}gt^2 \mathbf{j} + t\mathbf{v_0} + D
+        \]
+
+        But $D = r(0) = 0$, so the position vector of the projectile is given by
+
+        \begin{theorem}{Position Vector of Projectile}
+            r(t) = -\frac{1}{2}gt^2 \mathbf{j} + t\mathbf{v_0}
+        \end{theorem}
+
+        If we write $|v_0| = v_0$, then
+
+        \[
+            v_0 = v_0 \cos{\alpha} \mathbf{i} + v_0 \sin{\alpha} \mathbf{j}
+        \]
+
+        and it follows that
+
+        \[
+            r(t) = (v_0 \cos{\alpha})t\mathbf{i} + \left[(v_0 \sin{\alpha})t - \frac{1}{2}gt^2\right]\mathbf{j}
+        \]
+
+        The parametric equations of the trajectory are therefore
+
+        \begin{theorem}{Projectile Trajectory, Parametric Equations}
+            \[
+                x = (v_0 \cos{\alpha}) t
+            \]
+
+            and
+
+            \[
+                y = (v_0 \sin{\alpha})t - \frac{1}{2}gt^{2}
+            \]
+        \end{theorem}
+
+        The horizontal distance $d$ is the value of $x$ when $y=0$. Setting $y=0$, we obtain $t=0$ or $t=\frac{2v_0 \sin{\alpha}}{g}$. This second value of $t$ then gives
+
+        \[
+            d = x = (v_0 \cos{\alpha}) \frac{2v_0 \sin{\alpha}}{g} = \frac{v_0^2 (2\sin{\alpha}{\cos{\alpha}})}{g} = \frac{v^2_0 \sin{2\alpha}}{g}
+        \]
+
+        Clearly $d$ has its maximum value when $\sin{2\alpha} = 1$, that is, $\alpha = 45^{\circ}$. \\
+
+        \textit{\blue{Example 4:}} A projectile is fired with muzzle speed 150 m/s and angle of elevation $45^{\circ}$ from a position 10 m above ground level. Where does the projectile hit the ground, and with what
+        speed? \\
+
+        If we place the origin at ground level, then the initial position of the projectil is (0, 10) and so we need to adjust the parametric equation for $y$ by adding 10. With $v_0 = 150$ m/s, $\alpha = 45^{\circ}$,
+        and $g = 9.8 \text{ m/s}^2$, we have
+
+        \begin{align*}
+            x   &= 150\cos{45^{\circ}}t = 75\sqrt{2}t \\
+            y   &= 10 + 150\sin{45^{\circ}}t - \frac{1}{2}(9.8)t^2 = 10 + 75\sqrt{2}t - 4.9t^2
+        \end{align*}
+
+        Impact occurs when $y=0$, that is, $4.9t^2 - 75\sqrt{2}t-10 = 0$. Then
+
+        \[
+            t = \frac{75\sqrt{2} + \sqrt{11250+196}}{9.8} \approx 21.74
+        \]
+
+        Then $x=75\sqrt{2}(21.74)\approx 2306$, so the projectile hits the ground about 2306 m away. The velocity of the projectile is
+
+        \[
+            v(t) = r'(t) = 75\sqrt{2}\mathbf{i} + (75\sqrt{2} - 9.8t) \mathbf{j}
+        \]
+
+        so its speed at impact is
+
+        \[
+            |v(21.74)| = \sqrt{(75\sqrt{2})^2 + (75\sqrt{2} - 9.8\cdot 21.74)^2} \approx 151 \text{ m/s}
+        \]
+
+        We know that
+
+        \[
+            T(t) = \frac{r'(t)}{|r'(t)|} = \frac{v(t)}{|v(t)|} = \frac{\mathbf{v}}{v}
+        \]
+
+        and so
+
+        \[
+            \mathbf{v} = v\mathbf{T}
+        \]
+
+        Differentiating both sides with repsect to $t$,
+
+        \[
+            \mathbf{a} = \mathbf{v'} = v'\mathbf{T} + v\mathbf{T'}
+        \]
+
+        Using the expression for curvature, we have
+
+        \[
+            \kappa = \frac{|\mathbf{T'}|}{|\mathbf{r'}|} = \frac{|T'|}{v}\implies |T'| = \kappa v
+        \]
+
+        The unit normal vector was defined as $N = \frac{T'}{|T'|}$, so we have
+
+        \[
+            T' = |T'|N = \kappa v \mathbf{N}
+        \]
+
+        and our equation becomes
+
+        \[
+            \mathbf{a} = v'\mathbf{T} + \kappa v^2 \mathbf{N}
+        \]
+
+        \begin{theorem}{Tangential and Normal Components of Acceleration}
+            Letting $a_T$ and $a_N$ be the tangential and normal components of acceleration, respectively, we have
+
+            \[
+                a_T = v' = \frac{v\cdot a}{v} = \frac{r'(t)\cdot r''(t)}{|r'(t)|}
+            \]
+
+            and
+
+            \[
+                a_N = \kappa v^2 = \frac{|r'(t) \times r''(t)|}{|r'(t)|^3} |r'(t)|^2 = \frac{|r'(t) \times r''(t)|}{|r'(t)|}
+            \]
+        \end{theorem}
+

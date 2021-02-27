@@ -1,15 +1,243 @@
-%! Author = ericx
-%! Date = 1/7/2021
+\section{Multiple Integrals}
 
-% Preamble
-\documentclass[11pt]{article}
+    \subsection{Double Integrals Over Rectangles}   % 15.1
 
-% Packages
-\usepackage{amsmath}
+        Consider a function $f$ of two variables defined on a closed rectangle
 
-% Document
-\begin{document}
+        \[
+            R = [a,b] \times [c,d] = \{(x,y) \in \mathbb{R}^2\Big | a \leq x \leq b, c \leq y \leq d\}
+        \]
+
+        and we first suppose that $f(x,y) \geq 0$. The graph of $f$ is a surface with equation $z=f(x,y)$. Let $S$ be the solid that lies above $R$ and under the graph of $f$, that is,
+
+        \[
+            S = \{(x,y,z) \in \mathbb{R}^3 \Big| 0 \leq z \leq f(x,y), (x,y)\in R \}
+        \]
+
+        We want to find the volume of $S$ by dividing the rectangle $R$ into subrectangles through dividing the interval $[a,b]$ into $m$ subintervals $[x_{i-1}, x_i]$ of equal width $\Delta x = \frac{b-a}{m}$ and
+        dividing $[c,d]$ into $n$ subintervals $[y_{j-1}, y_j]$ of equal width $\Delta y = \frac{d-c}{n}$. By drawing lines parallel to the coordinate axes through the endpoints of these subintervals, we form the
+        subrectangles
+
+        \[
+            R_{ij} = [x_{i-1}, x_i] \times [y_{j-1}, y_j] = \{(x,y) \Big| x_{i-1} \leq x \leq x_i, y_{j-1} \leq y \leq y_j\}
+        \]
+
+        each with area $\DElta A = \Delta x \Delta y$.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/15.1_Subrectangles}
+        \end{figure*}
+
+        If we choose a \textbf{sample point} $\left(x_{ij}^*, y^*_{ij}\right)$ in each $R_{ij}$, then we can approximate the part of $S$ that lies above each $R_{ij}$ by a thin rectangular box or column with base
+        $R_{ij}$ and height $f\left(x^*_{ij}, y^*_{ij}\right)$ as shown below. The volume of this box is the height of the box times the area of the base rectangle:
+
+        \[
+            f\left(x^*_{ij}, y^*_{ij}\right) \Delta A
+        \]
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/15.1_Box_Volume}
+        \end{figure*}
+
+        Adding up the volumes of all the boxes corresponding the rectangles, we get an approximation to the total volume of $S$:
+
+        \[
+            V \approx \sum^m_{i=1} \sum^n_{j=1} f\left(x^*_{ij}, y^*_{ij}\right) \Delta A
+        \]
+
+        As the approximation becomes more accurate as $m$ and $n$ get larger,
+
+        \begin{theorem}{Volume over rectangle}
+            \[
+            V = \lim_{m, n\to \infty} \sum^m_{i=1} \sum^n_{j=1} f\left(x^*_{ij}, y^*_{ij}\right) \Delta A
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Double Integral}
+            The \textbf{double integral} of $f$ over the rectangle $R$ is
+
+            \[
+                \int \int_R f(x,y) dA = \lim_{m, n\to \infty} \sum^m_{i=1} \sum^n_{j=1} f\left(x^*_{ij}, y^*_{ij}\right) \Delta A
+            \]
+
+            if this limit exists.
+        \end{theorem}
+
+        \begin{theorem}{Definition of Double Integral}
+            For every number $\epsilon > 0$ there is an integer $N$ s.t.
+
+            \[
+                \left| \int \int_R f(x,y) dA - \sum^m_{i=1} \sum^n_{j=1} f\left(x^*_{ij}, y^*_{ij}\right) \Delta A \right| < \epsilon
+            \]
+
+            for all integers $m$ and $n$ greater than $N$ and for any choice of sample points $\left(x^*_{ij}, y^*_{ij}\right)$ in $R_{ij}$.
+        \end{theorem}
+
+        If we choose the sample point to be the upper right-hand corner of $R_{ij}$ then the expression for the double integral becomes
+
+        \[
+            \int \int_R f(x,y) dA = \lim_{m, n\to\infty} \sum^m_{i=1} \sum^n_{j = 1} f\left(x_i, y_i \right) \Delta A
+        \]
+
+        This can be written like so:
+
+        \begin{theorem}{Volume over rectangle and below surface}
+            If $f(x,y) \geq 0$, then the volume $V$ of the solid that lies above the rectangle $R$ and below the surface $z=f(x,y)$ is
+
+            \[
+                V = \int \int_R f(x,y) dA
+            \]
+        \end{theorem}
+
+        The sum below is called a \textbf{Double Riemann sum}
+
+        \[
+            \sum^m_{i=1} \sum^n_{j=1} f\left(x^*_{ij}, y^*_{ij}\right) \Delta A
+        \]
+
+        \textit{\blue{Example:}} Estimate the volume of the solid that lies above the square $R = [0, 2] \times [0, 2]$ and below the elliptic paraboloid $z=16 - x^2 - 2y^2$. Divide $R$ into four equal squares and choose
+        the sample point to be the upper right corner of each square $R_{ij}$. Sketch the solid and the approximating rectangular boxes. \\
+
+        The squares are shown below. The paraboloid is the graph of $f(x,y) = 16 - x^2 - 2y^2$ and the area of each square is $\Delta A = 1$. Approximating the volume by the Riemann sum with $m=n=2$, we have
+
+        \begin{align*}
+            V   &\approx \sum^2_{i=1} \sum^2_{j=1} f(x_i, y_j) \Delta A \\
+                &= f(1,1)\Delta A + f(1,2) \Delta A + f(2,1) \Delta A + f(2,2) \Delta A \\
+                &= 13(1) + 7(1) + 10(1) + 4(1) \\
+                &= 34
+        \end{align*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/15.1_Squares}
+        \end{figure*}
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/15.1_Example_Volume}
+        \end{figure*}
+
+        \textit{\blue{Example 2:}} If $R = \{(x,y) | -1 \leq x \leq 1, -2 \leq y \leq 2\}$, evaluate the integral
+
+        \[
+            \int \int_R \sqrt{1-x^2} dA
+        \]
+
+        Note that $\sqrt{1-x^2}\geq 0$, and so we can compute the integral by interpreting it as a volume. If $z=\sqrt{1- x^2}$, then $x^2 + z^2 = 1$ and $z \geq 0$, so the given double integral represents the volume of
+        the solid $S$ that lies below the circular cylinder $x^2 + z^2 = 1$ and above the rectangle $R$. The volume of $S$ is the area of a semicircle with radius 1 times the length of the cylinder. Thus
+
+        \[
+            \int \int_R \sqrt{1-x^2} dA = \frac{1}{2} \pi (1)^2 \times 4 = 2\pi
+        \]
+
+        \begin{theorem}{Midpoint Rule}
+            \[
+                \int \int_R f(x,y) dA \approx \sum^m_{i=1} \sum^n_{j=1} f(\bar{x}_i, \bar{y}_j) \Delta A
+            \]
+
+            where $\bar{x}_i$ is the midpoint of $[x_{i-1}, x_i]$ and $\bar{y}_j$ is the midpoint of $[y_{j-1}, y_j]$.
+        \end{theorem}
+
+        \textit{\blue{Example 3:}} Use the midpoint rule with $m=n=2$ to estimate the value of the integral $\int \int_R (x-3y^2)dA$, where $R = \{(x,y) | 0 \leq x \leq 2, 1 \leq y \leq 2\}$. \\
+
+        We evaulate $f(x,y) = x-3y^2$ at the centers of the four rectangles shown below. So $\bar{x}_1 = \frac{1}{2}$, $\bar{x}_2 = \frac{3}{2}$, $\bar{y}_1 = \frac{5}{4}$, and $\bar{y}_2 = \frac{7}{4}$. The area of each
+        subrectangle is $\Delta A = \frac{1}{2}$. Thus
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Resources/15.1_Rectangles}
+        \end{figure*}
+
+        \begin{align*}
+            \iint_R (x-3y^2) dA &\approx \sum^2_{i=1} \sum^2_{j=1} f\left(\bar{x}_i, \bar{y}_j\right) \Delta A \\
+                                &= f(\bar{x}_1, \bar{y}_1) \Delta A + f(\bar{x}_1, \bar{y}_2) \Delta A + f(\bar{x}_2, \bar{y}_1) \Delta A + f(\bar{x}_2, \bar{y}_2) \Delta A \\
+                                &= f\left(\frac{1}{2}, \frac{5}{4}\right) \Delta A + f\left(\frac{1}{2}, \frac{7}{4}\right)\Delta A + f\left(\frac{3}{2}, \frac{5}{4}\right) \Delta A + f\left(\frac{3}{2}, \frac{7}{4}\right) \Delta A \\
+                                &= \left(-\frac{67}{16}\right)\frac{1}{2} + \left(-\frac{139}{16}\right)\frac{1}{2} + \left(-\frac{51}{16}\right)\frac{1}{2} + \left(-\frac{123}{16}\right) \frac{1}{2} \\
+                                &= -\frac{95}{8} \\
+                                &= -11.875
+        \end{align*}
+
+        Thus we have
+
+        \[
+            \iint_R (x-3y^2) dA \approx -11.875
+        \]
+
+        \begin{theorem}{Iterated Integral}
+            \[
+                \int_a^b \int_c^d f(x,y) dy dx = \int_a^b \left[\int_c^d f(x,y) dy\right] dx
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example 4:}} Evaluate the integral given below.
+
+        \[
+            \int_0^3 \int_1^2 x^2 y dy dx
+        \]
+
+        Regarding $x$ as a constant, we obtain
+
+        \[
+            \int_1^2 x^2 y dy = \left[x^2 \frac{y^2}{2}\right]^{y=2}_{y=1} = x^2 \left(\frac{2^2}{2}\right) - x^2\left(\frac{1^2}{2}\right) = \frac{3}{2}x^2
+        \]
+
+        Thus the function $A$ in the preceding discussion is given by $A(x) = \frac{3}{2}x^2$ in this example. We now integrate this function of $x$ from 0 to 3:
+
+        \begin{align*}
+            \int_0^3 \int_1^2 x^2 y dy dx   &= \int_0^3 \left[\int_1^2 x^2 y dy\right] dx \\
+                                            &= \int_0^3 \frac{3}{2}x^2 dx \\
+                                            &= \frac{x^3}{2}\Big]_0^3 \\
+                                            &= \frac{27}{2}
+        \end{align*}
+
+        \begin{theorem}{Fubini's Theorem}
+            If $f$ is continuous on the rectangle $R = \{(x,y) | a \leq x \leq b, c\leq y \leq d\},$ then
+
+            \[
+                \iint_R f(x,y) dA = \int_a^b \int_c^d f(x,y) dy dx = \int_c^d \int_a^b f(x,y) dx dy
+            \]
+
+            More generally, this is true if we assume that $f$ is bounded on $R$, $f$ is discontinuous only on a finite number of smooth curves, and the iterated integrals exist.
+        \end{theorem}
+
+        \textit{\blue{Example 5:}} Evaluate $\iint_R y sin(xy)dA$, where $R = [1,2] \times [0, \pi]$. \\
+
+        If we first integrate with respect to $x$, we get
+
+        \begin{align*}
+            \iint_R ysin(xy)dA  &= \int_0^{\pi} \int_1^2 y sin(xy) dx dy \\
+                                &= \int_0^{\pi} \left[-\cos{(xy)}\right]_{x=1}^{x=2} dy \\
+                                &= \int_0^{\pi} \left(-\cos{2y} + \cos{y})dy \\
+                                &= -\frac{1}{2}\sin{2y} + \sin{y}\Big]_0^{\pi} \\
+                                &= 0
+        \end{align*}
+
+        Recall that the average value of a univariate function $f$ defined on an interval $[a,b]$ is
+
+        \[
+            f_{avg} = \frac{1}{b-a} \int_a^b f(x)dx
+        \]
+
+        \begin{theorem}{Average Value}
+            Similarly, we can define the average value of a two-variable function to be
+
+            \[
+                f_{avg} = \frac{1}{A(R)} \iint_R f(x,y) dA
+            \]
+
+            where $A(R)$ is the area of $R$.
+        \end{theorem}
+
+    \subsection{Double Integrals Over General Regions}  % 15.2
 
 
 
-\end{document}
+    \subsection{Double Integrals in Polar Coordinates}  % 15.3
+    \subsection{Applications of Double Integrals}   % 15.4
+    \subsection{Surface Area}   % 15.5
+    \subsection{Triple Integrals}   % 15.6
+    \subsection{Triple Integrals in Cylindrical Coordinates}    % 15.7
+    \subsection{Triple Integrals in Spherical Coordinates}  % 15.8
+    \subsection{Change of Variables in Multiple Integrals}  % 15.9
