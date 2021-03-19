@@ -12,7 +12,7 @@
 
 ## Independent Study Notes:
 |Course|PDF|Description|Date Started|
-|-|-|-|
+|-|-|-|-|
 |CLRS v3|-|[Book description](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)|March 19, 2021|
 |Hands-on ML with Scikit-Learn, Keras & Tensorflow|[HandsOn_ML.pdf](https://github.com/ericxiaseattle/Notes/raw/master/CS/Machine_Learning/out/HandsOn_ML/HandsOn_ML.pdf)|[Book Description](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)|-|
 
