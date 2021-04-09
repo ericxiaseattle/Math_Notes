@@ -1,0 +1,161 @@
+% Preamble
+\documentclass{article}
+
+% Packages
+\usepackage{../../../mypackages}
+
+
+% Macros
+\usepackage{../../../mymacros}
+
+
+% File info
+\title{CSE311 Notes}
+\author{Eric Xia}
+\date{Last Updated 29 March 2021}
+
+
+% Document
+\begin{document}
+
+    \maketitle
+    \tableofcontents
+    \pagebreak
+
+
+
+    \textbf{Proposition:} a "well-formed" statement that is either true or false \\
+    $\bullet$ Propositional variables: $q,r,s$ \\
+
+    Example of a compound proposition: "Garfield has black stripes if he is an orange cat and likes lasagna, and he is an orange cat or does not like lasagna" \\
+
+    We can break this proposition into the simplest (\textbf{atomic propositions}): \\
+    $q$: "Garfield has black stripes" \\
+    $r$: "Garfield is an orange cat" \\
+    $s$: "Garfield likes lasagna" \\
+
+    We rewrite the original proposition like so: \\
+    (q if (r and s)) and (r or (not s))
+
+    \begin{center}
+        \textbf{Logical connectives}: \\
+        \begin{tabular}{|c|c|}
+            \hline
+            Negation (not)  & $\neg q$ \\
+            \hline
+            Conjunction (and) &  $q\land r$ \\
+            \hline
+            Disjunction (or)   & $q \lor r$  \\
+            \hline
+            Exclusive Or       & $q \oplus r$ \\
+            \hline
+            Implication        & $q \implies r$ \\
+            \hline
+            Biconditional      & $q \iff r$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    We can then replace the compound proposition about Garfield with logical symbols like so:
+    (q if (r $\and$ s)) $\land$ (r$\lor\neg $s)
+
+    Implication truth table:
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $q$ &   $r$ & $q\implies r$ \\
+            \hline
+            T   &   T   & T \\
+            \hline
+            T   &   F   & F \\
+            \hline
+            F   &   T   & T \\
+            \hline
+            F   &   F   & T \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \textit{\blue{Example:}} $2+2=4\implies \text{the earth is a planet}$, this is a true implication because both $2+2=4$ and "the earth is a planet" are true \\
+    \textit{\blue{Example 2:}} $2+2 = 5 \implies 26$ is a prime number, this is a true implication because both $2+2=5$ and "26 is a prime number" are false \\
+
+    Analyzing the Garfield Sentence with a truth table:
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale = 0.75]{Assets/Garfield}
+    \end{figure*}
+
+    Implication: $q\implies r$ \\
+    Converse: $r\implies q$ \\
+    Contrapositive: $\neg r \implies \neg q$ \\
+    Inverse: $\neg q \implies \neg r$ \\
+
+    In the truth table below, notice that an implication and its contrapositive have the same truth value, and that the converse and inverse have the same truth value
+
+    \begin{figure*}[hbt!]
+        \centering
+        \includegraphics[scale = 0.75]{Assets/Contrapositive}
+    \end{figure*}
+
+    A compound proposition is a \\
+    \textbf{Tautology} if it is always true \\
+    $\bullet$ $q\lor \neg q$ is a tautology and is called "\textit{the law of the excluded middle}". If $q$ is true then $q\lor \neg q$ is true. If $q$ is false then $q\lor \neg q$ is true.
+    \textbf{Contradiction} if it is always false \\
+    $q \oplus q$ is a contradiction because it's always false no matter what truth value $q$ takes on
+    \textbf{Contingency} if it can be either true or false \\
+    $(q\implies r) \land q$ is a contingency. When $q=T,r=T,(T\implies T)\land T$ is true. When $q=T,r=F,(T\implies F)\land T$ is false. \\
+
+    Equivalence versus equal: \\
+
+    A = B means A and B are identical "strings": \\
+    $\bullet$ $q\land r = q\land r$, These are equal because they are character-for-character identical
+    $\bullet$ $q \land r \not = r \land q$, These are NOT equal because they are different sequences of characters. They "mean" the same thing though \\
+
+    $A \equiv B$ means A and B have identical truth values: \\
+    $\bullet$ $q\lor r \equiv q\lor r$ \\
+    $\bullet$ $q\lor r \equiv r\lor q$ \\
+    $\bullet$ $q\lor r \not \equiv r\land q$ \\
+
+    Biconditional versus equivalence:
+
+    $A \equiv B$ is an \textbf{assertion over all possible truth values} that A and B always have the same truth values \\
+    $A \iff B$ is a \textbf{proposition} that may be true or false depending on the truth values of the variables in A and B \\
+    $A\equiv B$ and $(A\iff B) \equiv T$ have the same meaning
+
+    \begin{axiom}{De Morgan's Laws}
+        \begin{align*}
+            \neg (q\land r) &\equiv \neg q \land \neg r \\
+            \neg(q\lor r)   &\equiv \neg q \lor \neg r
+        \end{align*}
+    \end{axiom}
+
+    Some equivalences related to implication:
+
+    \begin{align*}
+        q \implies r    &= \neg q \lor r \\
+        q \implies r    &= \neg r \implies \neg q \\
+        q \iff r        &= (q\implies r) \land (r\implies q) \\
+        q \iff r        &= \neg q \iff \neg r
+    \end{align*}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{Properties of logical connectives:}
+        \includegraphics[scale = 0.75]{Assets/Connectives}
+    \end{figure*}
+
+    \textbf{Boolean algebra:} another notation for propositional logic consisting of: \\
+    $\bullet$ a set of elements $B = \{0,1\}$ \\
+    $\bullet$ binary operations $\{+,\cdot\}$ (OR, AND) \\
+    $\bullet$ unary operation $\{'\}$ (NOT) \\
+
+    Example: $q\lor (r\land \neg s)$ written as $q+(r\cdot s')$ \\
+    $\bullet$ notation used in circuit design \\
+
+
+
+
+
+\end{document}

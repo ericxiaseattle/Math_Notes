@@ -1,0 +1,226 @@
+\section{Introduction}
+
+    \subsection{Permutations and Combinations}
+
+        \textbf{Cardinality:} the number of elements in a given set $A$, denoted by #$A$
+
+        \begin{axiom}{Property}
+            Let $A$ and $B$ be finite sets and $k$ a positive integer. Assume that there is a function $f$ from $A$ onto $B$ so that each element of $B$ is the image of exactly $k$ elements of $A$. (Such a function is
+            called $k$\text{-to-one}.) Then $#A = k\cdot #B$.
+        \end{axiom}
+
+        Below is a graphical illustration of this property. Set $A$ has 12 elements represented by bullets, set $B$ has 4 elements represented by squares, and set $C$ has 4 elements represented by triangles. Each element
+        of $B$ is matched up with exactly three elements of $A$ and each element of $C$ is matched up with one element of $B$. Thus $#A = 3\cdot #B$. The elements of $B$ and $C$ are matched up one-to-one, so $#B=#C$. \\
+
+        \textit{\blue{Example:}} To dress up for school in the morning, Joyce chooses from 3 dresses (red, yellow, or green), 3 blouses (also red, yellow, or green), and 2 pairs of shoes. She refuses to wear a dress and
+        a blouse of matching colors. How many different outfits can she choose from? \\
+
+        We can imagine that Joyce goes through the choices one by one: first the dress, then the blouse, and finally the shoes. There are three choices for the dress. Once the dress is chosen, there are two choices for
+        the blouse, and finally two choices for the shoes. By the multiplication principle, she has $3\cdot 2 \cdot 2 = 12$ different outfits. The construction of the $n$-tuples in the general multiplication rule may be
+        visualized by a \textbf{decision tree}, with arrows pointing to the available choices of the subsequent step. The dresses are the triangles and the blouses the squares, labeled by the colors. The shoes are the
+        circles. The possible outfits resulting from the three choices can thus be read off from the directed paths through the tree along the arrows.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \includegraphics[scale = 0.75]{Assets/Appendices_Decision_Tree}
+        \end{figure*}
+
+        \begin{corollemma}{Corollary of General Multiplication Product}
+            Let $A_1, A_2, \dots, A_n$ be finite sets. Then
+
+            \[
+                #(A_1 \times A_2 \times \dots \times A_n) = (#A_1)\cdot (#A_2) \dots (#A_n) = \Pi_{i=1}^n (#A_i)
+            \]
+
+            where the capital pi notation is shorthand for a product
+        \end{corollemma}
+
+        \textit{\blue{Example 2:}} In a certain country license plates have three letters followed by three digits. How many different license plates can we construct if the country's alphabet contains 26 letters? \\
+
+        Each license plate can be described as an element of hte set $A\times A \times A \times B \times B \times B$ where $A$ is the set of letters and $B$ is the set of digits. Since $#A=26$ and $#B=10$, the answer is
+        $26^3 \cdot 10^3=17,576,000$. \\
+
+        \textit{\blue{Example 3:}} We flip a coin three times and then roll a die twice. We record the resulting sequence of outcomes in order. How many different sequences are there? \\
+
+        The outcome of a coin flip is an element of the set $C=\{H,T\}$ and a die roll gives an element of the set $D=\{1,2,3,4,5,6\}$. Each possible sequence is an element of the set $C\times C\times C \times D \times D$,
+        which has $2^3 \cdot 6^2 = 288$ elements. \\
+
+        \textit{\blue{Example 4:}} How many distinct subsets does a set of size $n$ have? \\
+
+        Each subset can be encoded by an $n$-tuple with entries 0 or 1, where the $i$th entry is 1 if the $i$th element of the set is in the subset (and 0 if it is not). Thus the number of subsets is the same as the
+        number of elements in the Cartesian product
+
+        \[
+            \{0,1\} \times \cdot \times \{0,1\} = \{0,1\}^n,
+        \]
+
+        which is $2^n$. Note that the empty set $\emptyset$ and set itself are included in the count. These correspond to the $n$-tuples $(0,0,\dots,0)$ and $(1,1,\dots,1)$, respectively.
+
+        \begin{axiom}{Permutations}
+            Consider all $k$-tuples $(a_1, \dots, a_k)$ that can be constructed from a set $A$ of size $n(n\geq k)$ without repetition. So each $a_i \in A$ and $a_i \not = a_j$ if $i\not = j$. The total number of these
+            $k$-tuples is
+
+            \[
+                (n)_k = n\cdot (n-1) \dots (n-k+1) = \frac{n!}{(n-k)!}
+            \]
+
+            In particular, with $k=n$, each $n$-tuple is a \textbf{permutation} of the set $A$. So the total number of orderings of a set of $n$ elements is $n! = n\cdot (n-1)\dots 2 \cdot 1$.
+        \end{axiom}
+
+        \begin{proof}
+            Construct these $k$-tuples sequentially. Choose the first entry out of the full set $A$ with $n$ alternatives. If we have the first $j$ entries chosen then the next one can be any one of the remaining
+            $n-j$ elements of $A$. Thus the total number of $k$-tuples is the product $n\cdot (n-1) \dots (n-k+1).$
+        \end{proof}
+
+        $(n)_k$ is the \textbf{descending factorial}. \\
+
+        \textit{\blue{Example 5:}} I have a 5-day vacation from Monday to Friday in Santa Barbara. I have to specifically assign one day to exploring the town, one day to hiking the mountains, and one day for the beach.
+        I can take up at most one activity per day. In how many ways can I schedule these activities? \\
+
+        The underlying set has 5 elements and we choose a 3-tuple. For example, (Mon, Fri, Tue) means Monday in town, Friday for hiking, and Tuesday on the beach. The number of choices is $5\cdot 4 \cdot 3 = 60$. \\
+
+        \begin{theorem}{Binomial Coefficient}
+            Let $n$ and $k$ be nonnegative integers with $0\leq k \leq n$. The number of distinct subsets of size $k$ that a set of size $n$ has is given by the \textbf{binomial coefficient}
+
+            \[
+                \binom{n}{k} = \frac{n!}{k!(n-k)!}
+            \]
+        \end{theorem}
+
+        Conventionally, $0! = 1$ gives $\binom{n}{0} = 1$ which makes sense because the empty set $\emptyset$ is the unique subset with zero elements. The binomial coefficient $\binom{n}{k}$ is defined as 0 for integers
+        $k < 0$ and $k > n$. \\
+
+        \textit{\blue{Example 6:}} In a class there are 12 boys and 14 girls. How many different teams of 7 pupils with 3 boys and 4 girls can be created? \\
+
+        Imagine that first we choose the 3 boys and then the 4 girls. We can choose the 3 boys in $\binom{12}{3}$ different ways and the 4 girls in $\binom{14}{4}$ different ways. Thus we can form the team in
+        $\binom{12}{3}\cdot \binom{14}{4}$ different ways. \\
+
+        \textit{\blue{Example 7:}} Let $A=\{1,2,3,4,5,6\}$. \\
+        (a) How many different two-element subsets of $A$ are there that have one element from $\{1,2,3,4\}$ and one element from $\{5,6\}$? \\
+
+        The exhaustive list shows that the answer is 8:
+
+        \[
+            \{1,5\}, \{1,6\}, \{2,5\},\{2,6\},\{3,5\},\{3,6\},\{4,5\},\{4,6\}
+        \]
+
+        We get the correct answer by first picking one element from $\{1,2,3,4\}$ (four choices) and then one element from $\{5,6\}$ (two choices) and multiplying: $4\cdot 2 = 8$. Another way to arrive at the same answer
+        is to take
+
+        \[
+            \binom{6}{2} - \binom{4}{2} - \binom{2}{2} = 15 - 6 - 1 = 8
+        \]
+
+        \begin{theorem}{Multinomial Coefficient}
+            Let $n$ and $r$ be positive integers and $k_1, \dots, k_r$ nonnegative integers such that $k_1 + \dots + k_r = n$. The number of ways of assigning labels $1, 2, \dots, r$ to $n$ items so that, for each
+            $i=1,2,\dots,r$ exactly $k_i$ items receive label $i$, is the \textbf{multinomial coefficient}
+
+            \[
+                \binom{n}{k_1, k_2, \dots, k_r} = \frac{n!}{k_1 ! k_2 ! \dots k_r !}
+            \]
+        \end{theorem}
+
+        \textit{\blue{Example 8:}} 120 students signed up for a class. The class is divided into 4 sections numbered 1, 2, 3, and 4, which will have 25, 30, 31, 34 students, respectively. How many ways are there to
+        divide up the students among the four sections? \\
+
+        The answer is
+
+        \[
+            \binom{120}{25,30,31,34} = \frac{120!}{25! \cdot 30! \cdot 31! \cdot 34!}
+        \]
+
+        \textit{\blue{Example 9:}} If you flip a fair coin 4 times what is the probability that you will get exactly 2 tails? \\
+
+        We are trying to find the combination of 2 heads from 4 coins:
+
+        \begin{align*}
+            C(4,2) = \frac{4!}{2! (4-2)!} = 6
+        \end{align*}
+
+        The total number of all combinations of 4 flips is:
+
+        \[
+            C = 2^4 = 16
+        \]
+
+        Thus the probability is
+
+        \[
+            P(\text{Exactly 2H}) = \frac{6}{16}
+        \]
+
+        \textit{\blue{Example 10:}} There are 9 students in a class: 5 boys and 4 girls. If the teacher picks a group of 4 at random,w hat is the probability that everyone in the group is a boy? \\
+
+        The number of ways to pick a group of 4 students out of 9 is
+
+        \[
+            \frac{9!}{4! (9-4)!}
+        \]
+
+        and the number of ways to pick a group of 4 students out of 5 is
+
+        \[
+            \frac{5!}{4!(5-4)!}
+        \]
+
+        Thus the probability is
+
+        \[
+            \frac{\frac{5!}{4!(5-4)!}}{\frac{9!}{4!(9-4)!}} = \frac{5}{126}
+        \]
+
+    \subsection{Binomial Coefficients}
+
+        A finite sum may be represented by
+
+        \[
+            \sum_{k=1}^n a_k = a_1 + a_2 + \dots + a_n
+        \]
+
+        A product may be represented similarly like so:
+
+        \[
+            \Pi_{k=1}^n a_k = a_1 \cdot a_2 \cdot a_3 \dots a_n
+        \]
+
+        Exponentials and logarithms can be used to convert between sums and products:
+
+        \[
+            \Pi_{k=1}^n a_k = \exp{\left(\ln{\Pi_{k=1}^n} a_k\right)} = e^{\sum^n_{k=1}\ln{a_k}}, a_k > 0
+        \]
+
+        By convention, an empty sum has value zero while an empty product has value 1. This is because 0 is the additive identity and 1 is the multiplicative property. The $0! = 1$ is an instance of this convention.
+
+        \begin{axiom}{Summation Identities}
+            Let $n$ be a positive integer. Then
+
+            \begin{align*}
+                1 + 2 + \dots + n   &= \frac{n(n+1)}{2} \\
+                1^2 + 2^2 + \dots + n^2 &= \frac{n(n+1)(2n+1)}{6} \\
+                1^3 + 2^3 + \dots + n^3 &= \frac{n^2 (n+1)^2}{4}
+            \end{align*}
+        \end{axiom}
+
+        This continues to hold for arbtirary upper and lower summation limits:
+
+        \[
+            \sum^b_{k=a} k = a + a(a+1) + (a+2) + \dots + b = (b-a+1) \frac{a+b}{2}
+        \]
+
+        \begin{theorem}{Binomial theorem}
+            Let $n$ be a positive integer. Then for any $x,y$,
+
+            \[
+                (x+y)^n = \sum^n_{k=0} \binom{n}{k} x^k y^{n-k}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Multinomial theorem}
+            Let $n$ and $r$ be positive integers. Then for any $x_1, \dots, x_r$,
+
+            \begin{align*}
+                (x_1 + x_2 + \dots + x_r)^n &= \sum_{\substack{k_1 \geq 0,k_2 \geq 0,\dots, k_r \geq 0 \\ k_1 + k_2 + \dots + k_r = n}} \binom{n}{k_1,k_2,\dots,k_r} x_1^{k_1}x_2^{k_2}\dots x_r^{k_r}
+            \end{align*}
+
+            The sum runs over $r$-tuples $(k_1, k_2, \dots, k_r)$ of nonnegative integers that add up to $n$.
+        \end{theorem}

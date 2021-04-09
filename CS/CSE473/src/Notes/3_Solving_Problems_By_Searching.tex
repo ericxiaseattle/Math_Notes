@@ -1,0 +1,184 @@
+\section{Solving Problems By Searching}
+
+    \subsection{Problem-Solving Agents}                     % 3.1
+
+        \textbf{Planning agents:} agents that use \textbf{factored} or \textbf{structured} representations of states. \\
+        \textbf{Informed algorithms:} the agent can estimate how far it is from the goal \\
+        \textbf{Uninformed algorithms:} the agent cannot estimate how far it is from the goal \\
+        \textbf{Open-loop system:} ignoring the percepts breaks the loop between agent and environment. \\
+        $\bullet$ if there is a chance that the model is incorrect or the environment is nondeterministic then the agent would be safer using a \textbf{closed-loop} approach that monitors the percepts \\
+
+        A search \textbf{problem} may be defined as follows: \\
+        \indent $\bullet$ A set of possible \textbf{states} that the environment can be in, called the \textbf{state space} \\
+        \indent $\bullet$ The \textbf{initial state} that the agent starts in \\
+        \indent $\bullet$ A set of one or more \textbf{goal states}. \\
+        \indent $\bullet$ The \textbf{actions} available to the agent. Given a state $s$, ACTIONS$(s)$ returns a $\text{finite}^2$ set of actions that can be executed in $s$. We say that each of these actions is
+        \textbf{applicable} in $s$. For example:
+
+        \begin{center}
+            ACTIONS(\textit{Arad}) = \{\textit{ToSibiu, ToTimisoara, ToZerind}\}
+        \end{center}
+
+        \indent $\bullet$ A \textbf{transition model} which describes what each action does. RESULT($s,a$) returns the state that results from doing action $a$ in state $s$. For example,
+
+        \begin{center}
+            RESULT(\textit{Arad, ToZerind}) = \textit{Zerind}
+        \end{center}
+
+        \indent $\bullet$ An \textbf{action cost function}, denoted by ACTION-COST($s,a,s'$) when we are programming or $c(s,a,s')$ when we are doing math, that gives the numeric cost of applying action $a$ in state $s$
+        to reach state $s'$. A problem-solving agent should use a cost function that reflects its own performance measure; for example, for route-finding agents, the cost of an action might be the length in miles or it
+        might be the time it takes to complete the action \\
+
+        A sequence of actions forms a \textbf{path}, and a \textbf{solution} is a path from the initial state to a goal state. An \textbf{optimal solution} has the lowest path cost among all solutions. The state space
+        may be represented by a graph in which the \textit{vertices are states} and the \textit{directed edges between them are actions}.
+        
+    \subsection{Example Problems}                           % 3.2
+
+        \textbf{Standardized problem:} is intended to illustrate or exercise various problem-solving methods \\
+        $\bullet$ can be given a concise, exact description and hence is suitable as a benchmark for researchers to compare the performance of algorithms \\
+        \textbf{Real-world problem:} example is road navigation, real-world problems are ones whose solutions people actually use and whose formulation is not standardized \\
+        \textbf{Grid world problem} a 2D rectangular array of square cells in which agents can move from cell to cell. \\
+        $\bullet$ usually the agent can move to any obstacle-free adjacent cell horizontally or vertically and in some problems diagonally \\
+        $\bullet$ cells contain objects which the agent can pick up, push, or otherwise act upon \\
+
+        \textbf{Traveling salesperson problem (TSP):} a touring problem in which every city on a map must be visited. The aim is to find a tour with cost $< C$ (or in the optimization version, to find a tour with the
+        lowest cost possible).
+
+    \subsection{Search Algorithms}                          % 3.3
+
+        \textbf{Search algorithm:} takes a search problem as input and returns a solution, or an indication of failure \\
+        \textbf{Search tree:} is a superimposition of the state space graph \\
+        $\bullet$ each node in a search tree corresponds to a state space and the edges in the search tree correspond to actions \\
+        $\bullet$ the root of the tree corresponds to the initial state of the problem \\
+
+        When nodes in the search tree are \textbf{expanded} (visited), child nodes are \textit{generated}. The \textbf{frontier} or \textbf{fringe} of the search tree is the set of all nodes \textit{at the end} of all
+        visited paths. The frontier separates two regions of the state-space graph into an interior region where every state has been expanded, and an exterior region of states that have not yet been reached.
+
+        \begin{figure*}[hbt!]
+            \centering
+            \caption*{Grey nodes make up a fringe}
+            \includegraphics[scale = 0.4]{Assets/Fringe}
+        \end{figure*}
+
+        \pagebreak
+        \textbf{Best-first search:} choose a node $n$ with minimum value of some \textbf{evaluation function} $f(n)$. On each iteration we choose a node on the frontier with minimum $f(n)$ value, return it if its state
+        is in a goal state, and otherwise apply EXPAND to generate child nodes. Each child node is added to the frontier if it has not been reached before, or is re-added if it is now being reached with a path that
+        has a lower path cost than any previous path. \\
+
+        Nodes in search trees are represented by a data structure with four components: \\
+        \indent $\bullet$ \textit{node}.STATE: the state to which the node corresponds \\
+        \indent $\bullet$ \textit{node}.PARENT: the node in the tree that generated this node \\
+        \indent $\bullet$ \textit{node}.ACTION: the action that was applied to the parent's state to generate this node \\
+        \indent $\bullet$ \textit{node}.PATH-COST: the total cost of the path from the initial state to this node. In mathematical formulas, we use $g(node)$ as a synonym for PATH-COST. \\
+
+        Following the PARENT pointers back from a node allows us to recover the states and actions along the path to that node. Doing this from a goal node gives us the solution. The appropriate choice for a data
+        structure to store the frontier is a \textit{queue}, because the operations on a frontier are: \\
+        \indent $\bullet$ IS-EMPTY(\textit{frontier}) returns true only if there are no nodes in the frontier \\
+        \indent $\bullet$ POP(\textit{frontier}) removes the top node from the frontier and returns it \\
+        \indent $\bullet$ TOP(\textit{frontier}) returns (but does not remove) the top node of the frontier \\
+        \indent $\bullet$ ADD(\textit{node, frontier}) inserts node into its proper place in the queue \\
+
+        Three kinds of queues are used in search algorithms: \\
+        \indent $\bullet$ \textit{Priority queue}: first pops the node with the minimum cost according to some evaluation function $f$. It is used in best-first search \\
+        \indent $\bullet$ \textit{FIFO queue}: used in BFS \\
+        \indent $\bullet$ \textit{LIFO queue (Stack)}: used in DFS \\
+
+        \textbf{Repeated states:} are generated by a \textbf{cycle} (\textbf{loopy path}) \\
+
+        Search algorithms are \textbf{graph searches} if they check for redundant paths and \textbf{tree-like searches} if they do not check. In many AI problems, the graph is represented only implicitly by the
+        initial state, actions, and transition model. For an implicit state space, complexity can be measured in terms of $d$, the \textbf{depth} or number of actions in an optimal solution, $m$, the maximum number of
+        actions in any path, and $b$, the \textbf{branching factor} or number of successors of a node that need to be considered.
+
+    \subsection{Uninformed Search Strategies}               % 3.4
+
+        \textbf{Breadth-first search (BFS)} is an appropriate strategy when all actions have the same cost. We could implement breadth-first serach as a call to BEST-FIRST-SEARCH where the evaluation function $f(n)$ is
+        the depth of the node - that is, the number of actions it takes to reach the node. We can get additional efficiency with a couple of tricks. A FIFO queue will be faster than a priority queue and will give us
+        the correct order of nodes: new nodes (which are always deeper than their parents) go to the back of the queue, and old nodes which are shallower than the new nodes get expanded first. In addition,
+        \textit{reached} can be a set of states rather than a mapping from states to nodes, because once we've reached a state, we can never find a better path to the state. This means that we can do an
+        \textbf{early goal test}, checking whether a node is a solution as soon as it is generated, rather than the \textbf{late goal test} that best-first search uses, waiting until a node is popped off the queue. \\
+
+        BFS always finds a solution with a minimal number of actions, because when it is generating nodes at depth $d$, it has already generated all the nodes at depth $d-1$, so if one of them were a solution, it would
+        have been found. This means it is cost-optimal for problems where all action shave the same cost. For BFS, the \textit{memory requirements are a bigger problem than the runtime}. In general,
+        \textit{exponential-complexity search problems cannot be solved by uninformed search for any but the smallest instances}. The total number of nodes generated in a search tree where every state has $b$ successors
+        is given by $O(b^d)$ which is the time and space complexity of BFS.
+
+        Using BFS where the evaluation function is the cost of the path from the root to the current node is called Dijikstra's algorithm by the theoretical CS community and \textbf{uniform-cost search} by the AI
+        community. The complexity of uniform-cost search is characterized in terms of $C^*$, the cost of the optimal solution, and $\epsilon$, a lower bound on the cost of each action, with $\epsilon > 0$. The algorithm's
+        worst-case time and space complexity is
+
+        \[
+            O\left(b^{1+\frac{C^*}{\epsilon}}\right)
+        \]
+
+        which can be much greater than $b^d$. This is because uniform-cost search can explore large trees of action with low costs before exploring paths involving a high-cost and perhaps useful action. When all action
+        costs are equal, $b^{1+\frac{C^*}{\epsilon}} = b^{d+1}$, and uniform-cost search is similar to BFS. Uniform-cost search is cost-optimal because the first solution it finds will have a cost that is at least as low
+        as the cost of any other node in the frontier. Uniform-cost search considers all paths systematically in order of increasing cost, never getting caught going down a single infinite path
+        (assuming that all action costs are $>\epsilon > 0$). \\
+
+        DFS is usually implemented not as a graph search but as a tree-like search that does not keep a table of reached states. DFS is not cost-optimal as it returns the first solution it finds, even if it is not the
+        cheapest. For finite state spaces that are trees DFS is efficient and complete; for acyclic state spaces it may end up expanding the same state many times via different paths, but will (eventually)
+        systematically explore the entire space. For problems where a tree-like search is feasible, DFS has much smaller needs for memory. A "reached" table is not kept at all and the frontier is very small. For a finite
+        tree-shaped state-space, a depth-first tree-like search takes time proportional to the number of states, and have memory complexity of only $O(bm)$, where $b$ is the branching factor and $m$ is the maximum
+        depth of the tree. \\
+
+        \textbf{Bidirectional search:} simultaneously searches forward from the initial state and backwards from the goal state(s), hoping that the two searches will meet. The motivation is that
+        $b^\frac{d}{2}+b^\frac{d}{2}$ is much less than $b^d$.
+
+        \begin{center}
+            \textbf{Comparison of uninformed search algorithms}
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                \textbf{Criterion}  & BFS & Uniform-Cost & DFS & Depth-Limited & Iterative Deepening & Bidirectional \\
+                \hline
+                Complete?   & Yes   & Yes   & No    & No    & Yes   & Yes \\
+                \hline
+                Optimal cost?   & Yes   & Yes   & No    & No    & Yes   & Yes \\
+                \hline
+                Time    & $O(b^d)$  & $O\left(b^{1+\frac{C^*}{\epsilon}}\right)$    & $O(b^m)$ & $O(b^{\ell}$ & $O(b^d)$ & $O\left(b^\frac{d}{2}\right)$ \\
+                \hline
+                Space   & $O(b^d)$  & $O\left(b^{1+\frac{C^*}{\epsilon}}\right)$    & $O(bm)$ & $O(b\ell)$ & $O(bd)$ & $O\left(b^\frac{d}{2}\right)$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+    \subsection{Informed (Heuristic) Search Strategies}     % 3.5
+
+        \textbf{Informed search strategy:} uses domain-specific hints about the location of goals to find solutions more efficiently than uninformed strategies \\
+        $\bullet$ these hints come in the form of a \textbf{heuristic function}, denoted $h(n)$:
+
+        \[
+            h(n) = \text{ estimated cost of the cheapest path from the state at node } n \text{ to a goal state}
+        \]
+
+        \textbf{Greedy best-first search} expands first the node with the lowest $h(n)$ value - the node that appears to be closest to the goal - on the grounds that this is likely to lead to a solution quickly. So the
+        evaluation function $f(n) = h(n)$. Greedy best-first graph search is complete in finite state spaces, but not in infinite ones. The worst-case time and space complexity is $O(|V|)$. With a good heuristic function,
+        however, the complexity can be reduced substantially, on certain problems reaching $O(bm)$. \\
+
+        \textbf{$\text{A}^*$ search} is the most common informed search algorithm, which is a best-first search that uses the evaluation function
+
+        \[
+            f(n) = g(n) + h(n)
+        \]
+
+        where $g(n)$ is the path cost from the initial state to node $n$, and $h(n)$ is the \textit{estimated} cost of the shortest path from $n$ to a goal state, so we have
+
+        \[
+            f(n) = \text{ estimated cost of the best path that continues from $n$ to a goal}
+        \]
+
+        $\text{A}^*$ search is complete. Whether $A^*$ is cost-optimal depends on certain properties of the heuristic. A key property is \textbf{admissibility}: an \textbf{admissible heuristic} is one that
+        \textit{overestimates} the cost to reach a goal, s.t. an admissible heuristic is \textit{optimistic}. With an admissible heuristic, $\text{A}^*$ is cost-optimal. A slightly stronger property is called
+        \textbf{consistency}. A heuristic $h(n)$ is consistent if, for every node $n$ and every successor $n'$ of $n$ generated by an action $a$, we have:
+
+        \[
+            h(n) \leq c(n, a, n') + h(n')
+        \]
+
+
+%        TODO: FINISH UP NOTES FOR SUBSECTION
+
+    \subsection{Heuristic Functions}                        % 3.6
+
+        \textbf{Manhattan distance (city-block distance):} in the sliding tile problem, the manhattan distance would be the sum of the horizontal and vertical distances.
+
+%       TODO: FINISH UP NOTES FOR SUBSECTION

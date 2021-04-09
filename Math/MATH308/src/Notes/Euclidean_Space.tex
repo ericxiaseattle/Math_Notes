@@ -1,0 +1,323 @@
+\section{Euclidean Space}
+
+    \subsection{Vectors}
+
+        \textbf{Vector:} an ordered list of real numbers $u_1, u_2, \dots, u_n$ expressed as
+
+        \[
+            \mathbf{u} =
+            \begin{bmatrix}
+                u_1 \\
+                u_2 \\
+                \vdots \\
+                u_n
+            \end{bmatrix}
+        \]
+
+        or as $\mathbf{u} = (u_1, u_2, \dots, u_n)$. The set of all vectors with $n$ entries is denoted by $\mathbf{R}^n$. Each of the entries $u_1, u_2, \dots, u_n$ is called a \textbf{component} of the vector. A vector
+        expressed in the vertical form is also called a \textbf{column vector} and a vector expressed in horizontal form is also called a \textbf{row vector}. \\
+
+        Let $\mathbf{u}$ and $\mathbf{v}$ be vectors in $\mathbf{R}^n$ given by
+
+        \[
+            \mathbf{u} =
+            \begin{bmatrix}
+                u_1 \\
+                u_2 \\
+                \vdots \\
+                u_n
+            \end{bmatrix}
+            \text{ and }
+            \mathbf{v} =
+            \begin{bmatrix}
+                v_1 \\
+                v_2 \\
+                \vdots \\
+                v_n
+            \end{bmatrix}
+        \]
+
+        Suppose that $c$ is a real number, called  \textbf{scalar}. \\
+        \textbf{Equality}: $\mathbf{u} = \mathbf{v}$ if and only if $u_1 = v_1, u_2 = v_2, \dots, u_n = v_n$. \\
+        \textbf{Addition:}
+
+        \[
+            \mathbf{u} + \mathbf{v} =
+            \begin{bmatrix}
+                u_1 \\
+                u_2 \\
+                \vdots \\
+                u_n
+            \end{bmatrix}
+            +
+            \begin{bmatrix}
+                v_1 \\
+                v_2 \\
+                \vdots \\
+                v_n
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                u_1 + v_1 \\
+                u_2 + v_2 \\
+                \vdots \\
+                u_n + v_n
+            \end{bmatrix}
+        \]
+
+        \textbf{Scalar multiplication:}
+
+        \[
+            c\mathbf{u} = c
+            \begin{bmatrix}
+                u_1 \\
+                u_2 \\
+                \vdots \\
+                u_n
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                c\cdot u_1 \\
+                c\cdot u_2 \\
+                \vdots \\
+                c\cdot u_n
+            \end{bmatrix}
+        \]
+
+        The set of all vectors in $\mathbf{R}^n$, taken together with these definitions of addition and scalar multiplication, is called \textbf{Euclidean space}. \\
+
+        \textbf{Algebraic properties of vectors:} let $a$ and $b$ be scalars, and \textbf{u, v}, and \textbf{w} be vectors in $\mathbf{R}^n$. Then
+        (a) $\mathbf{u+v=v+u}$ \\
+        (b) $a(\mathbf{u+v})=a\mathbf{u} + a\mathbf{v}$ \\
+        (c) $(a+b)\mathbf{u}=a\mathbf{u} + b\mathbf{u}$ \\
+        (d) $(\mathbf{u+v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v+w})$ \\
+        (e) $a(b\mathbf{u}) = (ab)\mathbf{u}$ \\
+        (f) $\mathbf{u} + -\mathbf{(u)}=\mathbf{0}$ \\
+        (g) $\mathbf{u+0=0+u=u}$ \\
+        (h) $1\mathbf{u=u}$ \\
+
+        The \textbf{zero vector} is given y
+
+        \[
+            \mathbf{0} =
+            \begin{bmatrix}
+                0 \\
+                0 \\
+                \vdots \\
+                0
+            \end{bmatrix}
+        \]
+
+        If $u_1, u_2, \dots, u_m$ are vectors and $c_1, c_2, \dots, c_m$ are scalars, then
+
+        \[
+            c_1 u_1 + c_2 u_2 + \dots + c_m u_m
+        \]
+
+        is a \textbf{linear combination} of $u_1, u_2, \dots, u_m$. Linear combinations provide an alternate way to express a system of linear equations. Consider the \textbf{vector equation} below.
+
+        \[
+            x_1
+            \begin{bmatrix}
+                5 \\
+                -1 \\
+                6
+            \end{bmatrix}
+            + x_2
+            \begin{bmatrix}
+                -3 \\
+                2 \\
+                1
+            \end{bmatrix}
+            +x_3
+            \begin{bmatrix}
+                7 \\
+                5 \\
+                0
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                12 \\
+                -4 \\
+                11
+            \end{bmatrix}
+        \]
+
+        and the corresponding system
+
+        \begin{align*}
+            5x_1 - 3x_2 + 7x_3  &= 12 \\
+            -x_1 + 2x_2 + 5x_3  &= -4 \\
+            6x_1 + x_2          &= 11
+        \end{align*}
+
+        \textbf{Vector form} of general solution example:
+
+        \[
+            \mathbf{x} =
+            \begin{bmatrix}
+                x_1 \\
+                x_2 \\
+                x_3
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                2 \\
+                2 \\
+                0
+            \end{bmatrix}
+            + s_1
+            \begin{bmatrix}
+                -11 \\
+                -4 \\
+                1
+            \end{bmatrix}
+        \]
+
+        where $s_1$ can be any real number.
+
+    \subsection{Span}
+
+        Let $\{\mathbf{u_1, u_2, \dots, u_m\}}$ be a set of vectors in $\mathbf{R}^n$. The \textbf{span} of this set is denoted span$\{\mathbf{u_1, u_2, \dots, u_m\}}$ and is defined as the set of all linear combinations
+
+        \[
+            x_1 \mathbf{u_1} + x_2 \mathbf{u_2} + \dots + x_m \mathbf{u_m}
+        \]
+
+        where $x_1, x_2, \dots, x_m$ can be any real numbers. If span$\{\mathbf{u_1, u_2, \dots, u_m}\} = \mathbf{R}^n$, then we say that the set $\{\mathbf{u_1, u_2, \dots, u_m}\}$ spans $\mathbf{R}^n$. \\
+
+        \textit{\blue{Example:}} Show that $v_1 = \begin{bmatrix}-1 \\ 4 \\ 7\end{bmatrix}$ is in $S = \text{span}\{u_1, u_2\}$ and that $v_2 = \begin{bmatrix}8\\ 2 \\ 1\end{bmatrix}$ is not. \\
+
+        To show that $v_1$ is in $S$, we need to find scalars $x_1$ and $x_2$ that satisfy the equation
+
+        \[
+            x_1 = \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}
+            + x_2 \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+            =     \begin{bmatrix}-1 \\ 4 \\ 7 \end{bmatrix}
+        \]
+
+        which is equivalent to the linear system
+
+        \begin{align*}
+            2x_1 + x_2  &= -1 \\
+            x_1 + 2x_2  &= 4 \\
+            x_1 + 3x_2  &= 7
+        \end{align*}
+
+        Transferring to an augmented matrix and performing row operations gives us
+
+        \[
+            \begin{bmatrix}[cc|c]
+                2 & 1 & -1 \\
+                1 & 2 & 4 \\
+                1 & 3 & 7
+            \end{bmatrix}
+            \sim
+            \begin{bmatrix}[cc|c]
+                1 & 2 & 4 \\
+                0 & 1 & 3 \\
+                0 & 0 & 0
+            \end{bmatrix}
+        \]
+
+        Extracting the echelon system and back substituting gives $x_1 = -2, x_2 = 3$. Thus $v_1 = -2u_1 + 3u_2$, so $v_1$ is in $S = \text{span}\{u_1, u_2\}$. Similarly, the approach for $v_2$ involves determining
+        if there exists scalars $x_1$ and $x_2$ s.t.
+
+        \[
+            x_1 \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix} + x_2 \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = \begin{bmatrix} 8 \\ 2 \\ 1 \end{bmatrix}
+        \]
+
+        which is equivalent to the linear system
+
+        \begin{align*}
+            2x_1 + x_2  &= 8 \\
+            x_1 + 2x_2  &= 2 \\
+            x_1 + 3x_2  &= 1
+        \end{align*}
+
+        The augmented matrix and corresponding echelon form are
+
+        \[
+            \begin{bmatrix}[cc|c]
+                2 & 1 & 8 \\
+                1 & 2 & 2 \\
+                1 & 3 & 1
+            \end{bmatrix}
+            \sim
+            \begin{bmatrix}[cc|c]
+                1 & 2 & 2 \\
+                0 & 1 & -1 \\
+                0 & 0 & 1
+            \end{bmatrix}
+        \]
+
+        The third row of the echelon matrix corresponds to the equation $0 = 1$. Thus the system has no solutions and $v_2$ is not in $S$.
+
+        \begin{theorem}{Theorem}
+            Let $u_1, u_2, \dots, u_m$ and $v$ be vectors in $\mathbf{R}^n$. Then $v$ is an element of span$\{u_1, u_2, \dots, u_m\}$ iff the linear system with augmented matrix
+
+            \[
+                \begin{bmatrix}[cccc|c]
+                    u_1 & u_2 & \dots & u_m & v
+                \end{bmatrix}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Theorem}
+            Let $u_1, u_2, \dots, u_m$ and $u$ be vectors in $\mathbf{R}^n$. If $u$ is in span$\{u_1, u_2, \dots, u_m\}$, then
+
+            \[
+                \text{span}\{u, u_1, u_2, \dots, u_m\} = \text{span}\{u_1, u_2, \dots, u_m\}
+            \]
+        \end{theorem}
+
+        \begin{theorem}{Theorem}
+            Suppose that $u_1, \dots, u_m$ are in $\mathbf{R}^n$, and let
+
+            \[
+                A =
+                \begin{bmatrix}[cccc]
+                    u_1 \\
+                    u_2 \\
+                    \dots \\
+                    u_m
+                \end{bmatrix}
+                \sim B
+            \]
+
+            where $B$ is in echelon form. Then span $\{u_1, \dots, u_m\} = \mathbf{R}^n$ exactly when $B$ has a pivot position in every row.
+        \end{theorem}
+
+        \begin{theorem}{Theorem}
+            Let $\{u_1, u_2, \dots, u_m\}$ be a set of vectors in $\mathbf{R}^n$. If $m < n$, then this set does not span $\mathbf{R}^n$. If $m \geq n$, then the set might span $\mathbf{R}^n$ or it might not. In this
+            case, we cannot say more without additional information about the vectors.
+        \end{theorem}
+
+        Let $a_1, a_2, \dots, a_m$ be vectors in $\mathbf{R}^n$. If
+
+        \[
+            A =
+            \begin{bmatrix}
+                a_1 a_2 \dots a_m
+            \end{bmatrix}
+            \text{ and }
+            x =
+            \begin{bmatrix}
+                x_1 \\
+                x_2 \\
+                \vdots \\
+                x_m
+            \end{bmatrix}
+        \]
+
+        then $Ax = x_1 a_1 + x_2 a_1 + \dots + x_m a_m$. Note that the product $Ax$ is only defined when the number of columns of $A$ equals the number of entries of $x$.
+
+        \begin{theorem}{Theorem}
+            Let $a_1, a_2, \dots, a_m$ and $b$ be vectors in $\mathbf{R}^n$. Then the following statements are equivalent. That is, if one is true, then so are the others, and if one is false, then so are the others. \\
+            (a) $b$ is in span$\{a_1, a_2, \dots, a_m\}$. \\
+            (b) The vector equation $x_1 a_1 + x_2 a_2 + \dots + x_m a_m = b$ has at least one solution \\
+            (c) The linear system corresponding to $\begin{bmatrix}[cccc|c]a_1 & a_2 & \dots & a_m & b\end{bmatrix}$ has at least one solution \\
+            (d) The equation $Ax = b$ with $A$ and $x$ given as in the definition above, has at least one solution.
+        \end{theorem}
+
+    \subsection{Linear Independence}

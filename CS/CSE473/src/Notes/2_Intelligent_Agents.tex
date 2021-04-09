@@ -1,0 +1,100 @@
+\section{Intelligent Agents}
+
+    \textbf{Agent:} anything that can be viewed as perceiving its \textbf{environment} through \textbf{sensors} and acting upon that environment through \textbf{actuators} \\
+    \textbf{Percept:} the content an agent's sensors are perceiving \\
+    \textbf{Percept sequence:} the complete history of everything an agent has ever perceived \\
+    \textbf{Agent function:} describes an agent's behavior and maps any given percept sequence to an action \\
+    $\bullet$ an abstract mathematical description \\
+    \textbf{Agent program:} a concrete implementation of an agent function, running within some physical system \\
+    \textbf{Rational agent:} selects actions that are expected to maximize its performance measure, given the evidence provided by the percept sequence and whatever built-in knowledge the agent has
+    \textbf{Consequentialism:} we evaluate an agent's behavior by its consequences \\
+    \textbf{Performance measure:} evaluates any given sequence of environment states and captures the notion of desirability of results \
+    \textbf{Omniscience:} knows the \textit{actual} outcome of its actions and can act accordingly \\
+    $\bullet$ rationality measures the \textit{expected} outcome of an agent's outcomes and can act accordingly \\
+    \textbf{Task environment:} the problems to which rational agents are the solutions  \\
+    $\bullet$ \textbf{PEAS:} \textbf{P}erformance, \textbf{E}nvironment, \textbf{A}ctuators, \textbf{S}ensors \\
+    \textbf{Fully observable:} if an agent's sensors give it access to the complete state of the environment at each point in time \\
+    $\bullet$ a task environment is effectively fully observable if the sensors detect all aspects \textit{relevant} to the choice of action \\
+    \textbf{Competitive}: multiagent example is chess because opponent entity $B$ is trying to maximize its performance measure which by the rules of chess minimize agent $A$'s performance measure \\
+    \textbf{Co-operative:} multiagent example is avoiding collisions on the road maximizes the performance measures of all agents \\
+    \textbf{Deterministic:} the next state of the environment is completely determined by the current state and the action executed by the agent(s) such that the agent need not worry about uncertainty \\
+    \textbf{Nondeterministic:} not deterministic \\
+    $\bullet$ \textbf{stochastic:} is sometimes used as a synonym for nondeterministic however the convention is to use "stochastic" when dealing explicitly with quantifiable probabilities and "nondeterministic" when
+    not \\
+    \textbf{Agent architecture:} some computing device with physical sensors and actuators that implements the agent program
+
+    \[
+        \text{agent} = \text{architecture} + \text{program}
+    \]
+
+    \textbf{Simple reflex agent:} agents that select actions on the basis of the \textit{current} percept and ignore the rest of the percept history \\
+    $\bullet$ works only if the environment is fully observable
+    \textbf{Condition-action rule}:
+
+    \begin{center}
+        \textbf{if} \textit{car-in-front-is-braking} \textbf{then} \textit{initiate-braking}
+    \end{center}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{A simple reflex agent:}
+        \includegraphics[scale = 0.75]{Assets/Single_Reflex_Agent}
+    \end{figure*}
+
+    Escaping from infinite loops is possible if the agent can randomize its actions. \\
+    \textbf{Internal state:} depends on percept history and thereby reflects at least some of the unobserved aspects of the current state \\
+    \textbf{Transition model:} the knowledge about "how the world works" whether implemented in simple Boolean circuits or in complete scientific theories \\
+    \textbf{Sensor model:} the type of knowledge in which the state of the world is reflected in the agent's percepts \\
+    \textbf{Model-based agent:} an agent that uses both transition and sensor models \\
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{Model-based reflex agent}
+        \includegraphics[scale = 0.75]{Assets/Model_Based_Agent_Flow_Chart}
+    \end{figure*}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{Model-based reflex agent}
+        \includegraphics[scale = 0.75]{Assets/Model_Based_Agent}
+    \end{figure*}
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{Model-based, goal-based agent}
+        \includegraphics[scale = 0.75]{Assets/Model_Based_Goal_Based_Agent_Flow_Chart}
+    \end{figure*}
+
+    \textit{Search} and \textit{planning} are the subfields that attempt to find action sequences that achieve an agent's goals. Decision making for reflex agents and goal-based agents are different in that reflex agent
+    designs do not consider the future - questions such as "what will happen if I do X" and "will that make me happy" are not explicitly represented. The reflex agent will brake when it sees brake lights from the car
+    ahead. It does not know why, whereas the goal-based agent will brake when it sees brake lights ahead because that's the action it predicts that will achieve its goal of not hitting other cars. The goal-based agent
+    may appear less efficient however it is more flexible because the knowledge that supports its decisions is represented explicitly and can be modified. \\
+
+    \textbf{Utility function:} an internalization of a performance measure
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{Model-based, utility-based agent}
+        \includegraphics[scale = 0.75]{Assets/Model_Based_Utility_Based_Agent_Flow_Chart}
+    \end{figure*}
+
+    \textbf{Model-free agent:} learns what action is best in a particular situation without ever learning exactly how that action changes the environment \\
+    \textbf{Learning element}: responsible for making improvements \\
+    $\bullet$ uses feedback from the \textbf{critic} on how the agent is doing and determines how the performance element should be modified to do better in the future \\
+    \textbf{Performance element:} responsible for selecting external actions
+
+    \begin{figure*}[hbt!]
+        \centering
+        \caption*{General learning agent}
+        \includegraphics[scale = 0.75]{Assets/General_Learning_Agent}
+    \end{figure*}
+
+    \textbf{Problem generator:} responsible for suggesting actions that will lead to new and informative experiences \\
+
+    Three ways to represent states and the transitions between them for components of agent programs: \\
+    \textbf{Atomic representation:} a state is a black box with no internal structure \\
+    \textbf{Factored representation:} a state consists of a vector of attribute values which can be Boolean, real-valued, or one of a fixed set of symbols \\
+    \textbf{Structured representation:} a state includes objects, each of which may have attributes of its own as well as relationships to other objects \\
+
+    \textbf{Localist representation:} if there is a one-to=one mapping between concepts and memory locations \\
+    \textbf{Distributed representation:} the representation of a concept is spread over many memory locations and each memory location is employed as part of the representation of multiple different concepts
